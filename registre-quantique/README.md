@@ -138,13 +138,11 @@ python3 generer_vue.py                     # réécrit registre.md
 
 Il affiche ensuite un résumé par type, statut, acteur et type de source. Si `jsonschema` est installé, chaque ligne est en plus validée contre `schema.json`.
 
-## Licence (proposition à confirmer par le propriétaire)
+## Droits
 
-Ce n'est qu'une proposition ; rien n'est encore décidé.
+Tous droits réservés par le propriétaire du dépôt. Aucune licence n'est accordée sur les données ni sur le code : la licence de diffusion sera choisie par le propriétaire ou par un éventuel acquéreur.
 
-- **Données** (`affirmations.jsonl`, `registre.md`) : **CC BY 4.0**. On peut réutiliser les données, y compris commercialement, en citant le registre.
-- **Code** (`valider.py`, `generer_vue.py`, `schema.json`) : **MIT**.
-- Les énoncés reprennent de courts extraits de sources tierces, à titre de citation, et chaque source reste soumise à ses propres droits.
+Les énoncés reprennent de courts extraits de sources tierces, à titre de citation, et chaque source reste soumise à ses propres droits.
 
 ## État de la version 0 (22 novembre 2026)
 
