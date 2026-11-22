@@ -71,13 +71,26 @@ def developper_pays(pays_eligibles, groupes: dict) -> set[str] | None:
     return codes
 
 
+# Mots trop généraux pour prouver un lien thématique entre un projet passé et un appel.
+GENERIQUES = {
+    "computing", "computer", "computers", "compute", "system", "systems", "processing", "processor",
+    "processors", "device", "devices", "hardware", "software", "platform", "platforms", "technology",
+    "research", "innovation", "innovative", "advanced", "applications", "application", "europe",
+    "european", "solutions", "solution", "industrial", "industry", "future", "next", "generation",
+    "integration", "infrastructure", "digital", "data", "high", "performance", "scale", "scalable",
+    "ecosystem", "enabling", "hybrid", "design", "development", "demonstrator", "demonstrators",
+}
+
+
 def jetons(texte: str) -> set[str]:
     mots = re.findall(r"[a-zà-ÿ0-9-]{3,}", texte.lower())
     return {m for m in mots if m not in MOTS_VIDES}
 
 
 def texte_prospect(p: dict) -> str:
-    morceaux = [p.get("segment_justification") or ""]
+    # Uniquement les titres des projets financés : la justification de segment reprend des mots-clés de
+    # classement trop généraux pour prouver un lien avec un appel précis.
+    morceaux = []
     for f in p.get("financements_obtenus") or []:
         morceaux.append(f.get("projet") or "")
         morceaux.append(f.get("acronyme") or "")
@@ -135,12 +148,18 @@ def evaluer(p: dict, o: dict, groupes: dict, aujourdhui: dt.date) -> dict | None
     else:
         return None
 
+    specifiques = [m for m in communs if m not in GENERIQUES]
+    if o.get("mots_cles") and not specifiques:
+        # L'appel vise un sujet précis et rien dans l'historique public n'y renvoie.
+        score -= 15
+        reserves.append("aucun projet passé ne porte sur le sujet précis de l'appel : lien thématique à démontrer")
+        communs = []
     if communs:
-        score += min(20, 5 * len(communs))
+        score += min(20, 5 * len(specifiques) + 2 * (len(communs) - len(specifiques)))
         # Le projet passé le plus proche de l'appel sert d'argument concret.
         meilleur, communs_meilleur = None, set()
         for f in p.get("financements_obtenus") or []:
-            c = mots_o & jetons(f"{f.get('projet') or ''} {f.get('acronyme') or ''}")
+            c = (mots_o & jetons(f"{f.get('projet') or ''} {f.get('acronyme') or ''}")) - GENERIQUES
             if len(c) > len(communs_meilleur):
                 meilleur, communs_meilleur = f, c
         if meilleur:

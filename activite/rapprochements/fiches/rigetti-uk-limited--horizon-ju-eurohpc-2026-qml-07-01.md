@@ -23,10 +23,12 @@ Segment retenu : **calcul**. Justification : mots-clés des projets : quantum co
 
 ## Pourquoi cet appel pourrait vous concerner
 
-1. Pays GB éligible.
-2. Type d'organisation PME éligible.
-3. Segment « calcul » visé par l'appel.
-4. Mots-clés communs avec ses projets passés : computing, learning, machine.
+1. Segment « calcul » visé par l'appel.
+2. Votre projet Quantum Machine Learning for Financial Data Streams (Innovate UK, 2024) porte sur des thèmes proches de l'appel : learning, machine.
+3. Au moins un projet financé encore en cours.
+4. Vous avez déjà coordonné un projet financé (Quantum Computing Platform for NISQ Era Commercial Applications, Innovate UK, 4 988 077 €).
+
+D'après la fiche de l'appel, le pays (GB) et le type d'organisation (PME) semblent compatibles avec les conditions de participation, sous réserve des règles détaillées.
 
 ## À vérifier avant d'y consacrer du temps
 
@@ -34,11 +36,11 @@ Segment retenu : **calcul**. Justification : mots-clés des projets : quantum co
 
 ## Calendrier
 
-Il reste **9 semaine(s)** avant la clôture : délai suffisant pour préparer un dossier sérieux.
+Il reste **9 semaine(s)** avant la clôture : réaliste surtout si un consortium existe déjà ou se forme dans les prochaines semaines.
 
 ## Aide gratuite
 
-Vous pouvez aussi vous adresser gratuitement à Innovate UK Business Connect (https://iuk-business-connect.org.uk/) et le Point de contact national britannique pour Horizon Europe (https://www.ukri.org/apply-for-funding/horizon-europe/), ainsi qu'au service d'assistance indiqué sur la page de l'appel.
+Vous pouvez aussi vous adresser gratuitement à Innovate UK Business Connect (https://iuk-business-connect.org.uk/) et au Point de contact national britannique pour Horizon Europe (https://www.ukri.org/apply-for-funding/horizon-europe/), ainsi qu'au service d'assistance indiqué sur la page de l'appel.
 
 ## Pour aller plus loin
 

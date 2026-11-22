@@ -1,4 +1,4 @@
-# Fiche opportunité : RIVERLANE LTD × HORIZON-CL3-2027-02-CS-ECCC-04
+# Fiche opportunité : RIVERLANE LTD × HORIZON-JU-CHIPS-2026-QUANTUM-2-RIA
 
 *Fiche gratuite, établie le 2026-11-22 à partir de données publiques uniquement. Ce n'est ni un avis d'éligibilité, ni une recommandation de candidater.*
 
@@ -16,17 +16,19 @@ Segment retenu : **calcul**. Justification : mots-clés des projets : quantum co
 
 ## L'appel
 
-- **New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks** (HORIZON-CL3-2027-02-CS-ECCC-04), Commission européenne / ECCC, Horizon Europe – Cluster 3.
-- **Clôture : 2027-09-15** (heure et fuseau à relire sur la page officielle). Vérifiée le 2026-11-22 sur la [page officielle](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2027-02-CS-ECCC-04).
-- Nature : subvention. Budget : 4 000 000 €. Montant indicatif par projet : 4 000 000 €.
-- Consortium : exigé, au moins 3 entités. Pays éligibles : UE27, HE_ASSOCIES.
+- **Quantum Chips: Enabling Technologies** (HORIZON-JU-CHIPS-2026-QUANTUM-2-RIA), Chips JU, Horizon Europe – Chips JU (Chips for Europe Initiative).
+- **Clôture : 2027-03-31** (heure et fuseau à relire sur la page officielle). Vérifiée le 2026-11-22 sur la [page officielle](https://qt.eu/funding-opportunities).
+- Nature : subvention. Budget : 30 000 000 €. Montant indicatif par projet : 10 000 000 €.
+- Consortium : exigé, au moins 3 entités. Pays éligibles : EEE, CA, IL, KR, NZ, CH, GB.
 
 ## Pourquoi cet appel pourrait vous concerner
 
-1. Pays GB éligible.
-2. Type d'organisation PME éligible.
-3. Segment « calcul » visé par l'appel.
-4. Mots-clés communs avec ses projets passés : computing, future, hybrid.
+1. Segment « calcul » visé par l'appel.
+2. Votre projet SurgeonQ: Lattice-surgery platform for real-time, scalable error correction on superconducting qubits (Innovate UK, 2025) porte sur des thèmes proches de l'appel : qubits.
+3. Au moins un projet financé encore en cours.
+4. Vous avez déjà porté seul un projet financé (Anian Virtual Lab, Innovate UK, 2 670 862 €).
+
+D'après la fiche de l'appel, le pays (GB) et le type d'organisation (PME) semblent compatibles avec les conditions de participation, sous réserve des règles détaillées.
 
 ## À vérifier avant d'y consacrer du temps
 
@@ -34,11 +36,11 @@ Segment retenu : **calcul**. Justification : mots-clés des projets : quantum co
 
 ## Calendrier
 
-Il reste **42 semaine(s)** avant la clôture : délai suffisant pour préparer un dossier sérieux.
+Il reste **18 semaine(s)** avant la clôture : délai suffisant pour préparer un dossier sérieux.
 
 ## Aide gratuite
 
-Vous pouvez aussi vous adresser gratuitement à Innovate UK Business Connect (https://iuk-business-connect.org.uk/) et le Point de contact national britannique pour Horizon Europe (https://www.ukri.org/apply-for-funding/horizon-europe/), ainsi qu'au service d'assistance indiqué sur la page de l'appel.
+Vous pouvez aussi vous adresser gratuitement à Innovate UK Business Connect (https://iuk-business-connect.org.uk/) et au Point de contact national britannique pour Horizon Europe (https://www.ukri.org/apply-for-funding/horizon-europe/), ainsi qu'au service d'assistance indiqué sur la page de l'appel.
 
 ## Pour aller plus loin
 

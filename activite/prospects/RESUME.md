@@ -4,10 +4,11 @@ Extraction du 2026-11-22. Données publiques au niveau organisation uniquement (
 
 ## 1. En bref
 
-- **681 entreprises** dans `prospects.jsonl` (464 PME, 217 grandes entreprises), issues de 33 pays. Elles ont obtenu **819,4 M EUR** de financements publics sur des projets quantiques actifs ou terminés depuis le 2019-01-01. Cela représente 1 485 participations financées dans 623 projets.
-- **567 universités, organismes de recherche et autres organismes** dans `prospects_recherche.jsonl` (336 universités, 152 organismes de recherche, 79 « autre »). Ce sont des partenaires de consortium, pas des acheteurs.
-- **224 entreprises ont porté au moins un projet** : 118 ont coordonné un projet collaboratif et 147 ont été seules bénéficiaires (EIC Accelerator, Innovate UK mono-entreprise…). Une entreprise peut être dans les deux cas.
+- **678 entreprises** dans `prospects.jsonl` (461 PME, 217 grandes entreprises), issues de 33 pays. Elles ont obtenu **817,4 M EUR** de financements publics sur des projets quantiques actifs ou terminés depuis le 2019-01-01. Cela représente 1 480 participations financées dans 623 projets.
+- **570 universités, organismes de recherche et autres organismes** dans `prospects_recherche.jsonl` (337 universités, 153 organismes de recherche, 80 « autre »). Ce sont des partenaires de consortium, pas des acheteurs.
+- **223 entreprises ont porté au moins un projet** : 117 ont coordonné un projet collaboratif et 147 ont été seules bénéficiaires (EIC Accelerator, Innovate UK mono-entreprise…). Une entreprise peut être dans les deux cas.
 - **366 entreprises ont au moins un projet encore en cours** (date de fin ≥ 2026-11-22).
+- **Part du quantique** (`part_quantique` = projets quantiques / tous projets financés depuis 2019) : **375 entreprises ≥ 0,5**, dont 244 n'ont que des projets quantiques. C'est le cœur de cible « quantique natif ». **97 entreprises ont `profil_consultant_ue = true`** : sociétés de gestion de projets UE, conseil, fondations, mais aussi grands groupes très présents dans les programmes UE (voir § 3.9 et § 5).
 - **Précision mesurée à la main** sur deux échantillons aléatoires de 30 projets retenus :
   - stricte (« le projet est un projet de technologie quantique ») : 80 % sur l'ensemble des projets, 90 % sur les projets comptant une entreprise ;
   - large (y compris les projets où le quantique est une composante secondaire) : 97 % et 100 %.
@@ -20,12 +21,13 @@ Extraction du 2026-11-22. Données publiques au niveau organisation uniquement (
 |---|---|
 | `prospects.jsonl` | Une entreprise par ligne (types `PME`, `grande_entreprise`), triée par total obtenu décroissant. |
 | `prospects_recherche.jsonl` | Universités (`universite`), organismes publics de recherche (`recherche`) et autres organismes (`autre` : agences de financement, collectivités, associations, clusters). |
-| `prospects.csv` | Vue à plat des entreprises : nom, pays, ville, type_org, segment, nb_projets, total_obtenu_eur, derniere_activite, a_coordonne (oui = coordinateur ou seul bénéficiaire d'au moins un projet), programmes, site_web, lien_source_principal (projet le mieux doté). |
+| `prospects.csv` | Vue à plat des entreprises : nom, pays, ville, type_org, segment, nb_projets, total_obtenu_eur, derniere_activite, a_coordonne (oui = coordinateur ou seul bénéficiaire d'au moins un projet), programmes, site_web, lien_source_principal (projet le mieux doté), puis nb_projets_total, part_quantique, profil_consultant_ue (oui/non). |
 | `construire_prospects.py` | Script d'extraction reproductible. Bibliothèque standard uniquement. Cache des réponses brutes hors dépôt, ≥ 1,1 s entre requêtes, reprise sur cache, option `--hors-ligne`. |
 | `valider_prospects.py` | Contrôle de chaque ligne contre le contrat (champs, vocabulaires, dates ISO, codes pays ISO 3166-1, URLs de sources, absence de données personnelles, cohérence des totaux, fenêtre temporelle, CSV). |
 | `echantillon_precision.csv` | Les 60 projets tirés au sort et mon verdict manuel (oui / limite / non) avec sa justification. |
 
 Champs ajoutés au contrat, tous au niveau organisation :
+- `nb_projets_total`, `part_quantique`, `profil_consultant_ue` : champs optionnels désormais dans l'exemple de `CONTRAT.md`, renseignés pour les entreprises seulement (§ 3.9) ;
 - `a_coordonne` (booléen) ;
 - `identifiants_sources` (PIC CORDIS, identifiant d'organisation GtR) ;
 - `note` (origine du type d'organisation, taux de change, date des dumps, autres libellés) ;
@@ -39,7 +41,7 @@ Champs ajoutés au contrat, tous au niveau organisation :
 |---|---|---|
 | **CORDIS – Horizon Europe** (dont EIC, Chips JU/KDT, EuroHPC) | Dump open data `cordis-HORIZONprojects-csv.zip`, fichiers du 2026-11-05 (fiche data.europa.eu `cordis-eu-research-projects-under-horizon-europe-2021-2027`) | 24 419 projets, 151 382 lignes organisation |
 | **CORDIS – H2020** | Dump `cordis-h2020projects-csv.zip`, fichiers du 2026-11-05 | 35 389 projets, 179 063 lignes organisation |
-| **UKRI Gateway to Research** | API v2 (`Accept: application/vnd.rcuk.gtr.json-v7`) : `/projects?q=…`, `/funds/{id}`, `/organisations/{id}` | 23 requêtes plein texte, 6 657 projets distincts récoltés ; 2 067 appels (108 pages de recherche, 1 630 funds, 329 organisations), 0 échec après relances. Le service a renvoyé des 503 temporaires lors de mes premiers essais manuels ; le script relance avec attente croissante. |
+| **UKRI Gateway to Research** | API v2 (`Accept: application/vnd.rcuk.gtr.json-v7`) : `/projects?q=…`, `/funds/{id}`, `/organisations/{id}`, `/organisations/{id}/projects` | 23 requêtes plein texte, 6 657 projets distincts récoltés ; 2 295 appels (108 pages de recherche, 1 630 funds, 329 organisations, 228 pages de projets par organisation pour `nb_projets_total`), 0 échec après relances. Le service a renvoyé des 503 temporaires lors de mes premiers essais manuels ; le script relance avec attente croissante. |
 | **BCE** | `data-api.ecb.europa.eu`, série EXR.D.GBP.EUR.SP00.A | Taux de référence du **2026-11-20 : 1 EUR = 0,83735 GBP** |
 
 **Pourquoi les dumps plutôt que l'API de recherche CORDIS.** Les dumps contiennent *tous* les projets, sans aucune limite de pagination. Leur `organization.csv` donne directement :
@@ -139,12 +141,12 @@ Exceptions documentées dans `note` :
 **GtR.** GtR ne publie ni la nature ni la taille des organisations.
 - La nature (université, laboratoire public, Catapult, entreprise, autre) est déduite du nom.
 - La taille est **inférée** du taux d'aide Innovate UK (`grantOffer` / `projectCost`) sur les subventions R&D, hors contrats SBRI et projets UE. Une grande entreprise est plafonnée à 50 % en recherche industrielle et en faisabilité.
-  - Majorité des taux > 55 % → `PME` : 143 entreprises.
+  - Majorité des taux > 55 % → `PME` : 140 entreprises.
   - Majorité des taux entre 40 et 50 % → `grande_entreprise` : 38 entreprises, signalées « à vérifier ».
   - Taux non concluants → `PME` **par défaut** : 20 entreprises, signalées « à vérifier ».
 
   C'est une déduction. Exemples d'erreurs probables : Capgemini UK et QuEra Computing UK sont classées PME par défaut ; Kelvin Nanotechnology est inférée grande entreprise.
-- Pays : 17 entreprises GtR sans pays ni région dans GtR sont mises en `GB`. Les financements UKRI sont réservés aux organisations établies au Royaume-Uni. Ce cas est signalé dans `note`.
+- Pays : 16 entreprises GtR sans pays ni région dans GtR sont mises en `GB`. Les financements UKRI sont réservés aux organisations établies au Royaume-Uni. Ce cas est signalé dans `note`.
 
 ### 3.6 Segment
 
@@ -159,13 +161,35 @@ Pour chaque projet, je compte les termes de segment (tableau du § 3.3, élargi 
 
 1. Je dédoublonne par PIC CORDIS (H2020 et Horizon Europe confondus) et par identifiant d'organisation GtR. Si une même entité apparaît plusieurs fois dans un même projet, ses montants sont additionnés et je garde le rôle le plus élevé.
 2. Je fusionne ensuite de façon **conservatrice**, uniquement si le nom normalisé (majuscules, accents et ponctuation retirés, formes sociales LTD/GMBH/SAS/BV… retirées) **et** le pays sont strictement égaux. La fusion n'est faite qu'entre CORDIS et GtR, ou entre deux identifiants GtR. Elle n'a jamais lieu entre deux PIC CORDIS distincts, ni s'il y a ambiguïté.
-3. Résultat : 82 fusions, dont **13 entreprises présentes dans les deux sources** (Riverlane, Toshiba Europe, Quantum Motion, Duality Quantum Photonics, M Squared Lasers, Phasecraft, Quantum Dice, PQShield, Element Six, Hitachi Europe…). Au total, 467 entreprises viennent de CORDIS seul et 201 de GtR seul.
+3. Résultat : 82 fusions, dont **13 entreprises présentes dans les deux sources** (Riverlane, Toshiba Europe, Quantum Motion, Duality Quantum Photonics, M Squared Lasers, Phasecraft, Quantum Dice, PQShield, Element Six, Hitachi Europe…). Au total, 467 entreprises viennent de CORDIS seul et 198 de GtR seul.
 4. `site_web` n'est rempli que si la source le fournit : `organizationURL` CORDIS, le champ GtR étant toujours vide. Il est renseigné pour 108 entreprises, aucun domaine n'est deviné.
 
 ### 3.8 Montants
 
 - **CORDIS** : `ecContribution` par organisation, c'est-à-dire la contribution UE maximale signée, pas les paiements effectifs.
 - **GtR** : `grantOffer` par participant, ou montant total du fund pour les subventions de conseils de recherche. Converti en euros par montant GBP / 0,83735 (taux BCE du 2026-11-20, rappelé dans `note`).
+
+### 3.9 Part du quantique et profil « consultant UE » (entreprises)
+
+**`nb_projets_total`.** Nombre de **tous** les projets financés de l'entreprise dans la même fenêtre (fin ≥ 2019-01-01), quel que soit le thème. Il est calculé avec les mêmes critères de financement que `nb_projets` :
+- **CORDIS** : tous les projets H2020 et Horizon Europe des dumps où l'un des PIC rattachés à l'entité a `ecContribution` > 0 ;
+- **GtR** : tous les projets de `/organisations/{id}/projects` (un appel par page de 100, 228 appels) où l'entreprise a `grantOffer` > 0, ou est porteuse d'une subvention de conseil de recherche.
+
+Les deux comptes sont additionnés et figurent dans `note` (« Projets financés depuis 2019-01-01, tous thèmes : n CORDIS, m GtR »). Les projets quantiques sont inclus par construction : `nb_projets_total` ≥ `nb_projets`.
+
+**`part_quantique`** = `nb_projets` / `nb_projets_total`, arrondi à 2 décimales. Il vaut null si la liste GtR n'a pas pu être lue ; cela n'arrive pour aucune entreprise ici.
+
+**`profil_consultant_ue` = true** dans l'un ou l'autre de ces cas :
+1. l'entreprise compte **au moins 15 projets CORDIS financés** (tous thèmes, depuis 2019) **et** `part_quantique` < 0,20 ;
+2. son nom (majuscules, sans accents) contient un marqueur de gestion de projets, de conseil ou de fondation : `CONSULT`, `BERATUNG`, `PLANUNGSGESELLSCHAFT`, `FOUNDATION`, `STIFTUNG`, `FONDAZIONE`, `FUNDACI`, `FUNDACAO`, `EURESCOM`.
+
+Le seuil de 15 ne compte que les projets UE (CORDIS), pas les subventions GtR.
+
+**Limites.**
+- Le dénominateur ne couvre que les identifiants rattachés à l'entité. Une société britannique vue seulement dans GtR, mais aussi présente en H2020 sous un PIC non fusionné, a une part surestimée. L'inverse vaut pour une société CORDIS dont les subventions Innovate UK n'ont pas été fusionnées.
+- Les programmes hors H2020 et Horizon Europe (Digital Europe, programmes nationaux…) ne sont pas comptés.
+- Le compte des projets quantiques hérite de la précision du filtre (§ 4).
+- La règle 1 attrape aussi les **grands groupes industriels très présents dans les programmes UE** (Thales, Airbus, Infineon, IBM Research, Telefónica I+D, EDF…) : 59 des 97 entreprises signalées sont des grandes entreprises. Pour isoler les sociétés de montage de projets UE et de conseil, il faut croiser avec `type_org = PME` (38 entreprises).
 
 ## 4. Précision mesurée (contrôle manuel)
 
@@ -203,7 +227,7 @@ L'imprécision vient surtout des projets académiques dont le quantique est la m
 
 | Pays | Entreprises | Total obtenu (EUR) |
 |---|---|---|
-| GB | 223 | 291 535 156 |
+| GB | 220 | 289 551 509 |
 | DE | 99 | 107 686 498 |
 | FR | 69 | 104 562 199 |
 | IT | 45 | 30 019 470 |
@@ -227,7 +251,7 @@ L'imprécision vient surtout des projets académiques dont le quantique est la m
 | LV, SI, MT, RS | 2 chacun | 802 500 / 714 796 / 800 000 / 757 125 |
 | KR, HR, NO, HU | 1 chacun | 749 750 / 350 000 / 343 350 / 41 360 |
 
-**Pays les plus représentés.** Le Royaume-Uni (223 entreprises, 291,5 M EUR) domine parce que GtR couvre en détail les programmes nationaux d'Innovate UK. Les données de l'UE ne couvrent, elles, que les programmes européens. Viennent ensuite l'Allemagne (99 ; 107,7 M), la France (69 ; 104,6 M), l'Italie (45), l'Espagne (35) et les Pays-Bas (31, mais 89,3 M : forte concentration EIC et Chips JU).
+**Pays les plus représentés.** Le Royaume-Uni (220 entreprises, 289,6 M EUR) domine parce que GtR couvre en détail les programmes nationaux d'Innovate UK. Les données de l'UE ne couvrent, elles, que les programmes européens. Viennent ensuite l'Allemagne (99 ; 107,7 M), la France (69 ; 104,6 M), l'Italie (45), l'Espagne (35) et les Pays-Bas (31, mais 89,3 M : forte concentration EIC et Chips JU).
 
 ### Par segment et par type
 
@@ -235,16 +259,16 @@ L'imprécision vient surtout des projets académiques dont le quantique est la m
 |---|---|---|
 | calcul | 202 | 311 922 313 |
 | communication | 102 | 117 073 751 |
-| capteurs | 100 | 84 455 886 |
+| capteurs | 98 | 83 938 833 |
 | transverse | 84 | 213 801 753 |
-| composants | 76 | 42 252 026 |
+| composants | 75 | 40 785 431 |
 | pqc | 74 | 29 096 456 |
 | logiciel | 35 | 15 147 858 |
 | inconnu | 8 | 5 659 966 |
 
 | Type | Entreprises | Total (EUR) |
 |---|---|---|
-| PME | 464 | 608 760 955 |
+| PME | 461 | 606 777 307 |
 | grande_entreprise | 217 | 210 649 054 |
 
 ### Par programme
@@ -254,7 +278,7 @@ Une entreprise est comptée dans chaque programme où elle a obtenu au moins un 
 | Programme | Entreprises | Participations | Montant (EUR) |
 |---|---|---|---|
 | Horizon Europe (hors EIC, Chips JU, EuroHPC) | 310 | 453 | 224 945 980 |
-| Innovate UK | 213 | 578 | 266 217 658 |
+| Innovate UK | 210 | 573 | 264 234 011 |
 | H2020 (hors EIC, EuroHPC) | 134 | 221 | 85 929 436 |
 | EIC (H2020 EIC pilot + Horizon Europe) | 89 | 118 | 173 795 743 |
 | Chips JU (dont KDT JU) | 86 | 98 | 57 518 770 |
@@ -267,57 +291,116 @@ Une entreprise est comptée dans chaque programme où elle a obtenu au moins un 
 
 | Total obtenu | Entreprises |
 |---|---|
-| < 100 k EUR | 107 |
-| 100 k – 500 k EUR | 299 |
-| 500 k – 2 M EUR | 166 |
+| < 100 k EUR | 106 |
+| 100 k – 500 k EUR | 298 |
+| 500 k – 2 M EUR | 165 |
 | 2 – 5 M EUR | 71 |
 | ≥ 5 M EUR | 38 |
 
-**Récurrence.** 445 entreprises n'ont qu'un seul projet ; 136 en ont au moins trois.
+**Récurrence.** 444 entreprises n'ont qu'un seul projet quantique ; 136 en ont au moins trois.
 
 **Coordination.**
-- 118 entreprises ont coordonné au moins un projet collaboratif, soit 213 coordinations.
+- 117 entreprises ont coordonné au moins un projet collaboratif, soit 212 coordinations.
 - 147 ont été seules bénéficiaires d'au moins un projet, soit 216 projets.
-- Au total, 224 entreprises ont `a_coordonne = true`.
+- Au total, 223 entreprises ont `a_coordonne = true`.
 
 ### Top 30 par financement public obtenu
 
-| # | Entreprise | Pays | Type | Segment | Projets | Total (EUR) | A porté | Programmes |
-|---|---|---|---|---|---|---|---|---|
-| 1 | COLDQUANTA UK LIMITED | GB | PME | transverse | 19 | 22 715 976 | coordination | Innovate UK |
-| 2 | RIVERLANE LTD | GB | PME | calcul | 24 | 16 106 733 | coordination | Horizon Europe / Innovate UK / UKRI |
-| 3 | OXFORD IONICS LIMITED | GB | PME | calcul | 13 | 16 104 530 | coordination | Innovate UK |
-| 4 | RIGETTI UK LIMITED | GB | PME | calcul | 12 | 12 449 667 | coordination | Innovate UK |
-| 5 | IBM RESEARCH GMBH | CH | grande_entreprise | transverse | 14 | 12 331 182 | seul bénéficiaire | EIC / H2020 / Horizon Europe |
-| 6 | ORCA COMPUTING LTD. | GB | PME | calcul | 14 | 12 264 632 | coordination | Innovate UK |
-| 7 | TOSHIBA EUROPE LIMITED | GB | grande_entreprise | communication | 17 | 11 949 961 | coordination | H2020 / Horizon Europe / Innovate UK |
-| 8 | THALES | FR | grande_entreprise | transverse | 20 | 11 365 712 | coordination | Chips JU / EIC / EuroHPC / H2020 / Horizon Europe |
-| 9 | QUANTUM MOTION TECHNOLOGIES LTD | GB | PME | calcul | 12 | 10 950 825 | coordination | H2020 / Innovate UK |
-| 10 | Delft Networks B.V. | NL | PME | communication | 3 | 10 785 111 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
-| 11 | EXAIL | FR | grande_entreprise | capteurs | 14 | 10 363 556 | coordination | H2020 / Horizon Europe |
-| 12 | ALPINE QUANTUM TECHNOLOGIES GMBH | AT | PME | calcul | 9 | 10 086 238 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
-| 13 | QUOBLY | FR | PME | calcul | 5 | 10 057 300 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
-| 14 | SINGLE QUANTUM BV | NL | PME | transverse | 17 | 9 849 574 | coordination | Chips JU / EIC / H2020 / Horizon Europe |
-| 15 | TOPTICA PHOTONICS SE | DE | PME | transverse | 13 | 9 714 725 | non | H2020 / Horizon Europe |
-| 16 | KIUTRA GMBH | DE | PME | calcul | 5 | 9 276 728 | seul bénéficiaire | EIC / H2020 / Horizon Europe |
-| 17 | QBLOX BV | NL | PME | calcul | 7 | 9 156 826 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
-| 18 | WELINQ SAS | FR | PME | communication | 5 | 9 031 812 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
-| 19 | PASQAL | FR | PME | calcul | 7 | 8 877 845 | coordination | Chips JU / EIC / Horizon Europe |
-| 20 | SEEQC UK | GB | PME | calcul | 10 | 8 731 258 | coordination | Innovate UK |
-| 21 | QUANTWARE B.V. | NL | PME | calcul | 6 | 7 875 088 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
-| 22 | QUERA COMPUTING UK LIMITED | GB | PME (par défaut) | calcul | 1 | 7 826 823 | seul bénéficiaire | Innovate UK (SBRI) |
-| 23 | KETS QUANTUM SECURITY LTD | GB | PME | communication | 13 | 7 724 487 | coordination | Innovate UK / UKRI |
-| 24 | SEMIQON TECHNOLOGIES OY | FI | PME | calcul | 6 | 7 598 049 | coordination | Chips JU / EIC / Horizon Europe |
-| 25 | INFINEON TECHNOLOGIES AUSTRIA AG | AT | grande_entreprise | transverse | 7 | 7 394 063 | coordination | Chips JU / EIC / H2020 / Horizon Europe |
-| 26 | CPI TMD TECHNOLOGIES LIMITED | GB | grande_entreprise (inféré) | transverse | 9 | 7 220 777 | coordination | Innovate UK |
-| 27 | SPARROW QUANTUM ApS | DK | PME | transverse | 4 | 7 061 992 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
-| 28 | NU QUANTUM LTD | GB | PME | transverse | 11 | 7 055 985 | coordination | Innovate UK |
-| 29 | BULL SAS | FR | grande_entreprise | calcul | 9 | 6 300 049 | coordination | EuroHPC / H2020 / Horizon Europe |
-| 30 | AIRBUS DEFENCE AND SPACE GMBH | DE | grande_entreprise | capteurs | 3 | 6 036 269 | non | Horizon Europe |
+| # | Entreprise | Pays | Type | Segment | Projets quantiques / total | Part quantique | Total (EUR) | A porté | Programmes |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | COLDQUANTA UK LIMITED | GB | PME | transverse | 19 / 21 | 0.90 | 22 715 976 | coordination | Innovate UK |
+| 2 | RIVERLANE LTD | GB | PME | calcul | 24 / 24 | 1.00 | 16 106 733 | coordination | Horizon Europe / Innovate UK / UKRI |
+| 3 | OXFORD IONICS LIMITED | GB | PME | calcul | 13 / 13 | 1.00 | 16 104 530 | coordination | Innovate UK |
+| 4 | RIGETTI UK LIMITED | GB | PME | calcul | 12 / 12 | 1.00 | 12 449 667 | coordination | Innovate UK |
+| 5 | IBM RESEARCH GMBH † | CH | grande_entreprise | transverse | 14 / 82 | 0.17 | 12 331 182 | seul bénéficiaire | EIC / H2020 / Horizon Europe |
+| 6 | ORCA COMPUTING LTD. | GB | PME | calcul | 14 / 19 | 0.74 | 12 264 632 | coordination | Innovate UK |
+| 7 | TOSHIBA EUROPE LIMITED | GB | grande_entreprise | communication | 17 / 31 | 0.55 | 11 949 961 | coordination | H2020 / Horizon Europe / Innovate UK |
+| 8 | THALES † | FR | grande_entreprise | transverse | 20 / 145 | 0.14 | 11 365 712 | coordination | Chips JU / EIC / EuroHPC / H2020 / Horizon Europe |
+| 9 | QUANTUM MOTION TECHNOLOGIES LTD | GB | PME | calcul | 12 / 14 | 0.86 | 10 950 825 | coordination | H2020 / Innovate UK |
+| 10 | Delft Networks B.V. | NL | PME | communication | 3 / 3 | 1.00 | 10 785 111 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
+| 11 | EXAIL | FR | grande_entreprise | capteurs | 14 / 22 | 0.64 | 10 363 556 | coordination | H2020 / Horizon Europe |
+| 12 | ALPINE QUANTUM TECHNOLOGIES GMBH | AT | PME | calcul | 9 / 9 | 1.00 | 10 086 238 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
+| 13 | QUOBLY | FR | PME | calcul | 5 / 5 | 1.00 | 10 057 300 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
+| 14 | SINGLE QUANTUM BV | NL | PME | transverse | 17 / 19 | 0.89 | 9 849 574 | coordination | Chips JU / EIC / H2020 / Horizon Europe |
+| 15 | TOPTICA PHOTONICS SE | DE | PME | transverse | 13 / 14 | 0.93 | 9 714 725 | non | H2020 / Horizon Europe |
+| 16 | KIUTRA GMBH | DE | PME | calcul | 5 / 6 | 0.83 | 9 276 728 | seul bénéficiaire | EIC / H2020 / Horizon Europe |
+| 17 | QBLOX BV | NL | PME | calcul | 7 / 7 | 1.00 | 9 156 826 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
+| 18 | WELINQ SAS | FR | PME | communication | 5 / 5 | 1.00 | 9 031 812 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
+| 19 | PASQAL | FR | PME | calcul | 7 / 7 | 1.00 | 8 877 845 | coordination | Chips JU / EIC / Horizon Europe |
+| 20 | SEEQC UK | GB | PME | calcul | 10 / 10 | 1.00 | 8 731 258 | coordination | Innovate UK |
+| 21 | QUANTWARE B.V. | NL | PME | calcul | 6 / 6 | 1.00 | 7 875 088 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
+| 22 | QUERA COMPUTING UK LIMITED | GB | PME (par défaut) | calcul | 1 / 1 | 1.00 | 7 826 823 | seul bénéficiaire | Innovate UK |
+| 23 | KETS QUANTUM SECURITY LTD | GB | PME | communication | 13 / 13 | 1.00 | 7 724 487 | coordination | Innovate UK / UKRI |
+| 24 | SEMIQON TECHNOLOGIES OY | FI | PME | calcul | 6 / 6 | 1.00 | 7 598 049 | coordination | Chips JU / EIC / Horizon Europe |
+| 25 | INFINEON TECHNOLOGIES AUSTRIA AG † | AT | grande_entreprise | transverse | 7 / 79 | 0.09 | 7 394 063 | coordination | Chips JU / EIC / H2020 / Horizon Europe |
+| 26 | CPI TMD TECHNOLOGIES LIMITED | GB | grande_entreprise (inféré) | transverse | 9 / 14 | 0.64 | 7 220 777 | coordination | Innovate UK |
+| 27 | SPARROW QUANTUM ApS | DK | PME | transverse | 4 / 4 | 1.00 | 7 061 992 | seul bénéficiaire | Chips JU / EIC / Horizon Europe |
+| 28 | NU QUANTUM LTD | GB | PME | transverse | 11 / 12 | 0.92 | 7 055 985 | coordination | Innovate UK |
+| 29 | BULL SAS † | FR | grande_entreprise | calcul | 9 / 47 | 0.19 | 6 300 049 | coordination | EuroHPC / H2020 / Horizon Europe |
+| 30 | AIRBUS DEFENCE AND SPACE GMBH † | DE | grande_entreprise | capteurs | 3 / 69 | 0.04 | 6 036 269 | non | Horizon Europe |
+
+† = `profil_consultant_ue`. Ici, ce sont tous de grands groupes très présents dans les programmes UE (règle 1 du § 3.9).
+
+### Part du quantique dans l'activité financée
+
+| part_quantique | Entreprises | dont PME | dont grandes | Total obtenu (EUR) |
+|---|---|---|---|---|
+| 1,00 (tous les projets financés sont quantiques) | 244 | 194 | 50 | 344 836 588 |
+| [0,75 ; 1[ | 25 | 21 | 4 | 126 328 490 |
+| [0,50 ; 0,75[ | 106 | 69 | 37 | 119 731 704 |
+| [0,20 ; 0,50[ | 122 | 86 | 36 | 79 774 065 |
+| [0,05 ; 0,20[ | 135 | 74 | 61 | 118 625 581 |
+| < 0,05 | 46 | 17 | 29 | 28 129 934 |
+| **Total** | **678** | **461** | **217** | **817 426 362** |
+
+La médiane est de 0,50 et la moyenne de 0,55. **375 entreprises ont une part ≥ 0,5** (284 PME, 91 grandes) : elles totalisent 590,9 M EUR. Le dénominateur médian n'est que de 4 projets ; une part de 1,00 sur 1 projet (ex. SOFTJAM, Demcon Focal) est donc peu informative, et il vaut mieux la lire avec `nb_projets_total`.
+
+Exemples « quantique natif » (part ≥ 0,5, non signalés consultant), par financement décroissant :
+
+| Entreprise | Pays | Type | Segment | Projets quantiques / total | Part |
+|---|---|---|---|---|---|
+| COLDQUANTA UK LIMITED | GB | PME | transverse | 19 / 21 | 0.90 |
+| RIVERLANE LTD | GB | PME | calcul | 24 / 24 | 1.00 |
+| OXFORD IONICS LIMITED | GB | PME | calcul | 13 / 13 | 1.00 |
+| RIGETTI UK LIMITED | GB | PME | calcul | 12 / 12 | 1.00 |
+| ORCA COMPUTING LTD. | GB | PME | calcul | 14 / 19 | 0.74 |
+| TOSHIBA EUROPE LIMITED | GB | grande_entreprise | communication | 17 / 31 | 0.55 |
+| QUANTUM MOTION TECHNOLOGIES LTD | GB | PME | calcul | 12 / 14 | 0.86 |
+| Delft Networks B.V. | NL | PME | communication | 3 / 3 | 1.00 |
+| EXAIL | FR | grande_entreprise | capteurs | 14 / 22 | 0.64 |
+| ALPINE QUANTUM TECHNOLOGIES GMBH | AT | PME | calcul | 9 / 9 | 1.00 |
+
+**97 entreprises ont `profil_consultant_ue = true`.**
+- 91 via la règle 1 (≥ 15 projets CORDIS et part < 0,20), 11 via le nom, 5 cumulant les deux.
+- Par type : 59 grandes entreprises et 38 PME, totalisant 115,2 M EUR.
+- Les grandes entreprises signalées sont surtout des groupes industriels : EDF (2 projets quantiques sur 156 financés), AVL, Thales (20/145), Bosch Car Multimedia, Indra, Leonardo, Telefónica I+D, Infineon, Airbus, IBM Research (14/82), Bull (9/47)…
+- Parmi les 38 PME signalées, les profils de montage et de gestion de projets UE et de conseil ressortent nettement. Exemples :
+
+| Entreprise | Pays | Projets quantiques / total | Part | Déclencheur |
+|---|---|---|---|---|
+| EURICE EUROPEAN RESEARCH AND PROJECT OFFICE GMBH | DE | 5 / 100 | 0.05 | ≥ 15 projets UE et part < 0,20 |
+| UBITECH LIMITED | CY | 3 / 64 | 0.05 | ≥ 15 projets UE et part < 0,20 |
+| WINGS ICT SOLUTIONS TECHNOLOGIES PLIROFORIKIS KAI EPIKOINONION ANONYMI ETAIREIA | GR | 2 / 71 | 0.03 | ≥ 15 projets UE et part < 0,20 |
+| TECHNIKON FORSCHUNGS- UND PLANUNGSGESELLSCHAFT MBH | AT | 2 / 31 | 0.06 | ≥ 15 projets UE et part < 0,20 + nom |
+| AMIRES SRO | CZ | 2 / 45 | 0.04 | ≥ 15 projets UE et part < 0,20 |
+| ECLIPSE FOUNDATION EUROPE GMBH | DE | 2 / 36 | 0.06 | ≥ 15 projets UE et part < 0,20 + nom |
+| INTELLIGENTSIA CONSULTANTS SARL | LU | 2 / 15 | 0.13 | ≥ 15 projets UE et part < 0,20 + nom |
+| DAY ONE SOCIETA A RESPONSABILITA LIMITATA | IT | 2 / 63 | 0.03 | ≥ 15 projets UE et part < 0,20 |
+| TIMELEX | BE | 1 / 64 | 0.02 | ≥ 15 projets UE et part < 0,20 |
+| SUITE5 DATA INTELLIGENCE SOLUTIONS LIMITED | CY | 1 / 68 | 0.01 | ≥ 15 projets UE et part < 0,20 |
+| INCITES CONSULTING SA | LU | 1 / 24 | 0.04 | ≥ 15 projets UE et part < 0,20 + nom |
+| DEEP BLUE SRL | IT | 1 / 109 | 0.01 | ≥ 15 projets UE et part < 0,20 |
+
+Exemples cités par le coordinateur :
+- Technikon, Ubitech, Eclipse Foundation Europe et Eurescom sont signalés.
+- Zortenet ne l'est pas (2 projets quantiques sur 6, part 0,33).
+- Capgemini UK (1/5, part 0,20, vue seulement dans GtR) et Capgemini Deutschland (1/1) ne le sont pas non plus : peu de projets financés rattachés à ces entités.
+
+Pour une prospection centrée sur les « quantiques natifs », filtrer `part_quantique ≥ 0,5` et `profil_consultant_ue = false` donne 371 entreprises.
 
 ## 6. Organisations de recherche et autres (`prospects_recherche.jsonl`)
 
-567 organisations, 3,12 Md EUR au total, en grande partie des subventions EPSRC aux universités britanniques. Le fichier compte 336 universités, 152 organismes de recherche et 79 « autre ». Par pays : GB 80, DE 79, IT 57, FR 51, ES 40, PL 22, GR 22, AT 19, NL 18, CZ 17.
+570 organisations, 3,13 Md EUR au total, en grande partie des subventions EPSRC aux universités britanniques. Le fichier compte 337 universités, 153 organismes de recherche et 80 « autre ». Par pays : GB 83, DE 79, IT 57, FR 51, ES 40, PL 22, GR 22, AT 19, NL 18, CZ 17.
 
 Les cinq premiers par montant :
 
@@ -347,11 +430,11 @@ Le type « autre » regroupe des agences nationales de financement (ANR, DFG, BM
 - **Royaume-Uni en Horizon Europe 2021-2023** : les entités britanniques étaient « associated partners » sans contribution UE. Elles sont exclues côté CORDIS et n'apparaissent que via « Horizon Europe Guarantee » dans GtR, si le résumé passe le filtre.
 
 **Biais de classement.**
-- **Taille des entreprises GtR** : inférée ou par défaut pour 201 entreprises (§ 3.5). Les filiales britanniques de groupes étrangers et les grands groupes vus uniquement dans GtR peuvent être mal classés. Le drapeau SME de CORDIS est autodéclaré et validé, mais parfois périmé : une startup qui a grandi, ou au contraire Duality Quantum Photonics marquée `SME=false`.
+- **Taille des entreprises GtR** : inférée ou par défaut pour 198 entreprises (§ 3.5). Les filiales britanniques de groupes étrangers et les grands groupes vus uniquement dans GtR peuvent être mal classés. Le drapeau SME de CORDIS est autodéclaré et validé, mais parfois périmé : une startup qui a grandi, ou au contraire Duality Quantum Photonics marquée `SME=false`.
 - **Segment = thème des projets, pas métier de l'entreprise** : un fournisseur de cryogénie ou d'électronique de contrôle engagé dans des projets d'ordinateur quantique est classé `calcul`, comme Qblox ou Kiutra. Les projets « Quantum Internet Alliance » et les lignes pilotes Chips JU tirent de nombreuses entreprises vers `communication` ou `transverse`.
 
 **Limites des données.**
-- **Ville** : absente pour 201 entreprises GtR seules (GtR ne publie que région et code postal) ; les libellés CORDIS sont gardés tels quels (souvent en majuscules).
+- **Ville** : absente pour 198 entreprises GtR seules (GtR ne publie que région et code postal) ; les libellés CORDIS sont gardés tels quels (souvent en majuscules).
 - **Montants** : contribution maximale signée et non paiements. Conversion GBP au taux unique du 2026-11-20 plutôt qu'au taux de chaque année. Les contrats SBRI (marchés publics de R&D précommerciale, à 100 %) sont comptés comme des financements Innovate UK.
 - **Doublons résiduels** : je n'ai pas fusionné les noms qui diffèrent au-delà des formes sociales. Exemple : « Quantum Motion » (GtR) et « QUANTUM MOTION TECHNOLOGIES LTD ». Même chose pour deux PIC CORDIS de même nom (1 cas d'entreprise, Telefónica I+D).
 - **Données personnelles** : je n'ai collecté aucune donnée personnelle. Quelques raisons sociales contiennent toutefois un nom de fondateur, par exemple « Robert Harrison Consulting GmbH ». Ce sont des noms d'entités juridiques publiés par la Commission.
@@ -387,6 +470,8 @@ Le premier lancement :
 
 `--date-extraction AAAA-MM-JJ` fixe la date d'extraction.
 
-Le validateur émet aussi des avertissements non bloquants :
+Le validateur accepte les trois champs optionnels (`nb_projets_total` entier ≥ `nb_projets`, `part_quantique` entre 0 et 1 égal à `nb_projets / nb_projets_total`, `profil_consultant_ue` booléen, null admis) et le CSV à 12 ou 15 colonnes.
+
+Il émet aussi des avertissements non bloquants :
 - 242 villes manquantes ;
 - 2 libellés « ressemblant à un nom de personne » vérifiés à la main : STANDARD CHARTERED BANK et COMPACT CRYOGENICS, deux entreprises.

@@ -46,6 +46,9 @@ Une ligne JSON par organisation.
   ],
   "total_obtenu_eur": 512000,
   "nb_projets": 1,
+  "nb_projets_total": 4,
+  "part_quantique": 0.25,
+  "profil_consultant_ue": false,
   "derniere_activite": "2027-12-31",
   "sources": ["https://cordis.europa.eu/…"],
   "date_extraction": "2026-11-22"

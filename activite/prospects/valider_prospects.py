@@ -15,7 +15,10 @@ Contrôles bloquants (code de sortie 1 si au moins une erreur) :
     aucune adresse e-mail ni numéro de téléphone dans les valeurs ;
   * fenêtre temporelle : financements terminés le 2019-01-01 ou après (ou sans date de fin) ;
   * conversion de devise documentée dans `note` pour les montants GtR ;
-  * prospects.csv : en-tête attendu et une ligne par entreprise.
+  * champs optionnels nb_projets_total (entier >= nb_projets), part_quantique (0-1, 2 décimales,
+    = nb_projets / nb_projets_total) et profil_consultant_ue (booléen), null acceptés ;
+  * prospects.csv : en-tête attendu (12 colonnes, ou 15 avec les trois champs optionnels) et une
+    ligne par entreprise.
 Avertissements (non bloquants) : libellés ressemblant à un nom de personne, ville manquante, etc.
 
 Usage : python3 -I valider_prospects.py [--dossier DOSSIER]
@@ -39,6 +42,7 @@ REQUIS_FIN = ["programme", "projet", "acronyme", "id_projet", "debut", "fin", "c
 DOMAINES_SOURCES = ("https://cordis.europa.eu/", "https://gtr.ukri.org/")
 CSV_ENTETE = ["nom", "pays", "ville", "type_org", "segment", "nb_projets", "total_obtenu_eur", "derniere_activite",
               "a_coordonne", "programmes", "site_web", "lien_source_principal"]
+CSV_ENTETE_ETENDU = CSV_ENTETE + ["nb_projets_total", "part_quantique", "profil_consultant_ue"]
 DEBUT_FENETRE = "2019-01-01"
 
 # ISO 3166-1 alpha-2 (249 codes officiellement attribués) + XK (Kosovo, code utilisateur employé par la CE).
@@ -209,6 +213,24 @@ def valider_ligne(r, n, fichier, erreurs, avert):
             erreurs.append("%s : source_url absentes de sources : %s" % (ou, sorted(manquantes)[:3]))
     if gtr and not re.search(r"GBP.*EUR|EUR.*GBP", r.get("note") or ""):
         erreurs.append("%s : montant GtR sans taux de conversion GBP->EUR dans note" % ou)
+    # Champs optionnels : nb_projets_total, part_quantique, profil_consultant_ue.
+    nbt = r.get("nb_projets_total")
+    if nbt is not None:
+        if isinstance(nbt, bool) or not isinstance(nbt, int) or nbt < 1:
+            erreurs.append("%s : nb_projets_total invalide %r" % (ou, nbt))
+        elif isinstance(r.get("nb_projets"), int) and nbt < r["nb_projets"]:
+            erreurs.append("%s : nb_projets_total (%d) < nb_projets (%d)" % (ou, nbt, r["nb_projets"]))
+    pq = r.get("part_quantique")
+    if pq is not None:
+        if isinstance(pq, bool) or not isinstance(pq, (int, float)) or not 0 <= pq <= 1 or round(pq, 2) != pq:
+            erreurs.append("%s : part_quantique doit être un nombre entre 0 et 1 à 2 décimales ou null : %r" % (ou, pq))
+        elif isinstance(nbt, int) and nbt > 0 and isinstance(r.get("nb_projets"), int) \
+                and abs(pq - round(r["nb_projets"] / nbt, 2)) > 0.005:
+            erreurs.append("%s : part_quantique (%r) != nb_projets / nb_projets_total" % (ou, pq))
+        elif nbt is None:
+            erreurs.append("%s : part_quantique renseignée sans nb_projets_total" % ou)
+    if r.get("profil_consultant_ue") is not None and not isinstance(r["profil_consultant_ue"], bool):
+        erreurs.append("%s : profil_consultant_ue doit être un booléen ou null" % ou)
     if "a_coordonne" in r and not isinstance(r["a_coordonne"], bool):
         erreurs.append("%s : a_coordonne doit être un booléen" % ou)
     if r.get("ville") is None:
@@ -254,15 +276,24 @@ def main():
     if os.path.exists(chemin_csv):
         with open(chemin_csv, encoding="utf-8", newline="") as f:
             rows = list(csv.reader(f))
-        if not rows or rows[0] != CSV_ENTETE:
-            erreurs.append("prospects.csv : en-tête inattendu %r" % (rows[0] if rows else None))
+        entete = rows[0] if rows else None
+        if entete not in (CSV_ENTETE, CSV_ENTETE_ETENDU):
+            erreurs.append("prospects.csv : en-tête inattendu %r" % entete)
         elif len(rows) - 1 != len(noms_entreprises):
             erreurs.append("prospects.csv : %d lignes pour %d entreprises" % (len(rows) - 1, len(noms_entreprises)))
         else:
             for i, (row, nom) in enumerate(zip(rows[1:], noms_entreprises), 2):
-                if len(row) != len(CSV_ENTETE):
+                if len(row) != len(entete):
                     erreurs.append("prospects.csv:%d : %d colonnes" % (i, len(row)))
-                elif row[0] != nom:
+                    continue
+                if entete == CSV_ENTETE_ETENDU:
+                    if row[14] not in ("oui", "non"):
+                        erreurs.append("prospects.csv:%d : profil_consultant_ue doit valoir oui/non" % i)
+                    if row[13] and not re.fullmatch(r"(0\.\d{2}|1\.00)", row[13]):
+                        erreurs.append("prospects.csv:%d : part_quantique invalide %r" % (i, row[13]))
+                    if row[12] and not row[12].isdigit():
+                        erreurs.append("prospects.csv:%d : nb_projets_total invalide %r" % (i, row[12]))
+                if row[0] != nom:
                     erreurs.append("prospects.csv:%d : ordre/nom différent du JSONL (%r vs %r)" % (i, row[0], nom))
                 elif row[8] not in ("oui", "non"):
                     erreurs.append("prospects.csv:%d : a_coordonne doit valoir oui/non" % i)

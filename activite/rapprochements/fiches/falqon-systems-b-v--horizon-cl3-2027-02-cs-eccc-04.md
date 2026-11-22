@@ -23,10 +23,12 @@ Segment retenu : **communication**. Justification : mots-clés des projets : qua
 
 ## Pourquoi cet appel pourrait vous concerner
 
-1. Pays NL éligible.
-2. Type d'organisation PME éligible.
-3. Segment « communication » visé par l'appel.
-4. Mots-clés communs avec ses projets passés : future, networks, pqc, qkd.
+1. Segment « communication » visé par l'appel.
+2. Votre projet QSNP (Horizon Europe, 2023) porte sur des thèmes proches de l'appel : networks.
+3. Au moins un projet financé encore en cours.
+4. Vous avez déjà porté seul un projet financé (NEXUS, EIC, 2 490 162 €).
+
+D'après la fiche de l'appel, le pays (NL) et le type d'organisation (PME) semblent compatibles avec les conditions de participation, sous réserve des règles détaillées.
 
 ## À vérifier avant d'y consacrer du temps
 
@@ -38,7 +40,7 @@ Il reste **42 semaine(s)** avant la clôture : délai suffisant pour préparer u
 
 ## Aide gratuite
 
-Vous pouvez aussi vous adresser gratuitement à le Point de contact national de votre pays (https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/support/ncp) et le réseau Enterprise Europe Network (https://een.ec.europa.eu/), ainsi qu'au service d'assistance indiqué sur la page de l'appel.
+Vous pouvez aussi vous adresser gratuitement au Point de contact national de votre pays (https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/support/ncp) et au réseau Enterprise Europe Network (https://een.ec.europa.eu/), ainsi qu'au service d'assistance indiqué sur la page de l'appel.
 
 ## Pour aller plus loin
 

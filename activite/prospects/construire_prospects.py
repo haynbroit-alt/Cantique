@@ -9,7 +9,8 @@ Sources (données publiques, niveau organisation uniquement — aucune donnée p
   * UKRI Gateway to Research (GtR) API v2 (Accept: application/vnd.rcuk.gtr.json-v7) :
     recherche plein texte de projets, participantValues (grantOffer par participant
     pour Innovate UK / Horizon Europe Guarantee), /funds/{id} (montant total) et
-    /organisations/{id} (adresse : région, pays, ville ; site web).
+    /organisations/{id} (adresse : région, pays, ville ; site web) et /organisations/{id}/projects
+    (tous les projets d'une entreprise, pour le dénominateur de part_quantique).
   * BCE : taux de référence GBP/EUR (data-api.ecb.europa.eu) pour convertir les livres.
 
 Sorties (dans le dossier du script) : prospects.jsonl (entreprises), prospects_recherche.jsonl
@@ -419,6 +420,42 @@ CATEGORIES_INNOVATE_UK = re.compile(r"Collaborative R&D|Feasibility Studies|CR&D
                                     r"Investment Accelerator|Loans|Vouchers|GRD|Study", re.I)
 
 
+def projets_org_gtr(http, cache, oid):
+    """Ensemble des projets GtR (tous thèmes) financés pour l'organisation `oid` et terminés le
+    2019-01-01 ou après : grantOffer > 0 pour elle (participantValues), ou organisation porteuse
+    (LEAD_ORG) d'une subvention de conseil de recherche. None si la liste n'a pas pu être lue."""
+    ids, page = set(), 1
+    while True:
+        url = "%s/organisations/%s/projects?%s" % (GTR_API, oid, urllib.parse.urlencode({"s": 100, "p": page}))
+        d = gtr_json(http, cache, "org_projects/%s_p%03d.json" % (oid, page), url)
+        if d is None:
+            return None
+        for p in d.get("project") or []:
+            p = sans_personnes(p)
+            links = p["links"]["link"]
+            fin = max((ms_date(l.get("end")) for l in links if l.get("rel") == "FUND" and l.get("end")), default=None)
+            if fin and fin < DEBUT_FENETRE:
+                continue
+            pv = ((p.get("participantValues") or {}).get("participant")) or []
+            if pv:
+                ok = any(x.get("organisationId") == oid and (x.get("grantOffer") or 0) > 0 for x in pv)
+            else:
+                ok = any(l.get("rel") == "LEAD_ORG" and (l.get("href") or "").rstrip("/").endswith(oid) for l in links)
+            if ok:
+                ids.add(p["id"])
+        if page >= (d.get("totalPages") or 0):
+            break
+        page += 1
+    return ids
+
+
+# Marqueurs de nom d'un profil « gestion de projets UE / conseil / fondation ».
+RX_CONSULTANT = re.compile(r"CONSULT|BERATUNG|PLANUNGSGESELLSCHAFT|FOUNDATION|STIFTUNG|FONDAZIONE|FUNDACI|FUNDACAO|"
+                           r"EURESCOM")
+SEUIL_PROJETS_UE_CONSULTANT = 15
+SEUIL_PART_CONSULTANT = 0.2
+
+
 def ms_date(ms):
     if ms is None:
         return None
@@ -473,16 +510,16 @@ SUFFIXES = r"(LTD|LIMITED|PLC|LLP|LLC|INC|CORP|CORPORATION|CO|COMPANY|GMBH|MBH|A
            r"LDA|EURL|SCA|SCARL|SOCIETA|SOCIEDAD|LIMITADA|HAFTUNGSBESCHRANKT|UK|EUROPE|THE)"
 RX_SUFFIXE = re.compile(r"\b%s\b" % SUFFIXES)
 RX_SOCIETE = re.compile(r"\b(LTD|LIMITED|PLC|LLP|LLC|INC|GMBH|SAS|SARL|BV|B V|AB|OY|SRL|SPA|SL|NV|AG|SA|APS|ASA)\b")
-RX_UNIV = re.compile(r"UNIVERSIT|\bCOLLEGE\b|SCHOOL OF|POLYTECHNIC|INSTITUTE OF TECHNOLOGY|\bUCL\b|ECOLE|HOCHSCHULE")
+RX_UNIV = re.compile(r"UNIVERSIT|\bUNIV\b|\bCOLLEGE\b|SCHOOL OF|POLYTECHNIC|INSTITUTE OF TECHNOLOGY|\bUCL\b|ECOLE|HOCHSCHULE")
 RX_RECH = re.compile(r"NATIONAL PHYSICAL LABORATORY|NPL MANAGEMENT|SCIENCE AND TECHNOLOGY FACILITIES|\bSTFC\b|"
                      r"RESEARCH COUNCIL|ATOMIC ENERGY AUTHORITY|\bUKAEA\b|NATIONAL QUANTUM COMPUTING CENTRE|"
                      r"DEFENCE SCIENCE AND TECHNOLOGY LAB|\bDSTL\b|MET OFFICE|BRITISH GEOLOGICAL SURVEY|"
                      r"RUTHERFORD APPLETON|DIAMOND LIGHT SOURCE|CATAPULT|FRAUNHOFER|\bINSTITUTE\b|LABORATOR|"
-                     r"RESEARCH CENTRE|RESEARCH CENTER|\bTNO\b|\bCNRS\b|\bCEA\b|\bUKRI\b")
+                     r"RESEARCH CENTRE|RESEARCH CENTER|\bTNO\b|\bCNRS\b|\bCEA\b|\bUKRI\b|CENTRE FOR PROCESS INNOVATION")
 # Organismes publics de recherche exploités sous forme de société (CORDIS les code parfois PRC).
 RX_RECH_PUBLIC = re.compile(r"NPL MANAGEMENT|NATIONAL PHYSICAL LABORATORY|\bCATAPULT\b")
 RX_AUTRE = re.compile(r"\bNHS\b|COUNCIL\b|\bTRUST\b|DEPARTMENT FOR|MINISTRY|\bGOVERNMENT\b|\bCHARIT|\bFOUNDATION\b|"
-                      r"\bASSOCIATION\b|\bSOCIETY\b|ROYAL ACADEMY|NETWORK\b")
+                      r"\bASSOCIATION\b|\bSOCIETY\b|ROYAL ACADEMY|NETWORK\b|\bCENTRE FOR\b|\bCENTER FOR\b")
 
 
 def ascii_up(s):
@@ -582,6 +619,16 @@ def main():
             continue
         finances[k].append(r)
     stats["cordis_participations_non_financees_ignorees"] = dict(ignores)
+
+    # Tous projets financés (tous thèmes) par PIC dans la fenêtre : dénominateur de part_quantique.
+    tous_cordis = collections.defaultdict(set)
+    for r in orgs:
+        k = (r["_fp"], r["projectID"])
+        p = projets.get(k)
+        if p is None or (p["endDate"] and p["endDate"] < DEBUT_FENETRE):
+            continue
+        if montant(r["ecContribution"]) > 0:
+            tous_cordis[r["organisationID"]].add(k)
 
     entites = {}  # id -> entité agrégée
 
@@ -861,10 +908,33 @@ def main():
                          "aux organisations établies au Royaume-Uni.")
         if len(e["noms"]) > 1:
             notes.append("Autres libellés : %s." % "; ".join(n for n, _ in e["noms"].most_common()[1:4]))
+        # Part du quantique dans l'activité financée (entreprises seulement).
+        nb_total = part = consultant = None
+        if e["type_org"] in ("PME", "grande_entreprise"):
+            pics = [i.split()[-1] for i in e["ids"] if i.startswith("CORDIS PIC")]
+            gids = [i.split()[-1] for i in e["ids"] if i.startswith("GtR org")]
+            c_all = set(f["_cle"][1:] for f in fins if f["_cle"][0] == "cordis")
+            for pic in pics:
+                c_all |= tous_cordis.get(pic, set())
+            g_all = set(f["_cle"][1] for f in fins if f["_cle"][0] == "gtr")
+            inconnu = False
+            for gid in gids:
+                lst = projets_org_gtr(http, a.cache, gid)
+                if lst is None:
+                    inconnu = True
+                else:
+                    g_all |= lst
+            if not inconnu:
+                nb_total = len(c_all) + len(g_all)
+                part = round(len(fins_pub) / nb_total, 2) if nb_total else None
+                notes.append("Projets financés depuis %s, tous thèmes : %d CORDIS, %d GtR." % (DEBUT_FENETRE, len(c_all), len(g_all)))
+            consultant = bool(RX_CONSULTANT.search(ascii_up(e["nom"]))) or (
+                len(c_all) >= SEUIL_PROJETS_UE_CONSULTANT and part is not None and part < SEUIL_PART_CONSULTANT)
         rec = collections.OrderedDict([
             ("id", eid), ("nom", e["nom"]), ("pays", pays), ("ville", ville), ("site_web", site),
             ("type_org", e["type_org"]), ("segment", seg), ("segment_justification", just),
             ("financements_obtenus", fins_pub), ("total_obtenu_eur", total), ("nb_projets", len(fins_pub)),
+            ("nb_projets_total", nb_total), ("part_quantique", part), ("profil_consultant_ue", consultant),
             ("derniere_activite", max(dates) if dates else None), ("sources", sources),
             ("date_extraction", date_x), ("a_coordonne", any(f["role"] in ("coordinateur", "beneficiaire_unique") for f in fins_pub)),
             ("identifiants_sources", sorted(e["ids"])), ("note", " ".join(notes)),
@@ -872,6 +942,8 @@ def main():
         if e["type_org"] in ("PME", "grande_entreprise"):
             sorties["prospects"].append(rec)
         else:
+            for k in ("nb_projets_total", "part_quantique", "profil_consultant_ue"):
+                del rec[k]  # champs optionnels calculés pour les entreprises seulement
             sorties["recherche"].append(rec)
     for k in sorties:
         sorties[k].sort(key=lambda r: (-r["total_obtenu_eur"], r["nom"]))
@@ -884,14 +956,18 @@ def main():
     with open(os.path.join(a.sortie, "prospects.csv"), "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f)
         w.writerow(["nom", "pays", "ville", "type_org", "segment", "nb_projets", "total_obtenu_eur", "derniere_activite",
-                    "a_coordonne", "programmes", "site_web", "lien_source_principal"])
+                    "a_coordonne", "programmes", "site_web", "lien_source_principal", "nb_projets_total",
+                    "part_quantique", "profil_consultant_ue"])
         for r in sorties["prospects"]:
             fins = r["financements_obtenus"]
             princ = max(fins, key=lambda x: x["contribution_eur"])["source_url"] if fins else None
             progs = " | ".join(sorted(set(x["programme"] for x in fins)))
             w.writerow([r["nom"], r["pays"], r["ville"], r["type_org"], r["segment"], r["nb_projets"],
                         "%.2f" % r["total_obtenu_eur"], r["derniere_activite"], "oui" if r["a_coordonne"] else "non",
-                        progs, r["site_web"] or "", princ])
+                        progs, r["site_web"] or "", princ,
+                        "" if r["nb_projets_total"] is None else r["nb_projets_total"],
+                        "" if r["part_quantique"] is None else "%.2f" % r["part_quantique"],
+                        "oui" if r["profil_consultant_ue"] else "non"])
 
     # ---------------- Échantillons pour la mesure de précision -----------------
     tous = [("cordis",) + k for k in pq] + [("gtr", k) for k in gq]
@@ -944,6 +1020,9 @@ def main():
     stats["prospects_avec_site_web"] = sum(1 for r in P if r["site_web"])
     stats["prospects_multi_sources"] = sum(1 for r in P if len(set(i.split()[0] for i in r["identifiants_sources"])) > 1)
     stats["prospects_type_par_defaut"] = sum(1 for r in P if "défaut" in r["note"])
+    stats["prospects_part_quantique_inconnue"] = sum(1 for r in P if r["part_quantique"] is None)
+    stats["prospects_part_quantique_ge_0_5"] = sum(1 for r in P if (r["part_quantique"] or 0) >= 0.5)
+    stats["prospects_profil_consultant_ue"] = sum(1 for r in P if r["profil_consultant_ue"])
     stats["projets_cordis_par_programme"] = compte(list(pq.values()), lambda i: i["programme"])
     stats["projets_gtr_par_programme"] = compte(list(gq.values()), lambda i: i["programme"])
     stats["projets_gtr_par_financeur"] = compte(list(gq.values()), lambda i: i["schema"].split(" / ")[0])
