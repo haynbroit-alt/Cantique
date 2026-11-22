@@ -247,7 +247,7 @@ _GO_RSA = {"EncryptOAEP": "RSA-OAEP", "DecryptOAEP": "RSA-OAEP", "EncryptPKCS1v1
 _r("go-rsa-operation", "go", "Go : rsa.EncryptOAEP / SignPKCS1v15 / SignPSS…",
    rf"\brsa\.(?P<algo>{'|'.join(_GO_RSA)})\(", resolveur=_carte(_GO_RSA))
 _r("go-ecdsa", "go", "Go : ecdsa.GenerateKey(elliptic.Pxxx()), ecdsa.Sign/Verify",
-   r"\becdsa\.(?:GenerateKey\(\s*elliptic\.(?P<courbe>P224|P256|P384|P521)\(\)|SignASN1|Sign|VerifyASN1|Verify)\b",
+   r"\becdsa\.(?:GenerateKey\(\s*elliptic\.(?P<courbe>P224|P256|P384|P521)\(\)|(?:SignASN1|Sign|VerifyASN1|Verify)\b)",
    algo="ECDSA", fonctions=("sign", "verify"))
 _r("go-ed25519", "go", "Go : ed25519.GenerateKey / Sign / Verify",
    r"\bed25519\.(?:GenerateKey|Sign|Verify|NewKeyFromSeed)\(", algo="Ed25519", fonctions=("sign", "verify"))
@@ -310,7 +310,7 @@ _r("js-createhash", JS, "node:crypto : createHash('md5'…)",
 _r("js-createhmac", JS, "node:crypto : createHmac('sha256'…)",
    r"\bcreateHmac\(\s*['\"](?P<algo>[^'\"]+)['\"]", resolveur=lambda n: resoudre("HMAC-" + n), fonctions=("tag",))
 _r("js-createcipheriv", JS, "node:crypto : createCipheriv / createDecipheriv('aes-256-gcm'…)",
-   r"\bcreate(?:De)?cipher(?:iv)?\(\s*['\"](?P<algo>[^'\"]+)['\"]", fonctions=("encrypt", "decrypt"))
+   r"\bcreate(?:Dec|C)ipher(?:iv)?\(\s*['\"](?P<algo>[^'\"]+)['\"]", fonctions=("encrypt", "decrypt"))
 _r("js-createecdh", JS, "node:crypto : createECDH('prime256v1'…)",
    r"\bcreateECDH\(\s*['\"](?P<algo>[^'\"]+)['\"]", ec_vers="ECDH", fonctions=("keyderive",))
 _r("js-diffiehellman", JS, "node:crypto : createDiffieHellman(bits) / getDiffieHellman('modp14')",

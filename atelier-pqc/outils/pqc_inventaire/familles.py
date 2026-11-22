@@ -121,6 +121,7 @@ NOTES_LIBELLES: dict[str, tuple[str, str]] = {
     "tls_cert_non_verifie": ("certificat non vérifié", "certificate not verified"),
     "ssh_cle_publique": ("clé publique SSH", "SSH public key"),
     "dss_ambigu": ("DSS : DSA ou ECDSA selon la clé", "DSS: DSA or ECDSA depending on the key"),
+    "cert_signature": ("algorithme de signature du certificat", "certificate signature algorithm"),
 }
 
 
@@ -484,3 +485,24 @@ def nom_avec_taille(a: Algo) -> str:
     if a.taille and a.famille == "AES" and nom.startswith("AES") and not re.search(r"\d{3}", nom):
         return nom.replace("AES", f"AES-{a.taille}", 1)
     return nom
+
+
+def composer_detail(parametres: dict, langue: str = "fr") -> str:
+    """Texte court et lisible d'un constat, reconstruit depuis ses paramètres."""
+    i = 0 if langue == "fr" else 1
+    texte = parametres.get("algorithme", "")
+    if parametres.get("suites"):
+        liste = ", ".join(parametres["suites"])
+        court = liste[:120] + ("…" if len(liste) > 120 else "")
+        texte += f" (suites : {court})" if i == 0 else f" (suites: {court})"
+    fonctions = [FONCTIONS_LIBELLES[f][i] for f in parametres.get("fonctions", []) if f in FONCTIONS_LIBELLES and f != "other"]
+    if fonctions:
+        texte += ", " + " / ".join(fonctions)
+    notes = [NOTES_LIBELLES[n][i] for n in parametres.get("notes", []) if n in NOTES_LIBELLES]
+    cert = parametres.get("certificat")
+    if cert:
+        date = (cert.get("not_after") or "")[:10]
+        notes.append(f"{cert.get('sujet') or '?'}, expire le {date}" if i == 0 else f"{cert.get('sujet') or '?'}, expires {date}")
+    if notes:
+        texte += (" ; " if i == 0 else "; ") + (" ; " if i == 0 else "; ").join(notes)
+    return texte

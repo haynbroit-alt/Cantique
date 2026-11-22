@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pqc-inventaire"
+version = "0.1.0"
+description = "Inventaire cryptographique, CBOM CycloneDX 1.6 et rapport de préparation post-quantique"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+certificats = ["cryptography"]
+validation = ["cyclonedx-python-lib[json-validation]"]
+tests = ["pytest"]
+
+[project.scripts]
+pqc-inventaire = "pqc_inventaire.cli:main"
+
+[tool.setuptools]
+packages = ["pqc_inventaire"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

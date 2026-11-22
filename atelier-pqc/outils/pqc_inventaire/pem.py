@@ -300,7 +300,7 @@ def analyser_bloc_pem(type_bloc: str, corps: str) -> dict:
     if "ENCRYPTED" in corps or type_bloc == "ENCRYPTED PRIVATE KEY":
         res["notes"].append("chiffree")
     corps = corps.replace("\\n", "\n").replace("\\r", "")
-    lignes = [li.strip().strip('"\',+') for li in corps.strip().splitlines() if li.strip() and ":" not in li]
+    lignes = [li.strip().strip('"\',') for li in corps.strip().splitlines() if li.strip() and ":" not in li]
     try:
         der = base64.b64decode("".join(lignes), validate=False)
     except (binascii.Error, ValueError):
