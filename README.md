@@ -21,6 +21,12 @@ Les compilations de `activite/` reposent sur des données publiques réutilisée
 - **UKRI Gateway to Research** — Contains public sector information licensed under the Open Government
   Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Source :
   https://gtr.ukri.org/.
+  **Licence à confirmer pour un usage commercial.** Les *Principles of Use* d'UKRI indiquent que les
+  données de GtR peuvent être utilisées conformément à l'OGL v3.0 (« in line with the Open Government
+  Licence »). Mais les conditions d'utilisation du site GtR, mises à jour le 2 novembre 2026, interdisent de
+  reproduire à des fins commerciales tout document, graphique ou image du site sans l'autorisation écrite
+  préalable d'UKRI. Une confirmation écrite de la réutilisation commerciale des données est à demander à UKRI
+  (gateway@ukri.org ; à défaut, formulaire de contact du site GtR). Statut de la demande : {à compléter : date d'envoi, puis date et teneur de la réponse}.
 
 Les données ont été sélectionnées, agrégées, converties en euros et reclassées ; ni l'Union européenne ni
 UKRI ne sont responsables de ces modifications ni n'approuvent ce projet. Les autres sources du calendrier

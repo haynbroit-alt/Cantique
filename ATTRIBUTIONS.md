@@ -23,6 +23,14 @@ données :
 > (https://gtr.ukri.org/). The data have been selected, aggregated, converted and reclassified by the
 > publisher; neither the European Union nor UKRI is responsible for these changes or endorses this product.
 
+**Réserve sur la licence des données GtR (non tranchée).** La mention OGL v3.0 ci-dessus est celle à
+afficher, mais la licence applicable à un usage commercial n'est pas confirmée : les *Principles of Use*
+d'UKRI indiquent que les données de GtR peuvent être utilisées conformément à l'OGL v3.0, tandis que les
+conditions d'utilisation du site GtR, mises à jour le 2 novembre 2026, restreignent la reproduction à des fins
+commerciales de documents, graphiques et images du site sans autorisation écrite d'UKRI. Une confirmation
+écrite de la réutilisation commerciale des données est à demander à UKRI (gateway@ukri.org ; à défaut,
+formulaire de contact du site GtR). Statut de la demande : {à compléter : date d'envoi, puis date et teneur de la réponse}. Détails en section 2.
+
 ---
 
 ## 1. CORDIS (Union européenne)
@@ -137,8 +145,10 @@ jamais appelés. Fichiers concernés : les mêmes que pour CORDIS (organisations
 **Point de vigilance (à signaler à l'acquéreur).** Les principes d'usage placent les **données** de GtR sous
 l'OGL v3.0, mais les conditions du **site** restreignent la reproduction commerciale de « documents,
 graphiques ou images » sans autorisation. L'ensemble cédé ne reprend que des données factuelles
-(organisation, projet, montants, dates, liens). Avant une exploitation commerciale, **demander à UKRI une
-confirmation écrite** (formulaire « Contact us » du site GtR) que cette réutilisation relève bien de l'OGL.
+(organisation, projet, montants, dates, liens). Avant une exploitation commerciale, **obtenir d'UKRI une
+confirmation écrite** que cette réutilisation relève bien de l'OGL. Cette confirmation est à demander à UKRI
+à l'adresse gateway@ukri.org (à défaut, par le formulaire de contact du site GtR). Statut de la demande :
+{à compléter}.
 
 **Mention à afficher.**
 

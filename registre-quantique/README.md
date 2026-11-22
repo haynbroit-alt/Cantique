@@ -45,6 +45,7 @@ Premiers usages visés : les développeurs de protocoles et les dépositaires d'
 5. **Signaler les conflits d'intérêts connus** dans `conflit_interet` : un fabricant qui estime sa propre feuille de route, un vendeur à découvert, une enquête financée par un fabricant, un grand détenteur de bitcoins qui juge la menace lointaine.
 6. **Garder ce qui est incertain plutôt que le taire.** Un fait que la source signale comme non vérifié, contradictoire ou connu seulement par un résumé reste dans le registre avec le statut `inconnu`, et la note explique pourquoi. Une incertitude qui ne porte que sur la date est signalée dans la note, sans changer le statut.
 7. **Relire chaque entrée.** Des agents d'IA peuvent préparer les entrées, mais une personne vérifie la source avant chaque commit. L'enquête 2026 de la Unitary Foundation indique que seuls 42,9 % des développeurs quantiques vérifient toujours ce que produit l'IA : la relecture humaine est la condition de la crédibilité.
+   *Exception à résorber :* les entrées de la v0 ont été saisies à partir des notes de recherche, sans rouvrir les sources ; elles doivent être relues, source ouverte, avant toute publication (voir « État de la version 0 »).
 
 ### Les statuts
 
