@@ -258,10 +258,10 @@ T = {
         "Adapt the roadmap to the client's situation, then date and sign the report.",
     )),
     "s_annexe": ("Annexe : méthode", "Appendix: method"),
-    "annexe_outil": ("Constats produits par pqc-inventaire {v} ({r} règles) et, pour TLS, par la sonde sonde-tls.",
-                     "Findings produced by pqc-inventaire {v} ({r} rules) and, for TLS, by the sonde-tls probe."),
-    "annexe_outil_marque": ("Constats produits par un outillage d'analyse statique ({r} règles) et une sonde TLS.",
-                            "Findings produced by static-analysis tooling ({r} rules) and a TLS probe."),
+    "annexe_outil": ("Constats produits par pqc-inventaire {v} ({r} règles).", "Findings produced by pqc-inventaire {v} ({r} rules)."),
+    "annexe_outil_marque": ("Constats produits par un outillage d'analyse statique ({r} règles).",
+                            "Findings produced by static-analysis tooling ({r} rules)."),
+    "annexe_tls": ("Constats TLS importés depuis : {s}.", "TLS findings imported from: {s}."),
     "annexe_fichiers": ("{a} fichier(s) analysé(s) ; ignorés : {b} binaire(s), {t} trop volumineux, {x} exclu(s).",
                         "{a} file(s) analysed; skipped: {b} binary, {t} too large, {x} excluded."),
     "annexe_classes": ("Classes utilisées", "Classes used"),
@@ -624,10 +624,13 @@ class _Rapport:
         self.w(f"## {self.t('s_annexe')}", "")
         nb_regles = max([(d.get("statistiques") or {}).get("regles", 0) for d in self.docs] or [0])
         self.w(self.t("annexe_outil_marque", r=nb_regles) if self.marque else self.t("annexe_outil", v=__version__, r=nb_regles))
+        tls = [d["_source"] for d in self.docs if d.get("type") == "tls"]
+        if tls:
+            self.w("", self.t("annexe_tls", s=", ".join(tls)))
         for d in self.docs:
             s = d.get("statistiques")
             if d.get("type") == "code" and s:
-                self.w("", f"{_md(d['_source'])} : " + self.t("annexe_fichiers", a=s.get("fichiers_analyses", 0),
+                self.w("", f"{_md(d['_source'])}{' :' if self.i == 0 else ':'} " + self.t("annexe_fichiers", a=s.get("fichiers_analyses", 0),
                                                                 b=s.get("binaire", 0), t=s.get("taille", 0), x=s.get("exclu", 0)))
         self.w("", f"**{self.t('annexe_classes')}**", "")
         for classe in ORDRE_CLASSES:
