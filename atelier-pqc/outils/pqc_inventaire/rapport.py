@@ -80,7 +80,8 @@ T = {
               "public-key cryptography breakable by Shor's algorithm (encryption, key exchange, signatures)."),
     "r_sig": ("signatures falsifiables une fois un ordinateur quantique disponible ; migration à coordonner avec la PKI.",
               "signatures forgeable once a quantum computer exists; migration must be coordinated with the PKI."),
-    "r_exigences": ("Exigences du référentiel : {ids}.", "Reference-set requirements: {ids}."),
+    "r_exigences": ("Exigences les plus pressantes : {ids}.", "Most pressing requirements: {ids}."),
+    "r_autres": ("et {n} autre(s), voir la section 3", "and {n} more, see section 3"),
     "s_tls": ("Points TLS sondés", "Probed TLS endpoints"),
     "tls_resume": ("{n} point(s) sondé(s) ; échange hybride X25519MLKEM768 accepté sur {h} ; TLS 1.0 ou 1.1 accepté "
                    "sur {l} ; erreurs sur {e}.",
@@ -337,6 +338,13 @@ class _Rapport:
     def exigences_de(self, famille: str) -> list[dict]:
         return [e for e in self.exigences if famille in e["familles"]]
 
+    _RANG_NATURE = {"contraignant": 0, "contraignant_indirect": 1, "projet": 2, "recommandation": 3}
+
+    def priorite_exig(self, e: dict) -> tuple:
+        """Contraignant d'abord, puis échéance la plus proche ; les exigences sans date passent après."""
+        nature = (e.get("_ref") or {}).get("nature")
+        return (self._RANG_NATURE.get(nature, 4), e.get("echeance") or "9999-12-31", e.get("id") or "")
+
     def resume_exig(self, e: dict) -> str:
         return e.get("resume_fr" if self.i == 0 else "summary_en") or e.get("resume_fr") or e.get("summary_en") or ""
 
@@ -459,7 +467,10 @@ class _Rapport:
                 raison = self.t("r_rsa")
             else:
                 raison = self.t("r_sig")
-            ids = [e["id"] for e in self.exigences_de(f)]
+            exigences = sorted(self.exigences_de(f), key=self.priorite_exig)
+            ids = [f"{e['id']} ({e.get('echeance') or '—'})" for e in exigences[:3]]
+            if len(exigences) > 3:
+                ids.append(self.t("r_autres", n=len(exigences) - 3))
             suite = " " + self.t("r_exigences", ids=", ".join(ids)) if ids else ""
             self.w(f"{rang}. **{f}** ({self.lib(FAMILLES_LIBELLES, f)}) : {self.t('occ', n=len(xs), p=prod)} ; {raison}{suite}"
                    if self.i == 0 else

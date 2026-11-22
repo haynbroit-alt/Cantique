@@ -55,6 +55,10 @@ def _rapport(args) -> int:
     docs, constats, a_verifier = charger_constats(args.constats)
     with open(args.regles, encoding="utf-8") as f:
         regles = json.load(f)
+    if args.juridictions:
+        gardees = {j.strip().upper() for j in args.juridictions.split(",") if j.strip()}
+        regles = {**regles, "referentiels": [r for r in regles.get("referentiels") or []
+                                             if (r.get("juridiction") or "").upper() in gardees]}
     texte = generer_rapport(docs, constats, a_verifier, regles, args.client, langue=args.langue, marque=args.marque,
                             date=args.date, regles_chemin=args.regles.replace("\\", "/").rsplit("/", 1)[-1],
                             max_lignes=args.max_lignes)
@@ -100,6 +104,8 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--langue", choices=("fr", "en"), default="fr")
     r.add_argument("--marque", help="nom du partenaire (marque blanche : aucune mention de l'atelier)")
     r.add_argument("--date", help="date du rapport AAAA-MM-JJ (défaut : aujourd'hui)")
+    r.add_argument("--juridictions", metavar="LISTE",
+                   help="ne garder que ces juridictions du référentiel, ex. INT,EU,FR (défaut : toutes)")
     r.add_argument("--max-lignes", type=int, default=400, help="lignes maximales du tableau par emplacement")
     r.add_argument("-o", help="fichier de sortie (défaut : sortie standard)")
     r.set_defaults(fn=_rapport)

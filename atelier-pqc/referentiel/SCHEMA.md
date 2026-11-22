@@ -87,6 +87,12 @@ Règles :
   "langage": "python",
   "regle": "py-cryptography-rsa-generate",
   "confiance": "elevee | moyenne | faible",
-  "contexte": "production | test | exemple | documentation"
+  "contexte": "production | test | exemple | documentation",
+  "parametres": {"algorithme": "RSA-2048", "primitive": "pke", "taille_cle": 2048, "courbe": null, "mode": null,
+                 "fonctions": ["keygen"], "certificat": null, "notes": []}
 }
 ```
+
+`parametres` est facultatif ; `cbom` et `rapport` s'en servent quand il est présent.
+
+Le fichier de constats enveloppe la liste : `{"type": "code" | "tls", "constats": […], "a_verifier": […], "statistiques": {…}}`. Une liste nue de constats est aussi acceptée. `a_verifier` recueille le matériel cryptographique dont la famille n'a pas pu être établie (certificat illisible, clé PKCS#8 chiffrée, bloc PGP) : ces éléments restent hors de `constats` et figurent dans le rapport pour relecture humaine.

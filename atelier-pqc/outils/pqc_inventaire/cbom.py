@@ -28,6 +28,15 @@ _FONCTIONS = {"generate", "keygen", "encrypt", "decrypt", "digest", "tag", "keyd
 _MODES = {"cbc", "ecb", "ccm", "gcm", "cfb", "ofb", "ctr", "other", "unknown"}
 _REMPLISSAGES = {"pkcs5", "pkcs7", "pkcs1v15", "oaep", "raw", "other", "unknown"}
 _RANG = {"elevee": 3, "moyenne": 2, "faible": 1}
+
+
+def _horodatage_iso(horodatage: str | None) -> str:
+    """Horodatage ISO 8601 complet exigé par CycloneDX ; une date seule devient minuit UTC."""
+    if not horodatage:
+        return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", horodatage):
+        return horodatage + "T00:00:00Z"
+    return horodatage
 P = "pqc-inventaire:"
 
 
@@ -231,7 +240,7 @@ def construire_cbom(constats: list[dict], a_verifier: list[dict] | None = None, 
     corps = json.dumps(composants, sort_keys=True, ensure_ascii=False)
     serie = uuid.uuid5(uuid.NAMESPACE_URL, "urn:pqc-inventaire:" + hashlib.sha256(corps.encode()).hexdigest())
     meta: dict = {
-        "timestamp": horodatage or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "timestamp": _horodatage_iso(horodatage),
         "tools": {"components": [{"type": "application", "name": "pqc-inventaire", "version": __version__}]},
         "component": {"type": "application", "bom-ref": "cible-analysee", "name": nom or "cible analysée"},
         "properties": [{"name": P + "avertissement",

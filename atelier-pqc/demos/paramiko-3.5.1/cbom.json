@@ -1,0 +1,4056 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:e172a0fc-24ee-5385-a46e-9c6cc2307288",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-22T00:00:00Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "pqc-inventaire",
+          "version": "0.1.0"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "bom-ref": "cible-analysee",
+      "name": "paramiko-3.5.1"
+    },
+    "properties": [
+      {
+        "name": "pqc-inventaire:avertissement",
+        "value": "Inventaire issu d'une analyse statique et de sondes TLS : faux positifs et omissions possibles ; à relire par un humain avant toute décision."
+      },
+      {
+        "name": "pqc-inventaire:source",
+        "value": "constats.json"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/3des",
+      "name": "3DES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "classicalSecurityLevel": 112,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/pkey.py",
+            "line": 113,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 186,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 279,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "3"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "faible"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "3DES"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "obsolete_classique"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/aes",
+      "name": "AES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "cryptoFunctions": [
+            "decrypt",
+            "encrypt"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/pkey.py",
+            "line": 667,
+            "additionalContext": "py-cryptography-symetrique; production; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "AES"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "symetrique"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/aes-128-cbc",
+      "name": "AES-128-CBC",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "parameterSetIdentifier": "128",
+          "mode": "cbc",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 1,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        },
+        "oid": "2.16.840.1.101.3.4.1.2"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/pkey.py",
+            "line": 101,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 183,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 261,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 1109,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 1115,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 1116,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 1129,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 1158,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "8"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "faible"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "AES"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "symetrique"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/aes-128-ctr",
+      "name": "AES-128-CTR",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "parameterSetIdentifier": "128",
+          "mode": "ctr",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 1,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/transport.py",
+            "line": 180,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 243,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "2"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "faible"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "AES"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "symetrique"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/aes-192-cbc",
+      "name": "AES-192-CBC",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "parameterSetIdentifier": "192",
+          "mode": "cbc",
+          "classicalSecurityLevel": 192,
+          "nistQuantumSecurityLevel": 3,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/transport.py",
+            "line": 184,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 267,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 146,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 147,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 148,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "5"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "faible"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "AES"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "symetrique"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/aes-192-ctr",
+      "name": "AES-192-CTR",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "parameterSetIdentifier": "192",
+          "mode": "ctr",
+          "classicalSecurityLevel": 192,
+          "nistQuantumSecurityLevel": 3,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/transport.py",
+            "line": 181,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 249,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "2"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "faible"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "AES"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "symetrique"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/aes-256-cbc",
+      "name": "AES-256-CBC",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "parameterSetIdentifier": "256",
+          "mode": "cbc",
+          "classicalSecurityLevel": 256,
+          "nistQuantumSecurityLevel": 5,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        },
+        "oid": "2.16.840.1.101.3.4.1.42"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/pkey.py",
+            "line": 107,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/pkey.py",
+            "line": 632,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 185,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 273,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 146,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 147,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 148,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 150,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 233,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 237,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 238,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "11"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "faible"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "AES"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "symetrique"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/aes-256-ctr",
+      "name": "AES-256-CTR",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "parameterSetIdentifier": "256",
+          "mode": "ctr",
+          "classicalSecurityLevel": 256,
+          "nistQuantumSecurityLevel": 5,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/pkey.py",
+            "line": 634,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 182,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 255,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "3"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "faible"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "AES"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "symetrique"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/aes-cbc",
+      "name": "AES-CBC",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "mode": "cbc",
+          "cryptoFunctions": [
+            "decrypt",
+            "encrypt"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_packetizer.py",
+            "line": 48,
+            "additionalContext": "py-cryptography-symetrique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_packetizer.py",
+            "line": 78,
+            "additionalContext": "py-cryptography-symetrique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_packetizer.py",
+            "line": 102,
+            "additionalContext": "py-cryptography-symetrique; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "3"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "AES"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "symetrique"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/dsa",
+      "name": "DSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "sign",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "demos/demo.py",
+            "line": 87,
+            "additionalContext": "py-paramiko-cle; exemple; confiance elevee"
+          },
+          {
+            "location": "demos/demo.py",
+            "line": 90,
+            "additionalContext": "py-paramiko-cle; exemple; confiance elevee"
+          },
+          {
+            "location": "paramiko/__init__.py",
+            "line": 69,
+            "additionalContext": "py-import-module; production; confiance moyenne"
+          },
+          {
+            "location": "paramiko/client.py",
+            "line": 34,
+            "additionalContext": "py-import-module; production; confiance moyenne"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 112,
+            "additionalContext": "py-cryptography-dsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 114,
+            "additionalContext": "py-cryptography-dsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 116,
+            "additionalContext": "py-cryptography-dsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 152,
+            "additionalContext": "py-cryptography-dsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 154,
+            "additionalContext": "py-cryptography-dsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 166,
+            "additionalContext": "py-cryptography-dsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 168,
+            "additionalContext": "py-cryptography-dsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 170,
+            "additionalContext": "py-cryptography-dsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 184,
+            "additionalContext": "py-cryptography-dsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 186,
+            "additionalContext": "py-cryptography-dsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 188,
+            "additionalContext": "py-cryptography-dsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 211,
+            "additionalContext": "py-cryptography-dsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 98,
+            "additionalContext": "py-import-module; production; confiance moyenne"
+          },
+          {
+            "location": "tests/_util.py",
+            "line": 215,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/auth.py",
+            "line": 88,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/pkey.py",
+            "line": 219,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_dss_openssh.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_dss_password.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_hostkeys.py",
+            "line": 121,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 53,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 60,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 200,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 212,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 216,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 237,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 239,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 270,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 280,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 522,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "33"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "exemple,production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "DSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/dsa-1024",
+      "name": "DSA-1024",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "parameterSetIdentifier": "1024",
+          "classicalSecurityLevel": 80,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "keygen"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/_support/dss.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 94,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 291,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "3"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "DSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ec",
+      "name": "EC",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "keygen"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/ecdsakey.py",
+            "line": 277,
+            "additionalContext": "py-cryptography-ec; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/ecdsakey.py",
+            "line": 314,
+            "additionalContext": "py-cryptography-ec; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/kex_ecdh_nist.py",
+            "line": 59,
+            "additionalContext": "py-cryptography-ec; production; confiance elevee"
+          },
+          {
+            "location": "tests/test_ecdsa_password_256.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_ecdsa_password_384.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_ecdsa_password_521.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_kex.py",
+            "line": 31,
+            "additionalContext": "py-import-module; test; confiance moyenne"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "7"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ec-p-256",
+      "name": "EC-P-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "P-256",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/ecdsakey.py",
+            "line": 103,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/_support/ecdsa-256.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 109,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "3"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ec-p-384",
+      "name": "EC-P-384",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "P-384",
+          "classicalSecurityLevel": 192,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/ecdsakey.py",
+            "line": 104,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/test_ecdsa_384.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 117,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "3"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ec-p-521",
+      "name": "EC-P-521",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "P-521",
+          "classicalSecurityLevel": 256,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/ecdsakey.py",
+            "line": 105,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/test_ecdsa_521.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 126,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "3"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ecdh",
+      "name": "ECDH",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agree",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "keyderive"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/kex_ecdh_nist.py",
+            "line": 71,
+            "additionalContext": "py-cryptography-ec; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/kex_ecdh_nist.py",
+            "line": 117,
+            "additionalContext": "py-cryptography-ec; production; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "2"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDH"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ecdsa",
+      "name": "ECDSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "keygen",
+            "sign",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/client.py",
+            "line": 769,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/ecdsakey.py",
+            "line": 221,
+            "additionalContext": "py-cryptography-ec; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/ecdsakey.py",
+            "line": 239,
+            "additionalContext": "py-cryptography-ec; production; confiance elevee"
+          },
+          {
+            "location": "tests/pkey.py",
+            "line": 176,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/pkey.py",
+            "line": 225,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 178,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 286,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 295,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 388,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 666,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 297,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 326,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 338,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 342,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 354,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 356,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 363,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 374,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 378,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 390,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 394,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 413,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 417,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 419,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 426,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 437,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 441,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 456,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 460,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 472,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 474,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 481,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 492,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 533,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 658,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 685,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 692,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "37"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ecdsa-p-256",
+      "name": "ECDSA-P-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "P-256",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "keygen",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_hostkeys.py",
+            "line": 41,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 54,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 304,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "3"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ecdsa-p-384",
+      "name": "ECDSA-P-384",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "P-384",
+          "classicalSecurityLevel": 192,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "keygen",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_ecdsa_384_openssh.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 55,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 61,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 311,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "4"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ecdsa-p-521",
+      "name": "ECDSA-P-521",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "P-521",
+          "classicalSecurityLevel": 256,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "keygen",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_pkey.py",
+            "line": 56,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 318,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "2"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ed25519",
+      "name": "Ed25519",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "Ed25519",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "verify"
+          ]
+        },
+        "oid": "1.3.101.112"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/client.py",
+            "line": 770,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "setup.py",
+            "line": 45,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/_support/ed25519.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/badhash_key1.ed25519.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/badhash_key2.ed25519.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/pkey.py",
+            "line": 160,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/pkey.py",
+            "line": 178,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/pkey.py",
+            "line": 222,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 330,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 345,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_ed25519-funky-padding.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_ed25519-funky-padding_password.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_ed25519_password.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_hostkeys.py",
+            "line": 39,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 571,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 572,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 579,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 585,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 591,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 593,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 605,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 608,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 615,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 625,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "24"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ed448",
+      "name": "Ed448",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "Ed448",
+          "classicalSecurityLevel": 224,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        },
+        "oid": "1.3.101.113"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/_support/ed448.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/hmac-md5",
+      "name": "HMAC-MD5",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/transport.py",
+            "line": 196,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 308,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 1110,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 1117,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 1118,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 1130,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 1159,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "7"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "faible"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "MD5"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "obsolete_classique"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/hmac-sha-1",
+      "name": "HMAC-SHA-1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "tag"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/hostkeys.py",
+            "line": 302,
+            "additionalContext": "py-hmac; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 195,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "paramiko/transport.py",
+            "line": 302,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "3"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "SHA1"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "obsolete_classique"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/md5",
+      "name": "MD5",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "digest"
+          ]
+        },
+        "oid": "1.2.840.113549.2.5"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/pkey.py",
+            "line": 358,
+            "additionalContext": "py-hashlib; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/sftp_server.py",
+            "line": 85,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/test_sftp.py",
+            "line": 613,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_sftp.py",
+            "line": 618,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "4"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "MD5"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "obsolete_classique"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/rsa",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "keygen",
+            "other"
+          ]
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "demos/demo.py",
+            "line": 76,
+            "additionalContext": "py-paramiko-cle; exemple; confiance elevee"
+          },
+          {
+            "location": "demos/demo.py",
+            "line": 79,
+            "additionalContext": "py-paramiko-cle; exemple; confiance elevee"
+          },
+          {
+            "location": "demos/demo_server.py",
+            "line": 36,
+            "additionalContext": "py-paramiko-cle; exemple; confiance elevee"
+          },
+          {
+            "location": "demos/demo_server.py",
+            "line": 51,
+            "additionalContext": "py-paramiko-cle; exemple; confiance elevee"
+          },
+          {
+            "location": "paramiko/rsakey.py",
+            "line": 127,
+            "additionalContext": "py-cryptography-rsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/rsakey.py",
+            "line": 155,
+            "additionalContext": "py-cryptography-rsa; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/rsakey.py",
+            "line": 188,
+            "additionalContext": "py-cryptography-rsa; production; confiance elevee"
+          },
+          {
+            "location": "tests/_util.py",
+            "line": 411,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/agent.py",
+            "line": 135,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/auth.py",
+            "line": 163,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/auth.py",
+            "line": 207,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/auth.py",
+            "line": 223,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/auth.py",
+            "line": 238,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/auth.py",
+            "line": 249,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/auth.py",
+            "line": 261,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/auth.py",
+            "line": 272,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/auth.py",
+            "line": 292,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/auth.py",
+            "line": 304,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/auth.py",
+            "line": 316,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/conftest.py",
+            "line": 88,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/pkey.py",
+            "line": 122,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/pkey.py",
+            "line": 209,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 175,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 197,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 198,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 410,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 411,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 510,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 511,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_hostkeys.py",
+            "line": 97,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_hostkeys.py",
+            "line": 120,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_kex_gss.py",
+            "line": 83,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_kex_gss.py",
+            "line": 99,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_kex_gss.py",
+            "line": 100,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 158,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 170,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 181,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 186,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 189,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 228,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 230,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 245,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 255,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 496,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 512,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 549,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 556,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 563,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 566,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 635,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_rsa_password.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_ssh_gss.py",
+            "line": 92,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_ssh_gss.py",
+            "line": 103,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_ssh_gss.py",
+            "line": 104,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 119,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 120,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 185,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 186,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 211,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 212,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 861,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 862,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 1228,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_transport.py",
+            "line": 1250,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "64"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "exemple,production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/rsa-1024",
+      "name": "RSA-1024",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "parameterSetIdentifier": "1024",
+          "classicalSecurityLevel": 80,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "keygen",
+            "verify"
+          ]
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "demos/test_rsa.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; exemple; confiance elevee"
+          },
+          {
+            "location": "demos/user_rsa_key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; exemple; confiance elevee"
+          },
+          {
+            "location": "demos/user_rsa_key.pub",
+            "line": 1,
+            "additionalContext": "ssh-cle-publique; exemple; confiance elevee"
+          },
+          {
+            "location": "tests/_support/rsa-lonely.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/_support/rsa.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 52,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 76,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 285,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_rsa.key.pub",
+            "line": 1,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "9"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "exemple,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/rsa-2048",
+      "name": "RSA-2048",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "parameterSetIdentifier": "2048",
+          "classicalSecurityLevel": 112,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "keygen",
+            "verify"
+          ]
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/_util.py",
+            "line": 176,
+            "additionalContext": "py-cryptography-rsa; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_client.py",
+            "line": 671,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_pkey.py",
+            "line": 57,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_rsa_openssh.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_rsa_openssh_nopad.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_ssh_exception.py",
+            "line": 60,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_ssh_exception.py",
+            "line": 61,
+            "additionalContext": "py-paramiko-cle; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "7"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/rsa-pss",
+      "name": "RSA-PSS",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "padding": "other",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "sign",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/_util.py",
+            "line": 183,
+            "additionalContext": "py-cryptography-rsa; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/sha-1",
+      "name": "SHA-1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "digest"
+          ]
+        },
+        "oid": "1.3.14.3.2.26"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/config.py",
+            "line": 449,
+            "additionalContext": "py-hashlib; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 121,
+            "additionalContext": "py-cryptography-hash; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/dsskey.py",
+            "line": 159,
+            "additionalContext": "py-cryptography-hash; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/hostkeys.py",
+            "line": 296,
+            "additionalContext": "py-hashlib; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/hostkeys.py",
+            "line": 301,
+            "additionalContext": "py-hashlib; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/kex_gss.py",
+            "line": 230,
+            "additionalContext": "py-hashlib; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/kex_gss.py",
+            "line": 269,
+            "additionalContext": "py-hashlib; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/kex_gss.py",
+            "line": 532,
+            "additionalContext": "py-hashlib; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/kex_gss.py",
+            "line": 634,
+            "additionalContext": "py-hashlib; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/sftp_server.py",
+            "line": 85,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/_util.py",
+            "line": 184,
+            "additionalContext": "py-cryptography-hash; test; confiance elevee"
+          },
+          {
+            "location": "tests/_util.py",
+            "line": 187,
+            "additionalContext": "py-cryptography-hash; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_sftp.py",
+            "line": 608,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "13"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "SHA1"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "obsolete_classique"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/sha-256",
+      "name": "SHA-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "parameterSetIdentifier": "256",
+          "nistQuantumSecurityLevel": 2,
+          "cryptoFunctions": [
+            "digest"
+          ]
+        },
+        "oid": "2.16.840.1.101.3.4.2.1"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/pkey.py",
+            "line": 369,
+            "additionalContext": "py-hashlib; production; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "SHA2"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "hachage_ok"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/x25519",
+      "name": "X25519",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agree",
+          "curve": "X25519",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "keyderive"
+          ]
+        },
+        "oid": "1.3.101.110"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "paramiko/kex_curve25519.py",
+            "line": 30,
+            "additionalContext": "py-cryptography-xdh; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/kex_curve25519.py",
+            "line": 45,
+            "additionalContext": "py-cryptography-xdh; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/kex_curve25519.py",
+            "line": 71,
+            "additionalContext": "py-cryptography-xdh; production; confiance elevee"
+          },
+          {
+            "location": "paramiko/kex_curve25519.py",
+            "line": 109,
+            "additionalContext": "py-cryptography-xdh; production; confiance elevee"
+          },
+          {
+            "location": "tests/test_kex.py",
+            "line": 135,
+            "additionalContext": "py-cryptography-xdh; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "5"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "X25519_X448"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-demos-test-rsa.key-1",
+      "name": "clé privée stockée dans demos/test_rsa.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/rsa-1024",
+          "size": 1024
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "demos/test_rsa.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; exemple; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "exemple"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-demos-user-rsa-key-1",
+      "name": "clé privée stockée dans demos/user_rsa_key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/rsa-1024",
+          "size": 1024
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "demos/user_rsa_key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; exemple; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "exemple"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-badhash-key1.ed25519.key-1",
+      "name": "clé privée stockée dans tests/badhash_key1.ed25519.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ed25519"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/badhash_key1.ed25519.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-badhash-key2.ed25519.key-1",
+      "name": "clé privée stockée dans tests/badhash_key2.ed25519.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ed25519"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/badhash_key2.ed25519.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-support-dss.key-1",
+      "name": "clé privée stockée dans tests/_support/dss.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/dsa-1024",
+          "size": 1024
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/_support/dss.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "DSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-support-ecdsa-256.key-1",
+      "name": "clé privée stockée dans tests/_support/ecdsa-256.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ec-p-256"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/_support/ecdsa-256.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-support-ed25519.key-1",
+      "name": "clé privée stockée dans tests/_support/ed25519.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ed25519"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/_support/ed25519.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-support-ed448.key-1",
+      "name": "clé privée stockée dans tests/_support/ed448.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ed448"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/_support/ed448.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-support-rsa-lonely.key-1",
+      "name": "clé privée stockée dans tests/_support/rsa-lonely.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/rsa-1024",
+          "size": 1024
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/_support/rsa-lonely.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-support-rsa.key-1",
+      "name": "clé privée stockée dans tests/_support/rsa.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/rsa-1024",
+          "size": 1024
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/_support/rsa.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-dss-openssh.key-1",
+      "name": "clé privée stockée dans tests/test_dss_openssh.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/dsa"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_dss_openssh.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "DSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-dss-password.key-1",
+      "name": "clé privée stockée dans tests/test_dss_password.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/dsa"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_dss_password.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "DSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-ecdsa-384-openssh.key-1",
+      "name": "clé privée stockée dans tests/test_ecdsa_384_openssh.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ecdsa-p-384"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_ecdsa_384_openssh.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-ecdsa-384.key-1",
+      "name": "clé privée stockée dans tests/test_ecdsa_384.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ec-p-384"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_ecdsa_384.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-ecdsa-521.key-1",
+      "name": "clé privée stockée dans tests/test_ecdsa_521.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ec-p-521"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_ecdsa_521.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-ecdsa-password-256.key-1",
+      "name": "clé privée stockée dans tests/test_ecdsa_password_256.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ec"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_ecdsa_password_256.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-ecdsa-password-384.key-1",
+      "name": "clé privée stockée dans tests/test_ecdsa_password_384.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ec"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_ecdsa_password_384.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-ecdsa-password-521.key-1",
+      "name": "clé privée stockée dans tests/test_ecdsa_password_521.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ec"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_ecdsa_password_521.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-ed25519-funky-padding-password.key-1",
+      "name": "clé privée stockée dans tests/test_ed25519-funky-padding_password.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ed25519"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_ed25519-funky-padding_password.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-ed25519-funky-padding.key-1",
+      "name": "clé privée stockée dans tests/test_ed25519-funky-padding.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ed25519"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_ed25519-funky-padding.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-ed25519-password.key-1",
+      "name": "clé privée stockée dans tests/test_ed25519_password.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ed25519"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_ed25519_password.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-pkey.py-109",
+      "name": "clé privée stockée dans tests/test_pkey.py",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ec-p-256"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_pkey.py",
+            "line": 109,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-pkey.py-117",
+      "name": "clé privée stockée dans tests/test_pkey.py",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ec-p-384"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_pkey.py",
+            "line": 117,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-pkey.py-126",
+      "name": "clé privée stockée dans tests/test_pkey.py",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ec-p-521"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_pkey.py",
+            "line": 126,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-pkey.py-76",
+      "name": "clé privée stockée dans tests/test_pkey.py",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/rsa-1024",
+          "size": 1024
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_pkey.py",
+            "line": 76,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-pkey.py-94",
+      "name": "clé privée stockée dans tests/test_pkey.py",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/dsa-1024",
+          "size": 1024
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_pkey.py",
+            "line": 94,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "DSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-rsa-openssh-nopad.key-1",
+      "name": "clé privée stockée dans tests/test_rsa_openssh_nopad.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/rsa-2048",
+          "size": 2048
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_rsa_openssh_nopad.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-rsa-openssh.key-1",
+      "name": "clé privée stockée dans tests/test_rsa_openssh.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/rsa-2048",
+          "size": 2048
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_rsa_openssh.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-rsa-password.key-1",
+      "name": "clé privée stockée dans tests/test_rsa_password.key",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/rsa"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_rsa_password.key",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    }
+  ]
+}
