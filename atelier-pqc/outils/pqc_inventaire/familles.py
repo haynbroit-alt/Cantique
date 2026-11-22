@@ -120,6 +120,7 @@ NOTES_LIBELLES: dict[str, tuple[str, str]] = {
     "tls_classique_seul": ("échange de clés classique uniquement", "classical key exchange only"),
     "tls_cert_non_verifie": ("certificat non vérifié", "certificate not verified"),
     "ssh_cle_publique": ("clé publique SSH", "SSH public key"),
+    "dss_ambigu": ("DSS : DSA ou ECDSA selon la clé", "DSS: DSA or ECDSA depending on the key"),
 }
 
 
@@ -351,8 +352,9 @@ def resoudre(nom: str, *, jca: bool = False) -> list[Algo]:
         return []
 
     # --- protocoles -----------------------------------------------------------------
-    if re.fullmatch(r"SSLV?3(?:\.0)?", k):
-        return [Algo("TLS_LEGACY", "SSL 3.0", "other")]
+    m = re.fullmatch(r"SSLV?([23])(?:\.0)?", k)
+    if m:
+        return [Algo("TLS_LEGACY", f"SSL {m.group(1)}.0", "other")]
     if re.fullmatch(r"TLSV?1(?:[.-]0)?|TLSV?10", k):
         return [Algo("TLS_LEGACY", "TLS 1.0", "other")]
     if re.fullmatch(r"TLSV?1[.-]1|TLSV?11", k):
