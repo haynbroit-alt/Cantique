@@ -106,7 +106,7 @@
       "minLength": 1
     },
     "verbatim": {
-      "description": "true si les passages entre guillemets droits de l'énoncé sont des citations exactes de la source.",
+      "description": "true si les passages entre guillemets (“ ” ou « ») de l'énoncé sont des citations exactes de la source ; le reste est une paraphrase proche.",
       "type": "boolean"
     },
     "statut": {
