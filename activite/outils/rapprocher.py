@@ -210,52 +210,124 @@ def format_eur(montant) -> str:
     return f"{montant:,.0f} €".replace(",", " ")
 
 
-def ecrire_fiche(dossier: Path, p: dict, pistes: list[dict], opp_index: dict, aujourdhui: dt.date) -> Path:
-    nom_fichier = re.sub(r"[^a-z0-9]+", "-", (p.get("nom") or p.get("id")).lower()).strip("-") + ".md"
+AIDE_GRATUITE = {
+    "GB": "Innovate UK Business Connect (https://iuk-business-connect.org.uk/) et le Point de contact national "
+          "britannique pour Horizon Europe (https://www.ukri.org/apply-for-funding/horizon-europe/)",
+}
+AIDE_GRATUITE_DEFAUT = (
+    "le Point de contact national de votre pays "
+    "(https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/support/ncp) et le réseau "
+    "Enterprise Europe Network (https://een.ec.europa.eu/)"
+)
+
+
+def slug(texte: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", texte.lower()).strip("-")
+
+
+def ecrire_fiche(dossier: Path, p: dict, piste: dict, o: dict, aujourdhui: dt.date, signature: str) -> Path:
+    """Fiche opportunité (service A) : une entreprise, un appel, une page. Format de
+    offre/LIVRABLES/fiche-opportunite.md ; un humain la relit avant tout envoi."""
+    ident = o.get("identifiant_appel") or o.get("id")
     lignes = [
-        f"# Pistes de financement public — {p.get('nom')}",
+        f"# Fiche opportunité : {p.get('nom')} × {ident}",
         "",
-        f"*Fiche préparée le {aujourdhui.isoformat()} à partir de données publiques. "
-        "Elle signale des pistes à vérifier ; ce n'est pas un avis d'éligibilité.*",
+        f"*Fiche gratuite, établie le {aujourdhui.isoformat()} à partir de données publiques uniquement. "
+        "Ce n'est ni un avis d'éligibilité, ni une recommandation de candidater.*",
         "",
-        "## Ce que les données publiques montrent",
+        "## Ce que disent les sources publiques sur vos financements",
         "",
-        f"- Pays : {p.get('pays')} ; type : {p.get('type_org')} ; segment estimé : {p.get('segment')}.",
-        f"- Projets financés recensés : {p.get('nb_projets', len(p.get('financements_obtenus') or []))}, "
-        f"pour un total de {format_eur(p.get('total_obtenu_eur'))}.",
+        f"| Programme | Projet (acronyme) | Période | Contribution à {p.get('nom')} | Rôle | Source |",
+        "|---|---|---|---|---|---|",
     ]
-    for f in sorted(p.get("financements_obtenus") or [], key=lambda x: x.get("debut") or "", reverse=True)[:5]:
+    for f in sorted(p.get("financements_obtenus") or [], key=lambda x: x.get("debut") or "", reverse=True)[:4]:
         lignes.append(
-            f"  - {f.get('acronyme') or f.get('projet')} ({f.get('programme')}, {f.get('role')}, "
-            f"{format_eur(f.get('contribution_eur'))}) — [source]({f.get('source_url')})"
+            f"| {f.get('programme')} | {f.get('acronyme') or f.get('projet')} | {f.get('debut') or '?'} → "
+            f"{f.get('fin') or '?'} | {format_eur(f.get('contribution_eur'))} | {f.get('role')} | "
+            f"[fiche publique]({f.get('source_url')}) |"
         )
-    lignes += ["", "## Appels qui semblent correspondre", ""]
-    for i, piste in enumerate(pistes, 1):
-        o = opp_index.get(piste["opportunite_id"], {})
-        lignes += [
-            f"### {i}. {piste['opportunite_intitule']}",
-            "",
-            f"- Financeur : {piste['financeur']} ; clôture : {piste['cloture'] or 'inconnue'}"
-            + (f" (dans {piste['jours_avant_cloture']} jours)" if piste["jours_avant_cloture"] is not None else ""),
-            f"- Budget : {format_eur(o.get('budget_total_eur'))} au total ; "
-            f"par projet : {format_eur(o.get('montant_par_projet_eur'))}.",
-            f"- Pourquoi : " + " ; ".join(piste["raisons"]) + ".",
-        ]
-        if piste["reserves"]:
-            lignes.append("- À vérifier : " + " ; ".join(piste["reserves"]) + ".")
-        lignes += [f"- Texte de l'appel : {piste['liens']['opportunite']}", ""]
+    reste = len(p.get("financements_obtenus") or []) - 4
+    if reste > 0:
+        lignes.append(f"| … | {reste} autre(s) projet(s) | | | | |")
     lignes += [
-        "## Limites",
         "",
-        "Cette fiche est produite automatiquement à partir des bases publiques (CORDIS, UKRI et portails "
-        "des financeurs), puis relue. Elle ignore les financements nationaux non publiés et ne connaît "
-        "ni la stratégie, ni la feuille de route de l'entreprise. L'éligibilité se confirme toujours dans "
-        "le texte officiel de l'appel.",
+        f"Segment retenu : **{p.get('segment')}**. Justification : {p.get('segment_justification') or 'non précisée'}.",
+        "",
+        "## L'appel",
+        "",
+        f"- **{o.get('intitule')}** ({ident}), {o.get('financeur')}, {o.get('programme') or 'programme à préciser'}.",
+        f"- **Clôture : {o.get('cloture') or 'inconnue'}** (heure et fuseau à relire sur la page officielle). "
+        f"Vérifiée le {o.get('date_verification') or '?'} sur la [page officielle]({o.get('url') or o.get('source_url')}).",
+        f"- Nature : {o.get('nature') or 'à vérifier'}. Budget : {format_eur(o.get('budget_total_eur'))}. "
+        f"Montant indicatif par projet : {format_eur(o.get('montant_par_projet_eur'))}.",
+        "- Consortium : "
+        + ((f"exigé, au moins {o['taille_min_consortium']} entités" if o.get("taille_min_consortium") else "exigé")
+           if o.get("consortium_requis") else "non exigé")
+        + f". Pays éligibles : {', '.join(o.get('pays_eligibles') or ['à vérifier'])}.",
+        "",
+        "## Pourquoi cet appel pourrait vous concerner",
         "",
     ]
-    chemin = dossier / nom_fichier
+    lignes += [f"{i}. {r[0].upper() + r[1:]}." for i, r in enumerate(piste["raisons"][:4], 1)]
+    lignes += ["", "## À vérifier avant d'y consacrer du temps", ""]
+    reserves = piste["reserves"] or ["conditions détaillées d'éligibilité et taux de financement, sur la page du topic"]
+    lignes += [f"- {r[0].upper() + r[1:]}." for r in reserves]
+    jours = piste["jours_avant_cloture"]
+    lignes += ["", "## Calendrier", ""]
+    if jours is None:
+        lignes.append("La date de clôture n'est pas connue : à confirmer avant toute préparation.")
+    else:
+        semaines = jours // 7
+        if o.get("consortium_requis") and semaines < 8:
+            realisme = "faisable seulement si un consortium existe déjà"
+        elif semaines < 3:
+            realisme = "délai très court"
+        else:
+            realisme = "délai suffisant pour préparer un dossier sérieux"
+        lignes.append(f"Il reste **{semaines} semaine(s)** avant la clôture : {realisme}.")
+    lignes += [
+        "",
+        "## Aide gratuite",
+        "",
+        f"Vous pouvez aussi vous adresser gratuitement à {AIDE_GRATUITE.get(p.get('pays'), AIDE_GRATUITE_DEFAUT)}, "
+        "ainsi qu'au service d'assistance indiqué sur la page de l'appel.",
+        "",
+        "## Pour aller plus loin",
+        "",
+        "Si vous le souhaitez, une **note d'éligibilité et d'adéquation** tranche en 5 jours ouvrés : go, go sous "
+        "conditions ou no-go, avec les justifications. Elle coûte 490 € HT (245 € pour les 5 premiers clients) et "
+        "elle est remboursée si je la livre en retard.",
+        "",
+        "---",
+        f"*{signature}. Fiche préparée avec des outils d'IA sur des sources publiques, puis vérifiée et rédigée par "
+        "un humain. Elle peut contenir des erreurs ; aucune garantie de résultat. Mon historique : 0 dossier "
+        "accompagné à ce jour. Pour ne plus recevoir de fiches : répondez « stop ».*",
+        "",
+    ]
+    chemin = dossier / f"{slug(p.get('nom') or p.get('id'))}--{slug(ident)}.md"
     chemin.write_text("\n".join(lignes), encoding="utf-8")
     return chemin
+
+
+def ecrire_tableau(chemin: Path, classement: list, index_p: dict, aujourdhui: dt.date) -> None:
+    """Vue interne pour le fondateur : toutes les pistes, prospect par prospect."""
+    lignes = [
+        f"# Pistes par prospect (usage interne, {aujourdhui.isoformat()})",
+        "",
+        "Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la liste de contrôle de "
+        "`offre/LIVRABLES/fiche-opportunite.md`.",
+        "",
+        "| Prospect | Pays | Segment | Appel | Clôture | Score | Réserves |",
+        "|---|---|---|---|---|---:|---|",
+    ]
+    for pid, pistes in classement:
+        p = index_p[pid]
+        for piste in pistes:
+            lignes.append(
+                f"| {p.get('nom')} | {p.get('pays')} | {p.get('segment')} | {piste['opportunite_intitule']} | "
+                f"{piste['cloture'] or '?'} | {piste['score']} | {len(piste['reserves'])} |"
+            )
+    chemin.write_text("\n".join(lignes) + "\n", encoding="utf-8")
 
 
 def main(argv=None) -> int:
@@ -267,8 +339,9 @@ def main(argv=None) -> int:
     ap.add_argument("--score-min", type=int, default=30)
     ap.add_argument("--sortie", type=Path, default=Path("rapprochements.jsonl"))
     ap.add_argument("--fiches", type=Path, help="dossier où écrire les fiches Markdown")
-    ap.add_argument("--nb-fiches", type=int, default=20)
-    ap.add_argument("--pistes-par-fiche", type=int, default=3)
+    ap.add_argument("--nb-fiches", type=int, default=20, help="nombre de prospects qui reçoivent une fiche")
+    ap.add_argument("--signature", default="{Nom commercial}, {Prénom Nom}, {e-mail}",
+                    help="pied de page des fiches (nom commercial, nom, e-mail du fondateur)")
     args = ap.parse_args(argv)
 
     aujourdhui = dt.date.fromisoformat(args.aujourdhui)
@@ -292,8 +365,11 @@ def main(argv=None) -> int:
         index_p = {p.get("id"): p for p in prospects}
         index_o = {o.get("id"): o for o in opportunites}
         classement = sorted(par_prospect.items(), key=lambda kv: -max(x["score"] for x in kv[1]))
+        ecrire_tableau(args.fiches / "_pistes-par-prospect.md", classement, index_p, aujourdhui)
         for pid, ses_pistes in classement[: args.nb_fiches]:
-            chemin = ecrire_fiche(args.fiches, index_p[pid], ses_pistes[: args.pistes_par_fiche], index_o, aujourdhui)
+            meilleure = ses_pistes[0]
+            chemin = ecrire_fiche(args.fiches, index_p[pid], meilleure, index_o[meilleure["opportunite_id"]],
+                                  aujourdhui, args.signature)
             print(f"fiche : {chemin}")
     return 0
 

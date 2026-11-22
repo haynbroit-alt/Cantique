@@ -125,10 +125,15 @@ class TestCommande(unittest.TestCase):
             self.assertIn("1 pistes", res.stdout)
             pistes = [json.loads(l) for l in (d / "r.jsonl").read_text(encoding="utf-8").splitlines()]
             self.assertEqual(pistes[0]["prospect_id"], "cordis-1")
-            fiche = (d / "fiches" / "capteurs-quantiques-sas.md").read_text(encoding="utf-8")
-            self.assertIn("pas un avis d'éligibilité", fiche)
+            fiche = (d / "fiches" / "capteurs-quantiques-sas--opp-1.md").read_text(encoding="utf-8")
+            self.assertIn("ni un avis d'éligibilité", fiche)
             self.assertIn("DIAMAG", fiche)
             self.assertIn("https://ec.europa.eu/topic/1", fiche)
+            self.assertIn("Consortium : exigé, au moins 3 entités", fiche)
+            self.assertIn("répondez « stop »", fiche)
+            self.assertLessEqual(len(fiche.split()), 450 + 80)  # une page, marge pour les tableaux
+            tableau = (d / "fiches" / "_pistes-par-prospect.md").read_text(encoding="utf-8")
+            self.assertIn("Capteurs Quantiques SAS", tableau)
 
 
 if __name__ == "__main__":
