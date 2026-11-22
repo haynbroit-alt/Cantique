@@ -94,6 +94,7 @@ def evaluer(p: dict, o: dict, groupes: dict, aujourdhui: dt.date) -> dict | None
 
     raisons: list[str] = []
     reserves: list[str] = []
+    eligibilite: list[str] = []
     score = 0
 
     # Éligibilité géographique.
@@ -103,47 +104,77 @@ def evaluer(p: dict, o: dict, groupes: dict, aujourdhui: dt.date) -> dict | None
     elif p.get("pays") not in pays_ok:
         return None
     else:
-        raisons.append(f"pays {p.get('pays')} éligible")
+        eligibilite.append(f"le pays ({p.get('pays')})")
 
     # Type d'organisation.
     types = o.get("types_eligibles") or []
     if types:
         if p.get("type_org") not in types:
             return None
-        raisons.append(f"type d'organisation {p.get('type_org')} éligible")
+        eligibilite.append(f"le type d'organisation ({p.get('type_org')})")
     else:
         reserves.append("types d'organisation éligibles non précisés")
 
     # Adéquation technologique.
     seg_p = p.get("segment") or "inconnu"
     segs_o = set(o.get("segments") or [])
-    if seg_p in segs_o:
+    mots_o = jetons(" ".join(o.get("mots_cles") or []) + " " + (o.get("intitule") or ""))
+    communs = sorted(mots_o & jetons(texte_prospect(p)))
+    if seg_p in segs_o and seg_p not in SEGMENTS_LARGES:
         score += 40
         raisons.append(f"segment « {seg_p} » visé par l'appel")
-    elif "transverse" in segs_o:
-        score += 20
-        raisons.append("appel ouvert à tous les segments quantiques")
-    elif seg_p in SEGMENTS_LARGES:
+    elif "transverse" in segs_o or seg_p in SEGMENTS_LARGES:
+        # Appel généraliste ou segment flou : on n'en parle que si un lien thématique existe.
+        if not communs:
+            return None
         score += 10
-        reserves.append("segment de l'entreprise incertain : adéquation à confirmer")
+        if "transverse" in segs_o:
+            raisons.append("appel ouvert à toutes les technologies quantiques")
+        else:
+            reserves.append("segment de l'entreprise incertain : adéquation à confirmer")
     else:
         return None
 
-    mots_o = jetons(" ".join(o.get("mots_cles") or []) + " " + (o.get("intitule") or ""))
-    communs = sorted(mots_o & jetons(texte_prospect(p)))
     if communs:
-        bonus = min(20, 5 * len(communs))
-        score += bonus
-        raisons.append("mots-clés communs avec ses projets passés : " + ", ".join(communs[:6]))
+        score += min(20, 5 * len(communs))
+        # Le projet passé le plus proche de l'appel sert d'argument concret.
+        meilleur, communs_meilleur = None, set()
+        for f in p.get("financements_obtenus") or []:
+            c = mots_o & jetons(f"{f.get('projet') or ''} {f.get('acronyme') or ''}")
+            if len(c) > len(communs_meilleur):
+                meilleur, communs_meilleur = f, c
+        if meilleur:
+            raisons.append(
+                f"votre projet {meilleur.get('acronyme') or meilleur.get('projet')} ({meilleur.get('programme')}, "
+                f"{(meilleur.get('debut') or '')[:4]}) porte sur des thèmes proches de l'appel : "
+                + ", ".join(sorted(communs_meilleur)[:5])
+            )
+        else:
+            raisons.append("thèmes communs entre vos projets passés et l'appel : " + ", ".join(communs[:6]))
+
+    # Activité récente : un projet encore en cours vaut mieux qu'un historique ancien.
+    derniere = date_iso(p.get("derniere_activite"))
+    if derniere and derniere >= aujourdhui:
+        score += 5
+        raisons.append("au moins un projet financé encore en cours")
+    elif derniere and derniere < dt.date(2022, 1, 1):
+        score -= 10
+        reserves.append(f"dernier projet financé terminé en {derniere.year} : l'activité actuelle est à confirmer")
 
     # Expérience des financements publics.
     financements = p.get("financements_obtenus") or []
-    if any(f.get("role") == "coordinateur" for f in financements):
+    pilotes = [f for f in financements if f.get("role") in ("coordinateur", "beneficiaire_unique")]
+    if pilotes:
         score += 10
-        raisons.append("a déjà coordonné un projet financé")
+        plus_gros = max(pilotes, key=lambda f: f.get("contribution_eur") or 0)
+        role = "coordonné" if plus_gros.get("role") == "coordinateur" else "porté seul"
+        raisons.append(
+            f"vous avez déjà {role} un projet financé ({plus_gros.get('acronyme') or plus_gros.get('projet')}, "
+            f"{plus_gros.get('programme')}, {format_eur(plus_gros.get('contribution_eur'))})"
+        )
     if len(financements) >= 2:
         score += 5
-        raisons.append(f"{len(financements)} projets financés dans l'historique public")
+        raisons.append(f"{len(financements)} projets financés dans votre historique public")
     financeur = (o.get("financeur") or "").lower()
     programme = (o.get("programme") or "").lower()
     if any(
@@ -152,7 +183,7 @@ def evaluer(p: dict, o: dict, groupes: dict, aujourdhui: dt.date) -> dict | None
         if f.get("programme")
     ):
         score += 10
-        raisons.append("connaît déjà ce programme ou ce financeur")
+        raisons.append("vous connaissez déjà ce programme ou ce financeur")
 
     # Calendrier.
     jours = (cloture - aujourdhui).days if cloture else None
@@ -162,10 +193,8 @@ def evaluer(p: dict, o: dict, groupes: dict, aujourdhui: dt.date) -> dict | None
         reserves.append(f"clôture dans {jours} jours : délai probablement trop court")
     elif jours <= 90:
         score += 10
-        raisons.append(f"clôture dans {jours} jours")
     else:
         score += 5
-        raisons.append(f"clôture dans {jours} jours : temps de préparer un bon dossier")
 
     if o.get("consortium_requis"):
         taille = o.get("taille_min_consortium")
@@ -183,8 +212,9 @@ def evaluer(p: dict, o: dict, groupes: dict, aujourdhui: dt.date) -> dict | None
         "financeur": o.get("financeur"),
         "cloture": o.get("cloture"),
         "jours_avant_cloture": jours,
-        "score": min(score, 100),
+        "score": max(0, min(score, 100)),
         "raisons": raisons,
+        "eligibilite": eligibilite,
         "reserves": reserves,
         "liens": {
             "prospect": (p.get("sources") or [None])[0],
@@ -193,13 +223,14 @@ def evaluer(p: dict, o: dict, groupes: dict, aujourdhui: dt.date) -> dict | None
     }
 
 
-def rapprocher(prospects, opportunites, groupes, aujourdhui, score_min=30):
+def rapprocher(prospects, opportunites, groupes, aujourdhui, score_min=30, max_par_prospect=5):
     pistes = []
     for p in prospects:
-        for o in opportunites:
-            piste = evaluer(p, o, groupes, aujourdhui)
-            if piste and piste["score"] >= score_min:
-                pistes.append(piste)
+        siennes = [x for o in opportunites if (x := evaluer(p, o, groupes, aujourdhui)) and x["score"] >= score_min]
+        siennes.sort(key=lambda x: (-x["score"], x["jours_avant_cloture"] if x["jours_avant_cloture"] is not None else 10**6))
+        for x in siennes[:max_par_prospect]:
+            x["type_org"] = p.get("type_org")
+        pistes.extend(siennes[:max_par_prospect])
     pistes.sort(key=lambda x: (-x["score"], x["jours_avant_cloture"] if x["jours_avant_cloture"] is not None else 10**6))
     return pistes
 
@@ -211,12 +242,12 @@ def format_eur(montant) -> str:
 
 
 AIDE_GRATUITE = {
-    "GB": "Innovate UK Business Connect (https://iuk-business-connect.org.uk/) et le Point de contact national "
+    "GB": "à Innovate UK Business Connect (https://iuk-business-connect.org.uk/) et au Point de contact national "
           "britannique pour Horizon Europe (https://www.ukri.org/apply-for-funding/horizon-europe/)",
 }
 AIDE_GRATUITE_DEFAUT = (
-    "le Point de contact national de votre pays "
-    "(https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/support/ncp) et le réseau "
+    "au Point de contact national de votre pays "
+    "(https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/support/ncp) et au réseau "
     "Enterprise Europe Network (https://een.ec.europa.eu/)"
 )
 
@@ -269,6 +300,9 @@ def ecrire_fiche(dossier: Path, p: dict, piste: dict, o: dict, aujourdhui: dt.da
         "",
     ]
     lignes += [f"{i}. {r[0].upper() + r[1:]}." for i, r in enumerate(piste["raisons"][:4], 1)]
+    if piste.get("eligibilite"):
+        lignes += ["", "D'après la fiche de l'appel, " + " et ".join(piste["eligibilite"])
+                   + " semblent compatibles avec les conditions de participation, sous réserve des règles détaillées."]
     lignes += ["", "## À vérifier avant d'y consacrer du temps", ""]
     reserves = piste["reserves"] or ["conditions détaillées d'éligibilité et taux de financement, sur la page du topic"]
     lignes += [f"- {r[0].upper() + r[1:]}." for r in reserves]
@@ -278,8 +312,8 @@ def ecrire_fiche(dossier: Path, p: dict, piste: dict, o: dict, aujourdhui: dt.da
         lignes.append("La date de clôture n'est pas connue : à confirmer avant toute préparation.")
     else:
         semaines = jours // 7
-        if o.get("consortium_requis") and semaines < 8:
-            realisme = "faisable seulement si un consortium existe déjà"
+        if o.get("consortium_requis") and semaines < 12:
+            realisme = "réaliste surtout si un consortium existe déjà ou se forme dans les prochaines semaines"
         elif semaines < 3:
             realisme = "délai très court"
         else:
@@ -289,7 +323,7 @@ def ecrire_fiche(dossier: Path, p: dict, piste: dict, o: dict, aujourdhui: dt.da
         "",
         "## Aide gratuite",
         "",
-        f"Vous pouvez aussi vous adresser gratuitement à {AIDE_GRATUITE.get(p.get('pays'), AIDE_GRATUITE_DEFAUT)}, "
+        f"Vous pouvez aussi vous adresser gratuitement {AIDE_GRATUITE.get(p.get('pays'), AIDE_GRATUITE_DEFAUT)}, "
         "ainsi qu'au service d'assistance indiqué sur la page de l'appel.",
         "",
         "## Pour aller plus loin",
@@ -317,14 +351,14 @@ def ecrire_tableau(chemin: Path, classement: list, index_p: dict, aujourdhui: dt
         "Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la liste de contrôle de "
         "`offre/LIVRABLES/fiche-opportunite.md`.",
         "",
-        "| Prospect | Pays | Segment | Appel | Clôture | Score | Réserves |",
-        "|---|---|---|---|---|---:|---|",
+        "| Prospect | Type | Pays | Segment | Appel | Clôture | Score | Réserves |",
+        "|---|---|---|---|---|---|---:|---|",
     ]
     for pid, pistes in classement:
         p = index_p[pid]
         for piste in pistes:
             lignes.append(
-                f"| {p.get('nom')} | {p.get('pays')} | {p.get('segment')} | {piste['opportunite_intitule']} | "
+                f"| {p.get('nom')} | {p.get('type_org')} | {p.get('pays')} | {p.get('segment')} | {piste['opportunite_intitule']} | "
                 f"{piste['cloture'] or '?'} | {piste['score']} | {len(piste['reserves'])} |"
             )
     chemin.write_text("\n".join(lignes) + "\n", encoding="utf-8")
@@ -337,9 +371,14 @@ def main(argv=None) -> int:
     ap.add_argument("--groupes", type=Path, required=True)
     ap.add_argument("--aujourdhui", default=dt.date.today().isoformat())
     ap.add_argument("--score-min", type=int, default=30)
+    ap.add_argument("--max-pistes", type=int, default=5, help="pistes gardées par prospect")
+    ap.add_argument("--types-fiches", default="PME",
+                    help="types d'organisation qui reçoivent une fiche, séparés par des virgules (défaut : PME)")
     ap.add_argument("--sortie", type=Path, default=Path("rapprochements.jsonl"))
     ap.add_argument("--fiches", type=Path, help="dossier où écrire les fiches Markdown")
     ap.add_argument("--nb-fiches", type=int, default=20, help="nombre de prospects qui reçoivent une fiche")
+    ap.add_argument("--part-quantique-min", type=float, default=0.5,
+                    help="part minimale des projets publics de l'entreprise qui portent sur le quantique (si connue)")
     ap.add_argument("--signature", default="{Nom commercial}, {Prénom Nom}, {e-mail}",
                     help="pied de page des fiches (nom commercial, nom, e-mail du fondateur)")
     args = ap.parse_args(argv)
@@ -349,7 +388,7 @@ def main(argv=None) -> int:
     opportunites = lire_jsonl(args.opportunites)
     groupes = json.loads(args.groupes.read_text(encoding="utf-8"))
 
-    pistes = rapprocher(prospects, opportunites, groupes, aujourdhui, args.score_min)
+    pistes = rapprocher(prospects, opportunites, groupes, aujourdhui, args.score_min, args.max_pistes)
     with args.sortie.open("w", encoding="utf-8") as f:
         for piste in pistes:
             f.write(json.dumps(piste, ensure_ascii=False) + "\n")
@@ -366,7 +405,19 @@ def main(argv=None) -> int:
         index_o = {o.get("id"): o for o in opportunites}
         classement = sorted(par_prospect.items(), key=lambda kv: -max(x["score"] for x in kv[1]))
         ecrire_tableau(args.fiches / "_pistes-par-prospect.md", classement, index_p, aujourdhui)
-        for pid, ses_pistes in classement[: args.nb_fiches]:
+        types_fiches = {t.strip() for t in args.types_fiches.split(",") if t.strip()}
+
+        def cible(p: dict) -> bool:
+            """Cible commerciale : PME dont le quantique est le cœur de métier, hors cabinets de projets européens."""
+            if p.get("type_org") not in types_fiches or p.get("profil_consultant_ue"):
+                return False
+            part = p.get("part_quantique")
+            return part is None or part >= args.part_quantique_min
+
+        eligibles = [(pid, ps) for pid, ps in classement if cible(index_p[pid])]
+        print(f"{len(eligibles)} prospects ciblés (types {', '.join(sorted(types_fiches))}, "
+              f"part quantique ≥ {args.part_quantique_min}, hors profils de consultants).")
+        for pid, ses_pistes in eligibles[: args.nb_fiches]:
             meilleure = ses_pistes[0]
             chemin = ecrire_fiche(args.fiches, index_p[pid], meilleure, index_o[meilleure["opportunite_id"]],
                                   aujourdhui, args.signature)

@@ -55,6 +55,7 @@ CLES_PERSONNELLES = re.compile(
     r"personne|personnes|person|persons|people|prenom|pr[ée]nom|firstname|first_name|lastname|last_name|surname|"
     r"nom_contact|investigat\w*|pi|chercheur|responsable|signataire|linkedin)($|_)", re.I)
 RX_EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+RX_UUID = re.compile(r"[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}")
 RX_TEL = re.compile(r"(\+\d{1,3}[\s.-]?)?(\(?\d{2,4}\)?[\s.-]?){3,}\d{2,4}")
 RX_TEL_STRICT = re.compile(r"(\+\d{2,3}|\b0\d)[\s.-]?\d{1,4}([\s.-]\d{2,4}){2,4}\b")
 RX_ORG = re.compile(r"\b(LTD|LIMITED|PLC|LLP|LLC|INC|GMBH|MBH|AG|SE|SAS|SASU|SARL|SA|SL|SLU|SRL|SPA|BV|NV|AB|OY|OYJ|AS|ASA|APS|"
@@ -108,6 +109,7 @@ def scan_personnel(obj, chemin, erreurs):
             erreurs.append("%s : adresse e-mail détectée" % chemin)
         if "/persons/" in obj or "contact-form" in obj:
             erreurs.append("%s : lien vers une personne / formulaire de contact" % chemin)
+        obj = RX_UUID.sub(" ", obj)  # identifiants GtR (UUID) : pas des numéros de téléphone
         if not obj.startswith("http") and RX_TEL_STRICT.search(obj) and not re.search(r"\d{4}-\d{2}-\d{2}", obj):
             m = RX_TEL_STRICT.search(obj).group(0)
             if len(re.sub(r"\D", "", m)) >= 9 and not re.search(r"(PIC|GtR|EUR|GBP|%|\d+[.,]\d+)", obj[max(0, obj.find(m) - 12):obj.find(m) + len(m) + 6]):

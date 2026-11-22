@@ -1,0 +1,682 @@
+nom,pays,ville,type_org,segment,nb_projets,total_obtenu_eur,derniere_activite,a_coordonne,programmes,site_web,lien_source_principal
+COLDQUANTA UK LIMITED,GB,,PME,transverse,19,22715975.98,2026-09-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10099154
+RIVERLANE LTD,GB,CAMBRIDGE,PME,calcul,24,16106733.42,2030-09-30,oui,Horizon Europe | Innovate UK | UKRI,,https://gtr.ukri.org/projects?ref=10004571
+OXFORD IONICS LIMITED,GB,,PME,calcul,13,16104529.83,2027-06-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10094199
+RIGETTI UK LIMITED,GB,,PME,calcul,12,12449666.97,2027-12-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=44167
+IBM RESEARCH GMBH,CH,RUESCHLIKON,grande_entreprise,transverse,14,12331181.81,2032-02-29,oui,EIC | H2020 | Horizon Europe,http://www.zurich.ibm.com,https://cordis.europa.eu/project/id/101267581
+ORCA COMPUTING LTD.,GB,,PME,calcul,14,12264631.87,2026-01-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10098950
+TOSHIBA EUROPE LIMITED,GB,STAINES UPON THAMES,grande_entreprise,communication,17,11949960.95,2028-10-31,oui,H2020 | Horizon Europe | Innovate UK,http://www.toshiba.eu,https://gtr.ukri.org/projects?ref=10089202
+THALES,FR,MEUDON,grande_entreprise,transverse,20,11365711.60,2030-12-31,oui,Chips JU | EIC | EuroHPC | H2020 | Horizon Europe,https://www.thalesgroup.com,https://cordis.europa.eu/project/id/101219964
+QUANTUM MOTION TECHNOLOGIES LTD,GB,LONDON,PME,calcul,12,10950825.09,2027-03-31,oui,H2020 | Innovate UK,,https://gtr.ukri.org/projects?ref=10098221
+Delft Networks B.V.,NL,Delft,PME,communication,3,10785111.00,2029-09-30,oui,Chips JU | EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101297140
+EXAIL,FR,Saint Germain En Laye,grande_entreprise,capteurs,14,10363556.10,2027-12-31,oui,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101189541
+ALPINE QUANTUM TECHNOLOGIES GMBH,AT,Innsbruck,PME,calcul,9,10086237.63,2029-09-30,oui,Chips JU | EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101114305
+QUOBLY,FR,GRENOBLE,PME,calcul,5,10057299.75,2029-03-31,oui,Chips JU | EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101174557
+SINGLE QUANTUM BV,NL,Delft,PME,transverse,17,9849573.67,2030-12-31,oui,Chips JU | EIC | H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/848827
+TOPTICA PHOTONICS SE,DE,GRAEFELFING,PME,transverse,13,9714724.75,2029-09-30,non,H2020 | Horizon Europe,https://www.toptica.com,https://cordis.europa.eu/project/id/101102140
+KIUTRA GMBH,DE,MUNCHEN,PME,calcul,5,9276728.38,2027-08-31,oui,EIC | H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101161522
+QBLOX BV,NL,DELFT,PME,calcul,7,9156826.25,2029-09-30,oui,Chips JU | EIC | Horizon Europe,,https://cordis.europa.eu/project/id/969201
+WELINQ SAS,FR,Paris,PME,communication,5,9031812.50,2029-09-30,oui,Chips JU | EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101297140
+PASQAL,FR,Palaiseau,PME,calcul,7,8877845.00,2029-09-30,oui,Chips JU | EIC | Horizon Europe,,https://cordis.europa.eu/project/id/968614
+SEEQC UK,GB,,PME,calcul,10,8731257.98,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10005792
+QUANTWARE B.V.,NL,Delft,PME,calcul,6,7875087.50,2029-09-30,oui,Chips JU | EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101290564
+QUERA COMPUTING UK LIMITED,GB,,PME,calcul,1,7826822.71,2025-06-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10094291
+KETS QUANTUM SECURITY LTD,GB,,PME,communication,13,7724486.63,2027-07-31,oui,Innovate UK | UKRI,,https://gtr.ukri.org/projects?ref=10090765
+SEMIQON TECHNOLOGIES OY,FI,Espoo,PME,calcul,6,7598049.00,2029-03-31,oui,Chips JU | EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101218392
+INFINEON TECHNOLOGIES AUSTRIA  AG,AT,Villach,grande_entreprise,transverse,7,7394063.43,2029-02-28,oui,Chips JU | EIC | H2020 | Horizon Europe,http://www.infineon.com/austria,https://cordis.europa.eu/project/id/101288915
+CPI TMD TECHNOLOGIES LIMITED,GB,,grande_entreprise,transverse,9,7220777.46,2027-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10072054
+SPARROW QUANTUM ApS,DK,Frederiksberg,PME,transverse,4,7061991.63,2029-09-30,oui,Chips JU | EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101296899
+NU QUANTUM LTD,GB,,PME,transverse,11,7055984.69,2026-09-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10085813
+BULL SAS,FR,Les Clayes Sous Bois,grande_entreprise,calcul,9,6300048.63,2027-11-30,oui,EuroHPC | H2020 | Horizon Europe,https://www.bull.com,https://cordis.europa.eu/project/id/951821
+AIRBUS DEFENCE AND SPACE GMBH,DE,Taufkirchen,grande_entreprise,capteurs,3,6036268.80,2028-08-31,non,Horizon Europe,https://www.airbus-group.com,https://cordis.europa.eu/project/id/101081775
+QUIX QUANTUM BV,NL,Enschede,PME,transverse,9,6007023.75,2029-03-31,oui,Chips JU | EIC | H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101187962
+Duality Quantum Photonics Ltd,GB,Bristol,grande_entreprise,transverse,8,5900731.20,2028-03-31,oui,EIC | Innovate UK,,https://gtr.ukri.org/projects?ref=10150573
+LEONARDO - SOCIETA PER  AZIONI,IT,Roma,grande_entreprise,capteurs,4,5553687.00,2029-03-31,non,Chips JU | Horizon Europe,https://www.finmeccanica.com,https://cordis.europa.eu/project/id/101189541
+M-SQUARED LASERS LIMITED,GB,GLASGOW,PME,transverse,13,5528166.50,2027-03-31,oui,H2020 | Innovate UK,http://www.m2lasers.com,https://gtr.ukri.org/projects?ref=50133
+OXFORD QUANTUM CIRCUITS LIMITED,GB,,PME,calcul,5,5216721.45,2027-09-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10148061
+PIXEL PHOTONICS GMBH,DE,MUENSTER,PME,composants,3,5123556.51,2028-05-31,oui,EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101297193
+AEGIQ LTD,GB,,PME,transverse,8,5107071.25,2026-06-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10089576
+PHASECRAFT LIMITED,GB,London,PME,calcul,11,5079412.90,2028-12-31,oui,H2020 | Innovate UK,,https://gtr.ukri.org/projects?ref=10108062
+UNIVERSAL QUANTUM LTD,GB,,PME,calcul,3,4959718.40,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10004857
+DELFT CIRCUITS B.V.,NL,DELFT,PME,calcul,4,4956665.63,2027-08-31,oui,EIC | H2020,,https://cordis.europa.eu/project/id/101218253
+QPHOX BV,NL,Delft,PME,calcul,4,4846190.00,2029-09-30,oui,Chips JU | EIC,,https://cordis.europa.eu/project/id/190109269
+ARQ QUANTUM TECHNOLOGIES,ES,BARCELONA,PME,communication,1,4755283.75,2029-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101297140
+IQM FINLAND OY,FI,Espoo,grande_entreprise,calcul,9,4745638.38,2029-09-30,oui,Chips JU | EIC | EuroHPC | H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/959521
+QUANDELA,FR,Massy,PME,calcul,9,4676803.70,2030-12-31,oui,Chips JU | EIC | H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/190188855
+MELLANOX TECHNOLOGIES LTD - MLNX,IL,YOKNEAM,grande_entreprise,transverse,9,4645723.65,2029-01-31,non,EIC | H2020 | Horizon Europe,https://www.mellanox.com,https://cordis.europa.eu/project/id/101092766
+AQUARK TECHNOLOGIES LIMITED,GB,,PME,capteurs,3,4620380.96,2026-05-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10077426
+QUANTUM TRANSISTORS TECHNOLOGY LTD,IL,Binyamina,PME,calcul,2,4199999.00,2029-12-31,oui,Chips JU | EIC,,https://cordis.europa.eu/project/id/101188457
+Groove Quantum B.V.,NL,DELFT,PME,calcul,2,4183875.00,2029-03-31,oui,Chips JU | EIC,,https://cordis.europa.eu/project/id/101248173
+ARQIT LTD,GB,,PME,communication,4,4021258.66,2024-11-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=41172
+TELEFONICA INVESTIGACION Y DESARROLLO SA,ES,Madrid,grande_entreprise,transverse,8,4012828.99,2028-10-31,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101092766
+ORANGE QUANTUM SYSTEMS OPERATIONAL BV,NL,Delft,PME,calcul,5,4000884.00,2027-11-30,oui,EIC | H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/190152156
+QUANTUM DICE LIMITED,GB,Oxford,PME,communication,7,3969928.84,2027-09-30,oui,EIC | Innovate UK,,https://cordis.europa.eu/project/id/101248376
+QUSIDE TECHNOLOGIES SL,ES,Castelldefels,PME,communication,6,3881576.50,2027-02-28,oui,EIC | H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101145131
+Pasqal Netherlands BV,NL,Amsterdam,PME,logiciel,2,3876474.00,2025-10-31,oui,EIC | Horizon Europe,,https://cordis.europa.eu/project/id/190146292
+ALTER TECHNOLOGY TUV NORD UK LIMITED,GB,,grande_entreprise,transverse,19,3836832.86,2026-09-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10004103
+MENLO SYSTEMS GMBH,DE,PLANEGG MARTINSRIED,PME,transverse,5,3835907.53,2029-09-30,non,EIC | H2020 | Horizon Europe,http://www.menlosystems.com,https://cordis.europa.eu/project/id/101080166
+ALICE & BOB,FR,Paris,PME,calcul,7,3825481.66,2030-09-30,oui,Chips JU | EIC | Horizon Europe,,https://cordis.europa.eu/project/id/190110172
+NVISION QUANTUM TECHNOLOGIES GMBH,DE,ULM,PME,capteurs,5,3805278.98,2029-04-30,oui,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/820374
+THINKQUANTUM SRL,IT,Sarcedo (VI),PME,communication,5,3780995.90,2028-11-30,oui,EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101215241
+EPHOS SRL,IT,Milano,PME,composants,2,3750480.25,2026-12-31,oui,EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101136471
+FALQON SYSTEMS B.V.,NL,DELFT,PME,communication,5,3739262.93,2029-09-30,oui,Chips JU | EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101247760
+HAMAMATSU PHOTONICS A/S,DK,BIRKEROD,grande_entreprise,capteurs,7,3653443.33,2029-09-30,oui,H2020 | Horizon Europe,http://www.nktphotonics.com,https://cordis.europa.eu/project/id/101070062
+SILENT WAVES,FR,GRENOBLE,PME,transverse,5,3542257.75,2029-09-30,oui,Chips JU | EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101214315
+QRUISE GMBH,DE,Saarbrucken,PME,calcul,4,3509750.00,2027-03-31,oui,EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101099538
+3URA UNIPESSOAL LDA,PT,Porto,PME,inconnu,1,3464056.15,2028-11-30,oui,Horizon Europe,,https://cordis.europa.eu/project/id/101177922
+INFINEON TECHNOLOGIES AG,DE,Neubiberg,grande_entreprise,calcul,5,3458835.01,2029-09-30,non,Chips JU | H2020 | Horizon Europe,http://www.infineon.com,https://cordis.europa.eu/project/id/101286304
+REDWAVE LABS LTD,GB,,PME,transverse,13,3446412.25,2027-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10103658
+PQSHIELD LTD,GB,Oxford,PME,transverse,6,3363657.34,2029-06-30,oui,Chips JU | Horizon Europe | Innovate UK,,https://cordis.europa.eu/project/id/101225722
+DELTA G LIMITED,GB,,PME,capteurs,3,3205535.05,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10107128
+PHOTON FORCE LTD,GB,,PME,transverse,5,3194698.46,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10004054
+KVANTIFY APS,DK,KOBENHAVN O,PME,calcul,2,3153749.00,2027-01-31,oui,EIC,,https://cordis.europa.eu/project/id/190124924
+MULTIVERSE COMPUTING SL,ES,SAN SEBASTIAN,PME,calcul,3,3151250.00,2029-08-31,oui,EIC | Horizon Europe,,https://cordis.europa.eu/project/id/190145380
+ROBERT BOSCH CAR MULTIMEDIA GMBH,DE,Hildesheim,grande_entreprise,transverse,9,3149082.26,2029-01-31,non,H2020 | Horizon Europe,http://www.bosch.com,https://cordis.europa.eu/project/id/820393
+EQUAL 1 LABORATORIES IRELAND LIMITED,IE,Dublin,PME,transverse,3,3137653.28,2027-05-31,oui,Chips JU | EIC,,https://cordis.europa.eu/project/id/190105118
+QUANTROLOX FINLAND OY,FI,Espoo,PME,calcul,3,3122750.00,2027-03-31,oui,Chips JU | EIC,,https://cordis.europa.eu/project/id/190129990
+MONIRAIL LTD,GB,,PME,capteurs,2,3119623.81,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10107100
+ELEQTRON GMBH,DE,SIEGEN,PME,calcul,2,3065775.00,2029-02-28,oui,Chips JU | EIC,,https://cordis.europa.eu/project/id/101218305
+BAY PHOTONICS LTD,GB,,PME,transverse,14,3047925.09,2027-06-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10102355
+CERCA MAGNETICS LIMITED,GB,,PME,capteurs,3,3008092.20,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10107115
+VDI TECHNOLOGIEZENTRUM GMBH,DE,Duesseldorf,grande_entreprise,transverse,5,2990870.00,2029-01-31,oui,H2020 | Horizon Europe,https://www.vditz.de,https://cordis.europa.eu/project/id/101296593
+LUXQUANTA TECHNOLOGIES SL,ES,L HOSPITALET DE LLOBREGAT,PME,communication,3,2916897.50,2027-03-31,oui,EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101161539
+PLANQC GMBH,DE,GARCHING BEI MUNCHEN,PME,transverse,3,2899959.50,2029-03-31,oui,Chips JU | EIC | Horizon Europe,,https://cordis.europa.eu/project/id/101315141
+GMV NSL LIMITED,GB,,grande_entreprise,capteurs,4,2890728.49,2027-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10076250
+ID QUANTIQUE SA,CH,Carouge,grande_entreprise,communication,5,2852931.23,2025-02-28,oui,H2020,,https://cordis.europa.eu/project/id/857156
+COVESION LIMITED,GB,,PME,transverse,11,2816730.76,2026-05-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10004412
+QILIMANJARO QUANTUM TECH SL,ES,Barcelona,PME,calcul,4,2810341.88,2029-09-30,oui,Chips JU | EIC | H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101112839
+INFINEON TECHNOLOGIES DRESDEN AG & Co. KG,DE,Dresden,grande_entreprise,calcul,4,2677671.50,2029-03-31,non,Chips JU | H2020 | Horizon Europe,https://www.infineon.com,https://cordis.europa.eu/project/id/101288553
+C12 QUANTUM ELECTRONICS,FR,PARIS,PME,calcul,2,2649000.00,2029-03-31,oui,Chips JU | EIC,,https://cordis.europa.eu/project/id/190125825
+LIONIX INTERNATIONAL B.V.,NL,ENSCHEDE,PME,transverse,4,2631416.40,2029-03-31,non,Chips JU | Horizon Europe,,https://cordis.europa.eu/project/id/101291189
+THALES ALENIA SPACE FRANCE SAS,FR,Toulouse,grande_entreprise,transverse,4,2535275.85,2029-03-31,non,Chips JU | H2020 | Horizon Europe,http://www.thalesaleniaspace.com,https://cordis.europa.eu/project/id/101189541
+BEIT SPOLKA Z OGRANICZONA ODPOWIEDZIALNOSCIA,PL,Krakow,PME,calcul,1,2499999.00,2025-12-31,oui,EIC,,https://cordis.europa.eu/project/id/190183782
+MBRYONICS LIMITED,IE,Galway,PME,communication,1,2499999.00,2026-04-30,oui,EIC,,https://cordis.europa.eu/project/id/101166493
+PARTISIA APPLICATIONS APS,DK,Aarhus N,PME,transverse,1,2499999.00,2028-05-31,oui,EIC,,https://cordis.europa.eu/project/id/101297763
+QuantaMap B.V.,NL,Leiden,PME,calcul,1,2499999.00,2028-05-31,oui,EIC,,https://cordis.europa.eu/project/id/101296909
+MICROALIGN BV,NL,Eindhoven,PME,calcul,1,2499743.17,2028-06-30,oui,EIC,,https://cordis.europa.eu/project/id/101292483
+CUBIQ BV,NL,Eindhoven,PME,communication,1,2499375.00,2028-02-29,oui,EIC,,https://cordis.europa.eu/project/id/101213884
+ICON PHOTONICS,FR,Champs-Sur-Marne,PME,composants,1,2498825.00,2028-09-30,oui,EIC,,https://cordis.europa.eu/project/id/101315147
+CELARE QUANTUM COMMUNICATIONS APS,DK,FREDERISKSBERG,PME,communication,1,2498823.50,2029-04-30,oui,EIC,,https://cordis.europa.eu/project/id/101291297
+QC DESIGN GMBH,DE,Ulm,PME,calcul,1,2493000.00,2027-03-31,oui,EIC,,https://cordis.europa.eu/project/id/101188241
+CYBERRIDGE LTD,IL,TEL AVIV,PME,transverse,1,2488500.00,2028-03-31,oui,EIC,,https://cordis.europa.eu/project/id/101218274
+Oxford NanoScience Limited,GB,,grande_entreprise,calcul,7,2487627.63,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=50868
+QUANTUM BRILLIANCE GMBH,DE,Stuttgart,PME,calcul,2,2487333.13,2029-12-31,non,Chips JU | Horizon Europe,,https://cordis.europa.eu/project/id/101291215
+QUANTUMDIAMONDS GMBH,DE,MUNCHEN,PME,capteurs,1,2475229.75,2027-02-28,oui,EIC,,https://cordis.europa.eu/project/id/101144497
+CREOTECH INSTRUMENTS SPOLKA AKCYJNA,PL,PIASECZNO,PME,transverse,2,2449903.75,2029-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101114305
+ZURICH INSTRUMENTS AG,CH,Zurich,PME,calcul,3,2334750.50,2030-01-31,non,EIC | H2020,http://www.zhinst.com,https://cordis.europa.eu/project/id/820363
+Photon Bridge B.V.,NL,Eindhoven,PME,communication,1,2307188.00,2025-08-31,oui,EIC,,https://cordis.europa.eu/project/id/101099230
+EURICE EUROPEAN RESEARCH AND PROJECT OFFICE GMBH,DE,ST INGBERT,PME,calcul,5,2284286.76,2027-03-31,non,EuroHPC | H2020 | Horizon Europe,http://www.eurice.eu,https://cordis.europa.eu/project/id/101113690
+QUANTINUUM LTD,GB,,PME,calcul,7,2148523.31,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10107055
+CRYPTO QUANTIQUE LIMITED,GB,,PME,transverse,2,2047172.62,2026-06-30,oui,Innovate UK | UKRI,,https://gtr.ukri.org/projects?ref=10093112
+SURECORE LIMITED,GB,,PME,calcul,2,1934297.50,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10006017
+HIQUTE DIAMOND,FR,Boulogne-Billancourt,PME,transverse,2,1921102.63,2029-12-31,non,Chips JU | Horizon Europe,,https://cordis.europa.eu/project/id/101291215
+CUANTOMOCION SL,ES,Donostia,PME,calcul,2,1798721.25,2031-09-30,oui,Chips JU | Horizon Europe,,https://cordis.europa.eu/project/id/101230992
+DIATOPE GMBH,DE,Ummendorf,PME,capteurs,4,1787180.00,2029-12-31,non,Chips JU | Horizon Europe,,https://cordis.europa.eu/project/id/101080136
+WIDEBLUE LIMITED,GB,,PME,transverse,5,1774542.78,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=104616
+NOKIA NETWORKS FRANCE,FR,Massy,grande_entreprise,communication,6,1772140.95,2028-11-30,non,H2020 | Horizon Europe,http://www.alcatel-lucent.com,https://cordis.europa.eu/project/id/820466
+MICRO PHOTON DEVICES SRL,IT,Bolzano,PME,communication,4,1752542.50,2027-02-28,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101070062
+VEXLUM OY,FI,Tampere,PME,transverse,3,1697671.25,2027-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101080164
+NANOGA SA,CH,LAUSANNE,PME,composants,1,1671250.00,2023-01-31,oui,EIC,,https://cordis.europa.eu/project/id/881297
+INEX MICROTECHNOLOGY LIMITED,GB,,PME,capteurs,4,1624896.40,2025-02-28,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10004103
+ELEMENT SIX (UK) LIMITED,GB,HARWELL OXFORDSHIRE DIDCOT,grande_entreprise,capteurs,4,1620919.49,2022-03-31,oui,H2020 | Innovate UK,,https://cordis.europa.eu/project/id/820374
+LIGENTEC FRANCE,FR,Corbeil-Essonnes,PME,transverse,2,1529250.00,2029-03-31,non,Chips JU | Horizon Europe,,https://cordis.europa.eu/project/id/101291189
+HQS QUANTUM SIMULATIONS GMBH,DE,KARLSRUHE,PME,calcul,5,1501779.85,2029-09-30,non,EIC | H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101297083
+ORGANISMOS TILEPIKOINONION TIS ELLADOS OTE AE,GR,MAROUSSI,grande_entreprise,communication,4,1488262.50,2029-08-31,oui,H2020 | Horizon Europe,http://www.ote.gr,https://cordis.europa.eu/project/id/101287162
+"IPRONICS PROGRAMMABLE PHOTONICS,SL",ES,Valencia,PME,transverse,2,1481375.00,2027-02-28,oui,Horizon Europe,,https://cordis.europa.eu/project/id/101092766
+MAGNETIC SHIELDS LIMITED,GB,,PME,capteurs,3,1472157.89,2024-05-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=42186
+ROYAL HOLLOWAY UNIV OF LONDON,GB,,PME,composants,2,1466594.61,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=50868
+ALUVIA PHOTONICS B.V.,NL,Enschede,PME,composants,2,1452650.00,2029-03-31,non,Chips JU | Horizon Europe,,https://cordis.europa.eu/project/id/101291189
+GOOCH & HOUSEGO (TORQUAY) LIMITED,GB,,grande_entreprise,composants,3,1440844.32,2026-08-31,oui,Innovate UK | UKRI,,https://gtr.ukri.org/projects?ref=10045463
+AIRBUS DEFENCE AND SPACE SAS,FR,TOULOUSE CEDEX,grande_entreprise,capteurs,3,1431490.60,2027-12-31,non,Horizon Europe,http://www.astrium.eads.net,https://cordis.europa.eu/project/id/101081775
+QDEVIL APS,DK,Kobenhavn,PME,calcul,3,1402179.88,2025-12-31,oui,EIC | Horizon Europe,,https://cordis.europa.eu/project/id/946372
+KELVIN NANOTECHNOLOGY LIMITED,GB,,grande_entreprise,transverse,7,1396820.82,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=50133
+Q-CTRL UK LIMITED,GB,,PME,calcul,3,1380478.89,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10107895
+QUANTUM TECHNOLOGY LABORATORIES GMBH,AT,WIEN,PME,communication,3,1380312.50,2027-02-28,oui,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101135225
+UBITECH LIMITED,CY,Limassol,PME,calcul,3,1371412.50,2028-09-30,oui,EIC | H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101114978
+ERICSSON TELECOMUNICAZIONI SPA,IT,ROMA,grande_entreprise,pqc,3,1369198.50,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101092766
+TELEDYNE UK LIMITED,GB,,grande_entreprise,transverse,4,1318712.61,2021-12-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=102806
+MICROCHIP TECHNOLOGY CALDICOT LIMITED,GB,GWENT,grande_entreprise,composants,3,1310639.04,2024-06-30,oui,H2020 | Innovate UK,,https://cordis.europa.eu/project/id/871740
+OHB HELLAS MONOPROSOPI ETAIREIA PERIORISMENIS EFTHINIS,GR,MAROUSI,grande_entreprise,communication,1,1300000.00,2032-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101250094
+ORANGE SA,FR,Issy-les-Moulineaux,grande_entreprise,communication,4,1299038.95,2027-02-28,non,H2020 | Horizon Europe,http://www.francetelecom.com,https://cordis.europa.eu/project/id/780701
+TREQ GLOBAL LTD,GB,,PME,calcul,1,1266597.01,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10151275
+QLM TECHNOLOGY LTD,GB,,PME,transverse,3,1260441.87,2024-06-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=106174
+Quantum Motion,GB,,PME,calcul,1,1244335.10,2026-04-10,oui,UKRI,,https://gtr.ukri.org/projects?ref=MR/V023284/1
+WINGS ICT SOLUTIONS TECHNOLOGIES PLIROFORIKIS KAI EPIKOINONION ANONYMI ETAIREIA,GR,NEA SMYRNI,PME,transverse,2,1237039.87,2029-08-31,oui,Horizon Europe,,https://cordis.europa.eu/project/id/101292676
+IQE PLC,GB,,grande_entreprise,transverse,4,1229092.96,2026-06-30,non,Innovate UK,,https://gtr.ukri.org/projects?ref=48484
+SURF BV,NL,Utrecht,grande_entreprise,communication,4,1211141.24,2029-09-30,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101297140
+ALPES LASERS SA,CH,Saint-Blaise,PME,composants,1,1199062.50,2022-07-31,non,H2020,http://www.alpeslasers.ch,https://cordis.europa.eu/project/id/820419
+INTRINSIC SEMICONDUCTOR TECHNOLOGIES LIMITED,GB,,grande_entreprise,composants,1,1192089.33,2024-11-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10037194
+CORIANT R&D GMBH,DE,Stuttgart,grande_entreprise,communication,2,1132275.44,2027-02-28,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101092766
+QUBIG GMBH,DE,MUNICH,PME,capteurs,3,1129488.80,2029-09-30,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101135288
+ATTOCUBE SYSTEMS GmbH,DE,Haar,grande_entreprise,transverse,4,1127331.46,2022-03-31,non,H2020,https://www.attocube.com,https://cordis.europa.eu/project/id/820391
+NEXTWORKS SRL,IT,Pisa,PME,communication,3,1126415.63,2029-08-31,non,H2020 | Horizon Europe,http://www.nextworks.it,https://cordis.europa.eu/project/id/101287162
+AUREA TECHNOLOGY,FR,BESANCON,PME,composants,2,1110331.25,2027-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101091980
+SWABIAN INSTRUMENTS GMBH,DE,Stuttgart,PME,communication,4,1105985.90,2026-03-31,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/899824
+COMPOUND SEMICONDUCTOR CENTRE LIMITED,GB,,PME,capteurs,4,1102475.66,2024-05-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=106172
+Peak Quantum GmbH,DE,GARCHIN BEI MUNCHEN,PME,calcul,1,1101875.00,2029-09-30,non,Chips JU,,https://cordis.europa.eu/project/id/101286304
+BRITISH TELECOMMUNICATIONS PUBLIC LIMITED COMPANY,GB,,grande_entreprise,transverse,12,1089048.84,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10004793
+QUANTUM SPACE SYSTEMS GMBH,DE,HAUSHAM,PME,communication,2,1088281.25,2027-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101135225
+AIRBUS OPERATIONS GMBH,DE,Hamburg,grande_entreprise,calcul,2,1078750.00,2029-09-30,non,Horizon Europe,https://www.airbus.com,https://cordis.europa.eu/project/id/101080142
+WAVE PHOTONICS LTD,GB,,PME,transverse,7,1067979.94,2026-04-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10102939
+K3Y,BG,SOFIA,PME,transverse,3,1051750.00,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101192749
+STL TECH LIMITED,GB,,PME,capteurs,2,1025511.69,2024-04-30,non,Innovate UK,,https://gtr.ukri.org/projects?ref=106174
+ABSOLUT SYSTEM SAS,FR,EYBENS,PME,composants,1,1024800.00,2028-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101189824
+INDRA SISTEMAS SA,ES,ALCOBENDAS MADRID,grande_entreprise,transverse,2,1021984.50,2028-10-31,non,Horizon Europe,http://www.indracompany.com,https://cordis.europa.eu/project/id/101225759
+neQxt GmbH,DE,Erlenbach,PME,calcul,1,1009046.25,2029-02-28,non,Chips JU,,https://cordis.europa.eu/project/id/101288915
+HITACHI EUROPE LIMITED,GB,Stoke Poges,grande_entreprise,calcul,3,988953.51,2025-02-28,non,H2020 | Innovate UK,http://www.hitachi-eu.com/index.jsp,https://cordis.europa.eu/project/id/688539
+IRSWEEP AG,CH,STAFA,PME,composants,1,962800.00,2022-07-31,non,H2020,,https://cordis.europa.eu/project/id/820419
+Solinide Photonics AB,SE,PARTILLE,PME,composants,1,953750.00,2027-07-31,non,EIC,,https://cordis.europa.eu/project/id/101158577
+STELLAR PROJECT S.R.L.,IT,PADOVA,PME,communication,2,948750.00,2025-12-31,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101082596
+PHLUX TECHNOLOGY LTD,GB,,PME,transverse,4,928657.08,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10103658
+HCD RESEARCH LIMITED,GB,,PME,capteurs,1,927515.36,2025-02-28,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10004103
+ESHARD,FR,Pessac,grande_entreprise,pqc,1,914365.00,2028-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225722
+BIFROST COMMUNICATIONS APS,DK,Kongens Lyngby,PME,communication,1,891804.00,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101287162
+BLUEFORS OY,FI,Helsinki,PME,calcul,3,873087.50,2027-03-31,non,Chips JU | H2020 | Horizon Europe,https://www.BlueFors.com,https://cordis.europa.eu/project/id/101113946
+Hartley Ultrafast Ltd,GB,,PME,composants,2,834009.66,2027-10-31,oui,Innovate UK | UKRI,,https://gtr.ukri.org/projects?ref=MR/Y034406/1
+MIND FOUNDRY LIMITED,GB,,PME,calcul,1,833491.37,2025-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10004359
+TTI-TECHNOLOGIE-TRANSFER-INITIATIVEGMBH AN DER UNIVERSITAT STUTTGART,DE,Stuttgart,grande_entreprise,capteurs,3,828591.48,2026-03-31,non,H2020 | Horizon Europe,http://www.smartmote.de,https://cordis.europa.eu/project/id/101080136
+PSIQUANTUM LTD,GB,,PME,calcul,2,828202.54,2028-02-29,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10150354
+CyberHive Ltd,GB,Newbury,PME,pqc,1,827410.00,2028-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225722
+VPIPHOTONICS GMBH,DE,Berlin,grande_entreprise,communication,3,825789.20,2027-09-30,non,H2020 | Horizon Europe,http://www.vpiphotonics.com,https://cordis.europa.eu/project/id/820474
+CHRONOS TECHNOLOGY LIMITED,GB,Lydbrook,PME,capteurs,4,821614.01,2025-03-31,oui,H2020 | Innovate UK,,https://cordis.europa.eu/project/id/820404
+TOPTICA PHOTONICS SAS,FR,Pessac,PME,calcul,2,820268.75,2027-03-31,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101113690
+Q.M. TECHNOLOGIES LTD,IL,Tel Aviv,PME,calcul,2,818000.00,2027-11-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101174557
+HUAWEI TECHNOLOGIES DUESSELDORF GMBH,DE,DUSSELDORF,grande_entreprise,transverse,2,814875.00,2022-03-31,non,H2020,,https://cordis.europa.eu/project/id/820466
+SUPRACON AG,DE,Jena,PME,calcul,2,802117.13,2027-03-31,non,Chips JU | Horizon Europe,https://www.supracon.com,https://cordis.europa.eu/project/id/101113946
+SKYLARK LASERS LIMITED,GB,,PME,composants,2,793810.24,2025-02-28,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=50414
+SAFRAN TIMING TECHNOLOGIES SA,CH,NEUCHATEL,grande_entreprise,composants,1,792585.00,2022-07-31,non,H2020,,https://cordis.europa.eu/project/id/820393
+GESELLSCHAFT FUR ANGEWANDTE MIKRO UND OPTOELEKTRONIK MIT BESCHRANKTERHAFTUNG AMO GMBH,DE,Aachen,PME,capteurs,2,788570.00,2027-03-31,non,EIC | H2020,http://www.amo.de,https://cordis.europa.eu/project/id/871740
+NXP SEMICONDUCTORS GERMANY GMBH,DE,HAMBURG,grande_entreprise,pqc,2,776875.00,2029-06-30,non,Chips JU | Horizon Europe,,https://cordis.europa.eu/project/id/101225859
+CODASIP S R O,CZ,BRNO,PME,pqc,1,776000.00,2028-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225722
+TECHNIKON FORSCHUNGS- UND PLANUNGSGESELLSCHAFT MBH,AT,Villach,PME,pqc,2,760975.00,2029-10-31,oui,H2020 | Horizon Europe,http://www.technikon.at,https://cordis.europa.eu/project/id/101308625
+ELECTRICITE DE FRANCE,FR,Paris,grande_entreprise,calcul,2,759488.38,2027-03-31,non,H2020 | Horizon Europe,https://www.edf.fr,https://cordis.europa.eu/project/id/101113690
+SIVERS PHOTONICS LIMITED,GB,,PME,capteurs,3,753203.55,2024-01-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=106172
+RED HAT CZECH S R O,CZ,Brno,grande_entreprise,pqc,2,751199.50,2028-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225691
+PPQSENSE SRL,IT,SESTO FIORENTINO,PME,transverse,2,750000.00,2027-06-30,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101070546
+GAC,FR,ISSY LES MOULINEAUX,PME,capteurs,2,749875.00,2027-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101081775
+SK TELECOM CO LTD,KR,SEOUL,grande_entreprise,communication,1,749750.00,2029-05-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101298828
+TELETEL TECHNOLOGIA AERODIASTIMIKIS KAI AMINAS,GR,ATHINA,PME,capteurs,1,747533.25,2027-12-31,non,Horizon Europe,https://www.teletel.gr,https://cordis.europa.eu/project/id/101081775
+CICOR NORDIC ENGINEERING AB,SE,NORRTALJE,grande_entreprise,pqc,1,727343.75,2029-06-30,non,Chips JU,,https://cordis.europa.eu/project/id/101252658
+DIAMFAB,FR,Grenoble,PME,calcul,1,723092.50,2029-12-31,non,Chips JU,,https://cordis.europa.eu/project/id/101291215
+VECTOR PHOTONICS LIMITED,GB,,PME,calcul,3,718144.15,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10149275
+BESI AUSTRIA GMBH,AT,Radfeld,grande_entreprise,calcul,2,711283.75,2027-03-31,non,Chips JU | H2020,https://www.besi.com,https://cordis.europa.eu/project/id/101139908
+ZORTENET IDIOTIKI KEFALAIOUXIKI ETAIREIA,GR,ATHINA,PME,logiciel,2,704089.12,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225776
+TELEDYNE E2V (UK) LIMITED,GB,Chelmsford,grande_entreprise,capteurs,2,703656.25,2022-03-31,non,H2020,http://www.e2v.com,https://cordis.europa.eu/project/id/820404
+SILICON MICROGRAVITY LIMITED,GB,,PME,capteurs,2,703451.36,2025-09-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10074338
+PARITY QUANTUM COMPUTING GMBH,AT,Innsbruck,PME,calcul,4,700548.00,2029-02-28,non,Chips JU | EuroHPC | Horizon Europe,,https://cordis.europa.eu/project/id/101113690
+NORBLIS APS,DK,Kongens Lyngby,PME,capteurs,1,700450.00,2026-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101070062
+ASPHERICON GMBH,DE,Jena,PME,capteurs,1,699300.00,2026-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101080144
+KROMEK LIMITED,GB,,PME,inconnu,2,698697.08,2024-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10032607
+PNO Innovation,FR,PARIS,grande_entreprise,capteurs,2,697622.50,2022-03-31,non,H2020,http://www.arttic.eu,https://cordis.europa.eu/project/id/820394
+CAPGEMINI DEUTSCHLAND GMBH,DE,Berlin,grande_entreprise,logiciel,1,696875.00,2025-10-31,oui,Horizon Europe,,https://cordis.europa.eu/project/id/101080142
+QUBITECH IDIOTIKI KEFALAIOUCHIKI ETAIREIA,GR,CHALANDRI,PME,calcul,1,686250.00,2027-10-31,non,EIC,,https://cordis.europa.eu/project/id/101114978
+I.D.I.L. SAS (INGENIERIE-DEVELOPPEMENT-INSTRUMENTATION-LASER),FR,Lannion,PME,calcul,1,683500.00,2027-04-30,non,EIC,,https://cordis.europa.eu/project/id/101159049
+UNITARY FUND FRANCE,FR,Tours,grande_entreprise,composants,1,681250.00,2026-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101135876
+CRAFT PROSPECT LTD,GB,,PME,communication,6,677722.58,2024-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=78161
+SPLOROTECH SL,ES,PAMPLONA,PME,transverse,3,675421.89,2028-11-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101119547
+LIZARD PHOTONICS APS,DK,COPENHAGEN V,grande_entreprise,composants,1,671780.16,2030-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101312406
+THALES SIX GTS FRANCE SAS,FR,Gennevilliers,grande_entreprise,communication,3,668042.91,2026-03-31,non,H2020 | Horizon Europe,http://www.thalesgroup.com,https://cordis.europa.eu/project/id/780701
+KEYSIGHT TECHNOLOGIES SPAIN SL,ES,Las Rozas De Madrid,grande_entreprise,transverse,2,663500.00,2023-08-31,non,H2020,,https://cordis.europa.eu/project/id/712721
+QTI SRL,IT,Firenze,grande_entreprise,transverse,2,663169.97,2027-12-03,oui,Horizon Europe,,https://cordis.europa.eu/project/id/101135785
+SMART PHOTONICS BV,NL,EINDHOVEN,PME,communication,1,660602.50,2022-06-30,non,H2020,,https://cordis.europa.eu/project/id/820474
+SEMIWISE LIMITED,GB,,PME,calcul,1,658729.32,2025-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10006017
+WIDMO SPECTRAL TECHNOLOGIES SPOLKA Z OGRANICZONA ODPOWIEDZIALNOSCIA,PL,Krakow,PME,capteurs,1,658036.75,2026-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101080144
+CRYPTONEXT,FR,Paris,PME,communication,2,646737.50,2029-06-30,non,Chips JU | Horizon Europe,,https://cordis.europa.eu/project/id/101114043
+AMIRES SRO,CZ,Praha,PME,transverse,2,645000.00,2027-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101135699
+OXFORD INSTRUMENTS NANOTECHNOLOGY TOOLS LIMITED,GB,Abingdon,grande_entreprise,transverse,1,643750.00,2022-03-31,non,H2020,,https://cordis.europa.eu/project/id/820505
+NEXTNANO GMBH,DE,Poing,PME,calcul,2,642500.00,2029-02-28,non,EIC | H2020,,https://cordis.europa.eu/project/id/101185712
+DIMOSIA EPICHEIRISI ILEKTRISMOU ANONYMI ETAIREIA,GR,ATHINA,grande_entreprise,calcul,2,642062.00,2027-12-31,non,Horizon Europe,http://www.dei.gr,https://cordis.europa.eu/project/id/101192749
+SILENTSYS,FR,Le Mans,PME,calcul,1,636150.00,2027-04-30,non,EIC,,https://cordis.europa.eu/project/id/101159049
+SONARDYNE INTERNATIONAL LIMITED,GB,,grande_entreprise,composants,2,628231.93,2026-12-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10004054
+FSAS TECHNOLOGIES SL,ES,POZUELO DE ALARCON,grande_entreprise,calcul,2,625740.00,2029-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101297083
+VLC PHOTONICS SL,ES,Valencia,grande_entreprise,composants,3,618662.50,2027-12-31,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/820466
+AGATA COMUNICACION CIENTIFICA SL,ES,Santander,PME,inconnu,1,617875.00,2029-01-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101296593
+IQUADRAT INFORMATICA SL,ES,Barcelona,PME,pqc,1,616500.00,2027-12-31,non,Horizon Europe,http://www.iquadrat.com,https://cordis.europa.eu/project/id/101192749
+E 4 COMPUTER ENGINEERING SPA,IT,Scandiano,PME,transverse,2,586845.63,2029-10-31,non,EuroHPC | Horizon Europe,,https://cordis.europa.eu/project/id/101298343
+"SATELIO IOT SERVICES, SL",ES,Barcelona,PME,communication,2,579265.00,2025-12-31,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101004341
+CALEDONIAN PHOTONICS LIMITED,GB,,PME,capteurs,3,578250.44,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10005391
+AKRONIC - AKRON OLOKLIROMENA KYKLOMATA IKE,GR,AGIA PARASKEVI,PME,logiciel,1,575662.50,2029-08-31,non,Horizon Europe,https://www.akronic.com/,https://cordis.europa.eu/project/id/101292676
+THALES ALENIA SPACE ITALIA SPA,IT,ROMA,grande_entreprise,communication,4,575646.05,2027-03-31,non,Horizon Europe,http://www.thalesaleniaspace.com,https://cordis.europa.eu/project/id/101082596
+QUDORA Technologies GmbH,DE,Braunschweig,grande_entreprise,calcul,1,574980.00,2029-02-28,non,Chips JU,,https://cordis.europa.eu/project/id/101288915
+ANGOKA LIMITED,GB,,PME,communication,1,564339.88,2026-09-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10135149
+EURESCOM-EUROPEAN INSTITUTE FOR RESEARCH AND STRATEGIC STUDIES IN TELECOMMUNICATIONS GMBH,DE,Heidelberg,grande_entreprise,pqc,1,561125.00,2028-08-31,oui,Horizon Europe,https://www.eurescom.eu,https://cordis.europa.eu/project/id/101225722
+STMICROELECTRONICS FRANCE,FR,MONTROUGE,grande_entreprise,calcul,3,560777.50,2027-11-30,non,Chips JU | H2020 | Horizon Europe,http://www.st.com,https://cordis.europa.eu/project/id/101174557
+NIREOS SRL,IT,Milano,PME,capteurs,1,559375.00,2029-11-30,non,EIC,,https://cordis.europa.eu/project/id/101258685
+NordAmps AB,SE,LUND,PME,composants,2,557960.40,2027-03-31,non,Chips JU | H2020,,https://cordis.europa.eu/project/id/101139908
+AMTE POWER PLC,GB,,PME,capteurs,1,554728.82,2024-05-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=42186
+SILTRONIC AG,DE,MUNCHEN,grande_entreprise,calcul,2,554679.06,2029-03-31,non,Chips JU | H2020,https://www.siltronic.com,https://cordis.europa.eu/project/id/101288553
+SILORIX GMBH,DE,Karlsruhe,grande_entreprise,calcul,1,554655.00,2028-01-31,non,EIC,,https://cordis.europa.eu/project/id/101187231
+NVIDIA GREECE MONOPROSOPI ANONYMI ETAIREIA,GR,Athens,grande_entreprise,communication,1,554456.25,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101287162
+BILFINGER NUCLEAR & ENERGY TRANSITION GMBH,DE,Oberhausen,grande_entreprise,calcul,1,554250.00,2025-04-30,non,EIC,,https://cordis.europa.eu/project/id/101057977
+ECLIPSE FOUNDATION EUROPE GMBH,DE,Darmstadt,PME,logiciel,2,553016.01,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101293734
+MEGIN OY,FI,Helsinki,grande_entreprise,capteurs,2,552957.50,2025-11-30,non,EIC | H2020,,https://cordis.europa.eu/project/id/101099379
+SABIEDRIBA AR IEROBEZOTU ATBILDIBU TET,LV,Riga,grande_entreprise,pqc,1,552500.00,2028-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225691
+ADTRAN NETWORKS SE,DE,Meiningen,grande_entreprise,communication,1,552212.50,2023-03-01,non,H2020,https://www.advaoptical.com,https://cordis.europa.eu/project/id/857156
+IMST GMBH,DE,KAMP LINTFORT,PME,logiciel,1,551115.00,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101292676
+MICROFLUIDICS INNOVATION CENTER,FR,PARIS,PME,composants,1,549604.08,2025-01-31,non,H2020,,https://cordis.europa.eu/project/id/956387
+TUV SUD PRODUCT SERVICE GMBH,DE,MUNCHEN,grande_entreprise,calcul,1,547575.00,2026-10-31,non,Horizon Europe,http://www.tuev-sued.de,https://cordis.europa.eu/project/id/101119602
+OXFORD HIGHQ LTD,GB,,PME,communication,1,543689.02,2019-09-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=103879
+INTEGRATED COMPOUND SEMICONDUCTORS LIMITED,GB,,PME,capteurs,2,543119.02,2024-05-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=48484
+ATOS SECURE DIGITAL GMBH,DE,Munchen,grande_entreprise,pqc,1,539000.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225797
+TELEFONICA INVESTIGACION Y DESARROLLO SA,ES,Madrid,grande_entreprise,communication,1,535957.50,2022-03-31,non,H2020,http://www.tid.es,https://cordis.europa.eu/project/id/820466
+MY CRYO FIRM,FR,Fontenay-sous-Bois,PME,transverse,2,535883.90,2022-03-31,non,H2020,,https://cordis.europa.eu/project/id/817482
+LOW NOISE FACTORY AB,SE,Goteborg,PME,composants,2,533062.50,2026-05-31,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101080152
+D. SWAROVSKI KG,AT,Wattens,grande_entreprise,calcul,1,532812.50,2029-12-31,non,Chips JU,,https://cordis.europa.eu/project/id/101291215
+PQShield B.V.,NL,Amsterdam,PME,pqc,1,532312.50,2029-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101308625
+SIGNIFY  NETHERLANDS BV,NL,Eindhoven,grande_entreprise,pqc,1,530405.00,2029-06-30,non,Chips JU,https://www.philips.com,https://cordis.europa.eu/project/id/101252658
+NEW ORIGIN BV,NL,ENSCHEDE,PME,composants,1,530000.00,2029-03-31,non,Chips JU,,https://cordis.europa.eu/project/id/101291189
+BEARINGPOINT GMBH,DE,FRANKFURT AM MAIN,grande_entreprise,logiciel,1,523940.28,2028-09-30,oui,Horizon Europe,,https://cordis.europa.eu/project/id/101225776
+BEYOND BLOOD DIAGNOSTICS LTD,GB,,PME,inconnu,1,519693.08,2025-09-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10075392
+CRYPTOEXPERTS SAS,FR,Paris,PME,pqc,1,518125.00,2029-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101308625
+CDO2 LIMITED,GB,,PME,capteurs,2,514055.26,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=42186
+HELIA PHOTONICS LTD,GB,Livingston,PME,transverse,2,512878.25,2019-12-31,non,H2020 | Innovate UK,https://www.helia-photonics.com,https://cordis.europa.eu/project/id/676108
+DEUTSCHE TELEKOM AG,DE,Bonn,grande_entreprise,communication,1,500000.37,2023-03-01,non,H2020,http://www.fp7-sparc.eu/,https://cordis.europa.eu/project/id/857156
+FINQBIT Prosta Spolka Akcyjna,PL,Lublin,PME,calcul,1,500000.00,2028-01-31,oui,Horizon Europe,,https://cordis.europa.eu/project/id/101310803
+TESLA DYNAMIC COILS BV,NL,Zaltbommel,PME,capteurs,1,500000.00,2029-04-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101297341
+VIGO PHOTONICS SPOLKA AKCYJNA,PL,Ozarow Mazowiecki,PME,capteurs,1,500000.00,2025-11-30,non,EIC,https://www.vigo.com.pl,https://cordis.europa.eu/project/id/101099379
+RESQUANT SPOLKA Z OGRANICZONA ODPOWIEDZIALNOSCIA,PL,Łódź,PME,pqc,1,499452.98,2027-11-30,oui,Horizon Europe,,https://cordis.europa.eu/project/id/101310752
+CYBERNETICA AS,EE,Tallinn,PME,pqc,1,498750.00,2028-12-31,non,Horizon Europe,http://www.cyber.ee,https://cordis.europa.eu/project/id/101225691
+SEMI EUROPE GMBH,DE,Berlin,PME,pqc,1,497768.75,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225859
+BRITISH TELECOMMUNICATIONS LTD,GB,LONDON,grande_entreprise,transverse,2,496372.56,2024-08-31,non,H2020,https://www.bt.com,https://cordis.europa.eu/project/id/860579
+Massive Beams GmbH,DE,Berlin,grande_entreprise,logiciel,1,496125.00,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101292676
+EUROPEAN DYNAMICS LUXEMBOURG SA,LU,LUXEMBOURG,grande_entreprise,pqc,1,489375.00,2027-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101192749
+NXP SEMICONDUCTORS BELGIUM NV,BE,Leuven,grande_entreprise,pqc,1,488406.25,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101308630
+SMARTLEX SRL SOCIETA DI PRODOTTI E SERVIZI GIURIDICI INTERDISCIPLINARI,IT,SAN GIULIANO TERME,PME,transverse,2,488000.00,2028-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225759
+ENGYS SRL,IT,Trieste,PME,logiciel,1,483700.00,2027-04-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101080085
+QPURPOSE APS,DK,Odense M,PME,calcul,1,483125.00,2029-04-30,non,Chips JU,,https://cordis.europa.eu/project/id/101291743
+PHIX BV,NL,ENSCHEDE,PME,composants,1,479375.00,2027-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101070549
+N10GLED LDA,PT,EVORA,PME,communication,1,477793.70,2028-06-30,oui,Horizon Europe,,https://cordis.europa.eu/project/id/101310154
+IFU GMBH PRIVATES INSTITUT FUR UMWELTANALYSEN,DE,Lichtenau,PME,composants,1,477250.00,2026-06-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101091980
+ERGUNLER INSAAT PETROL URUNLERI OTOMOTIV TEKSTIL MADENCILIK SU URUNLER SANAYI VE TICARET LIMITED STI.,TR,Isparta,PME,pqc,1,475070.31,2029-06-30,non,Chips JU,,https://cordis.europa.eu/project/id/101252658
+IQRYPTO SRL,BE,MONS,PME,calcul,1,475000.00,2029-04-30,non,Chips JU,,https://cordis.europa.eu/project/id/101291743
+KUANO LTD,GB,,PME,calcul,2,474574.91,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10002667
+IBM IRELAND LIMITED,IE,DUBLIN,grande_entreprise,logiciel,1,469523.40,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225776
+CENTRE FOR PROCESS INNOVATION LIMITED,GB,,PME,capteurs,2,469280.55,2024-05-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=42186
+ARCHANGEL LIGHTWORKS LTD,GB,,PME,communication,2,466269.78,2025-01-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10036058
+SCINTIL PHOTONICS,FR,GRENOBLE,PME,composants,1,464586.00,2026-11-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101070195
+TELECOM ITALIA SPA O TIM SPA,IT,Milano,grande_entreprise,communication,2,463794.28,2027-02-28,non,Horizon Europe,http://www.ict-strongest.eu/,https://cordis.europa.eu/project/id/101114043
+SENKO ADVANCED COMPONENTS (EURO) LIMITED,GB,,PME,transverse,3,463476.44,2026-04-30,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10102939
+BOSCH GLOBAL SOFTWARE TECHNOLOGIES GMBH,DE,Stuttgart,grande_entreprise,calcul,1,460893.13,2026-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101119602
+SAES GETTERS S.P.A.,IT,LAINATE (MI),grande_entreprise,calcul,1,457766.25,2029-04-30,non,Chips JU,,https://cordis.europa.eu/project/id/101291743
+ROBOTNIK AUTOMATION SL,ES,Paterna,PME,capteurs,1,451320.63,2026-09-30,non,Horizon Europe,http://www.robotnik.es,https://cordis.europa.eu/project/id/101080144
+HEWLETT PACKARD ENTERPRISE BELGIUM,BE,Diegem,grande_entreprise,logiciel,1,450000.00,2027-08-31,non,EIC,,https://cordis.europa.eu/project/id/101115575
+STMICROELECTRONICS SILICON CARBIDE AB,SE,Norkoping,grande_entreprise,calcul,1,450000.00,2028-03-31,non,EIC,https://www.norstel.com,https://cordis.europa.eu/project/id/101186889
+ROHDE & SCHWARZ CYBERSECURITY GMBH,DE,Munchen,grande_entreprise,communication,1,449925.00,2023-03-01,non,H2020,,https://cordis.europa.eu/project/id/857156
+NOKIA UK LIMITED,GB,ALMONDSBURY BRISTOL,grande_entreprise,logiciel,1,448579.13,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101292676
+EULAMBIA ADVANCED TECHNOLOGIES ETAIRIA PERIORISMENIS EFTHINIS,GR,AG PARASKEYI,PME,pqc,1,448250.00,2027-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101092766
+IONOPTIKA LIMITED,GB,,PME,calcul,2,447876.40,2025-12-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10078083
+EKSMA OPTICS UAB,LT,Vilnius,PME,composants,1,447500.00,2027-03-31,non,Horizon Europe,https://www.eksmaoptics.com,https://cordis.europa.eu/project/id/101080164
+QRUISE SAS,FR,Levallois Perret,PME,calcul,1,440000.00,2029-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101297083
+ORANGE ROMANIA SA,RO,BUCURESTI,grande_entreprise,logiciel,1,439087.00,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101292676
+LFOUNDRY SRL,IT,AVEZZANO AQ,grande_entreprise,capteurs,1,434375.00,2019-10-31,non,H2020,,https://cordis.europa.eu/project/id/686731
+AGILE OPTIC GMBH,DE,Braunschweig,PME,composants,1,433750.00,2027-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101080164
+SONNENBERG HARRISON PARTNERSCHAFTMBB  PATENT- UNDRECHTSANWALTSKANZLEI,DE,MUNCHEN,PME,transverse,2,433750.00,2027-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101113901
+"INTERNET INSTITUTE, COMMUNICATIONS SOLUTIONS AND CONSULTING LTD",SI,Ljubljana,PME,communication,1,432984.38,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101287162
+MARTEL INNOVATE BV,NL,Amsterdam,PME,transverse,1,432875.00,2027-12-03,non,Horizon Europe,,https://cordis.europa.eu/project/id/101135785
+RED HAT LIMITED,IE,Cork,grande_entreprise,pqc,1,431250.00,2028-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225708
+AMETHYST RESEARCH LIMITED,GB,,PME,composants,1,428628.43,2024-04-30,non,Innovate UK,,https://gtr.ukri.org/projects?ref=48484
+SCYTL ELECTION TECHNOLOGIES SL,ES,Barcelona,PME,pqc,1,427125.00,2022-06-30,non,H2020,,https://cordis.europa.eu/project/id/780701
+BEAMAGINE S.L,ES,TERRASSA,PME,communication,1,426718.13,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101287162
+INTERACTIVE FULLY ELECTRICAL VEHICLES SRL,IT,Sommariva Del Bosco Cn,PME,calcul,1,425000.00,2021-12-31,non,H2020,https://www.ifevs.com,https://cordis.europa.eu/project/id/801285
+LUMINO TECHNOLOGIES LIMITED,GB,,PME,communication,1,424957.31,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10150141
+POWERPHOTONIC LIMITED,GB,,PME,capteurs,1,424719.65,2025-02-28,non,Innovate UK,,https://gtr.ukri.org/projects?ref=50414
+ARQUE SYSTEMS GMBH,DE,Aachen,PME,calcul,2,422500.00,2029-03-31,non,Chips JU | Horizon Europe,,https://cordis.europa.eu/project/id/101288553
+QXBRANCH LLC,GB,,PME,logiciel,1,417985.31,2019-02-28,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=102810
+Alea Quantum Technologies ApS,DK,Frederiksberg,PME,communication,2,416250.00,2027-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101114043
+MERQURY CYBERSECURITY LIMITED,MT,Santa Venera,PME,communication,1,416250.00,2026-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101070168
+GIESECKE+DEVRIENT EPAYMENTS GMBH,DE,Munchen,grande_entreprise,pqc,1,414184.38,2029-06-30,non,Chips JU,,https://cordis.europa.eu/project/id/101252658
+QUANTUM BLOCKCHAINS SP ZOO,PL,Lublin,PME,pqc,1,409430.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225797
+ARGOTEC SRL,IT,SAN MAURO TORINESE,PME,communication,2,409362.50,2025-12-31,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/101082596
+LOGIICDEV GMBH,AT,GRAZ-WETZELSDORF,PME,pqc,1,408750.00,2028-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225708
+ADRESTIA EREVNITIKI IDIOTIKI KEFALAIOUXIKI ETAIREIA,GR,IRAKLEIO,PME,logiciel,1,406250.00,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101293734
+ICEOXFORD LIMITED,GB,,PME,calcul,1,405904.34,2025-10-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10075109
+TELEKOM DEUTSCHLAND GMBH,DE,Bonn,grande_entreprise,communication,1,401400.00,2022-03-31,non,H2020,,https://cordis.europa.eu/project/id/820466
+QLIBRI GMBH,DE,MUNCHEN,PME,capteurs,1,399962.50,2027-06-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101070546
+CHASE RESEARCH CRYOGENICS LTD,GB,,PME,transverse,2,399824.45,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=133988
+UAB 3 fotonai,LT,Vilnius,PME,capteurs,1,399500.00,2029-11-30,non,EIC,,https://cordis.europa.eu/project/id/101258685
+ADVANCED COMPUTING SPAIN SL,ES,MADRID,grande_entreprise,pqc,1,393219.46,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225797
+AUSTRALO INTERINNOV MARKETING LAB SL,ES,MADRID,PME,transverse,1,392500.00,2028-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225759
+ODIN SOLUTIONS SOCIEDAD LIMITADA,ES,Alcantarilla,PME,pqc,1,390875.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225797
+MASSIVE ANALYTIC LIMITED,GB,,PME,calcul,3,387189.35,2023-05-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10001969
+TOPGAN QUANTUM TECHNOLOGIES LIMITED,GB,,PME,capteurs,2,386706.87,2019-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=103878
+ACCELER8 LIMITED,MT,Floriana,PME,calcul,1,383750.00,2027-04-30,non,EIC,,https://cordis.europa.eu/project/id/101159049
+BESTEK,FR,Marolles en Hurepoix,grande_entreprise,calcul,1,383750.00,2029-12-31,non,Chips JU,,https://cordis.europa.eu/project/id/101291215
+QUANTUM BASE ALPHA LTD,GB,,PME,calcul,3,382480.45,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10072541
+INTELLIGENTSIA CONSULTANTS SARL,LU,Bertrange,PME,calcul,2,382375.00,2027-08-31,non,EIC | Horizon Europe,http://www.intelligentsia-consultants.com,https://cordis.europa.eu/project/id/101129663
+4CF SP ZOO,PL,WARSZAWA,PME,pqc,1,379375.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225797
+PRIVREDNO DRUSTVO ZENTRIX LAB DRUSTVO SA OGRANICENOM ODGOVORNOSCU PANCEVO,RS,PANCEVO,PME,communication,1,379125.00,2025-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101096435
+ULTRAVIOLET CONSULT DOO,RS,Novi Beograd,grande_entreprise,communication,1,378000.00,2025-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101096435
+CYLO LABS LTD,GB,Harlow,PME,pqc,1,372562.50,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225797
+DAY ONE SOCIETA A RESPONSABILITA LIMITATA,IT,ROMA RM,PME,calcul,2,370000.00,2029-01-31,non,EIC,,https://cordis.europa.eu/project/id/101057977
+ATPHARMA ILAC SANAYI VE TICARET LIMITED SIRKETI,TR,ISTANBUL,PME,pqc,1,367500.00,2029-06-30,non,Chips JU,,https://cordis.europa.eu/project/id/101252658
+INFINERA UNIPESSOAL LDA,PT,CARNAXIDE,grande_entreprise,pqc,1,366250.00,2027-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101092766
+DB SYSTEL GMBH,DE,Frankfurt Am Main,grande_entreprise,logiciel,1,365062.50,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101293734
+SWECO SVERIGE AB,SE,Stockholm,grande_entreprise,pqc,1,364687.50,2029-06-30,non,Chips JU,,https://cordis.europa.eu/project/id/101252658
+CORDON ELECTRONICS ITALIA SRL,IT,CORNATE D'ADDA,grande_entreprise,communication,1,364375.00,2022-06-30,non,H2020,,https://cordis.europa.eu/project/id/820474
+Kwan-Tek,FR,PLOEMEUR,PME,capteurs,1,364000.00,2028-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101189875
+CAMBRIDGE CONSULTANTS LIMITED,GB,,PME,pqc,1,361624.05,2025-04-30,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10129418
+INSPEK,FR,Palaiseau,PME,calcul,1,360692.50,2026-01-31,non,EIC,,https://cordis.europa.eu/project/id/101099699
+FUTURE ENERGY INNOVATIVE TECHNOLOGIES I.K.E.,GR,MAROUSI,PME,calcul,1,360000.00,2027-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101192566
+KPMG LIMITED,CY,Lefkosia,grande_entreprise,pqc,1,356250.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225859
+SECURE-IC SAS,FR,CESSON-SEVIGNE,PME,pqc,1,350150.00,2027-02-28,non,Horizon Europe,https://www.secure-ic.com,https://cordis.europa.eu/project/id/101092766
+AXON LOGIC IDIOTIKI KEFALAIOUXIKI ETAIREIA,GR,NEON HERAKLION,PME,logiciel,1,350000.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225776
+ELLAS SAT ANONYMH ETAIREIA YPIRESIES DORYFORIKON SYSTIMATON KAI EPIKOINONION,GR,ATHENS,grande_entreprise,pqc,1,350000.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225859
+RESEARCH AND INNOVATION SERVICES DOO ZA USLUGE,HR,Zagreb,PME,communication,1,350000.00,2030-08-31,non,EIC,,https://cordis.europa.eu/project/id/101258015
+QPERFECT SAS,FR,STRASBOURG,grande_entreprise,calcul,1,349750.00,2029-04-30,non,Chips JU,,https://cordis.europa.eu/project/id/101291743
+MOTOR OIL (HELLAS) DIILISTIRIA KORINTHOU A.E.,GR,MAROUSSI ATHINA,grande_entreprise,transverse,1,348125.00,2028-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225759
+"DATA MACHINE ELITE, LDA.",PT,ALENQUER,grande_entreprise,logiciel,1,344385.84,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225776
+Honda Research Institute Europe GmbH,DE,Offenbach/Main,grande_entreprise,calcul,1,343922.50,2026-02-28,non,Horizon Europe,https://www.honda-ri.de,https://cordis.europa.eu/project/id/101080086
+CYENTIFIC AS,NO,STROMMEN,PME,pqc,1,343350.00,2027-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101192749
+SOFTJAM SPA,IT,Genova,grande_entreprise,composants,1,340750.00,2026-06-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101091980
+ACCELOPMENT SCHWEIZ AG,CH,Zurich,PME,composants,1,340625.00,2022-07-31,non,H2020,http://www.accelopment.com,https://cordis.europa.eu/project/id/820393
+ERGTECH RESEARCH GMBH,CH,ZURICH,PME,pqc,1,340560.94,2029-06-30,non,Chips JU,,https://cordis.europa.eu/project/id/101252658
+OXFORD LASERS LIMITED,GB,,PME,transverse,1,339665.61,2026-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10100964
+LUCEDA,BE,GENT,PME,composants,1,339347.50,2027-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101070622
+CARDIATEC BIOSCIENCES LTD,GB,,PME,calcul,1,337750.04,2027-09-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10149695
+EBOS TECHNOLOGIES LIMITED,CY,NICOSIA,PME,calcul,1,337750.00,2026-10-31,non,Horizon Europe,http://www.ebos.com.cy,https://cordis.europa.eu/project/id/101119602
+DEMCON FOCAL BV,NL,Enschede,grande_entreprise,communication,1,337580.00,2027-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101135225
+BITNET BILISIM HIZMETLERI LIMITED SIRKETI,TR,Cekmekoy Istanbul,PME,pqc,1,337225.00,2029-06-30,non,Chips JU,,https://cordis.europa.eu/project/id/101252658
+TELSY S.P.A.,IT,Torino,grande_entreprise,pqc,1,336700.00,2026-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101119746
+DEUTSCHE TELEKOM TECHNIK GMBH,DE,Bonn,grande_entreprise,communication,1,334152.00,2027-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101114043
+TOTALENERGIES ONETECH,FR,Courbevoie,grande_entreprise,calcul,1,333391.25,2024-11-30,non,H2020,,https://cordis.europa.eu/project/id/951821
+ACCENT PRO 2000 SRL,RO,Bucuresti,PME,capteurs,1,331250.00,2030-04-30,non,EIC,https://www.accent.ro,https://cordis.europa.eu/project/id/101257367
+ACKTAR LTD.,IL,Kiryat,PME,capteurs,1,329250.00,2022-03-31,non,H2020,https://www.acktar.com,https://cordis.europa.eu/project/id/820404
+FEBUS OPTICS,FR,PAU,PME,communication,1,326812.50,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101287162
+INFILI TECHNOLOGIES SOCIETE ANONYME,GR,ATHENS,PME,transverse,1,325000.00,2028-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225759
+PUMACY TECHNOLOGIES AG,DE,Bernburg,PME,pqc,1,323750.00,2029-06-30,non,Chips JU,,https://cordis.europa.eu/project/id/101252658
+TINEXTA INNOVATION HUB S.P.A.,IT,CORREGGIO RE,PME,composants,1,321875.00,2026-06-30,non,Horizon Europe,http://www.warrantgroup.eu,https://cordis.europa.eu/project/id/101091980
+TIMELEX,BE,Bruxelles / Brussel,PME,pqc,1,321000.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225797
+INFOLYSIS P.C.,GR,Athens,PME,communication,1,320132.25,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101287162
+VERIQLOUD,FR,Montrouge,PME,communication,3,319700.00,2026-03-31,non,H2020 | Horizon Europe,,https://cordis.europa.eu/project/id/820445
+METAMORPHIC ADDITIVE MANUFACTURING LTD,GB,,PME,capteurs,2,317410.86,2027-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10143484
+TECHNIC FRANCE,FR,SAINT DENIS,grande_entreprise,calcul,1,315035.63,2024-05-31,non,H2020,,https://cordis.europa.eu/project/id/101007322
+PERTIMM DEVELOPPEMENT,FR,Asnieres Sur Seine,PME,pqc,1,313242.13,2029-06-30,non,Chips JU,,https://cordis.europa.eu/project/id/101252658
+DYNAMIS AE GENIKON ASFALEION,GR,MAROUSI,PME,pqc,1,311250.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225797
+VOLKSWAGEN AKTIENGESELLSCHAFT,DE,Wolfsburg,grande_entreprise,calcul,1,306405.00,2023-02-28,non,H2020,http://www.volkswagen.de,https://cordis.europa.eu/project/id/828826
+SPINEDGE LTD,IL,Haifa,PME,pqc,1,302500.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225859
+NOKIA DENMARK AS,DK,Copenhagen,grande_entreprise,communication,1,301788.00,2028-11-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101169042
+NVIDIA DENMARK APS,DK,Roskilde,grande_entreprise,pqc,1,301788.00,2026-08-31,oui,Horizon Europe,,https://cordis.europa.eu/project/id/101073355
+APPLIED MATERIALS ITALIA SRL,IT,San Bagio Di Callalta,grande_entreprise,calcul,1,301500.00,2024-04-30,non,H2020,http://www.amat.com/index.html,https://cordis.europa.eu/project/id/829005
+SIMUNE ATOMISTICS SL,ES,Donostia San Sebastian,PME,transverse,1,299375.00,2024-06-30,non,H2020,,https://cordis.europa.eu/project/id/824140
+E-LIGHTHOUSE NETWORK SOLUTIONS SL,ES,Cartagena,PME,pqc,1,299000.00,2027-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101092766
+HONEYWELL INTERNATIONAL SRO,CZ,PRAHA,grande_entreprise,capteurs,1,298213.62,2028-11-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101286197
+A.P.E. RESEARCH SRL,IT,Trieste,PME,capteurs,1,297656.00,2019-10-31,non,H2020,http://www.aperesearch.com,https://cordis.europa.eu/project/id/686731
+GRAPHENEA SEMICONDUCTOR SL,ES,DONOSTIA,PME,capteurs,1,294000.00,2028-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101189611
+VIVID COMPONENTS GERMANY UG,DE,Paderborn,PME,capteurs,1,293500.00,2026-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101070062
+GIGASYS SOLUTIONS SL,ES,MALAGA,PME,logiciel,1,293125.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225776
+TEMATYS,FR,Palaiseau,PME,composants,1,293125.00,2027-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101135845
+Summit TEC Group LTD,CY,Paphos,PME,pqc,1,292500.00,2027-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101192749
+CGA SIMULATION LIMITED,GB,,PME,calcul,2,291005.67,2025-02-28,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10072813
+SECURITY PATTERN SRL,IT,MAZZANO,PME,pqc,1,290937.00,2026-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101119746
+QUBIT PHARMACEUTICALS,FR,Paris,PME,calcul,1,290303.13,2029-10-31,non,EuroHPC,,https://cordis.europa.eu/project/id/101194322
+IQM GERMANY GMBH,DE,MUNCHEN,PME,calcul,1,290272.32,2030-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101312335
+SCHOTT AG,DE,Mainz,grande_entreprise,composants,1,289838.00,2026-12-31,non,Horizon Europe,https://www.schott.com,https://cordis.europa.eu/project/id/101135876
+ADDITESS ADVANCED INTEGRATED TECHNOLOGY SOLUTIONS & SERVICES LTD,CY,LEFKOSIA,PME,pqc,1,288000.00,2027-12-31,non,Horizon Europe,https://www.aditess.com,https://cordis.europa.eu/project/id/101192749
+CAIXABANK SA,ES,Valencia,grande_entreprise,transverse,1,287125.00,2028-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225759
+ARTIC INSTRUMENTS OY,FI,Espoo,PME,calcul,1,286462.50,2029-09-30,non,Chips JU,,https://cordis.europa.eu/project/id/101286304
+VALEO TELEMATIK UND AKUSTIK GMBH,DE,Friedrichsdorf,grande_entreprise,pqc,1,286000.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225859
+ROLLS-ROYCE PLC,GB,,grande_entreprise,calcul,3,285770.63,2025-08-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10071684
+VALEO COMFORT AND DRIVING ASSISTANCE,FR,CRETEIL,grande_entreprise,pqc,1,283475.00,2028-09-30,non,Horizon Europe,https://www.valeo.com,https://cordis.europa.eu/project/id/101225859
+SOFTWARE COMPANY EOOD,BG,Sofia,PME,calcul,1,283125.00,2027-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101192566
+THALES DMS FRANCE SAS,FR,Elancourt,grande_entreprise,capteurs,2,283101.00,2028-12-31,non,Horizon Europe,https://www.thalesgroup.com,https://cordis.europa.eu/project/id/101080136
+AMPLITUDE,FR,Pessac,PME,composants,1,282693.60,2028-08-31,non,Horizon Europe,http://www.amplitude-systemes.com,https://cordis.europa.eu/project/id/101168628
+TELEKOM SLOVENIJE DD,SI,Ljubljana,grande_entreprise,pqc,1,281812.00,2027-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101192749
+TELESPAZIO SPA,IT,ROMA,grande_entreprise,pqc,1,278911.25,2028-10-31,non,Horizon Europe,http://www.telespazio.it,https://cordis.europa.eu/project/id/101225708
+ACUA OCEAN LIMITED,GB,,PME,pqc,1,278826.06,2025-08-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10036045
+CITY SCIENCE CORPORATION LIMITED,GB,,PME,calcul,1,277722.58,2024-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10030783
+AIRBUS NETHERLANDS BV,NL,Leiden,grande_entreprise,communication,1,274370.40,2028-11-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101169042
+KANFIT LTD,IL,Migdal Ha-Emek,PME,capteurs,1,272805.00,2020-06-30,non,H2020,,https://cordis.europa.eu/project/id/667192
+NXP SEMICONDUCTORS NETHERLANDS BV,NL,Eindhoven,grande_entreprise,pqc,1,272095.63,2029-06-30,non,Chips JU,http://www.nxp.com,https://cordis.europa.eu/project/id/101252658
+FOTEC FORSCHUNGS- UND TECHNOLOGIETRANSFER GMBH,AT,Wiener Neustadt,PME,capteurs,1,270331.20,2027-11-30,non,Horizon Europe,http://www.fotec.at,https://cordis.europa.eu/project/id/101073088
+ERGO QUANTUM LTD,GB,,PME,calcul,1,269492.21,2024-04-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10030953
+CYBERECOCUL GLOBAL SERVICES LTD,CY,NICOSIA,PME,pqc,1,264750.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225859
+SUITE5 DATA INTELLIGENCE SOLUTIONS LIMITED,CY,Limassol,PME,pqc,1,263500.00,2020-12-31,non,H2020,,https://cordis.europa.eu/project/id/779391
+TEEM PHOTONICS SA,FR,Meylan,PME,capteurs,1,262875.60,2022-06-30,non,H2020,,https://cordis.europa.eu/project/id/765075
+ROHDE & SCHWARZ GMBH & CO. KOMMANDITGESELLSCHAFT,DE,MUNCHEN,grande_entreprise,calcul,1,262595.00,2027-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101113946
+SOITEC SA,FR,Bernin,grande_entreprise,calcul,2,262493.75,2025-02-28,non,H2020,https://www.soitec.com,https://cordis.europa.eu/project/id/101007322
+OPTAGON FOTONIKI IDIOTIKI KEFALAIOUCHIKI ETAIRIA,GR,"PALLINI, ATHINA",PME,composants,1,261981.00,2027-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101070549
+LITHIUM LASERS SRL,IT,Milano,PME,composants,1,261499.68,2025-01-31,non,H2020,,https://cordis.europa.eu/project/id/956387
+ADVA NETWORK SECURITY GMBH,DE,BERLIN,grande_entreprise,communication,1,260539.20,2027-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101120422
+KEEQUANT GMBH,DE,Furth,PME,communication,1,260539.20,2027-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101120422
+NVIDIA GmbH,DE,Wuerselen,grande_entreprise,pqc,1,260539.20,2026-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101073355
+TESAT-SPACECOM GMBH & CO.KG,DE,Backnang,grande_entreprise,communication,1,260539.20,2028-11-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101169042
+RESOLUTE PHOTONICS LTD,GB,,PME,calcul,1,260272.29,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10102939
+Promethence S.r.l,IT,Milano,PME,logiciel,1,259950.00,2029-04-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101298343
+NVIDIA ITALY S.R.L.,IT,Milano,grande_entreprise,pqc,1,259437.60,2026-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101073355
+ENLIGHTRA SARL,CH,Renens,PME,calcul,1,258000.00,2031-02-28,non,EIC,,https://cordis.europa.eu/project/id/101259183
+ColibrITD,FR,Paris,PME,calcul,1,254937.50,2029-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101288872
+RAHKO LIMITED,GB,,PME,logiciel,2,254469.46,2022-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=133986
+QUNASYS DENMARK APS,DK,KBENHAVN N,grande_entreprise,calcul,1,253507.00,2028-12-31,non,EuroHPC,,https://cordis.europa.eu/project/id/101241875
+KEYSIGHT TECHNOLOGIES FINLAND OY,FI,Oulu,grande_entreprise,logiciel,1,253125.00,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101292676
+SEEQC-EU SRL,IT,Roma,PME,calcul,1,251392.50,2025-02-28,non,H2020,,https://cordis.europa.eu/project/id/964398
+EAGLEYARD PHOTONICS GMBH,DE,Berlin,PME,composants,1,251050.00,2027-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101135845
+TILDE SIA,LV,Riga,PME,calcul,1,250000.00,2024-11-30,non,H2020,https://www.tilde.eu,https://cordis.europa.eu/project/id/951821
+HOLOEYE PHOTONICS AG,DE,Berlin,PME,composants,1,249216.48,2021-06-30,non,H2020,http://www.holoeye.com,https://cordis.europa.eu/project/id/721465
+QUTOOLS GMBH,DE,MUNCHEN,PME,capteurs,1,249216.48,2022-06-30,non,H2020,https://www.qutools.com,https://cordis.europa.eu/project/id/765075
+NANOCO TECHNOLOGIES LIMITED,GB,,PME,calcul,1,247513.82,2024-01-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10030660
+INCITES CONSULTING SA,LU,Strassen,PME,pqc,1,247500.00,2027-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101192749
+JIJ EUROPE LTD,GB,LONDON,grande_entreprise,calcul,1,244541.25,2028-12-31,non,EuroHPC,,https://cordis.europa.eu/project/id/101241875
+X-FAB MEMS FOUNDRY GmbH,DE,Erfurt,grande_entreprise,composants,1,244225.00,2024-06-30,non,H2020,,https://cordis.europa.eu/project/id/871740
+RED ALERT LABS,FR,Alfortville,PME,calcul,1,244125.00,2026-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101119602
+SPHERE ULTRAFAST PHOTONICS SA,PT,Porto,PME,composants,1,243403.20,2028-08-31,non,Horizon Europe,https://www.sphere-photonics.com,https://cordis.europa.eu/project/id/101168628
+CRYPTA LABS LIMITED,GB,,PME,communication,2,241679.87,2024-01-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=49229
+MULTIVERSE COMPUTING SAS,FR,Palaiseau,PME,calcul,1,240937.50,2029-10-31,non,EuroHPC,,https://cordis.europa.eu/project/id/101194322
+ASTRAZENECA AB,SE,Sodertaelje,grande_entreprise,calcul,1,240500.00,2024-11-30,non,H2020,http://www.astrazeneca.com,https://cordis.europa.eu/project/id/951821
+RIBER SA,FR,BEZONS,PME,calcul,1,240000.00,2027-09-30,non,EIC,https://www.riber.com,https://cordis.europa.eu/project/id/101115190
+SCIPROM SARL,CH,SAINT SULPICE,PME,composants,1,240000.00,2024-06-30,non,H2020,http://www.sciprom.ch,https://cordis.europa.eu/project/id/871740
+QSEIDON GMBH,DE,GUTERSLOH,PME,logiciel,1,238582.70,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225776
+ZAIKU GROUP LTD,GB,,PME,logiciel,2,237487.07,2024-08-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10072286
+NIQS TECH (LEEDS) LIMITED,GB,,PME,capteurs,1,236056.22,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10031417
+NASCENT SEMICONDUCTOR LIMITED,GB,,PME,composants,2,233374.33,2025-01-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10074860
+KLARIAN LIMITED,GB,,PME,transverse,1,232605.24,2021-08-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=104615
+DA VINCI LABS,FR,Reugny,PME,logiciel,1,231125.00,2025-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101080142
+STMICROELECTRONICS CROLLES 2 SAS,FR,Crolles,grande_entreprise,composants,1,230193.75,2027-03-31,non,Chips JU,http://www.st.com,https://cordis.europa.eu/project/id/101139908
+BRUKER BIOSPIN HOLDING SE,DE,Ettlingen,grande_entreprise,capteurs,1,228800.00,2022-03-31,non,H2020,http://www.bruker-biospin.de,https://cordis.europa.eu/project/id/820374
+KEYSIGHT TECHNOLOGIES BELGIUM,BE,Leuven,grande_entreprise,logiciel,1,227250.00,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101292676
+INCIZE,BE,Louvain La Neuve,PME,composants,1,226778.13,2027-03-31,non,Chips JU,,https://cordis.europa.eu/project/id/101139908
+GMV AEROSPACE AND DEFENCE SA,ES,Tres Cantos,grande_entreprise,capteurs,2,225932.08,2027-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101189541
+ESC AEROSPACE SRO,CZ,Prague,PME,communication,1,225420.00,2027-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101135225
+BENEQ OY,FI,Espoo,grande_entreprise,calcul,1,223125.00,2024-05-31,non,H2020,http://www.beneq.com,https://cordis.europa.eu/project/id/101007322
+QUANTROLOX LIMITED,GB,,PME,calcul,1,217622.24,2024-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10031865
+GEOMATICS RESEARCH & DEVELOPMENT SRL,IT,Lomazzo,PME,capteurs,1,215909.75,2026-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101080144
+CNET CENTRE FOR NEW ENERGY TECHNOLOGIES SA,PT,LOURES,grande_entreprise,logiciel,1,210000.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225776
+TOP-GAN SP ZOO,PL,WARSZAWA,PME,calcul,1,209675.00,2029-04-30,non,Chips JU,http://www.topgan.fr.pl,https://cordis.europa.eu/project/id/101291743
+INQBIT INNOVATIONS SRL,RO,BUCURESTI,PME,calcul,1,209125.00,2026-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101119602
+NCC OPERATIONS LIMITED,GB,,PME,calcul,1,209030.87,2025-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10004793
+ZURICH INSTRUMENTS GERMANY GMBH,DE,Munich,grande_entreprise,calcul,1,208396.25,2027-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101113946
+STREAM ANALYSE SWEDEN AB,SE,Uppsala,PME,pqc,1,205318.75,2029-06-30,non,Chips JU,,https://cordis.europa.eu/project/id/101252658
+SMART FACTORY SRL,IT,Milano,grande_entreprise,pqc,1,203262.00,2026-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101119746
+SAP SE,DE,Walldorf,grande_entreprise,communication,1,202375.00,2022-03-31,non,H2020,https://www.sap.com,https://cordis.europa.eu/project/id/820445
+PRACTIN IKE,GR,IOANNINA,PME,calcul,1,201687.50,2026-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101119602
+ATREIDES CASERI UK LTD,GB,,PME,calcul,1,201636.11,2024-05-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10031704
+DEEP BLUE SRL,IT,ROMA,PME,calcul,1,201125.00,2029-02-28,non,Horizon Europe,http://www.dblue.it,https://cordis.europa.eu/project/id/101287685
+IS-INSTRUMENTS LIMITED,GB,,PME,capteurs,1,200123.01,2025-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10005391
+EMPIRIQA SP ZOO,PL,TORUN,grande_entreprise,calcul,1,200000.00,2032-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101250265
+Q.ANT GMBH,DE,STUTTGART,PME,calcul,1,200000.00,2027-04-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101080173
+CHROMACITY LIMITED,GB,,PME,composants,2,196761.21,2019-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=104163
+EUNOMIA LIMITED,IE,DUBLIN,PME,logiciel,1,196437.50,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225776
+SENETAS EUROPE  LIMITED,GB,,PME,transverse,1,195166.64,2021-08-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=104615
+POLARITON TECHNOLOGIES AG,CH,Adliswil,PME,calcul,1,192543.75,2024-09-30,non,H2020,,https://cordis.europa.eu/project/id/899558
+NOKIA SOLUTIONS AND NETWORKS HELLAS SINGLE MEMBER SA,GR,NEA KIFISIA,grande_entreprise,communication,1,191126.25,2025-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101096435
+DCS COMPUTING GMBH,AT,Linz,PME,transverse,1,190000.00,2031-09-30,non,Horizon Europe,http://www.dcs-computing.com,https://cordis.europa.eu/project/id/101303925
+QUANTOPTICON LTD.,GB,,PME,composants,2,187525.40,2025-09-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=104170
+MAGRITEK GMBH,DE,Aachen,PME,capteurs,1,182500.00,2027-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101135742
+SLF SVENSKA LASERFABRIKEN AB,SE,RIMBO,PME,calcul,1,181875.00,2029-04-30,non,Chips JU,,https://cordis.europa.eu/project/id/101291743
+UBS LIMITED,GB,,grande_entreprise,logiciel,1,179118.65,2019-02-28,non,Innovate UK,,https://gtr.ukri.org/projects?ref=102810
+INNOVA INTEGRA LIMITED,GB,FOWEY,PME,pqc,1,175962.50,2029-06-30,non,Chips JU,,https://cordis.europa.eu/project/id/101252658
+BABCOCK INTEGRATED TECHNOLOGY LIMITED,GB,,grande_entreprise,communication,1,173994.94,2024-11-30,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10005967
+FiberCop S.p.A.,IT,Milan,grande_entreprise,pqc,1,172000.00,2027-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101092766
+UNISYS LIMITED,GB,,grande_entreprise,transverse,1,171944.83,2024-12-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10073838
+STANDARD CHARTERED BANK,GB,,grande_entreprise,calcul,2,170464.19,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=44167
+SIA PARTNERS UK PLC,GB,,grande_entreprise,calcul,1,169220.49,2025-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10004857
+EDWARDS LIMITED,GB,,grande_entreprise,calcul,1,168598.36,2025-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10004857
+A2E LIMITED,GB,,grande_entreprise,composants,1,167269.36,2025-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10053868
+ZENABYTE SRL,IT,GENOVA,PME,calcul,1,166250.00,2029-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101287685
+INSTADEEP LTD,GB,,grande_entreprise,calcul,1,164649.19,2025-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10074167
+ORTHOKEY ITALIA SRL,IT,CARRARA MS,PME,transverse,1,164375.00,2031-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101303925
+QUENTANGLE QUANTUM SYSTEMS LTD,GB,,PME,communication,1,163302.08,2026-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10102791
+NANOPHAB B.V.,NL,Eindhoven,PME,calcul,1,161250.00,2023-08-31,non,H2020,,https://cordis.europa.eu/project/id/862046
+DIVIDITI LIMITED,GB,,PME,calcul,1,159117.45,2019-01-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=104168
+NEOVIA INNOVATION,FR,Paris,PME,calcul,1,158750.00,2026-06-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101131550
+INDEV ANONYMI ETAIREIA ANAPTYKSIS LOGISMIKOY,GR,Athens,grande_entreprise,pqc,1,155875.00,2020-12-31,non,H2020,,https://cordis.europa.eu/project/id/779391
+INTERMODULATION PRODUCTS AB,SE,SEGERSTA,PME,calcul,1,155875.00,2025-04-30,non,EIC,,https://cordis.europa.eu/project/id/101057977
+PA CONSULTING SERVICES LIMITED,GB,,PME,logiciel,1,155772.23,2026-04-30,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10179238
+SAFRAN ELECTRONICS & DEFENSE,FR,Paris,grande_entreprise,calcul,1,153750.00,2029-04-30,non,Chips JU,https://www.safran-group.com,https://cordis.europa.eu/project/id/101291743
+BASEL PRECISION INSTRUMENTS GMBH,CH,Basel,PME,calcul,1,153125.00,2023-08-31,non,H2020,,https://cordis.europa.eu/project/id/862046
+JUSTINMIND SL,ES,Barcelona,PME,calcul,1,152289.05,2027-06-30,non,EIC,,https://cordis.europa.eu/project/id/101129663
+LASER QUANTUM GMBH,DE,Konstanz,PME,composants,1,151430.89,2022-03-31,non,H2020,https://www.laserquantum.com,https://cordis.europa.eu/project/id/820423
+JOHNSON MATTHEY PLC,GB,,grande_entreprise,calcul,2,151179.32,2022-01-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=133986
+EUROUSC ESPANA SL,ES,Madrid,PME,calcul,1,151000.00,2029-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101287685
+TTI NORTE SL,ES,Santander,PME,transverse,1,150000.00,2022-03-31,non,H2020,https://www.ttinorte.es,https://cordis.europa.eu/project/id/820505
+GLOBAL TCAD SOLUTIONS GMBH,AT,Wien,PME,composants,1,149301.25,2027-03-31,non,Chips JU,,https://cordis.europa.eu/project/id/101139908
+COGNIZANT WORLDWIDE  LIMITED,GB,,grande_entreprise,communication,1,149291.22,2019-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=104161
+ERNST & YOUNG LLP,GB,,grande_entreprise,calcul,1,149168.21,2024-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10076433
+HOMOMORPHIC LABS LTD,GB,,PME,calcul,2,144600.42,2024-08-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10072286
+ATOTECH DEUTSCHLAND GMBH,DE,Berlin,grande_entreprise,calcul,1,143593.75,2024-05-31,non,H2020,,https://cordis.europa.eu/project/id/101007322
+ALTARANGE LTD,GB,,PME,capteurs,1,143309.25,2023-11-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10086180
+CAPGEMINI UK PLC,GB,,PME,calcul,1,143308.06,2023-11-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10085266
+APPLIED QUANTUM COMPUTING LIMITED,GB,,PME,calcul,1,143204.16,2024-11-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10072653
+VORSUS LTD,GB,,PME,calcul,1,143121.75,2023-11-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10082522
+X-NET SERVICES GMBH,AT,Linz,PME,communication,1,141828.75,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101287162
+Robert Harrison Consulting GmbH,DE,Zorneding,PME,inconnu,1,140269.70,2028-11-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101177922
+NANOLAYERS OU,EE,Tallinn,PME,composants,1,140000.00,2027-03-31,non,Chips JU,,https://cordis.europa.eu/project/id/101139908
+XCAM LIMITED,GB,,PME,composants,1,137440.74,2019-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=102805
+ID QUANTIQUE LTD,GB,,PME,communication,1,137242.49,2019-05-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=103874
+INTELLIGENT FLUIDS GMBH,DE,Leipzig,PME,calcul,1,136500.00,2024-05-31,non,H2020,,https://cordis.europa.eu/project/id/101007322
+MODUS RESEARCH AND INNOVATION LIMITED,GB,DUNDEE,PME,transverse,1,136250.00,2029-01-31,non,EIC,,https://cordis.europa.eu/project/id/101257287
+FRAGMENTIX STORAGE SOLUTIONS GMBH,AT,KIERLING,PME,communication,1,134750.00,2023-03-01,non,H2020,,https://cordis.europa.eu/project/id/857156
+SEROX LIMITED,GB,,PME,capteurs,1,133361.20,2019-02-28,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=133092
+METLASE LIMITED,GB,,PME,capteurs,1,133049.50,2023-11-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10085220
+CARL ZEISS AG,DE,Oberkochen,grande_entreprise,capteurs,1,132765.00,2022-03-31,non,H2020,https://www.zeiss.de,https://cordis.europa.eu/project/id/801060
+QUANTUM TECHNOLOGIES ASSOCIATES LIMITED,GB,,PME,capteurs,2,130123.83,2026-09-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10144591
+AVL LIST GMBH,AT,Graz,grande_entreprise,pqc,1,129718.75,2029-06-30,non,Chips JU,http://www.avl.com,https://cordis.europa.eu/project/id/101252658
+NATIONAL GRID ELECTRICITY SYSTEM OPERATOR LIMITED,GB,,PME,logiciel,2,128752.73,2026-04-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10129418
+AIRBUS OPERATIONS SAS,FR,Toulouse,grande_entreprise,calcul,1,128750.00,2029-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101297083
+MULTIVERSE COMPUTING LTD,GB,,PME,calcul,1,126656.71,2023-11-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10083669
+CASCADE TECHNOLOGIES LIMITED,GB,,grande_entreprise,composants,1,126434.59,2019-10-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=133076
+JPE B.V.,NL,Maastricht Airpor,PME,communication,1,126250.00,2022-03-31,non,H2020,,https://cordis.europa.eu/project/id/820445
+GESELLSCHAFT FUR GERATEBAU MIT BESCHRANKTER HAFTUNG,DE,DORTMUND,grande_entreprise,calcul,1,125000.00,2029-02-28,non,EIC,,https://cordis.europa.eu/project/id/101185712
+R INNOVATION AB,SE,SKARA,PME,composants,1,123750.00,2027-07-31,non,EIC,,https://cordis.europa.eu/project/id/101158577
+MAGNETFAB,FR,Grenoble,PME,capteurs,1,123200.00,2028-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101189611
+ATRINEO AG,DE,Karlsruhe,PME,communication,1,123046.25,2024-02-29,non,H2020,,https://cordis.europa.eu/project/id/899814
+GLOBAZ SA,PT,OLIVEIRA DE AZEMEIS,PME,calcul,1,120000.00,2029-02-28,non,Horizon Europe,http://www.globazgrupo.com,https://cordis.europa.eu/project/id/101288872
+IQD FREQUENCY PRODUCTS LIMITED,GB,,PME,capteurs,1,113859.92,2026-12-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10142737
+AI4SEC OU,EE,Tallinn,PME,pqc,1,113750.00,2029-06-30,non,Chips JU,,https://cordis.europa.eu/project/id/101252658
+ALTER TECHNOLOGY TUV NORD SA,ES,Sevilla,grande_entreprise,communication,1,112500.00,2027-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101135225
+KEYSIGHT TECHNOLOGIES DEUTSCHLAND GMBH,DE,Boeblingen,grande_entreprise,calcul,1,111562.50,2024-05-31,non,H2020,,https://cordis.europa.eu/project/id/101007322
+SARCURA GMBH,AT,KLOSTERNEUBURG,PME,composants,1,110695.56,2027-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101070622
+THE CIRCLE SOCIETA AGRICOLA A RESPONSABILITA LIMITATA,IT,ROMA,PME,composants,1,110375.00,2026-06-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101091980
+CYPRUS ORGANISATION FOR STANDARDISATION,CY,Lefkosia,grande_entreprise,pqc,1,109375.00,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225859
+QUANTONOVA LIMITED,GB,,PME,calcul,2,107481.94,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10076022
+OKMETIC OY,FI,Vantaa,grande_entreprise,composants,1,105625.00,2027-03-31,non,Chips JU,http://www.okmetic.com,https://cordis.europa.eu/project/id/101139908
+TORR SCIENTIFIC LIMITED,GB,,PME,capteurs,1,103938.69,2024-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10031462
+TAOTECH (UK) LIMITED,GB,,PME,composants,1,101695.83,2025-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10053868
+SENER AEROESPACIAL SOCIEDAD ANONIMA,ES,LAS ARENAS,grande_entreprise,transverse,1,100028.75,2027-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101113901
+AKKA DSW GMBH,DE,Stuttgart,grande_entreprise,calcul,1,100000.00,2022-03-31,non,H2020,,https://cordis.europa.eu/project/id/820495
+COMPACT CRYOGENICS,GB,,PME,composants,1,95840.45,2019-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=104151
+VALID DATUM LIMITED,GB,,PME,calcul,1,95212.28,2021-09-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=106707
+QNAMI AG,CH,Muttenz,grande_entreprise,capteurs,1,93750.00,2019-05-31,oui,H2020,,https://cordis.europa.eu/project/id/801189
+CLYDE SPACE LIMITED,GB,,PME,composants,1,92705.56,2019-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=102805
+PICOSUN OY,FI,Espoo,PME,composants,1,91718.75,2027-03-31,non,Chips JU,http://www.picosun.com,https://cordis.europa.eu/project/id/101139908
+ABSTRACT MACHINES SAS,FR,Paris,PME,communication,1,91125.00,2025-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101096435
+NANOLAYERS RESEARCH COMPUTING LTD,GB,,PME,calcul,1,90284.83,2023-02-28,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=75574
+LAB14 GMBH,DE,Essen,grande_entreprise,inconnu,1,90000.00,2027-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101113983
+MAGCAM,BE,Leuven,grande_entreprise,inconnu,1,89375.00,2027-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101113983
+QURECA LTD,GB,,PME,calcul,1,87525.79,2025-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10004857
+OHB SYSTEM AG,DE,Bremen,grande_entreprise,communication,1,87354.81,2027-02-28,non,Horizon Europe,http://www.ohb-system.de,https://cordis.europa.eu/project/id/101135225
+CYSTEL LIMITED,GB,,PME,communication,1,85806.41,2026-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10102791
+AIRBUS GROUP LIMITED,GB,,grande_entreprise,communication,1,85578.31,2019-05-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=103874
+NODEQ LIMITED,GB,,PME,communication,1,84263.45,2026-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10102791
+NOKIA SOLUTIONS AND NETWORKS OY,FI,Espoo,grande_entreprise,communication,1,84160.13,2025-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101096435
+CRYOCONCEPT FRANCE,FR,"SASSENAGE""""""""",PME,transverse,1,83474.59,2027-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101113901
+OXFORD PHOTOVOLTAICS LIMITED,GB,,PME,calcul,1,83425.09,2024-05-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10032332
+CRYSTALLINE MIRROR SOLUTIONS GMBH,AT,Wien,PME,communication,1,83139.16,2022-03-31,non,H2020,,https://cordis.europa.eu/project/id/820445
+LG NEXERA BUSINESS SOLUTIONS AG,AT,Wien,PME,calcul,1,82800.00,2026-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101080374
+navaid OÜ,EE,Tallinn,PME,pqc,1,81811.11,2029-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101286435
+QUANTUM OPTICS JENA GMBH,DE,JENA,PME,transverse,1,81742.50,2027-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101113901
+AIRBUS DEFENCE AND SPACE LIMITED,GB,,grande_entreprise,communication,1,81350.69,2021-12-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=43037
+"PROPOSTA FIGURADA, UNIPESSOAL LDA",PT,AVEIRO,PME,communication,1,81000.00,2030-08-31,non,EIC,,https://cordis.europa.eu/project/id/101258015
+DOTQUANTUM LTD,GB,,PME,communication,2,80232.28,2021-09-30,non,Innovate UK,,https://gtr.ukri.org/projects?ref=105246
+ATOMICUS GMBH,DE,Karlsruhe,PME,capteurs,1,78200.00,2026-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101086142
+ELECTRODISTRIBUTION GRID WEST AD,BG,Sofia,grande_entreprise,calcul,1,76250.00,2027-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101192566
+ELEKTROENERGIEN SISTEMEN OPERATOR EAD,BG,Sofia,grande_entreprise,calcul,1,76250.00,2027-12-31,non,Horizon Europe,http://www.tso.bg,https://cordis.europa.eu/project/id/101192566
+LEVELQUANTUM S.R.L.,IT,Milano,PME,communication,1,75000.00,2024-03-31,oui,Horizon Europe,,https://cordis.europa.eu/project/id/101113570
+MB PLATFORMINA,LT,VILNIUS,PME,capteurs,1,73600.00,2026-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101086142
+ENAV SPA,IT,Roma,grande_entreprise,calcul,1,72232.70,2029-02-28,non,Horizon Europe,,https://cordis.europa.eu/project/id/101287685
+ANDOR TECHNOLOGY LIMITED,GB,,grande_entreprise,capteurs,1,71340.54,2019-06-30,non,Innovate UK,,https://gtr.ukri.org/projects?ref=104164
+MT PELERIN GROUP SA,CH,Geneve,PME,communication,1,64312.50,2023-03-01,non,H2020,,https://cordis.europa.eu/project/id/857156
+OTOKAR OTOMOTIV VE SAVUNMA SANAYI AS,TR,İSTANBUL,grande_entreprise,pqc,1,62500.00,2029-06-30,non,Chips JU,,https://cordis.europa.eu/project/id/101252658
+TELEPLAN FORSBERG LIMITED,GB,,PME,capteurs,1,61387.71,2027-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10141801
+TOTALENERGIES SE,FR,Courbevoie,grande_entreprise,calcul,1,60858.75,2024-11-30,non,H2020,http://www.total.com,https://cordis.europa.eu/project/id/951821
+ABSENSING LTD,GB,,PME,communication,1,59688.30,2022-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10004945
+RHEA SPACE ACTIVITY UK LTD,GB,,PME,communication,1,59679.94,2026-04-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10170880
+SPECTROSENSE LTD,GB,,PME,capteurs,1,59658.45,2026-04-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10173224
+ROBQUANT LIMITED,GB,,PME,capteurs,1,59629.78,2026-05-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10173577
+GEMASECURE LTD,GB,,PME,transverse,1,59620.23,2026-02-28,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10173664
+ENTANGLED QUANTUM LTD,GB,,PME,calcul,1,59541.41,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10173352
+LUMPI LIMITED,GB,,PME,composants,1,59406.46,2024-05-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10032529
+NCC GROUP SECURITY SERVICES LIMITED,GB,,grande_entreprise,calcul,1,58876.22,2025-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10004793
+QRUISE LIMITED,GB,,PME,calcul,1,58806.95,2026-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10151275
+AMORPHIQ LTD,GB,,PME,calcul,1,58736.49,2026-04-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10171570
+PHOTARIX LTD,GB,,PME,calcul,1,57713.02,2026-07-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10172684
+VODAFONE GROUP PUBLIC LIMITED COMPANY,GB,,grande_entreprise,communication,1,57323.70,2026-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10150141
+MESA QUANTUM UK LIMITED,GB,,PME,capteurs,1,56829.28,2026-05-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10173888
+SPINOR LIMITED,GB,,PME,calcul,1,56732.55,2026-04-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10174047
+SCIENTIFIC CRYO SYSTEMS UG,DE,BAD FEILNBACH,grande_entreprise,composants,1,52500.00,2027-04-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101247472
+FUTURE CODERS LIMITED,GB,,PME,calcul,1,51681.38,2025-02-28,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10072813
+IQE SILICON COMPOUNDS LIMITED,GB,,grande_entreprise,capteurs,1,50890.31,2019-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=104150
+NARRANDO SRL,IT,SALERNO,PME,capteurs,1,50600.00,2026-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101086142
+SYNOGATE UG (HAFTUNGSBESCHRANKT),DE,BERLIN,PME,communication,1,50000.00,2029-05-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101298828
+LEIDEN SPIN IMAGING BV,NL,Leiden,PME,composants,1,49949.00,2025-07-31,oui,Horizon Europe,,https://cordis.europa.eu/project/id/101194541
+MICRON SEMICONDUCTOR LIMITED,GB,,PME,composants,1,49168.21,2024-05-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10032529
+CISCO INTERNATIONAL LIMITED,GB,,grande_entreprise,transverse,2,48984.30,2024-07-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10032268
+THE NATIONAL CENTRE FOR YOUNG PEOPLE WITH EPILEPSY,GB,,PME,capteurs,1,47772.14,2021-01-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=104604
+CAMBRIDGE FLAIR LIMITED,GB,,PME,capteurs,1,47769.75,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10180157
+INCODE TECHNOLOGY UK LIMITED,GB,,PME,capteurs,1,47769.75,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10180241
+ORBRO LTD,GB,,PME,capteurs,1,47769.75,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10179192
+TAKA DIGITAL LIMITED,GB,,PME,capteurs,1,47769.75,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10180172
+TRACKGENESIS LIMITED,GB,,PME,capteurs,1,47769.75,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10179827
+BASILICON GLOBAL LIMITED,GB,,PME,capteurs,1,47755.42,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10178785
+MICROENDO LTD,GB,,PME,capteurs,1,47732.73,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10180025
+QUANTOMICO LTD,GB,,PME,capteurs,1,47601.36,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10180251
+ENTERGAIA TECHNOLOGIES LTD,GB,,PME,capteurs,1,47585.84,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10179342
+RSK ENVIRONMENT LIMITED,GB,,grande_entreprise,logiciel,1,47440.14,2022-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=43439
+LEEDS WORKS LTD,GB,,PME,capteurs,1,47354.15,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10180073
+ALLOY LTD,GB,,PME,calcul,1,46897.95,2023-07-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10050415
+BANDARLOG.DEV LTD,GB,,PME,capteurs,1,44188.21,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10178703
+SYNOPSYS (NORTHERN EUROPE) LIMITED,GB,,grande_entreprise,calcul,1,43070.40,2025-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10006017
+GALAXY INNOVATION LTD,GB,,PME,composants,1,41855.85,2025-09-30,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10077950
+ALL-I@MOVEO LTD.,GB,,PME,capteurs,1,41591.93,2026-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10178762
+SILURUS SOFTWARE KORLATOLT FELELOSSEGU TARSASAG,HU,Budapest,grande_entreprise,calcul,1,41360.00,2030-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101341578
+CRYOHEMT,FR,Orsay,grande_entreprise,inconnu,1,40000.00,2027-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101113983
+THE PUBLIC SERVICE CONSULTANTS LIMITED,GB,,PME,calcul,1,39512.99,2024-11-30,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10072653
+FLYSIGHT SRL,IT,Livorno,PME,calcul,1,38062.50,2026-05-31,non,EuroHPC,,https://cordis.europa.eu/project/id/101018180
+BOSON ENERGY,LU,LUXEMBOURG,PME,calcul,1,36800.00,2026-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101080374
+BARRIER NETWORKS LIMITED,GB,,PME,communication,1,35779.54,2021-09-30,non,Innovate UK,,https://gtr.ukri.org/projects?ref=133993
+III-V EPI LIMITED,GB,,PME,composants,1,35469.04,2022-02-28,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10004810
+POWERLASE LIMITED,GB,,PME,composants,1,35405.91,2024-05-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10032529
+TOKAMAK ENERGY LTD,GB,,PME,composants,1,35334.09,2025-02-28,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10073463
+IOETEC LIMITED,GB,,PME,communication,1,35148.98,2022-02-28,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10002385
+ORDNANCE SURVEY LIMITED,GB,,grande_entreprise,logiciel,1,33502.12,2022-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=43439
+DAVIES & BELL LTD,GB,,PME,composants,1,33259.69,2025-01-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10073994
+CITYCOM TELEKOMMUNIKATION GMBH,AT,Graz,grande_entreprise,communication,1,32812.50,2023-03-01,non,H2020,,https://cordis.europa.eu/project/id/857156
+TETHERED DRONE SYSTEMS LTD,GB,,PME,transverse,1,31560.28,2021-08-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=104615
+MAGELLIUM SAS,FR,Ramonville Saint Agne,PME,capteurs,1,30000.00,2029-08-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101295973
+NORTHUMBRIAN WATER LIMITED,GB,,grande_entreprise,logiciel,1,28354.93,2022-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=43439
+QINETIQ LIMITED,GB,,grande_entreprise,calcul,1,26426.23,2025-02-28,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10074907
+KUBOS SEMICONDUCTORS LTD,GB,,PME,composants,1,26177.82,2025-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10053868
+HSBC GROUP MANAGEMENT SERVICES LIMITED,GB,,grande_entreprise,calcul,1,25377.68,2025-02-28,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10072633
+TESKALABS LTD,GB,,PME,communication,1,21781.21,2020-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=34998
+NATIONAL GAS TRANSMISSION PLC,GB,,PME,logiciel,1,21495.52,2026-04-30,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10179238
+HSBC BANK PLC,GB,,PME,calcul,1,21378.16,2022-03-31,oui,Innovate UK,,https://gtr.ukri.org/projects?ref=10003408
+ALGORITHMIQ OY,FI,HELSINKI,grande_entreprise,calcul,1,20680.00,2030-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101341578
+DATALOGIC IP TECH SRL,IT,Lippo Di Calderara Di Reno Bo,grande_entreprise,calcul,1,20680.00,2030-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101341578
+DIAMOND MICROWAVE LIMITED,GB,,PME,calcul,1,17854.83,2025-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=10004857
+AIRBUS OPERATIONS LIMITED,GB,,grande_entreprise,communication,1,15995.70,2019-05-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=103874
+VST S.r.l.,IT,Modena,PME,calcul,1,15510.00,2030-12-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101341578
+THALES LAS FRANCE SAS,FR,ELANCOURT,grande_entreprise,calcul,2,14940.00,2030-12-31,non,Horizon Europe,https://www.thalesgroup.com,https://cordis.europa.eu/project/id/101341578
+SPACETECH GMBH,DE,Immenstaad Am Bodensee,PME,capteurs,1,14715.00,2026-03-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101070700
+ATOS IT SOLUTIONS AND SERVICES IBERIA SL,ES,MADRID,grande_entreprise,pqc,1,14593.04,2028-09-30,non,Horizon Europe,,https://cordis.europa.eu/project/id/101225797
+HALL SCIENTIFIC LIMITED,GB,,PME,composants,1,13920.11,2019-03-31,non,Innovate UK,,https://gtr.ukri.org/projects?ref=104151
+MARGINUM OY,FI,Tampere,grande_entreprise,capteurs,1,4600.00,2026-10-31,non,Horizon Europe,,https://cordis.europa.eu/project/id/101086142
+CS CONNECTED LIMITED,GB,,PME,composants,1,1315.82,2024-04-30,non,Innovate UK,,https://gtr.ukri.org/projects?ref=48484

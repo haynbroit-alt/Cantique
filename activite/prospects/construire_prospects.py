@@ -479,6 +479,8 @@ RX_RECH = re.compile(r"NATIONAL PHYSICAL LABORATORY|NPL MANAGEMENT|SCIENCE AND T
                      r"DEFENCE SCIENCE AND TECHNOLOGY LAB|\bDSTL\b|MET OFFICE|BRITISH GEOLOGICAL SURVEY|"
                      r"RUTHERFORD APPLETON|DIAMOND LIGHT SOURCE|CATAPULT|FRAUNHOFER|\bINSTITUTE\b|LABORATOR|"
                      r"RESEARCH CENTRE|RESEARCH CENTER|\bTNO\b|\bCNRS\b|\bCEA\b|\bUKRI\b")
+# Organismes publics de recherche exploités sous forme de société (CORDIS les code parfois PRC).
+RX_RECH_PUBLIC = re.compile(r"NPL MANAGEMENT|NATIONAL PHYSICAL LABORATORY|\bCATAPULT\b")
 RX_AUTRE = re.compile(r"\bNHS\b|COUNCIL\b|\bTRUST\b|DEPARTMENT FOR|MINISTRY|\bGOVERNMENT\b|\bCHARIT|\bFOUNDATION\b|"
                       r"\bASSOCIATION\b|\bSOCIETY\b|ROYAL ACADEMY|NETWORK\b")
 
@@ -707,8 +709,12 @@ def main():
                 addr = ((od.get("addresses") or {}).get("address") or [])
                 ad = next((x for x in addr if x.get("type") == "MAIN_ADDRESS"), addr[0] if addr else {})
                 pays = pays_gtr(ad)
-                if pays:
-                    e["pays"][pays] += 1
+                if not pays:
+                    # adresse GtR sans pays ni région : les financements UKRI / Innovate UK / HEG sont
+                    # versés à des organisations établies au Royaume-Uni -> GB (signalé dans note).
+                    pays = "GB"
+                    e["pays_deduit"] = True
+                e["pays"][pays] += 1
                 if ad.get("city"):
                     e["villes"][ad["city"].strip().title()] += 1
                 if url_site(od.get("website")):
@@ -754,18 +760,32 @@ def main():
             if last[2] in ("REC", "OTH") and last[3] == "true" and RX_SOCIETE.search(ascii_up(e["nom"])) \
                     and not RX_UNIV.search(ascii_up(e["nom"])) and not re.search(r"FRAUNHOFER|STIFTUNG|FOUNDATION|ASSOCIA|VEREIN|FUNDA", ascii_up(e["nom"])):
                 t, src = "PME", "CORDIS activityType=%s mais drapeau SME=true et forme sociale commerciale dans le nom" % last[2]
+            if t in ("PME", "grande_entreprise") and RX_RECH_PUBLIC.search(ascii_up(e["nom"])):
+                t, src = "recherche", src + " ; reclassé recherche : laboratoire public national exploité par une société"
             e["type_org"], e["type_src"] = t, src
         else:
             tg = next(iter(e["type_src"]))
             if tg == "entreprise":
+                # GtR ne publie pas la taille. Indice : taux d'aide Innovate UK (grantOffer / projectCost)
+                # sur les subventions R&D : > 55 % n'est en principe possible que pour une PME (grande
+                # entreprise : 50 % en recherche industrielle / faisabilité) ; exactement ~50 % partout est
+                # typique d'une grande entreprise. Contrats SBRI (100 %) et projets UE exclus de l'indice.
                 ratios = [f["_ratio"] for f in e["fin"] if f.get("_ratio") is not None and
-                          re.search(r"Collaborative R&D|Feasibility|CR&D Bilateral|Smart|Grant for R&D", f["_categorie"])]
-                if any(r > 0.55 for r in ratios):
+                          re.search(r"Collaborative R&D|Feasibility|CR&D Bilateral|Smart|Grant for R&D|Fast Track|GRD",
+                                    f["_categorie"])]
+                hi = sum(1 for r in ratios if r > 0.55)
+                lo = sum(1 for r in ratios if 0.40 <= r <= 0.505)
+                if hi > lo:
                     e["type_org"] = "PME"
-                    e["type_src"] = "inféré : taux d'aide Innovate UK > 55 % sur au moins une subvention (plafond 50 % pour une grande entreprise)"
+                    e["type_src"] = ("inféré : taux d'aide Innovate UK > 55 %% sur %d des %d subventions R&D "
+                                     "(plafond 50 %% pour une grande entreprise)" % (hi, len(ratios)))
+                elif lo > hi:
+                    e["type_org"] = "grande_entreprise"
+                    e["type_src"] = ("inféré : taux d'aide Innovate UK entre 40 et 50 %% sur %d des %d subventions R&D "
+                                     "(profil d'une grande entreprise), à vérifier" % (lo, len(ratios)))
                 else:
                     e["type_org"] = "PME"
-                    e["type_src"] = "taille non publiée par GtR : classé PME par défaut, à vérifier"
+                    e["type_src"] = "taille non publiée par GtR et taux d'aide non concluant : classé PME par défaut, à vérifier"
             else:
                 e["type_org"], e["type_src"] = tg, "GtR : type déduit du nom de l'organisation"
 
@@ -793,8 +813,8 @@ def main():
             src, dst = entites.pop(x), entites[cible]
             dst["noms"].update(src["noms"]); dst["pays"].update(src["pays"]); dst["villes"].update(src["villes"])
             dst["sites"] += src["sites"]; dst["fin"] += src["fin"]; dst["ids"] |= src["ids"]
-            if cible.startswith("gtr-") and dst["type_org"] == "PME" and "défaut" in dst["type_src"] and "inféré" in src["type_src"]:
-                dst["type_src"] = src["type_src"]
+            if cible.startswith("gtr-") and "défaut" in dst["type_src"] and "inféré" in src["type_src"]:
+                dst["type_org"], dst["type_src"] = src["type_org"], src["type_src"]
             fusions += 1
     stats["fusions_nom_pays"] = fusions
 
@@ -836,6 +856,9 @@ def main():
         if any(f["_cle"][0] == "cordis" for f in fins):
             notes.append("Montants CORDIS = ecContribution par organisation (dumps open data CORDIS du %s)."
                          % ", ".join(sorted(set(pq[f["_cle"][1:]]["dump"] for f in fins if f["_cle"][0] == "cordis"))))
+        if e.get("pays_deduit") and pays == "GB" and not any(i.startswith("CORDIS") for i in e["ids"]):
+            notes.append("Pays GB déduit : adresse GtR sans pays ni région, bénéficiaire d'un financement UKRI réservé "
+                         "aux organisations établies au Royaume-Uni.")
         if len(e["noms"]) > 1:
             notes.append("Autres libellés : %s." % "; ".join(n for n, _ in e["noms"].most_common()[1:4]))
         rec = collections.OrderedDict([
