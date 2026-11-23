@@ -1,6 +1,6 @@
 # Fiche opportunité : PASQAL × HORIZON-JU-CHIPS-2026-QUANTUM-1-RIA
 
-*Fiche gratuite, établie le 2026-11-22 à partir de données publiques uniquement. Ce n'est ni un avis d'éligibilité, ni une recommandation de candidater.*
+*Fiche gratuite, établie le 2026-11-23 à partir de données publiques uniquement. Ce n'est ni un avis d'éligibilité, ni une recommandation de candidater.*
 
 ## Ce que disent les sources publiques sur vos financements
 
@@ -24,7 +24,7 @@ Segment retenu : **calcul**. Justification : mots-clés des projets : quantum in
 ## Pourquoi cet appel pourrait vous concerner
 
 1. Segment « calcul » visé par l'appel.
-2. Votre projet Q-PLANET SGA1 (Chips JU, 2026) porte sur des thèmes proches de l'appel : chips, pilot.
+2. Votre projet Q-PLANET SGA1 (Chips JU, 2026) porte sur des thèmes proches de l'appel : chips.
 3. Au moins un projet financé encore en cours.
 4. Vous avez déjà porté seul un projet financé (FRESNEL, EIC, 2 495 062 €).
 

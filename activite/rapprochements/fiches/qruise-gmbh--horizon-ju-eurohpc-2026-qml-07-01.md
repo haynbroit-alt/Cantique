@@ -1,6 +1,6 @@
 # Fiche opportunité : QRUISE GMBH × HORIZON-JU-EUROHPC-2026-QML-07-01
 
-*Fiche gratuite, établie le 2026-11-22 à partir de données publiques uniquement. Ce n'est ni un avis d'éligibilité, ni une recommandation de candidater.*
+*Fiche gratuite, établie le 2026-11-23 à partir de données publiques uniquement. Ce n'est ni un avis d'éligibilité, ni une recommandation de candidater.*
 
 ## Ce que disent les sources publiques sur vos financements
 
