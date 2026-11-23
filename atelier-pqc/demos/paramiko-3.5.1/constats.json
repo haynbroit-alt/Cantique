@@ -1,0 +1,5145 @@
+{
+  "format": "pqc-inventaire/constats",
+  "version_format": 1,
+  "outil": {
+    "nom": "pqc-inventaire",
+    "version": "0.1.0"
+  },
+  "type": "code",
+  "projet": "paramiko-3.5.1",
+  "statistiques": {
+    "fichiers_analyses": 227,
+    "binaire": 24,
+    "taille": 1,
+    "illisible": 0,
+    "lien": 0,
+    "exclu": 0,
+    "regles": 107
+  },
+  "constats": [
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "demos/demo.py",
+      "ligne": 76,
+      "extrait": "key = paramiko.RSAKey.from_private_key_file(path)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "exemple",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "demos/demo.py",
+      "ligne": 79,
+      "extrait": "key = paramiko.RSAKey.from_private_key_file(path, password)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "exemple",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "demos/demo.py",
+      "ligne": 87,
+      "extrait": "key = paramiko.DSSKey.from_private_key_file(path)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "exemple",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "demos/demo.py",
+      "ligne": 90,
+      "extrait": "key = paramiko.DSSKey.from_private_key_file(path, password)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "exemple",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "demos/demo_server.py",
+      "ligne": 36,
+      "extrait": "host_key = paramiko.RSAKey(filename=\"test_rsa.key\")",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "exemple",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "demos/demo_server.py",
+      "ligne": 51,
+      "extrait": "good_pub_key = paramiko.RSAKey(data=decodebytes(data))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "exemple",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-1024 ; clé privée présente dans les fichiers analysés",
+      "fichier": "demos/test_rsa.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN RSA PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "exemple",
+      "parametres": {
+        "algorithme": "RSA-1024",
+        "primitive": "pke",
+        "taille_cle": 1024,
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-1024 ; clé privée présente dans les fichiers analysés",
+      "fichier": "demos/user_rsa_key",
+      "ligne": 1,
+      "extrait": "-----BEGIN RSA PRIVATE KEY----- [contenu masqué]",
+      "langage": "texte",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "exemple",
+      "parametres": {
+        "algorithme": "RSA-1024",
+        "primitive": "pke",
+        "taille_cle": 1024,
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-1024, vérification de signature ; clé publique SSH",
+      "fichier": "demos/user_rsa_key.pub",
+      "ligne": 1,
+      "extrait": "ssh-rsa [clé masquée]",
+      "langage": "pem",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "exemple",
+      "parametres": {
+        "algorithme": "RSA-1024",
+        "primitive": "pke",
+        "taille_cle": 1024,
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA ; import du module, usage non confirmé",
+      "fichier": "paramiko/__init__.py",
+      "ligne": 69,
+      "extrait": "from paramiko.dsskey import DSSKey",
+      "langage": "python",
+      "regle": "py-import-module",
+      "confiance": "moyenne",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "notes": [
+          "import"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA ; import du module, usage non confirmé",
+      "fichier": "paramiko/client.py",
+      "ligne": 34,
+      "extrait": "from paramiko.dsskey import DSSKey",
+      "langage": "python",
+      "regle": "py-import-module",
+      "confiance": "moyenne",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "notes": [
+          "import"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/client.py",
+      "ligne": 769,
+      "extrait": "(ECDSAKey, \"ecdsa\"),",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/client.py",
+      "ligne": 770,
+      "extrait": "(Ed25519Key, \"ed25519\"),",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "SHA-1, empreinte",
+      "fichier": "paramiko/config.py",
+      "ligne": 449,
+      "extrait": "\"%C\": sha1(tohash.encode()).hexdigest(),",
+      "langage": "python",
+      "regle": "py-hashlib",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "SHA-1",
+        "primitive": "hash",
+        "fonctions": [
+          "digest"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, signature",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 112,
+      "extrait": "key = dsa.DSAPrivateNumbers(",
+      "langage": "python",
+      "regle": "py-cryptography-dsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, signature",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 114,
+      "extrait": "public_numbers=dsa.DSAPublicNumbers(",
+      "langage": "python",
+      "regle": "py-cryptography-dsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, signature",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 116,
+      "extrait": "parameter_numbers=dsa.DSAParameterNumbers(",
+      "langage": "python",
+      "regle": "py-cryptography-dsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "SHA-1, empreinte",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 121,
+      "extrait": "sig = key.sign(data, hashes.SHA1())",
+      "langage": "python",
+      "regle": "py-cryptography-hash",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "SHA-1",
+        "primitive": "hash",
+        "fonctions": [
+          "digest"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, signature",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 152,
+      "extrait": "key = dsa.DSAPublicNumbers(",
+      "langage": "python",
+      "regle": "py-cryptography-dsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, signature",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 154,
+      "extrait": "parameter_numbers=dsa.DSAParameterNumbers(",
+      "langage": "python",
+      "regle": "py-cryptography-dsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "SHA-1, empreinte",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 159,
+      "extrait": "key.verify(signature, data, hashes.SHA1())",
+      "langage": "python",
+      "regle": "py-cryptography-hash",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "SHA-1",
+        "primitive": "hash",
+        "fonctions": [
+          "digest"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, signature",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 166,
+      "extrait": "key = dsa.DSAPrivateNumbers(",
+      "langage": "python",
+      "regle": "py-cryptography-dsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, signature",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 168,
+      "extrait": "public_numbers=dsa.DSAPublicNumbers(",
+      "langage": "python",
+      "regle": "py-cryptography-dsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, signature",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 170,
+      "extrait": "parameter_numbers=dsa.DSAParameterNumbers(",
+      "langage": "python",
+      "regle": "py-cryptography-dsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, signature",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 184,
+      "extrait": "key = dsa.DSAPrivateNumbers(",
+      "langage": "python",
+      "regle": "py-cryptography-dsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, signature",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 186,
+      "extrait": "public_numbers=dsa.DSAPublicNumbers(",
+      "langage": "python",
+      "regle": "py-cryptography-dsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, signature",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 188,
+      "extrait": "parameter_numbers=dsa.DSAParameterNumbers(",
+      "langage": "python",
+      "regle": "py-cryptography-dsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, signature",
+      "fichier": "paramiko/dsskey.py",
+      "ligne": 211,
+      "extrait": "numbers = dsa.generate_private_key(",
+      "langage": "python",
+      "regle": "py-cryptography-dsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/ecdsakey.py",
+      "ligne": 103,
+      "extrait": "_ECDSACurve(ec.SECP256R1, \"nistp256\"),",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-384 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/ecdsakey.py",
+      "ligne": 104,
+      "extrait": "_ECDSACurve(ec.SECP384R1, \"nistp384\"),",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-521 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/ecdsakey.py",
+      "ligne": 105,
+      "extrait": "_ECDSACurve(ec.SECP521R1, \"nistp521\"),",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-P-521",
+        "primitive": "signature",
+        "courbe": "P-521",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA, signature / vérification de signature",
+      "fichier": "paramiko/ecdsakey.py",
+      "ligne": 221,
+      "extrait": "ecdsa = ec.ECDSA(self.ecdsa_curve.hash_object())",
+      "langage": "python",
+      "regle": "py-cryptography-ec",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA, signature / vérification de signature",
+      "fichier": "paramiko/ecdsakey.py",
+      "ligne": 239,
+      "extrait": "signature, data, ec.ECDSA(self.ecdsa_curve.hash_object())",
+      "langage": "python",
+      "regle": "py-cryptography-ec",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC, génération de clé ; clé EC : ECDSA ou ECDH selon l'usage",
+      "fichier": "paramiko/ecdsakey.py",
+      "ligne": 277,
+      "extrait": "private_key = ec.generate_private_key(curve, backend=default_backend())",
+      "langage": "python",
+      "regle": "py-cryptography-ec",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC",
+        "primitive": "signature",
+        "fonctions": [
+          "keygen"
+        ],
+        "notes": [
+          "ec_ambigu"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC, génération de clé ; clé EC : ECDSA ou ECDH selon l'usage",
+      "fichier": "paramiko/ecdsakey.py",
+      "ligne": 314,
+      "extrait": "key = ec.derive_private_key(",
+      "langage": "python",
+      "regle": "py-cryptography-ec",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC",
+        "primitive": "signature",
+        "fonctions": [
+          "keygen"
+        ],
+        "notes": [
+          "ec_ambigu"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "SHA-1, empreinte",
+      "fichier": "paramiko/hostkeys.py",
+      "ligne": 296,
+      "extrait": "salt = os.urandom(sha1().digest_size)",
+      "langage": "python",
+      "regle": "py-hashlib",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "SHA-1",
+        "primitive": "hash",
+        "fonctions": [
+          "digest"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "SHA-1, empreinte",
+      "fichier": "paramiko/hostkeys.py",
+      "ligne": 301,
+      "extrait": "assert len(salt) == sha1().digest_size",
+      "langage": "python",
+      "regle": "py-hashlib",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "SHA-1",
+        "primitive": "hash",
+        "fonctions": [
+          "digest"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "HMAC-SHA-1, MAC",
+      "fichier": "paramiko/hostkeys.py",
+      "ligne": 302,
+      "extrait": "hmac = HMAC(salt, b(hostname), sha1).digest()",
+      "langage": "python",
+      "regle": "py-hmac",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "HMAC-SHA-1",
+        "primitive": "mac",
+        "fonctions": [
+          "tag"
+        ]
+      }
+    },
+    {
+      "famille": "X25519_X448",
+      "classe": "vulnerable_shor",
+      "detail": "X25519, accord / dérivation de clé",
+      "fichier": "paramiko/kex_curve25519.py",
+      "ligne": 30,
+      "extrait": "X25519PrivateKey.generate()",
+      "langage": "python",
+      "regle": "py-cryptography-xdh",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "X25519",
+        "primitive": "key-agree",
+        "courbe": "X25519",
+        "fonctions": [
+          "keyderive"
+        ]
+      }
+    },
+    {
+      "famille": "X25519_X448",
+      "classe": "vulnerable_shor",
+      "detail": "X25519, accord / dérivation de clé",
+      "fichier": "paramiko/kex_curve25519.py",
+      "ligne": 45,
+      "extrait": "self.key = X25519PrivateKey.generate()",
+      "langage": "python",
+      "regle": "py-cryptography-xdh",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "X25519",
+        "primitive": "key-agree",
+        "courbe": "X25519",
+        "fonctions": [
+          "keyderive"
+        ]
+      }
+    },
+    {
+      "famille": "X25519_X448",
+      "classe": "vulnerable_shor",
+      "detail": "X25519, accord / dérivation de clé",
+      "fichier": "paramiko/kex_curve25519.py",
+      "ligne": 71,
+      "extrait": "peer_key = X25519PublicKey.from_public_bytes(peer_key_bytes)",
+      "langage": "python",
+      "regle": "py-cryptography-xdh",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "X25519",
+        "primitive": "key-agree",
+        "courbe": "X25519",
+        "fonctions": [
+          "keyderive"
+        ]
+      }
+    },
+    {
+      "famille": "X25519_X448",
+      "classe": "vulnerable_shor",
+      "detail": "X25519, accord / dérivation de clé",
+      "fichier": "paramiko/kex_curve25519.py",
+      "ligne": 109,
+      "extrait": "peer_key = X25519PublicKey.from_public_bytes(peer_key_bytes)",
+      "langage": "python",
+      "regle": "py-cryptography-xdh",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "X25519",
+        "primitive": "key-agree",
+        "courbe": "X25519",
+        "fonctions": [
+          "keyderive"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC, génération de clé ; clé EC : ECDSA ou ECDH selon l'usage",
+      "fichier": "paramiko/kex_ecdh_nist.py",
+      "ligne": 59,
+      "extrait": "self.P = ec.generate_private_key(self.curve, default_backend())",
+      "langage": "python",
+      "regle": "py-cryptography-ec",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC",
+        "primitive": "signature",
+        "fonctions": [
+          "keygen"
+        ],
+        "notes": [
+          "ec_ambigu"
+        ]
+      }
+    },
+    {
+      "famille": "ECDH",
+      "classe": "vulnerable_shor",
+      "detail": "ECDH, accord / dérivation de clé",
+      "fichier": "paramiko/kex_ecdh_nist.py",
+      "ligne": 71,
+      "extrait": "K = self.P.exchange(ec.ECDH(), self.Q_C)",
+      "langage": "python",
+      "regle": "py-cryptography-ec",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "ECDH",
+        "primitive": "key-agree",
+        "fonctions": [
+          "keyderive"
+        ]
+      }
+    },
+    {
+      "famille": "ECDH",
+      "classe": "vulnerable_shor",
+      "detail": "ECDH, accord / dérivation de clé",
+      "fichier": "paramiko/kex_ecdh_nist.py",
+      "ligne": 117,
+      "extrait": "K = self.P.exchange(ec.ECDH(), self.Q_S)",
+      "langage": "python",
+      "regle": "py-cryptography-ec",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "ECDH",
+        "primitive": "key-agree",
+        "fonctions": [
+          "keyderive"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "SHA-1, empreinte",
+      "fichier": "paramiko/kex_gss.py",
+      "ligne": 230,
+      "extrait": "H = sha1(str(hm)).digest()",
+      "langage": "python",
+      "regle": "py-hashlib",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "SHA-1",
+        "primitive": "hash",
+        "fonctions": [
+          "digest"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "SHA-1, empreinte",
+      "fichier": "paramiko/kex_gss.py",
+      "ligne": 269,
+      "extrait": "H = sha1(hm.asbytes()).digest()",
+      "langage": "python",
+      "regle": "py-hashlib",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "SHA-1",
+        "primitive": "hash",
+        "fonctions": [
+          "digest"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "SHA-1, empreinte",
+      "fichier": "paramiko/kex_gss.py",
+      "ligne": 532,
+      "extrait": "H = sha1(hm.asbytes()).digest()",
+      "langage": "python",
+      "regle": "py-hashlib",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "SHA-1",
+        "primitive": "hash",
+        "fonctions": [
+          "digest"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "SHA-1, empreinte",
+      "fichier": "paramiko/kex_gss.py",
+      "ligne": 634,
+      "extrait": "H = sha1(hm.asbytes()).digest()",
+      "langage": "python",
+      "regle": "py-hashlib",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "SHA-1",
+        "primitive": "hash",
+        "fonctions": [
+          "digest"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-128-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/pkey.py",
+      "ligne": 101,
+      "extrait": "\"AES-128-CBC\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-128-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 128,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/pkey.py",
+      "ligne": 107,
+      "extrait": "\"AES-256-CBC\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-256-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "3DES",
+      "classe": "obsolete_classique",
+      "detail": "3DES ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/pkey.py",
+      "ligne": 113,
+      "extrait": "\"DES-EDE3-CBC\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "3DES",
+        "primitive": "block-cipher",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "MD5",
+      "classe": "obsolete_classique",
+      "detail": "MD5, empreinte",
+      "fichier": "paramiko/pkey.py",
+      "ligne": 358,
+      "extrait": "return md5(self.asbytes()).digest()",
+      "langage": "python",
+      "regle": "py-hashlib",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "MD5",
+        "primitive": "hash",
+        "fonctions": [
+          "digest"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "SHA-256, empreinte",
+      "fichier": "paramiko/pkey.py",
+      "ligne": 369,
+      "extrait": "hashy = sha256(bytes(self))",
+      "langage": "python",
+      "regle": "py-hashlib",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "SHA-256",
+        "primitive": "hash",
+        "fonctions": [
+          "digest"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/pkey.py",
+      "ligne": 632,
+      "extrait": "if cipher == b(\"aes256-cbc\"):",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-256-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CTR ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/pkey.py",
+      "ligne": 634,
+      "extrait": "elif cipher == b(\"aes256-ctr\"):",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-256-CTR",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "ctr",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES, chiffrement / déchiffrement",
+      "fichier": "paramiko/pkey.py",
+      "ligne": 667,
+      "extrait": "decryptor = Cipher(",
+      "langage": "python",
+      "regle": "py-cryptography-symetrique",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES",
+        "primitive": "block-cipher",
+        "fonctions": [
+          "encrypt",
+          "decrypt"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "paramiko/rsakey.py",
+      "ligne": 127,
+      "extrait": "padding=padding.PKCS1v15(),",
+      "langage": "python",
+      "regle": "py-cryptography-rsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke",
+        "remplissage": "pkcs1v15",
+        "fonctions": [
+          "other"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "paramiko/rsakey.py",
+      "ligne": 155,
+      "extrait": "sign, data, padding.PKCS1v15(), self.HASHES[sig_algorithm]()",
+      "langage": "python",
+      "regle": "py-cryptography-rsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke",
+        "remplissage": "pkcs1v15",
+        "fonctions": [
+          "other"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA, génération de clé",
+      "fichier": "paramiko/rsakey.py",
+      "ligne": 188,
+      "extrait": "key = rsa.generate_private_key(",
+      "langage": "python",
+      "regle": "py-cryptography-rsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke",
+        "fonctions": [
+          "keygen"
+        ]
+      }
+    },
+    {
+      "famille": "MD5",
+      "classe": "obsolete_classique",
+      "detail": "MD5 ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/sftp_server.py",
+      "ligne": 85,
+      "extrait": "_hash_class = {\"sha1\": sha1, \"md5\": md5}",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "MD5",
+        "primitive": "hash",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "SHA-1 ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/sftp_server.py",
+      "ligne": 85,
+      "extrait": "_hash_class = {\"sha1\": sha1, \"md5\": md5}",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "SHA-1",
+        "primitive": "hash",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA ; import du module, usage non confirmé",
+      "fichier": "paramiko/transport.py",
+      "ligne": 98,
+      "extrait": "from paramiko.dsskey import DSSKey",
+      "langage": "python",
+      "regle": "py-import-module",
+      "confiance": "moyenne",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "notes": [
+          "import"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-128-CTR ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 180,
+      "extrait": "\"aes128-ctr\",",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-128-CTR",
+        "primitive": "block-cipher",
+        "taille_cle": 128,
+        "mode": "ctr",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-192-CTR ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 181,
+      "extrait": "\"aes192-ctr\",",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-192-CTR",
+        "primitive": "block-cipher",
+        "taille_cle": 192,
+        "mode": "ctr",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CTR ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 182,
+      "extrait": "\"aes256-ctr\",",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-256-CTR",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "ctr",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-128-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 183,
+      "extrait": "\"aes128-cbc\",",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-128-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 128,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-192-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 184,
+      "extrait": "\"aes192-cbc\",",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-192-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 192,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 185,
+      "extrait": "\"aes256-cbc\",",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-256-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "3DES",
+      "classe": "obsolete_classique",
+      "detail": "3DES ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 186,
+      "extrait": "\"3des-cbc\",",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "3DES",
+        "primitive": "block-cipher",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "HMAC-SHA-1 ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 195,
+      "extrait": "\"hmac-sha1\",",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "HMAC-SHA-1",
+        "primitive": "mac",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "MD5",
+      "classe": "obsolete_classique",
+      "detail": "HMAC-MD5 ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 196,
+      "extrait": "\"hmac-md5\",",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "HMAC-MD5",
+        "primitive": "mac",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-128-CTR ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 243,
+      "extrait": "\"aes128-ctr\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-128-CTR",
+        "primitive": "block-cipher",
+        "taille_cle": 128,
+        "mode": "ctr",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-192-CTR ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 249,
+      "extrait": "\"aes192-ctr\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-192-CTR",
+        "primitive": "block-cipher",
+        "taille_cle": 192,
+        "mode": "ctr",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CTR ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 255,
+      "extrait": "\"aes256-ctr\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-256-CTR",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "ctr",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-128-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 261,
+      "extrait": "\"aes128-cbc\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-128-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 128,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-192-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 267,
+      "extrait": "\"aes192-cbc\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-192-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 192,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 273,
+      "extrait": "\"aes256-cbc\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "AES-256-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "3DES",
+      "classe": "obsolete_classique",
+      "detail": "3DES ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 279,
+      "extrait": "\"3des-cbc\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "3DES",
+        "primitive": "block-cipher",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "HMAC-SHA-1 ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 302,
+      "extrait": "\"hmac-sha1\": {\"class\": sha1, \"size\": 20},",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "HMAC-SHA-1",
+        "primitive": "mac",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "MD5",
+      "classe": "obsolete_classique",
+      "detail": "HMAC-MD5 ; nom d'algorithme dans une chaîne",
+      "fichier": "paramiko/transport.py",
+      "ligne": 308,
+      "extrait": "\"hmac-md5\": {\"class\": md5, \"size\": 16},",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "HMAC-MD5",
+        "primitive": "mac",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; nom d'algorithme dans une chaîne",
+      "fichier": "setup.py",
+      "ligne": 45,
+      "extrait": "\"ed25519\": [],",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA-1024 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/_support/dss.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN DSA PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA-1024",
+        "primitive": "signature",
+        "taille_cle": 1024,
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/_support/ecdsa-256.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN EC PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/_support/ed25519.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN OPENSSH PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed448 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/_support/ed448.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed448",
+        "primitive": "signature",
+        "courbe": "Ed448",
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-1024 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/_support/rsa-lonely.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN RSA PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-1024",
+        "primitive": "pke",
+        "taille_cle": 1024,
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-1024 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/_support/rsa.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN RSA PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-1024",
+        "primitive": "pke",
+        "taille_cle": 1024,
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048, génération de clé",
+      "fichier": "tests/_util.py",
+      "ligne": 176,
+      "extrait": "private_key = rsa.generate_private_key(",
+      "langage": "python",
+      "regle": "py-cryptography-rsa",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "fonctions": [
+          "keygen"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-PSS, signature / vérification de signature",
+      "fichier": "tests/_util.py",
+      "ligne": 183,
+      "extrait": "padding.PSS(",
+      "langage": "python",
+      "regle": "py-cryptography-rsa",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-PSS",
+        "primitive": "signature",
+        "remplissage": "other",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "SHA-1, empreinte",
+      "fichier": "tests/_util.py",
+      "ligne": 184,
+      "extrait": "mgf=padding.MGF1(hashes.SHA1()),",
+      "langage": "python",
+      "regle": "py-cryptography-hash",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "SHA-1",
+        "primitive": "hash",
+        "fonctions": [
+          "digest"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "SHA-1, empreinte",
+      "fichier": "tests/_util.py",
+      "ligne": 187,
+      "extrait": "hashes.SHA1(),",
+      "langage": "python",
+      "regle": "py-cryptography-hash",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "SHA-1",
+        "primitive": "hash",
+        "fonctions": [
+          "digest"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "tests/_util.py",
+      "ligne": 215,
+      "extrait": "paranoid_key = DSSKey.from_private_key_file(_support(\"dss.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/_util.py",
+      "ligne": 411,
+      "extrait": "hostkey = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/agent.py",
+      "ligne": 135,
+      "extrait": "inner_key = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "tests/auth.py",
+      "ligne": 88,
+      "extrait": "key = DSSKey.from_private_key_file(_support(\"dss.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/auth.py",
+      "ligne": 163,
+      "extrait": "privkey = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/auth.py",
+      "ligne": 207,
+      "extrait": "privkey = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/auth.py",
+      "ligne": 223,
+      "extrait": "privkey = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/auth.py",
+      "ligne": 238,
+      "extrait": "privkey = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/auth.py",
+      "ligne": 249,
+      "extrait": "privkey = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/auth.py",
+      "ligne": 261,
+      "extrait": "privkey = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/auth.py",
+      "ligne": 272,
+      "extrait": "privkey = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/auth.py",
+      "ligne": 292,
+      "extrait": "privkey = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/auth.py",
+      "ligne": 304,
+      "extrait": "privkey = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/auth.py",
+      "ligne": 316,
+      "extrait": "privkey = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/badhash_key1.ed25519.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN OPENSSH PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/badhash_key2.ed25519.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN OPENSSH PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/conftest.py",
+      "ligne": 88,
+      "extrait": "host_key = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/pkey.py",
+      "ligne": 122,
+      "extrait": "key = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "tests/pkey.py",
+      "ligne": 160,
+      "extrait": "edkey = Ed25519Key.from_private_key_file(_support(\"ed25519.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/pkey.py",
+      "ligne": 176,
+      "extrait": "assert key.algorithm_name == \"ECDSA\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/pkey.py",
+      "ligne": 178,
+      "extrait": "assert key.algorithm_name == \"ED25519\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/pkey.py",
+      "ligne": 209,
+      "extrait": "assert RSAKey.identifiers() == [",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "tests/pkey.py",
+      "ligne": 219,
+      "extrait": "assert DSSKey.identifiers() == [\"ssh-dss\"]",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "tests/pkey.py",
+      "ligne": 222,
+      "extrait": "assert Ed25519Key.identifiers() == [\"ssh-ed25519\"]",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/pkey.py",
+      "ligne": 225,
+      "extrait": "assert ECDSAKey.identifiers() == [",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_client.py",
+      "ligne": 175,
+      "extrait": "host_key = paramiko.RSAKey.from_private_key_file(keypath)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_client.py",
+      "ligne": 178,
+      "extrait": "host_key = paramiko.ECDSAKey.from_private_key_file(keypath)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_client.py",
+      "ligne": 197,
+      "extrait": "host_key = paramiko.RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_client.py",
+      "ligne": 198,
+      "extrait": "public_host_key = paramiko.RSAKey(data=host_key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_client.py",
+      "ligne": 286,
+      "extrait": "\"ecdsa\": \"ecdsa-sha2-nistp256\",",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_client.py",
+      "ligne": 295,
+      "extrait": "([\"rsa\", \"ecdsa-256\"], [\"ecdsa\"]),  # ECDSA success",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_client.py",
+      "ligne": 330,
+      "extrait": "for type_ in (\"rsa\", \"dss\", \"ecdsa-256\", \"ed25519\"):",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_client.py",
+      "ligne": 345,
+      "extrait": "for type_ in (\"rsa\", \"dss\", \"ecdsa-256\", \"ed25519\"):",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_client.py",
+      "ligne": 388,
+      "extrait": "public_host_key = paramiko.ECDSAKey.from_private_key_file(key_file)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_client.py",
+      "ligne": 410,
+      "extrait": "host_key = paramiko.RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_client.py",
+      "ligne": 411,
+      "extrait": "public_host_key = paramiko.RSAKey(data=host_key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_client.py",
+      "ligne": 510,
+      "extrait": "host_key = paramiko.RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_client.py",
+      "ligne": 511,
+      "extrait": "public_host_key = paramiko.RSAKey(data=host_key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA, génération de clé",
+      "fichier": "tests/test_client.py",
+      "ligne": 666,
+      "extrait": "host_key = paramiko.ECDSAKey.generate()",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature",
+        "fonctions": [
+          "keygen"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048, génération de clé",
+      "fichier": "tests/test_client.py",
+      "ligne": 671,
+      "extrait": "host_key = paramiko.RSAKey.generate(2048)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "fonctions": [
+          "keygen"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_dss_openssh.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN OPENSSH PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA ; clé privée présente dans les fichiers analysés ; clé chiffrée, paramètres non lus",
+      "fichier": "tests/test_dss_password.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN DSA PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "notes": [
+          "cle_privee",
+          "chiffree"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-384 ; clé EC : ECDSA ou ECDH selon l'usage ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_ecdsa_384.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN EC PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "notes": [
+          "ec_ambigu",
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA-P-384 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_ecdsa_384_openssh.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN OPENSSH PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-521 ; clé EC : ECDSA ou ECDH selon l'usage ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_ecdsa_521.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN EC PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-521",
+        "primitive": "signature",
+        "courbe": "P-521",
+        "notes": [
+          "ec_ambigu",
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC ; clé EC : ECDSA ou ECDH selon l'usage ; clé privée présente dans les fichiers analysés ; clé chiffrée, paramètres non lus",
+      "fichier": "tests/test_ecdsa_password_256.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN EC PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC",
+        "primitive": "signature",
+        "notes": [
+          "ec_ambigu",
+          "cle_privee",
+          "chiffree"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC ; clé EC : ECDSA ou ECDH selon l'usage ; clé privée présente dans les fichiers analysés ; clé chiffrée, paramètres non lus",
+      "fichier": "tests/test_ecdsa_password_384.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN EC PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC",
+        "primitive": "signature",
+        "notes": [
+          "ec_ambigu",
+          "cle_privee",
+          "chiffree"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC ; clé EC : ECDSA ou ECDH selon l'usage ; clé privée présente dans les fichiers analysés ; clé chiffrée, paramètres non lus",
+      "fichier": "tests/test_ecdsa_password_521.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN EC PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC",
+        "primitive": "signature",
+        "notes": [
+          "ec_ambigu",
+          "cle_privee",
+          "chiffree"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_ed25519-funky-padding.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN OPENSSH PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_ed25519-funky-padding_password.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN OPENSSH PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_ed25519_password.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN OPENSSH PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519, vérification de signature ; clé publique SSH",
+      "fichier": "tests/test_hostkeys.py",
+      "ligne": 39,
+      "extrait": "ssh-ed25519 [clé masquée]",
+      "langage": "python",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA-P-256, vérification de signature ; clé publique SSH",
+      "fichier": "tests/test_hostkeys.py",
+      "ligne": 41,
+      "extrait": "ecdsa-sha2-nistp256 [clé masquée]",
+      "langage": "python",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_hostkeys.py",
+      "ligne": 97,
+      "extrait": "key = paramiko.RSAKey(data=decodebytes(keyblob))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_hostkeys.py",
+      "ligne": 120,
+      "extrait": "key = paramiko.RSAKey(data=decodebytes(keyblob))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "tests/test_hostkeys.py",
+      "ligne": 121,
+      "extrait": "key_dss = paramiko.DSSKey(data=decodebytes(keyblob_dss))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC ; clé EC : ECDSA ou ECDH selon l'usage ; import du module, usage non confirmé",
+      "fichier": "tests/test_kex.py",
+      "ligne": 31,
+      "extrait": "from cryptography.hazmat.primitives.asymmetric import ec",
+      "langage": "python",
+      "regle": "py-import-module",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC",
+        "primitive": "signature",
+        "notes": [
+          "ec_ambigu",
+          "import"
+        ]
+      }
+    },
+    {
+      "famille": "X25519_X448",
+      "classe": "vulnerable_shor",
+      "detail": "X25519, accord / dérivation de clé",
+      "fichier": "tests/test_kex.py",
+      "ligne": 135,
+      "extrait": "static_x25519_key = x25519.X25519PrivateKey.from_private_bytes(",
+      "langage": "python",
+      "regle": "py-cryptography-xdh",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "X25519",
+        "primitive": "key-agree",
+        "courbe": "X25519",
+        "fonctions": [
+          "keyderive"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_kex_gss.py",
+      "ligne": 83,
+      "extrait": "host_key = paramiko.RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_kex_gss.py",
+      "ligne": 99,
+      "extrait": "host_key = paramiko.RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_kex_gss.py",
+      "ligne": 100,
+      "extrait": "public_host_key = paramiko.RSAKey(data=host_key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-CBC, chiffrement / déchiffrement",
+      "fichier": "tests/test_packetizer.py",
+      "ligne": 48,
+      "extrait": "encryptor = Cipher(",
+      "langage": "python",
+      "regle": "py-cryptography-symetrique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-CBC",
+        "primitive": "block-cipher",
+        "mode": "cbc",
+        "fonctions": [
+          "encrypt",
+          "decrypt"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-CBC, chiffrement / déchiffrement",
+      "fichier": "tests/test_packetizer.py",
+      "ligne": 78,
+      "extrait": "decryptor = Cipher(",
+      "langage": "python",
+      "regle": "py-cryptography-symetrique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-CBC",
+        "primitive": "block-cipher",
+        "mode": "cbc",
+        "fonctions": [
+          "encrypt",
+          "decrypt"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-CBC, chiffrement / déchiffrement",
+      "fichier": "tests/test_packetizer.py",
+      "ligne": 102,
+      "extrait": "encryptor = Cipher(",
+      "langage": "python",
+      "regle": "py-cryptography-symetrique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-CBC",
+        "primitive": "block-cipher",
+        "mode": "cbc",
+        "fonctions": [
+          "encrypt",
+          "decrypt"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-1024, vérification de signature ; clé publique SSH",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 52,
+      "extrait": "ssh-rsa [clé masquée]",
+      "langage": "python",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-1024",
+        "primitive": "pke",
+        "taille_cle": 1024,
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, vérification de signature ; clé publique SSH",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 53,
+      "extrait": "ssh-dss [clé masquée]",
+      "langage": "python",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA-P-256, vérification de signature ; clé publique SSH",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 54,
+      "extrait": "ecdsa-sha2-nistp256 [clé masquée]",
+      "langage": "python",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA-P-384, vérification de signature ; clé publique SSH",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 55,
+      "extrait": "ecdsa-sha2-nistp384 [clé masquée]",
+      "langage": "python",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA-P-521, vérification de signature ; clé publique SSH",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 56,
+      "extrait": "ecdsa-sha2-nistp521 [clé masquée]",
+      "langage": "python",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA-P-521",
+        "primitive": "signature",
+        "courbe": "P-521",
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048, vérification de signature ; clé publique SSH",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 57,
+      "extrait": "ssh-rsa [clé masquée]",
+      "langage": "python",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA, vérification de signature ; clé publique SSH",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 60,
+      "extrait": "ssh-dss [clé masquée]",
+      "langage": "python",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature",
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA-P-384, vérification de signature ; clé publique SSH",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 61,
+      "extrait": "ecdsa-sha2-nistp384 [clé masquée]",
+      "langage": "python",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-1024 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 76,
+      "extrait": "-----BEGIN RSA PRIVATE KEY----- [contenu masqué]",
+      "langage": "python",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-1024",
+        "primitive": "pke",
+        "taille_cle": 1024,
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA-1024 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 94,
+      "extrait": "-----BEGIN DSA PRIVATE KEY----- [contenu masqué]",
+      "langage": "python",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA-1024",
+        "primitive": "signature",
+        "taille_cle": 1024,
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 109,
+      "extrait": "-----BEGIN EC PRIVATE KEY----- [contenu masqué]",
+      "langage": "python",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-384 ; clé EC : ECDSA ou ECDH selon l'usage ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 117,
+      "extrait": "-----BEGIN EC PRIVATE KEY----- [contenu masqué]",
+      "langage": "python",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "notes": [
+          "ec_ambigu",
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-521 ; clé EC : ECDSA ou ECDH selon l'usage ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 126,
+      "extrait": "-----BEGIN EC PRIVATE KEY----- [contenu masqué]",
+      "langage": "python",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-521",
+        "primitive": "signature",
+        "courbe": "P-521",
+        "notes": [
+          "ec_ambigu",
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 158,
+      "extrait": "key = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 170,
+      "extrait": "key2 = RSAKey.from_private_key(s)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 181,
+      "extrait": "RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 186,
+      "extrait": "RSAKey.from_private_key_file(_support(\"blank_rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 189,
+      "extrait": "key = RSAKey.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 200,
+      "extrait": "key = DSSKey.from_private_key_file(_support(\"dss.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 212,
+      "extrait": "key2 = DSSKey.from_private_key(s)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 216,
+      "extrait": "key = DSSKey.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 228,
+      "extrait": "key = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 230,
+      "extrait": "pub = RSAKey(data=key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 237,
+      "extrait": "key = DSSKey.from_private_key_file(_support(\"dss.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 239,
+      "extrait": "pub = DSSKey(data=key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 245,
+      "extrait": "key = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 255,
+      "extrait": "pub = RSAKey(data=key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 270,
+      "extrait": "key = DSSKey.from_private_key_file(_support(\"dss.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 280,
+      "extrait": "pub = DSSKey(data=key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-1024, génération de clé",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 285,
+      "extrait": "key = RSAKey.generate(1024)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-1024",
+        "primitive": "pke",
+        "taille_cle": 1024,
+        "fonctions": [
+          "keygen"
+        ]
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA-1024, génération de clé",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 291,
+      "extrait": "key = DSSKey.generate(1024)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA-1024",
+        "primitive": "signature",
+        "taille_cle": 1024,
+        "fonctions": [
+          "keygen"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA, génération de clé",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 297,
+      "extrait": "key = ECDSAKey.generate()",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature",
+        "fonctions": [
+          "keygen"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA-P-256, génération de clé",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 304,
+      "extrait": "key = ECDSAKey.generate(bits=256)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "fonctions": [
+          "keygen"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA-P-384, génération de clé",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 311,
+      "extrait": "key = ECDSAKey.generate(bits=384)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "fonctions": [
+          "keygen"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA-P-521, génération de clé",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 318,
+      "extrait": "key = ECDSAKey.generate(bits=521)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA-P-521",
+        "primitive": "signature",
+        "courbe": "P-521",
+        "fonctions": [
+          "keygen"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 326,
+      "extrait": "key = ECDSAKey.from_private_key_file(_support(\"ecdsa-256.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 338,
+      "extrait": "key2 = ECDSAKey.from_private_key(s)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 342,
+      "extrait": "key = ECDSAKey.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 354,
+      "extrait": "key = ECDSAKey.from_private_key_file(_support(\"ecdsa-256.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 356,
+      "extrait": "pub = ECDSAKey(data=key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 363,
+      "extrait": "key = ECDSAKey.from_private_key_file(_support(\"ecdsa-256.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 374,
+      "extrait": "pub = ECDSAKey(data=key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 378,
+      "extrait": "key = ECDSAKey.from_private_key_file(_support(\"test_ecdsa_384.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 390,
+      "extrait": "key2 = ECDSAKey.from_private_key(s)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 394,
+      "extrait": "key = ECDSAKey.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 413,
+      "extrait": "ECDSAKey.from_private_key_file(path)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 417,
+      "extrait": "key = ECDSAKey.from_private_key_file(_support(\"test_ecdsa_384.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 419,
+      "extrait": "pub = ECDSAKey(data=key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 426,
+      "extrait": "key = ECDSAKey.from_private_key_file(_support(\"test_ecdsa_384.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 437,
+      "extrait": "pub = ECDSAKey(data=key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 441,
+      "extrait": "key = ECDSAKey.from_private_key_file(_support(\"test_ecdsa_521.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 456,
+      "extrait": "key2 = ECDSAKey.from_private_key(s)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 460,
+      "extrait": "key = ECDSAKey.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 472,
+      "extrait": "key = ECDSAKey.from_private_key_file(_support(\"test_ecdsa_521.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 474,
+      "extrait": "pub = ECDSAKey(data=key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 481,
+      "extrait": "key = ECDSAKey.from_private_key_file(_support(\"test_ecdsa_521.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 492,
+      "extrait": "pub = ECDSAKey(data=key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 496,
+      "extrait": "key = RSAKey.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 512,
+      "extrait": "RSAKey.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "DSA",
+      "classe": "vulnerable_shor",
+      "detail": "DSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 522,
+      "extrait": "key = DSSKey.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "DSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 533,
+      "extrait": "key = ECDSAKey.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 549,
+      "extrait": "key = RSAKey(filename=file_, password=password)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 556,
+      "extrait": "key2 = RSAKey(filename=newfile, password=newpassword)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 563,
+      "extrait": "RSAKey.from_private_key_file(_support(\"test_rsa_openssh_nopad.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 566,
+      "extrait": "key = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 571,
+      "extrait": "key1 = Ed25519Key.from_private_key_file(_support(\"ed25519.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 572,
+      "extrait": "key2 = Ed25519Key.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 579,
+      "extrait": "Ed25519Key.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 585,
+      "extrait": "Ed25519Key.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 591,
+      "extrait": "key = Ed25519Key.from_private_key_file(_support(\"ed25519.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 593,
+      "extrait": "pub = Ed25519Key(data=key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 605,
+      "extrait": "original = Ed25519Key.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 608,
+      "extrait": "generated = Ed25519Key.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 615,
+      "extrait": "Ed25519Key.from_private_key_file(",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 625,
+      "extrait": "key = Ed25519Key.from_private_key(pkey_fileobj)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 635,
+      "extrait": "key = RSAKey(filename=file_, password=password)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 658,
+      "extrait": "key = ECDSAKey(filename=source, password=password)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 685,
+      "extrait": "key = ECDSAKey(filename=source, password=password)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA",
+      "fichier": "tests/test_pkey.py",
+      "ligne": 692,
+      "extrait": "reloaded = ECDSAKey(filename=new, password=newpassword)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-1024, vérification de signature ; clé publique SSH",
+      "fichier": "tests/test_rsa.key.pub",
+      "ligne": 1,
+      "extrait": "ssh-rsa [clé masquée]",
+      "langage": "pem",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-1024",
+        "primitive": "pke",
+        "taille_cle": 1024,
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_rsa_openssh.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN OPENSSH PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_rsa_openssh_nopad.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN OPENSSH PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA ; clé privée présente dans les fichiers analysés ; clé chiffrée, paramètres non lus",
+      "fichier": "tests/test_rsa_password.key",
+      "ligne": 1,
+      "extrait": "-----BEGIN RSA PRIVATE KEY----- [contenu masqué]",
+      "langage": "pem",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke",
+        "notes": [
+          "cle_privee",
+          "chiffree"
+        ]
+      }
+    },
+    {
+      "famille": "SHA1",
+      "classe": "obsolete_classique",
+      "detail": "SHA-1 ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_sftp.py",
+      "ligne": 608,
+      "extrait": "sum = f.check(\"sha1\")",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "SHA-1",
+        "primitive": "hash",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "MD5",
+      "classe": "obsolete_classique",
+      "detail": "MD5 ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_sftp.py",
+      "ligne": 613,
+      "extrait": "sum = f.check(\"md5\", 0, 512)",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "MD5",
+        "primitive": "hash",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "MD5",
+      "classe": "obsolete_classique",
+      "detail": "MD5 ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_sftp.py",
+      "ligne": 618,
+      "extrait": "sum = f.check(\"md5\", 0, 0, 510)",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "MD5",
+        "primitive": "hash",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048, génération de clé",
+      "fichier": "tests/test_ssh_exception.py",
+      "ligne": 60,
+      "extrait": "got_key = RSAKey.generate(2048)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "fonctions": [
+          "keygen"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048, génération de clé",
+      "fichier": "tests/test_ssh_exception.py",
+      "ligne": 61,
+      "extrait": "wanted_key = RSAKey.generate(2048)",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "fonctions": [
+          "keygen"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_ssh_gss.py",
+      "ligne": 92,
+      "extrait": "host_key = paramiko.RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_ssh_gss.py",
+      "ligne": 103,
+      "extrait": "host_key = paramiko.RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_ssh_gss.py",
+      "ligne": 104,
+      "extrait": "public_host_key = paramiko.RSAKey(data=host_key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_transport.py",
+      "ligne": 119,
+      "extrait": "host_key = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_transport.py",
+      "ligne": 120,
+      "extrait": "public_host_key = RSAKey(data=host_key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-192-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 146,
+      "extrait": "self.assertTrue((\"aes256-cbc\", \"aes192-cbc\") != o.ciphers)",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-192-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 192,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 146,
+      "extrait": "self.assertTrue((\"aes256-cbc\", \"aes192-cbc\") != o.ciphers)",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-256-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-192-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 147,
+      "extrait": "o.ciphers = (\"aes256-cbc\", \"aes192-cbc\")",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-192-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 192,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 147,
+      "extrait": "o.ciphers = (\"aes256-cbc\", \"aes192-cbc\")",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-256-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-192-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 148,
+      "extrait": "self.assertEqual((\"aes256-cbc\", \"aes192-cbc\"), o.ciphers)",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-192-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 192,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 148,
+      "extrait": "self.assertEqual((\"aes256-cbc\", \"aes192-cbc\"), o.ciphers)",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-256-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 150,
+      "extrait": "o.ciphers = (\"aes256-cbc\", \"made-up-cipher\")",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-256-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_transport.py",
+      "ligne": 185,
+      "extrait": "host_key = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_transport.py",
+      "ligne": 186,
+      "extrait": "public_host_key = RSAKey(data=host_key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_transport.py",
+      "ligne": 211,
+      "extrait": "host_key = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_transport.py",
+      "ligne": 212,
+      "extrait": "public_host_key = RSAKey(data=host_key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 233,
+      "extrait": "options.ciphers = (\"aes256-cbc\",)",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-256-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 237,
+      "extrait": "self.assertEqual(\"aes256-cbc\", self.tc.local_cipher)",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-256-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-256-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 238,
+      "extrait": "self.assertEqual(\"aes256-cbc\", self.tc.remote_cipher)",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-256-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 256,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_transport.py",
+      "ligne": 861,
+      "extrait": "host_key = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_transport.py",
+      "ligne": 862,
+      "extrait": "public_host_key = RSAKey(data=host_key.asbytes())",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-128-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 1109,
+      "extrait": "\"ciphers\": [\"aes128-cbc\"],",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-128-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 128,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "MD5",
+      "classe": "obsolete_classique",
+      "detail": "HMAC-MD5 ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 1110,
+      "extrait": "\"macs\": [\"hmac-md5\"],",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HMAC-MD5",
+        "primitive": "mac",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-128-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 1115,
+      "extrait": "assert \"aes128-cbc\" in t._preferred_ciphers",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-128-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 128,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-128-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 1116,
+      "extrait": "assert \"aes128-cbc\" not in t.preferred_ciphers",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-128-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 128,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "MD5",
+      "classe": "obsolete_classique",
+      "detail": "HMAC-MD5 ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 1117,
+      "extrait": "assert \"hmac-md5\" in t._preferred_macs",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HMAC-MD5",
+        "primitive": "mac",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "MD5",
+      "classe": "obsolete_classique",
+      "detail": "HMAC-MD5 ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 1118,
+      "extrait": "assert \"hmac-md5\" not in t.preferred_macs",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HMAC-MD5",
+        "primitive": "mac",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-128-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 1129,
+      "extrait": "\"ciphers\": [\"aes128-cbc\"],",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-128-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 128,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "MD5",
+      "classe": "obsolete_classique",
+      "detail": "HMAC-MD5 ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 1130,
+      "extrait": "\"macs\": [\"hmac-md5\"],",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HMAC-MD5",
+        "primitive": "mac",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "AES",
+      "classe": "symetrique",
+      "detail": "AES-128-CBC ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 1158,
+      "extrait": "assert \"aes128-cbc\" not in ciphers",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "AES-128-CBC",
+        "primitive": "block-cipher",
+        "taille_cle": 128,
+        "mode": "cbc",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "MD5",
+      "classe": "obsolete_classique",
+      "detail": "HMAC-MD5 ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_transport.py",
+      "ligne": 1159,
+      "extrait": "assert \"hmac-md5\" not in macs",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HMAC-MD5",
+        "primitive": "mac",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_transport.py",
+      "ligne": 1228,
+      "extrait": "hostkey = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "tests/test_transport.py",
+      "ligne": 1250,
+      "extrait": "privkey = RSAKey.from_private_key_file(_support(\"rsa.key\"))",
+      "langage": "python",
+      "regle": "py-paramiko-cle",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke"
+      }
+    }
+  ],
+  "a_verifier": []
+}

@@ -1,0 +1,4844 @@
+{
+  "format": "pqc-inventaire/constats",
+  "version_format": 1,
+  "outil": {
+    "nom": "pqc-inventaire",
+    "version": "0.1.0"
+  },
+  "type": "code",
+  "projet": "pyjwt-2.10.1",
+  "statistiques": {
+    "fichiers_analyses": 86,
+    "binaire": 0,
+    "taille": 0,
+    "illisible": 0,
+    "lien": 0,
+    "exclu": 0,
+    "regles": 107
+  },
+  "constats": [
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048 ; clé privée présente dans les fichiers analysés",
+      "fichier": "docs/usage.rst",
+      "ligne": 23,
+      "extrait": "-----BEGIN RSA PRIVATE KEY----- [contenu masqué]",
+      "langage": "texte",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "documentation",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048 ; clé publique",
+      "fichier": "docs/usage.rst",
+      "ligne": 24,
+      "extrait": "-----BEGIN PUBLIC KEY-----",
+      "langage": "texte",
+      "regle": "pem-cle-publique",
+      "confiance": "elevee",
+      "contexte": "documentation",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "notes": [
+          "cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA ; clé privée présente dans les fichiers analysés ; clé chiffrée, paramètres non lus",
+      "fichier": "docs/usage.rst",
+      "ligne": 36,
+      "extrait": "-----BEGIN RSA PRIVATE KEY----- [contenu masqué]",
+      "langage": "texte",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "documentation",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke",
+        "notes": [
+          "cle_privee",
+          "chiffree"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048 ; clé privée présente dans les fichiers analysés",
+      "fichier": "docs/usage.rst",
+      "ligne": 56,
+      "extrait": "-----BEGIN RSA PRIVATE KEY----- [contenu masqué]",
+      "langage": "texte",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "documentation",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048 ; clé publique",
+      "fichier": "docs/usage.rst",
+      "ligne": 57,
+      "extrait": "-----BEGIN PUBLIC KEY-----",
+      "langage": "texte",
+      "regle": "pem-cle-publique",
+      "confiance": "elevee",
+      "contexte": "documentation",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "notes": [
+          "cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; clé privée présente dans les fichiers analysés",
+      "fichier": "docs/usage.rst",
+      "ligne": 70,
+      "extrait": "-----BEGIN PRIVATE KEY----- [contenu masqué]",
+      "langage": "texte",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "documentation",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; clé publique",
+      "fichier": "docs/usage.rst",
+      "ligne": 71,
+      "extrait": "-----BEGIN PUBLIC KEY-----",
+      "langage": "texte",
+      "regle": "pem-cle-publique",
+      "confiance": "elevee",
+      "contexte": "documentation",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; clé privée présente dans les fichiers analysés",
+      "fichier": "docs/usage.rst",
+      "ligne": 84,
+      "extrait": "-----BEGIN EC PRIVATE KEY----- [contenu masqué]",
+      "langage": "texte",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "documentation",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; clé publique",
+      "fichier": "docs/usage.rst",
+      "ligne": 85,
+      "extrait": "-----BEGIN PUBLIC KEY-----",
+      "langage": "texte",
+      "regle": "pem-cle-publique",
+      "confiance": "elevee",
+      "contexte": "documentation",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EdDSA ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 101,
+      "extrait": "\"EdDSA\",",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EdDSA",
+        "primitive": "signature",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EdDSA ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 132,
+      "extrait": "\"EdDSA\": OKPAlgorithm(),",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EdDSA",
+        "primitive": "signature",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 477,
+      "extrait": "return key.sign(msg, padding.PKCS1v15(), self.hash_alg())",
+      "langage": "python",
+      "regle": "py-cryptography-rsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke",
+        "remplissage": "pkcs1v15",
+        "fonctions": [
+          "other"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 481,
+      "extrait": "key.verify(sig, msg, padding.PKCS1v15(), self.hash_alg())",
+      "langage": "python",
+      "regle": "py-cryptography-rsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke",
+        "remplissage": "pkcs1v15",
+        "fonctions": [
+          "other"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA, signature / vérification de signature",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 530,
+      "extrait": "der_sig = key.sign(msg, ECDSA(self.hash_alg()))",
+      "langage": "python",
+      "regle": "py-cryptography-ec",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA, signature / vérification de signature",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 546,
+      "extrait": "public_key.verify(der_sig, msg, ECDSA(self.hash_alg()))",
+      "langage": "python",
+      "regle": "py-cryptography-ec",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "ECDSA",
+        "primitive": "signature",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 573,
+      "extrait": "crv = \"P-256\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-384 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 575,
+      "extrait": "crv = \"P-384\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-521 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 577,
+      "extrait": "crv = \"P-521\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-P-521",
+        "primitive": "signature",
+        "courbe": "P-521",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-secp256k1 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 579,
+      "extrait": "crv = \"secp256k1\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-secp256k1",
+        "primitive": "signature",
+        "courbe": "secp256k1",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 631,
+      "extrait": "if curve == \"P-256\":",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-384 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 638,
+      "extrait": "elif curve == \"P-384\":",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-521 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 645,
+      "extrait": "elif curve == \"P-521\":",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-P-521",
+        "primitive": "signature",
+        "courbe": "P-521",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-secp256k1 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 652,
+      "extrait": "elif curve == \"secp256k1\":",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-secp256k1",
+        "primitive": "signature",
+        "courbe": "secp256k1",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-PSS, signature / vérification de signature",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 689,
+      "extrait": "padding.PSS(",
+      "langage": "python",
+      "regle": "py-cryptography-rsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "RSA-PSS",
+        "primitive": "signature",
+        "remplissage": "other",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-PSS, signature / vérification de signature",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 701,
+      "extrait": "padding.PSS(",
+      "langage": "python",
+      "regle": "py-cryptography-rsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "RSA-PSS",
+        "primitive": "signature",
+        "remplissage": "other",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 802,
+      "extrait": "crv = \"Ed25519\" if isinstance(key, Ed25519PublicKey) else \"Ed448\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed448 ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 802,
+      "extrait": "crv = \"Ed25519\" if isinstance(key, Ed25519PublicKey) else \"Ed448\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed448",
+        "primitive": "signature",
+        "courbe": "Ed448",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 827,
+      "extrait": "crv = \"Ed25519\" if isinstance(key, Ed25519PrivateKey) else \"Ed448\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed448 ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 827,
+      "extrait": "crv = \"Ed25519\" if isinstance(key, Ed25519PrivateKey) else \"Ed448\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed448",
+        "primitive": "signature",
+        "courbe": "Ed448",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 858,
+      "extrait": "if curve != \"Ed25519\" and curve != \"Ed448\":",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed448 ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 858,
+      "extrait": "if curve != \"Ed25519\" and curve != \"Ed448\":",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed448",
+        "primitive": "signature",
+        "courbe": "Ed448",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 867,
+      "extrait": "if curve == \"Ed25519\":",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 868,
+      "extrait": "return Ed25519PublicKey.from_public_bytes(x)",
+      "langage": "python",
+      "regle": "py-cryptography-eddsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed448",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 869,
+      "extrait": "return Ed448PublicKey.from_public_bytes(x)",
+      "langage": "python",
+      "regle": "py-cryptography-eddsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed448",
+        "primitive": "signature",
+        "courbe": "Ed448"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 871,
+      "extrait": "if curve == \"Ed25519\":",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 872,
+      "extrait": "return Ed25519PrivateKey.from_private_bytes(d)",
+      "langage": "python",
+      "regle": "py-cryptography-eddsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519"
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed448",
+      "fichier": "jwt/algorithms.py",
+      "ligne": 873,
+      "extrait": "return Ed448PrivateKey.from_private_bytes(d)",
+      "langage": "python",
+      "regle": "py-cryptography-eddsa",
+      "confiance": "elevee",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed448",
+        "primitive": "signature",
+        "courbe": "Ed448"
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/api_jwk.py",
+      "ligne": 34,
+      "extrait": "if crv == \"P-256\" or not crv:",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-384 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/api_jwk.py",
+      "ligne": 36,
+      "extrait": "elif crv == \"P-384\":",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-521 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/api_jwk.py",
+      "ligne": 38,
+      "extrait": "elif crv == \"P-521\":",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-P-521",
+        "primitive": "signature",
+        "courbe": "P-521",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-secp256k1 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/api_jwk.py",
+      "ligne": 40,
+      "extrait": "elif crv == \"secp256k1\":",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC-secp256k1",
+        "primitive": "signature",
+        "courbe": "secp256k1",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/api_jwk.py",
+      "ligne": 51,
+      "extrait": "if crv == \"Ed25519\":",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EdDSA ; nom d'algorithme dans une chaîne",
+      "fichier": "jwt/api_jwk.py",
+      "ligne": 52,
+      "extrait": "algorithm = \"EdDSA\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EdDSA",
+        "primitive": "signature",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC ; clé EC : ECDSA ou ECDH selon l'usage ; import du module, usage non confirmé",
+      "fichier": "jwt/utils.py",
+      "ligne": 7,
+      "extrait": "from cryptography.hazmat.primitives.asymmetric.ec import EllipticCurve",
+      "langage": "python",
+      "regle": "py-import-module",
+      "confiance": "moyenne",
+      "contexte": "production",
+      "parametres": {
+        "algorithme": "EC",
+        "primitive": "signature",
+        "notes": [
+          "ec_ambigu",
+          "import"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC ; clé EC : ECDSA ou ECDH selon l'usage ; import du module, usage non confirmé",
+      "fichier": "tests/keys/__init__.py",
+      "ligne": 8,
+      "extrait": "from cryptography.hazmat.primitives.asymmetric import ec",
+      "langage": "python",
+      "regle": "py-import-module",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC",
+        "primitive": "signature",
+        "notes": [
+          "ec_ambigu",
+          "import"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048 ; clé publique",
+      "fichier": "tests/keys/testkey2_rsa.pub.pem",
+      "ligne": 1,
+      "extrait": "-----BEGIN PUBLIC KEY-----",
+      "langage": "pem",
+      "regle": "pem-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "notes": [
+          "cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/keys/testkey_ec.priv",
+      "ligne": 1,
+      "extrait": "-----BEGIN PRIVATE KEY----- [contenu masqué]",
+      "langage": "texte",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; clé publique",
+      "fichier": "tests/keys/testkey_ec.pub",
+      "ligne": 1,
+      "extrait": "-----BEGIN PUBLIC KEY-----",
+      "langage": "pem",
+      "regle": "pem-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC ; clé EC : ECDSA ou ECDH selon l'usage ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/keys/testkey_ec_secp192r1.priv",
+      "ligne": 1,
+      "extrait": "-----BEGIN PRIVATE KEY----- [contenu masqué]",
+      "langage": "texte",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC",
+        "primitive": "signature",
+        "notes": [
+          "ec_ambigu",
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA-P-256, vérification de signature ; clé publique SSH",
+      "fichier": "tests/keys/testkey_ec_ssh.pub",
+      "ligne": 1,
+      "extrait": "ecdsa-sha2-nistp256 [clé masquée]",
+      "langage": "pem",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/keys/testkey_ed25519",
+      "ligne": 1,
+      "extrait": "-----BEGIN PRIVATE KEY----- [contenu masqué]",
+      "langage": "texte",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519, vérification de signature ; clé publique SSH",
+      "fichier": "tests/keys/testkey_ed25519.pub",
+      "ligne": 1,
+      "extrait": "ssh-ed25519 [clé masquée]",
+      "langage": "pem",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-1024 ; clé publique",
+      "fichier": "tests/keys/testkey_pkcs1.pub.pem",
+      "ligne": 1,
+      "extrait": "-----BEGIN RSA PUBLIC KEY-----",
+      "langage": "pem",
+      "regle": "pem-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-1024",
+        "primitive": "pke",
+        "taille_cle": 1024,
+        "notes": [
+          "cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048, vérification de signature ; certificat X.509 ; OU=Test Certificate,O=PyJWT,L=Austin,ST=Texas,C=US, expire le 2018-03-17",
+      "fichier": "tests/keys/testkey_rsa.cer",
+      "ligne": 1,
+      "extrait": "-----BEGIN CERTIFICATE-----",
+      "langage": "pem",
+      "regle": "pem-certificat",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "certificat"
+        ],
+        "certificat": {
+          "sujet": "OU=Test Certificate,O=PyJWT,L=Austin,ST=Texas,C=US",
+          "emetteur": "OU=Test Certificate,O=PyJWT,L=Austin,ST=Texas,C=US",
+          "not_before": "2015-03-18T01:16:14Z",
+          "not_after": "2018-03-17T01:16:14Z",
+          "signature": "SHA256withRSA",
+          "empreinte_sha256": "6a1289bb893f1cf93c5169707d4e9e14b4b69b0e24752ce4444fe78b3c426c81",
+          "analyseur": "cryptography"
+        }
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/keys/testkey_rsa.priv",
+      "ligne": 1,
+      "extrait": "-----BEGIN RSA PRIVATE KEY----- [contenu masqué]",
+      "langage": "texte",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA-2048, vérification de signature ; clé publique SSH",
+      "fichier": "tests/keys/testkey_rsa.pub",
+      "ligne": 1,
+      "extrait": "ssh-rsa [clé masquée]",
+      "langage": "pem",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA-2048",
+        "primitive": "pke",
+        "taille_cle": 2048,
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_advisory.py",
+      "ligne": 9,
+      "extrait": "-----BEGIN PRIVATE KEY----- [contenu masqué]",
+      "langage": "python",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519, vérification de signature ; clé publique SSH",
+      "fichier": "tests/test_advisory.py",
+      "ligne": 14,
+      "extrait": "ssh-ed25519 [clé masquée]",
+      "langage": "python",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; clé privée présente dans les fichiers analysés",
+      "fichier": "tests/test_advisory.py",
+      "ligne": 17,
+      "extrait": "-----BEGIN EC PRIVATE KEY----- [contenu masqué]",
+      "langage": "python",
+      "regle": "pem-cle-privee",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "cle_privee"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ECDSA-P-256, vérification de signature ; clé publique SSH",
+      "fichier": "tests/test_advisory.py",
+      "ligne": 23,
+      "extrait": "ecdsa-sha2-nistp256 [clé masquée]",
+      "langage": "python",
+      "regle": "ssh-cle-publique",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ECDSA-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "fonctions": [
+          "verify"
+        ],
+        "notes": [
+          "ssh_cle_publique"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RSA ; import du module, usage non confirmé",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 27,
+      "extrait": "from cryptography.hazmat.primitives.asymmetric.rsa import (",
+      "langage": "python",
+      "regle": "py-import-module",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RSA",
+        "primitive": "pke",
+        "notes": [
+          "import"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 172,
+      "extrait": "\"P-256\": ECAlgorithm.SHA256,",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-384 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 173,
+      "extrait": "\"P-384\": ECAlgorithm.SHA384,",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-521 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 174,
+      "extrait": "\"P-521\": ECAlgorithm.SHA512,",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-521",
+        "primitive": "signature",
+        "courbe": "P-521",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-secp256k1 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 175,
+      "extrait": "\"secp256k1\": ECAlgorithm.SHA256,",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-secp256k1",
+        "primitive": "signature",
+        "courbe": "secp256k1",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 194,
+      "extrait": "\"P-256\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-384 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 198,
+      "extrait": "\"P-384\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-521 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 202,
+      "extrait": "\"P-521\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-521",
+        "primitive": "signature",
+        "courbe": "P-521",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-secp256k1 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 206,
+      "extrait": "\"secp256k1\": {",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-secp256k1",
+        "primitive": "signature",
+        "courbe": "secp256k1",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 237,
+      "extrait": "for curve in (\"P-256\", \"P-384\", \"P-521\", \"secp256k1\"):",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-384 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 237,
+      "extrait": "for curve in (\"P-256\", \"P-384\", \"P-521\", \"secp256k1\"):",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-521 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 237,
+      "extrait": "for curve in (\"P-256\", \"P-384\", \"P-521\", \"secp256k1\"):",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-521",
+        "primitive": "signature",
+        "courbe": "P-521",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-secp256k1 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 237,
+      "extrait": "for curve in (\"P-256\", \"P-384\", \"P-521\", \"secp256k1\"):",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-secp256k1",
+        "primitive": "signature",
+        "courbe": "secp256k1",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 289,
+      "extrait": "\"crv\": \"P-256\",",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 311,
+      "extrait": "\"crv\": \"P-256\",",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 330,
+      "extrait": "\"P-256\": ECAlgorithm.SHA256,",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-384 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 331,
+      "extrait": "\"P-384\": ECAlgorithm.SHA384,",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-384",
+        "primitive": "signature",
+        "courbe": "P-384",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-521 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 332,
+      "extrait": "\"P-521\": ECAlgorithm.SHA512,",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-521",
+        "primitive": "signature",
+        "courbe": "P-521",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-secp256k1 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 333,
+      "extrait": "\"secp256k1\": ECAlgorithm.SHA256,",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-secp256k1",
+        "primitive": "signature",
+        "courbe": "secp256k1",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 936,
+      "extrait": "v[\"crv\"] = \"P-256\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed448 ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 942,
+      "extrait": "v[\"crv\"] = \"Ed448\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed448",
+        "primitive": "signature",
+        "courbe": "Ed448",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EC-P-256 ; clé EC : ECDSA ou ECDH selon l'usage ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 1046,
+      "extrait": "v[\"crv\"] = \"P-256\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EC-P-256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "notes": [
+          "ec_ambigu",
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "Ed25519 ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_algorithms.py",
+      "ligne": 1052,
+      "extrait": "v[\"crv\"] = \"Ed25519\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "Ed25519",
+        "primitive": "signature",
+        "courbe": "Ed25519",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwk.py",
+      "ligne": 80,
+      "extrait": "jwk = PyJWK.from_dict(key_data, algorithm=\"RS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RS256",
+        "primitive": "signature",
+        "remplissage": "pkcs1v15",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "EDDSA",
+      "classe": "vulnerable_shor",
+      "detail": "EdDSA ; nom d'algorithme dans une chaîne",
+      "fichier": "tests/test_api_jwk.py",
+      "ligne": 169,
+      "extrait": "assert jwk.algorithm_name == \"EdDSA\"",
+      "langage": "python",
+      "regle": "py-chaine-algorithme",
+      "confiance": "faible",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "EdDSA",
+        "primitive": "signature",
+        "notes": [
+          "chaine"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwk.py",
+      "ligne": 217,
+      "extrait": "PyJWK({\"kty\": \"dummy\"}, algorithm=\"RS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RS256",
+        "primitive": "signature",
+        "remplissage": "pkcs1v15",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwk.py",
+      "ligne": 223,
+      "extrait": "PyJWK({\"kty\": \"dummy\"}, algorithm=\"RS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RS256",
+        "primitive": "signature",
+        "remplissage": "pkcs1v15",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 70,
+      "extrait": "jws = PyJWS(algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 92,
+      "extrait": "jws_message = jws.encode(payload, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 93,
+      "extrait": "decoded_payload = jws.decode(jws_message, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 101,
+      "extrait": "jws_token = jws.encode(payload, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 102,
+      "extrait": "jws.decode(jws_token, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS384, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 105,
+      "extrait": "jws.decode(jws_token, secret, algorithms=[\"HS384\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS384",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 115,
+      "extrait": "jws.decode(unicode_jws, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 122,
+      "extrait": "jws.decode(example_jws, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 132,
+      "extrait": "jws.decode(example_jws, example_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 142,
+      "extrait": "jws.decode(example_jws, example_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 156,
+      "extrait": "jws.decode(example_jws, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 163,
+      "extrait": "decoded = jws.decode_complete(msg, \"secret\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 165,
+      "extrait": "\"header\": {\"alg\": \"HS256\", \"typ\": \"JWT\"},",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 174,
+      "extrait": "jws.encode(payload, \"secret\", algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ES256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 195,
+      "extrait": "msg = jws.encode(payload, priv_key, headers={\"alg\": \"ES256\"})",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ES256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ES256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 196,
+      "extrait": "assert b\"hello world\" == jws.decode(msg, pub_key, algorithms=[\"ES256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ES256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ES256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 205,
+      "extrait": "msg = jws.encode(payload, priv_key, algorithm=\"HS256\", headers={\"alg\": \"ES256\"})",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ES256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 205,
+      "extrait": "msg = jws.encode(payload, priv_key, algorithm=\"HS256\", headers={\"alg\": \"ES256\"})",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ES256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 206,
+      "extrait": "assert b\"hello world\" == jws.decode(msg, pub_key, algorithms=[\"ES256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ES256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 212,
+      "extrait": "\"alg\": \"HS256\",",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 217,
+      "extrait": "decoded = jws.decode_complete(msg, key=jwk, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 219,
+      "extrait": "\"header\": {\"alg\": \"HS256\", \"typ\": \"JWT\"},",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 247,
+      "extrait": "jws.decode(jws_message, bad_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 251,
+      "extrait": "jws.decode(jws_message, bad_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 262,
+      "extrait": "decoded_payload = jws.decode(example_jws, example_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 274,
+      "extrait": "decoded = jws.decode_complete(example_jws, example_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 277,
+      "extrait": "\"header\": {\"alg\": \"HS256\", \"typ\": \"JWT\"},",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 289,
+      "extrait": "\"alg\": \"HS256\",",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 299,
+      "extrait": "decoded_payload = jws.decode(example_jws, jwk, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 307,
+      "extrait": "\"alg\": \"HS256\",",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS512, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 325,
+      "extrait": "\"alg\": \"HS512\",",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS512",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ES256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 352,
+      "extrait": "decoded_payload = jws.decode(example_jws, example_pubkey, algorithms=[\"ES256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ES256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RS384, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 378,
+      "extrait": "decoded_payload = jws.decode(example_jws, example_pubkey, algorithms=[\"RS384\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RS384",
+        "primitive": "signature",
+        "remplissage": "pkcs1v15",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 392,
+      "extrait": "example_jws, key=example_secret, algorithms=[\"HS256\"]",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 440,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 451,
+      "extrait": "jws.decode(jws_message, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 458,
+      "extrait": "jws.decode(jws_message, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 466,
+      "extrait": "jws.decode(example_jws, \"secret\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 475,
+      "extrait": "jws.encode(payload, \"secret\", algorithm=\"RS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RS256",
+        "primitive": "signature",
+        "remplissage": "pkcs1v15",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 481,
+      "extrait": "decoded_payload = jws.decode(jws_message, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 489,
+      "extrait": "decoded_payload = jws.decode(jws_message, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 497,
+      "extrait": "decoded_payload = jws.decode(jws_message, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 521,
+      "extrait": "jws.decode(example_jws, example_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 534,
+      "extrait": "jws.decode(example_jws, example_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 547,
+      "extrait": "jws.decode(example_jws, example_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 560,
+      "extrait": "jws.decode(example_jws, example_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 578,
+      "extrait": "algorithm=\"HS256\",",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 822,
+      "extrait": "payload, secret, algorithm=\"HS256\", is_payload_detached=True",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 825,
+      "extrait": "jws.decode(jws_message, secret, algorithms=[\"HS256\"], detached_payload=payload)",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 863,
+      "extrait": "jws.decode(example_jws, example_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 873,
+      "extrait": "payload, secret, algorithm=\"HS256\", is_payload_detached=True",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 880,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 890,
+      "extrait": "payload, secret, algorithm=\"HS256\", is_payload_detached=True",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jws.py",
+      "ligne": 897,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 47,
+      "extrait": "decoded_payload = jwt.decode(example_jwt, example_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 59,
+      "extrait": "decoded = jwt.decode_complete(example_jwt, example_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 62,
+      "extrait": "\"header\": {\"alg\": \"HS256\", \"typ\": \"JWT\"},",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 80,
+      "extrait": "example_jwt, key=example_secret, algorithms=[\"HS256\"]",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 94,
+      "extrait": "jwt.decode(example_jwt, example_secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 107,
+      "extrait": "jwt.decode(example_jwt, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 121,
+      "extrait": "jwt.decode(example_jwt, secret, audience=1, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 139,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 158,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 170,
+      "extrait": "lambda t=t: jwt.encode(t, \"secret\", algorithms=[\"HS256\"]),",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 190,
+      "extrait": "payload, \"secret\", algorithm=\"HS256\", headers={\"typ\": \"secevent+jwt\"}",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 208,
+      "extrait": "jwt.decode(example_jwt, \"secret\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 221,
+      "extrait": "jwt.decode(example_jwt, \"secret\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 229,
+      "extrait": "jwt.decode(jwt_message, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 235,
+      "extrait": "data = jwt.decode(jwt_message, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 247,
+      "extrait": "jwt.decode(example_jwt, \"secret\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 256,
+      "extrait": "decoded = jwt.decode(example_jwt, \"secret\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 269,
+      "extrait": "jwt_message, secret, leeway=1, algorithms=[\"HS256\"]",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "ECDSA",
+      "classe": "vulnerable_shor",
+      "detail": "ES256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 297,
+      "extrait": "decoded_payload = jwt.decode(example_jwt, example_pubkey, algorithms=[\"ES256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "ES256",
+        "primitive": "signature",
+        "courbe": "P-256",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RS384, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 321,
+      "extrait": "decoded_payload = jwt.decode(example_jwt, example_pubkey, algorithms=[\"RS384\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RS384",
+        "primitive": "signature",
+        "remplissage": "pkcs1v15",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 331,
+      "extrait": "jwt.decode(jwt_message, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 339,
+      "extrait": "jwt.decode(jwt_message, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 349,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 361,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 373,
+      "extrait": "jwt_message, secret, leeway=leeway, algorithms=[\"HS256\"]",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 380,
+      "extrait": "jwt.decode(jwt_message, secret, leeway=leeway, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 388,
+      "extrait": "jwt.decode(jwt_message, secret, leeway=13, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 391,
+      "extrait": "jwt.decode(jwt_message, secret, leeway=1, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 396,
+      "extrait": "jwt.decode(token, \"secret\", audience=\"urn:me\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 405,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 412,
+      "extrait": "jwt.decode(token, \"secret\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 422,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 428,
+      "extrait": "jwt.decode(token, \"secret\", audience=\"urn:me\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 436,
+      "extrait": "jwt.decode(token, \"secret\", audience=\"urn-me\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 442,
+      "extrait": "jwt.decode(token, \"secret\", audience=b\"urn:me\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 453,
+      "extrait": "jwt.decode(token, \"secret\", audience=\"urn:me\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 463,
+      "extrait": "jwt.decode(token, \"secret\", issuer=issuer, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 475,
+      "extrait": "jwt.decode(token, \"secret\", issuer=issuer, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 482,
+      "extrait": "jwt.decode(token, \"secret\", audience=\"urn:me\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 491,
+      "extrait": "jwt.decode(token, \"secret\", audience=\"urn:me\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 499,
+      "extrait": "jwt.decode(token, \"secret\", issuer=issuer, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 505,
+      "extrait": "jwt.decode(token, \"secret\", issuer=issuer, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 515,
+      "extrait": "jwt.decode(token, \"secret\", issuer=issuer, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 525,
+      "extrait": "jwt.decode(token, \"secret\", issuer=issuer, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 534,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 547,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 562,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 579,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 596,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 611,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 624,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 637,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 650,
+      "extrait": "jwt.encode(data, \"secret\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 653,
+      "extrait": "payload = jwt.decode(token, \"secret\", algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 665,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 673,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 718,
+      "extrait": "jwt.decode(jwt_message, secret, verify=False, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 732,
+      "extrait": "jwt.decode(jwt_message, secret, options=options, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 740,
+      "extrait": "jwt.decode(jwt_message, secret, algorithms=[\"HS256\"], foo=\"bar\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 749,
+      "extrait": "jwt.decode_complete(jwt_message, secret, algorithms=[\"HS256\"], foo=\"bar\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 764,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 774,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 788,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 800,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 816,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 829,
+      "extrait": "algorithms=[\"HS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 839,
+      "extrait": "token = jwt.encode(payload, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 840,
+      "extrait": "decoded = jwt.decode(token, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 846,
+      "extrait": "token = jwt.encode({}, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 848,
+      "extrait": "decoded = jwt.decode(token, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 854,
+      "extrait": "token = jwt.encode({}, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 858,
+      "extrait": "token, secret, algorithms=[\"HS256\"], options={\"require\": [\"sub\"]}",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 866,
+      "extrait": "token = jwt.encode(payload, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 869,
+      "extrait": "jwt.decode(token, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 876,
+      "extrait": "token = jwt.encode(payload, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 878,
+      "extrait": "decoded = jwt.decode(token, secret, algorithms=[\"HS256\"], subject=\"user123\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 887,
+      "extrait": "token = jwt.encode(payload, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 890,
+      "extrait": "jwt.decode(token, secret, algorithms=[\"HS256\"], subject=\"user456\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 899,
+      "extrait": "token = jwt.encode(payload, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 901,
+      "extrait": "decoded = jwt.decode(token, secret, algorithms=[\"HS256\"], subject=None)",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 911,
+      "extrait": "token = jwt.encode(payload, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 912,
+      "extrait": "decoded = jwt.decode(token, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 919,
+      "extrait": "token = jwt.encode(payload, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 923,
+      "extrait": "token, secret, algorithms=[\"HS256\"], options={\"require\": [\"jti\"]}",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 930,
+      "extrait": "token = jwt.encode({}, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 932,
+      "extrait": "decoded = jwt.decode(token, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 942,
+      "extrait": "token = jwt.encode(payload, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_api_jwt.py",
+      "ligne": 945,
+      "extrait": "jwt.decode(token, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_compressed_jwt.py",
+      "ligne": 27,
+      "extrait": "example_jwt, example_secret, algorithms=[\"HS256\"]",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_compressed_jwt.py",
+      "ligne": 31,
+      "extrait": "\"header\": {\"alg\": \"HS256\", \"typ\": \"JWT\"},",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RS256, signature / vérification de signature",
+      "fichier": "tests/test_jwks_client.py",
+      "ligne": 20,
+      "extrait": "\"alg\": \"RS256\",",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RS256",
+        "primitive": "signature",
+        "remplissage": "pkcs1v15",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RS256, signature / vérification de signature",
+      "fichier": "tests/test_jwks_client.py",
+      "ligne": 37,
+      "extrait": "\"alg\": \"RS256\",",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RS256",
+        "primitive": "signature",
+        "remplissage": "pkcs1v15",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "RSA",
+      "classe": "vulnerable_shor",
+      "detail": "RS256, signature / vérification de signature",
+      "fichier": "tests/test_jwks_client.py",
+      "ligne": 207,
+      "extrait": "algorithms=[\"RS256\"],",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "RS256",
+        "primitive": "signature",
+        "remplissage": "pkcs1v15",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "TLS_SUITE",
+      "classe": "inventaire",
+      "detail": "TLS ; paramètres TLS par défaut de la bibliothèque",
+      "fichier": "tests/test_jwks_client.py",
+      "ligne": 342,
+      "extrait": "jwks_client = PyJWKClient(url, ssl_context=ssl.create_default_context())",
+      "langage": "python",
+      "regle": "py-ssl-contexte",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "TLS",
+        "primitive": "other",
+        "notes": [
+          "tls_defaut"
+        ]
+      }
+    },
+    {
+      "famille": "TLS_SUITE",
+      "classe": "inventaire",
+      "detail": "TLS ; paramètres TLS par défaut de la bibliothèque",
+      "fichier": "tests/test_jwks_client.py",
+      "ligne": 351,
+      "extrait": "url, ssl_context=ssl.SSLContext(protocol=ssl.PROTOCOL_TLS_CLIENT)",
+      "langage": "python",
+      "regle": "py-ssl-contexte",
+      "confiance": "moyenne",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "TLS",
+        "primitive": "other",
+        "notes": [
+          "tls_defaut"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_jwt.py",
+      "ligne": 16,
+      "extrait": "jwt_message = jwt.encode(payload, secret, algorithm=\"HS256\")",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    },
+    {
+      "famille": "SHA2",
+      "classe": "hachage_ok",
+      "detail": "HS256, signature / vérification de signature",
+      "fichier": "tests/test_jwt.py",
+      "ligne": 17,
+      "extrait": "decoded_payload = jwt.decode(jwt_message, secret, algorithms=[\"HS256\"])",
+      "langage": "python",
+      "regle": "py-jwt-algorithme",
+      "confiance": "elevee",
+      "contexte": "test",
+      "parametres": {
+        "algorithme": "HS256",
+        "primitive": "mac",
+        "fonctions": [
+          "sign",
+          "verify"
+        ]
+      }
+    }
+  ],
+  "a_verifier": []
+}

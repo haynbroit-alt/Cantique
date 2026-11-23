@@ -1,0 +1,1073 @@
+{
+  "version": "2026-11-22",
+  "avertissement_fr": "Référentiel établi le 22 novembre 2026 à partir de notes de recherche datées et de sources primaires consultées le même jour. Ce n'est pas un avis juridique : l'applicabilité d'un texte à une organisation donnée doit être confirmée par un juriste ou par l'autorité compétente. Pour la plupart des entreprises privées situées hors du périmètre PCI DSS et hors des marchés publics (notamment fédéraux américains), aucune échéance de migration post-quantique contraignante n'existe à ce jour : les autres textes sont des recommandations, des projets ou des obligations qui visent des administrations. Conventions : « nature » décrit la portée du texte pour le public qu'il vise, pas pour le client ; « echeance » est la date à partir de laquelle, ou au plus tard à laquelle, l'effet s'applique ; quand le texte ne donne qu'une année, la date retenue est le 31 décembre de cette année, et quand il ne donne qu'un mois, le dernier jour de ce mois. « confiance » : elevee = vérifié dans le texte primaire le 22/11/2026 ; moyenne = partiellement vérifié (date ou libellé principal confirmé par une source officielle, le reste par des sources secondaires concordantes) ; faible = non vérifié dans une source primaire. Une exigence « faible » ne doit pas être citée à un client sans vérification préalable.",
+  "disclaimer_en": "Reference compiled on 22 November 2026 from dated research notes and from primary sources consulted that day. It is not legal advice: whether a text applies to a given organisation must be confirmed by a lawyer or the competent authority. For most private companies outside PCI DSS scope and outside public procurement (US federal procurement in particular), there is no binding post-quantum migration deadline today: the other texts are recommendations, proposals, or obligations aimed at governments. Conventions: \"nature\" describes the text's force for its own target audience, not for the client; \"echeance\" is the date from which, or by which, the effect applies; when a text gives only a year, the date used is 31 December of that year, and when it gives only a month, the last day of that month. \"confiance\": elevee = verified in the primary text on 2026-11-22; moyenne = partly verified (date or core wording confirmed by an official source, the rest by consistent secondary sources); faible = not verified in a primary source. A \"faible\" item must not be quoted to a client without checking it first.",
+  "referentiels": [
+    {
+      "id": "PCI-DSS-4.0.1",
+      "nom": "PCI DSS v4.0.1 — Payment Card Industry Data Security Standard",
+      "juridiction": "INT",
+      "emetteur": "PCI Security Standards Council",
+      "nature": "contraignant",
+      "public_vise_fr": "Entités qui stockent, traitent ou transmettent des données de titulaires de carte, et prestataires pouvant affecter leur sécurité. L'obligation est contractuelle (réseaux de cartes, acquéreurs), pas légale.",
+      "target_audience_en": "Entities that store, process or transmit cardholder data, and service providers that can affect its security. The obligation is contractual (card brands, acquirers), not statutory.",
+      "source_url": "https://blog.pcisecuritystandards.org/now-is-the-time-for-organizations-to-adopt-the-future-dated-requirements-of-pci-dss-v4-x",
+      "date_source": "2024-08-20",
+      "exigences": [
+        {
+          "id": "PCI-DSS-12.3.3-INVENTAIRE-SUITES",
+          "resume_fr": "Les suites et protocoles cryptographiques utilisés sont documentés et revus au moins tous les 12 mois : inventaire à jour (usage et emplacement), veille sur leur viabilité, stratégie documentée face aux vulnérabilités attendues. Obligatoire depuis le 31 mars 2025. Aucune échéance de migration PQC. Libellé principal vérifié sur un document hébergé par le PCI SSC ; les alinéas « veille » et « stratégie » proviennent de sources secondaires concordantes (texte de la norme, sous licence, non consulté).",
+          "summary_en": "Cryptographic cipher suites and protocols in use are documented and reviewed at least every 12 months: an up-to-date inventory (purpose and where used), monitoring of their continued viability, and a documented strategy for anticipated cryptographic vulnerabilities. Mandatory since 31 March 2025. No PQC migration deadline. Core wording verified in a document hosted by PCI SSC; the monitoring and strategy bullets come from consistent secondary sources (the licensed standard itself was not consulted).",
+          "echeance": "2025-03-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA",
+            "ML-KEM",
+            "ML-DSA",
+            "SLH-DSA",
+            "FN-DSA",
+            "HYBRID_KEM",
+            "AES",
+            "CHACHA20",
+            "3DES",
+            "DES",
+            "RC4",
+            "MD5",
+            "SHA1",
+            "SHA2",
+            "SHA3",
+            "TLS_LEGACY",
+            "TLS_SUITE"
+          ],
+          "effet": "inventaire_obligatoire",
+          "source_url": "https://www.pcisecuritystandards.org/day-1_t2_7_pci-dss-v4-0_final/",
+          "confiance": "moyenne"
+        },
+        {
+          "id": "PCI-DSS-4.2.1.1-INVENTAIRE-CLES-CERTIFICATS",
+          "resume_fr": "Inventaire des clés et certificats de confiance utilisés pour protéger le PAN en transmission, exigence applicable depuis le 31 mars 2025. Non vérifié dans le texte de la norme : seule une source secondaire a été lue.",
+          "summary_en": "Inventory of the entity's trusted keys and certificates used to protect PAN during transmission, applicable since 31 March 2025. Not verified in the standard's text: only a secondary source was read.",
+          "echeance": "2025-03-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "EDDSA",
+            "DSA",
+            "TLS_SUITE"
+          ],
+          "effet": "inventaire_obligatoire",
+          "source_url": "https://postquantum.com/security-pqc/pci-dss-v4-quantum-cryptographic-requirements/",
+          "confiance": "faible"
+        }
+      ]
+    },
+    {
+      "id": "CABF-SC-081",
+      "nom": "CA/Browser Forum — Baseline Requirements, scrutin SC-081v3 (durées de validité des certificats TLS)",
+      "juridiction": "INT",
+      "emetteur": "CA/Browser Forum",
+      "nature": "contraignant_indirect",
+      "public_vise_fr": "Autorités de certification publiques (obligation directe). Tout détenteur de certificats TLS publics en subit l'effet. Ce ne sont pas des exigences PQC.",
+      "target_audience_en": "Public certification authorities (direct obligation). Every holder of public TLS certificates is affected. These are not PQC requirements.",
+      "source_url": "https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/",
+      "date_source": "2025-04-11",
+      "exigences": [
+        {
+          "id": "CABF-VALIDITE-200J-2026",
+          "resume_fr": "Durée de validité maximale de 200 jours pour les certificats TLS publics émis à partir du 15 mars 2026 (en vigueur) ; réutilisation des validations de domaine limitée à 200 jours. Vérifié dans les Baseline Requirements v2.3.1.",
+          "summary_en": "Maximum validity of 200 days for public TLS certificates issued from 15 March 2026 (in force); domain validation reuse limited to 200 days. Verified in Baseline Requirements v2.3.1.",
+          "echeance": "2026-03-15",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "TLS_SUITE"
+          ],
+          "effet": "autre",
+          "source_url": "https://github.com/cabforum/servercert/blob/main/docs/BR.md",
+          "confiance": "elevee"
+        },
+        {
+          "id": "CABF-VALIDITE-100J-2027",
+          "resume_fr": "Durée de validité maximale de 100 jours pour les certificats émis à partir du 15 mars 2027 ; réutilisation des validations de domaine limitée à 100 jours.",
+          "summary_en": "Maximum validity of 100 days for certificates issued from 15 March 2027; domain validation reuse limited to 100 days.",
+          "echeance": "2027-03-15",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "TLS_SUITE"
+          ],
+          "effet": "autre",
+          "source_url": "https://github.com/cabforum/servercert/blob/main/docs/BR.md",
+          "confiance": "elevee"
+        },
+        {
+          "id": "CABF-VALIDITE-47J-2029",
+          "resume_fr": "Durée de validité maximale de 47 jours pour les certificats émis à partir du 15 mars 2029 ; réutilisation des validations de domaine limitée à 10 jours.",
+          "summary_en": "Maximum validity of 47 days for certificates issued from 15 March 2029; domain validation reuse limited to 10 days.",
+          "echeance": "2029-03-15",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "TLS_SUITE"
+          ],
+          "effet": "autre",
+          "source_url": "https://github.com/cabforum/servercert/blob/main/docs/BR.md",
+          "confiance": "elevee"
+        },
+        {
+          "id": "CABF-SHA1-FIN-2026",
+          "resume_fr": "Fin de tout usage résiduel de SHA-1 dans les certificats et les listes de révocation à partir du 15 septembre 2026 (Baseline Requirements v2.3.1).",
+          "summary_en": "Sunset of all remaining use of SHA-1 in certificates and CRLs from 15 September 2026 (Baseline Requirements v2.3.1).",
+          "echeance": "2026-09-15",
+          "familles": [
+            "SHA1"
+          ],
+          "effet": "interdit",
+          "source_url": "https://github.com/cabforum/servercert/blob/main/docs/BR.md",
+          "confiance": "elevee"
+        }
+      ]
+    },
+    {
+      "id": "G7-CEG-PQC-FINANCE",
+      "nom": "G7 Cyber Expert Group — Advancing a Coordinated Roadmap for the Transition to Post-Quantum Cryptography in the Financial Sector",
+      "juridiction": "INT",
+      "emetteur": "G7 Cyber Expert Group",
+      "nature": "recommandation",
+      "public_vise_fr": "Établissements financiers et autorités financières des pays du G7. Le texte se déclare non prescriptif.",
+      "target_audience_en": "Financial institutions and financial authorities in G7 countries. The text declares itself non-prescriptive.",
+      "source_url": "https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf",
+      "date_source": "2026-01-12",
+      "exigences": [
+        {
+          "id": "G7-CEG-CIBLE-2035",
+          "resume_fr": "Feuille de route en six phases, explicitement non contraignante : la déclaration « ne fixe ni orientations ni attentes réglementaires ». Elle cite 2035 comme cible générale et 2030-2032 pour les systèmes les plus critiques. Document daté « janvier 2026 » (le 12 janvier selon les notes).",
+          "summary_en": "Six-phase roadmap, explicitly non-binding: the statement \"does not set guidance or regulatory expectations\". It cites 2035 as the overall target and 2030-32 for the most critical systems. Document dated \"January 2026\" (12 January according to the notes).",
+          "echeance": "2035-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "recommande",
+          "source_url": "https://home.treasury.gov/system/files/136/G7-CEG-Quantum-Roadmap.pdf",
+          "confiance": "elevee"
+        }
+      ]
+    },
+    {
+      "id": "NIST-FIPS-203-204-205",
+      "nom": "NIST FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), FIPS 205 (SLH-DSA)",
+      "juridiction": "US",
+      "emetteur": "NIST",
+      "nature": "contraignant_indirect",
+      "public_vise_fr": "Administrations fédérales américaines. Pour les entreprises, ces normes s'imposent surtout par les contrats publics et la validation FIPS 140-3 des modules.",
+      "target_audience_en": "US federal agencies. For companies, these standards apply mainly through public contracts and FIPS 140-3 module validation.",
+      "source_url": "https://csrc.nist.gov/publications/fips",
+      "date_source": "2024-08-13",
+      "exigences": [
+        {
+          "id": "NIST-FIPS-203-ML-KEM",
+          "resume_fr": "FIPS 203 (ML-KEM), norme finale publiée le 13 août 2024. ML-KEM est à ce jour le seul établissement de clés post-quantique approuvé par le NIST.",
+          "summary_en": "FIPS 203 (ML-KEM), final standard published 13 August 2024. ML-KEM is currently the only NIST-approved post-quantum key-establishment scheme.",
+          "echeance": null,
+          "familles": [
+            "ML-KEM"
+          ],
+          "effet": "recommande",
+          "source_url": "https://csrc.nist.gov/pubs/fips/203/final",
+          "confiance": "elevee"
+        },
+        {
+          "id": "NIST-FIPS-204-ML-DSA",
+          "resume_fr": "FIPS 204 (ML-DSA), norme finale publiée le 13 août 2024.",
+          "summary_en": "FIPS 204 (ML-DSA), final standard published 13 August 2024.",
+          "echeance": null,
+          "familles": [
+            "ML-DSA"
+          ],
+          "effet": "recommande",
+          "source_url": "https://csrc.nist.gov/pubs/fips/204/final",
+          "confiance": "elevee"
+        },
+        {
+          "id": "NIST-FIPS-205-SLH-DSA",
+          "resume_fr": "FIPS 205 (SLH-DSA), norme finale publiée le 13 août 2024.",
+          "summary_en": "FIPS 205 (SLH-DSA), final standard published 13 August 2024.",
+          "echeance": null,
+          "familles": [
+            "SLH-DSA"
+          ],
+          "effet": "recommande",
+          "source_url": "https://csrc.nist.gov/pubs/fips/205/final",
+          "confiance": "elevee"
+        }
+      ]
+    },
+    {
+      "id": "NIST-FIPS-206-PROJET",
+      "nom": "NIST FIPS 206 (FN-DSA, dérivé de Falcon) — en cours d'élaboration",
+      "juridiction": "US",
+      "emetteur": "NIST",
+      "nature": "projet",
+      "public_vise_fr": "Mêmes publics que les autres FIPS, une fois la norme publiée.",
+      "target_audience_en": "Same audiences as the other FIPS, once the standard is published.",
+      "source_url": "https://csrc.nist.gov/publications/fips",
+      "date_source": "2026-10-27",
+      "exigences": [
+        {
+          "id": "NIST-FIPS-206-STATUT",
+          "resume_fr": "FN-DSA n'est pas encore une norme : l'IR 8547 finale (27 oct. 2026) indique que le NIST « développe » cette FIPS, et la liste des FIPS du CSRC ne la mentionne pas au 22 nov. 2026. Ne pas présenter FN-DSA comme approuvé.",
+          "summary_en": "FN-DSA is not yet a standard: the final IR 8547 (27 Oct 2026) says NIST \"is developing\" this FIPS, and the CSRC FIPS list does not include it as of 22 Nov 2026. Do not present FN-DSA as approved.",
+          "echeance": null,
+          "familles": [
+            "FN-DSA"
+          ],
+          "effet": "autre",
+          "source_url": "https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8547.pdf",
+          "confiance": "elevee"
+        }
+      ]
+    },
+    {
+      "id": "NIST-IR-8547",
+      "nom": "NIST IR 8547 — Transition to Post-Quantum Cryptography Standards",
+      "juridiction": "US",
+      "emetteur": "NIST",
+      "nature": "contraignant_indirect",
+      "public_vise_fr": "Administrations fédérales américaines et, par les marchés publics et la validation FIPS 140, leurs fournisseurs. Ne lie pas directement les entreprises privées.",
+      "target_audience_en": "US federal agencies and, through procurement and FIPS 140 validation, their suppliers. Does not bind private companies directly.",
+      "source_url": "https://csrc.nist.gov/pubs/ir/8547/final",
+      "date_source": "2026-10-27",
+      "exigences": [
+        {
+          "id": "NIST-IR-8547-DEPRECATION-2030",
+          "resume_fr": "Toute la cryptographie à clé publique vulnérable au quantique (RSA, ECDSA, EdDSA, DH et ECDH, MQV) est dépréciée après 2030, à toutes les tailles de clé approuvées (au moins 112 bits de sécurité, 128 pour EdDSA). L'usage reste permis pendant la migration, sauf échéances plus précoces de l'EO 14412 et de l'OMB M-26-15 pour les systèmes fédéraux prioritaires.",
+          "summary_en": "All quantum-vulnerable public-key cryptography (RSA, ECDSA, EdDSA, DH and ECDH, MQV) is deprecated after 2030, at every approved key size (at least 112 bits of security, 128 for EdDSA). Use remains allowed during migration, except where EO 14412 and OMB M-26-15 set earlier deadlines for priority federal systems.",
+          "echeance": "2030-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "deprecie",
+          "source_url": "https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8547.pdf",
+          "confiance": "elevee"
+        },
+        {
+          "id": "NIST-IR-8547-INTERDICTION-2035",
+          "resume_fr": "Ces mêmes algorithmes sont interdits après 2035 dans les normes et guides du NIST. Des guides par application (TLS, IKE…) pourront exiger plus tôt un établissement de clés résistant au quantique.",
+          "summary_en": "The same algorithms are disallowed after 2035 under NIST standards and guidelines. Application-specific guidance (TLS, IKE…) may require quantum-resistant key establishment earlier.",
+          "echeance": "2035-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "interdit",
+          "source_url": "https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8547.pdf",
+          "confiance": "elevee"
+        },
+        {
+          "id": "NIST-IR-8547-KEM-HYBRIDE",
+          "resume_fr": "ML-KEM-768 est le paramètre recommandé par défaut. Un établissement de clés hybride peut être validé FIPS 140 si au moins une composante est approuvée. HQC, retenu comme alternative à ML-KEM, sera approuvé après publication de sa FIPS, toujours en cours d'élaboration (SCHEMA.md ne prévoit pas de famille HQC).",
+          "summary_en": "ML-KEM-768 is the recommended default parameter set. Hybrid key establishment can be FIPS 140-validated if at least one component is approved. HQC, selected as an alternative to ML-KEM, will be approved once its FIPS is published; that FIPS is still under development (SCHEMA.md has no HQC family).",
+          "echeance": null,
+          "familles": [
+            "ML-KEM",
+            "HYBRID_KEM"
+          ],
+          "effet": "recommande",
+          "source_url": "https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8547.pdf",
+          "confiance": "elevee"
+        },
+        {
+          "id": "NIST-IR-8547-SHA1-2030",
+          "resume_fr": "SHA-1 est déprécié pour tous ses usages restants et sera interdit dans les modules cryptographiques validés FIPS après 2030.",
+          "summary_en": "SHA-1 is deprecated for all remaining uses and will be disallowed in FIPS-validated cryptographic modules after 2030.",
+          "echeance": "2030-12-31",
+          "familles": [
+            "SHA1"
+          ],
+          "effet": "interdit",
+          "source_url": "https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8547.pdf",
+          "confiance": "elevee"
+        },
+        {
+          "id": "NIST-IR-8547-SYMETRIQUE",
+          "resume_fr": "Les primitives symétriques approuvées offrant au moins 128 bits de sécurité classique (AES, SHA-2 à partir de SHA-256, SHA-3) sont jugées suffisantes face aux attaques quantiques connues : ce ne sont pas des cibles de migration PQC. Les normes symétriques à 112 bits seront interdites en 2030. Le constat doit préciser la taille de clé ou de condensé.",
+          "summary_en": "Approved symmetric primitives offering at least 128 bits of classical security (AES, SHA-2 from SHA-256 up, SHA-3) are considered adequate against known quantum attacks: they are not PQC migration targets. 112-bit symmetric standards will be disallowed in 2030. The finding should state the key or digest size.",
+          "echeance": null,
+          "familles": [
+            "AES",
+            "SHA2",
+            "SHA3"
+          ],
+          "effet": "autre",
+          "source_url": "https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8547.pdf",
+          "confiance": "elevee"
+        }
+      ]
+    },
+    {
+      "id": "US-EO-14412",
+      "nom": "Executive Order 14412 — Securing the Nation Against Advanced Cryptographic Attacks",
+      "juridiction": "US",
+      "emetteur": "The White House",
+      "nature": "contraignant",
+      "public_vise_fr": "Agences fédérales américaines, hors systèmes de sécurité nationale. Aucune échéance pour les opérateurs d'infrastructures critiques, que les agences sectorielles doivent seulement accompagner.",
+      "target_audience_en": "US federal agencies, excluding National Security Systems. No deadline for critical infrastructure operators, whom sector agencies are only told to assist.",
+      "source_url": "https://www.govinfo.gov/content/pkg/DCPD-202600417/html/DCPD-202600417.htm",
+      "date_source": "2026-06-22",
+      "exigences": [
+        {
+          "id": "US-EO-14412-RESPONSABLE-30J",
+          "resume_fr": "Chaque agence désigne sous 30 jours (22 juillet 2026) un responsable de la migration PQC, chargé notamment de l'inventaire cryptographique.",
+          "summary_en": "Each agency names a PQC migration lead within 30 days (22 July 2026), responsible among other things for the cryptographic inventory.",
+          "echeance": "2026-07-22",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "autre",
+          "source_url": "https://www.govinfo.gov/content/pkg/DCPD-202600417/html/DCPD-202600417.htm",
+          "confiance": "elevee"
+        },
+        {
+          "id": "US-EO-14412-ETABLISSEMENT-CLES-2030",
+          "resume_fr": "Les actifs de grande valeur (HVA) et les systèmes à impact élevé doivent utiliser la PQC pour l'établissement de clés au plus tard le 31 décembre 2030.",
+          "summary_en": "High value assets (HVAs) and high impact systems must use PQC for key establishment by 31 December 2030.",
+          "echeance": "2030-12-31",
+          "familles": [
+            "RSA",
+            "ECDH",
+            "X25519_X448",
+            "DH"
+          ],
+          "effet": "migration_requise",
+          "source_url": "https://www.govinfo.gov/content/pkg/DCPD-202600417/html/DCPD-202600417.htm",
+          "confiance": "elevee"
+        },
+        {
+          "id": "US-EO-14412-SIGNATURES-2031",
+          "resume_fr": "Les mêmes systèmes doivent utiliser la PQC pour les signatures numériques au plus tard le 31 décembre 2031.",
+          "summary_en": "The same systems must use PQC for digital signatures by 31 December 2031.",
+          "echeance": "2031-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "EDDSA",
+            "DSA"
+          ],
+          "effet": "migration_requise",
+          "source_url": "https://www.govinfo.gov/content/pkg/DCPD-202600417/html/DCPD-202600417.htm",
+          "confiance": "elevee"
+        }
+      ]
+    },
+    {
+      "id": "US-OMB-M-26-15",
+      "nom": "OMB M-26-15 — Execution of the Migration to Post-Quantum Cryptography",
+      "juridiction": "US",
+      "emetteur": "Office of Management and Budget",
+      "nature": "contraignant",
+      "public_vise_fr": "Agences fédérales américaines. Ne s'applique pas aux systèmes de sécurité nationale.",
+      "target_audience_en": "US federal agencies. Does not apply to National Security Systems.",
+      "source_url": "https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf",
+      "date_source": "2026-06-24",
+      "exigences": [
+        {
+          "id": "US-OMB-M-26-15-PLAN-INVENTAIRE",
+          "resume_fr": "Plan de migration PQC remis à l'OMB et à l'ONCD sous 120 jours (22 octobre 2026), décrivant notamment les méthodes et outils automatisés d'inventaire. La phase 1 (2026-2027) porte sur l'inventaire ; le mémo recommande un inventaire automatisé de tous les actifs cryptographiques, alimentant un CBOM central.",
+          "summary_en": "PQC migration plan due to OMB and ONCD within 120 days (22 October 2026), describing in particular the automated inventory methods and tools. Phase 1 (2026-27) covers inventory; the memo recommends an automated inventory of all cryptographic assets feeding a central CBOM.",
+          "echeance": "2026-10-22",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA",
+            "ML-KEM",
+            "ML-DSA",
+            "SLH-DSA",
+            "FN-DSA",
+            "HYBRID_KEM",
+            "AES",
+            "CHACHA20",
+            "3DES",
+            "DES",
+            "RC4",
+            "MD5",
+            "SHA1",
+            "SHA2",
+            "SHA3",
+            "TLS_LEGACY",
+            "TLS_SUITE"
+          ],
+          "effet": "inventaire_obligatoire",
+          "source_url": "https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf",
+          "confiance": "elevee"
+        },
+        {
+          "id": "US-OMB-M-26-15-TLS13-2030",
+          "resume_fr": "Les agences prennent en charge TLS 1.3 (ou une version ultérieure) dès que possible et au plus tard le 2 janvier 2030.",
+          "summary_en": "Agencies support TLS 1.3 (or a successor version) as soon as practicable and no later than 2 January 2030.",
+          "echeance": "2030-01-02",
+          "familles": [
+            "TLS_SUITE"
+          ],
+          "effet": "migration_requise",
+          "source_url": "https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf",
+          "confiance": "elevee"
+        },
+        {
+          "id": "US-OMB-M-26-15-ACHATS-FEDRAMP",
+          "resume_fr": "Les agences intègrent la PQC aux exigences d'achat des catégories de produits listées par la CISA, et répartissent les responsabilités PQC avec leurs fournisseurs cloud FedRAMP.",
+          "summary_en": "Agencies build PQC into purchasing requirements for the product categories listed by CISA, and allocate PQC responsibilities with their FedRAMP cloud providers.",
+          "echeance": null,
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "autre",
+          "source_url": "https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf",
+          "confiance": "elevee"
+        },
+        {
+          "id": "US-OMB-M-26-15-MIGRATION-2035",
+          "resume_fr": "Phase 5 : migration des systèmes restants d'ici 2035, selon le risque et l'offre commerciale disponible.",
+          "summary_en": "Phase 5: migration of remaining systems by 2035, based on risk and available commercial offerings.",
+          "echeance": "2035-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "migration_requise",
+          "source_url": "https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf",
+          "confiance": "elevee"
+        }
+      ]
+    },
+    {
+      "id": "US-FAR-PQC-PROJET",
+      "nom": "Projets de règles FAR prévus par l'EO 14412 (sec. 6) pour les « covered contractors »",
+      "juridiction": "US",
+      "emetteur": "Federal Acquisition Regulatory Council",
+      "nature": "projet",
+      "public_vise_fr": "« Covered contractors » des agences fédérales américaines. L'EO 14412 ne définit pas cette catégorie.",
+      "target_audience_en": "\"Covered contractors\" of US federal agencies. EO 14412 does not define the term.",
+      "source_url": "https://www.govinfo.gov/content/pkg/DCPD-202600417/html/DCPD-202600417.htm",
+      "date_source": "2026-06-22",
+      "exigences": [
+        {
+          "id": "US-FAR-PQC-FIPS-2030",
+          "resume_fr": "L'EO 14412 impose au FAR Council de publier sous 180 jours (19 décembre 2026) un projet de règle obligeant les « covered contractors » à se conformer, d'ici le 31 décembre 2030, aux FIPS du NIST, y compris celles qui intègrent des algorithmes PQC. Projet non repéré au 22 nov. 2026 (notes) ; la règle, son champ et sa date finale restent inconnus.",
+          "summary_en": "EO 14412 requires the FAR Council to publish within 180 days (19 December 2026) a proposed rule requiring \"covered contractors\" to comply by 31 December 2030 with NIST FIPS, including those that incorporate PQC algorithms. Not seen as of 22 Nov 2026 (notes); the rule, its scope and final date remain unknown.",
+          "echeance": "2030-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "migration_requise",
+          "source_url": "https://www.govinfo.gov/content/pkg/DCPD-202600417/html/DCPD-202600417.htm",
+          "confiance": "elevee"
+        },
+        {
+          "id": "US-FAR-VDP-CRYPTO-2027",
+          "resume_fr": "Second projet de règle FAR attendu sous 270 jours (19 mars 2027) : politiques de divulgation de vulnérabilités des contractants couvrant les vulnérabilités cryptographiques, dont l'absence de chiffrement et l'usage d'algorithmes non approuvés FIPS.",
+          "summary_en": "Second proposed FAR rule due within 270 days (19 March 2027): contractor vulnerability disclosure policies covering cryptographic vulnerabilities, including lack of encryption and use of non-FIPS-approved algorithms.",
+          "echeance": "2027-03-19",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA",
+            "3DES",
+            "DES",
+            "RC4",
+            "MD5",
+            "SHA1",
+            "TLS_LEGACY"
+          ],
+          "effet": "autre",
+          "source_url": "https://www.govinfo.gov/content/pkg/DCPD-202600417/html/DCPD-202600417.htm",
+          "confiance": "elevee"
+        }
+      ]
+    },
+    {
+      "id": "US-CISA-CBOM-PROJET",
+      "nom": "CISA/NIST — éléments minimaux d'un inventaire cryptographique (CBOM), prévus par l'EO 14412 (sec. 5)",
+      "juridiction": "US",
+      "emetteur": "CISA",
+      "nature": "projet",
+      "public_vise_fr": "Fournisseurs de matériel et de logiciels, acheteurs publics. Orientation publique attendue, pas une obligation en soi.",
+      "target_audience_en": "Hardware and software suppliers, public buyers. Expected public guidance, not an obligation in itself.",
+      "source_url": "https://www.govinfo.gov/content/pkg/DCPD-202600417/html/DCPD-202600417.htm",
+      "date_source": "2026-06-22",
+      "exigences": [
+        {
+          "id": "US-CISA-CBOM-ELEMENTS-2027",
+          "resume_fr": "Sous 270 jours (19 mars 2027), la CISA, avec le NIST, publie une orientation sur les éléments minimaux d'un CBOM permettant l'évaluation automatisée des actifs cryptographiques d'un produit. Échéance non atteinte au 22 nov. 2026 ; publication non vérifiée.",
+          "summary_en": "Within 270 days (19 March 2027), CISA, with NIST, issues guidance on the minimum elements of a CBOM enabling automated assessment of a product's cryptographic assets. Not yet due as of 22 Nov 2026; publication not checked.",
+          "echeance": "2027-03-19",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA",
+            "ML-KEM",
+            "ML-DSA",
+            "SLH-DSA",
+            "FN-DSA",
+            "HYBRID_KEM",
+            "AES",
+            "CHACHA20",
+            "3DES",
+            "DES",
+            "RC4",
+            "MD5",
+            "SHA1",
+            "SHA2",
+            "SHA3",
+            "TLS_LEGACY",
+            "TLS_SUITE"
+          ],
+          "effet": "autre",
+          "source_url": "https://www.govinfo.gov/content/pkg/DCPD-202600417/html/DCPD-202600417.htm",
+          "confiance": "elevee"
+        }
+      ]
+    },
+    {
+      "id": "US-CISA-PQC-CATEGORIES",
+      "nom": "CISA — Product Categories for Technologies That Use Post-Quantum Cryptography Standards",
+      "juridiction": "US",
+      "emetteur": "CISA",
+      "nature": "recommandation",
+      "public_vise_fr": "Acheteurs des agences fédérales civiles ; signal pour les éditeurs qui leur vendent. Aucune obligation pour les entreprises privées.",
+      "target_audience_en": "Buyers at federal civilian agencies; a signal to vendors selling to them. No obligation for private companies.",
+      "source_url": "https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards",
+      "date_source": "2026-01-23",
+      "exigences": [
+        {
+          "id": "US-CISA-CATEGORIES-ACHATS",
+          "resume_fr": "Catégories où la PQC est « largement disponible » : cloud PaaS/IaaS, messagerie instantanée, navigateurs et serveurs web, chiffrement des données au repos. Pour ces catégories, les organisations devraient n'acheter que des produits compatibles PQC.",
+          "summary_en": "Categories where PQC is \"widely available\": cloud PaaS/IaaS, chat and messaging, web browsers and servers, data-at-rest encryption. In these categories, organisations should buy only PQC-capable products.",
+          "echeance": null,
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "recommande",
+          "source_url": "https://www.cisa.gov/resources-tools/resources/product-categories-technologies-use-post-quantum-cryptography-standards",
+          "confiance": "elevee"
+        }
+      ]
+    },
+    {
+      "id": "NSA-CNSA-2.0",
+      "nom": "NSA CNSA 2.0 (Commercial National Security Algorithm Suite 2.0) et CNSSP 15",
+      "juridiction": "US",
+      "emetteur": "NSA / Committee on National Security Systems",
+      "nature": "contraignant",
+      "public_vise_fr": "Systèmes de sécurité nationale américains (NSS) et leurs fournisseurs. Hors du champ de l'EO 14412.",
+      "target_audience_en": "US National Security Systems (NSS) and their suppliers. Outside the scope of EO 14412.",
+      "source_url": "https://postquantum.com/security-pqc/nsa-cnsa-2-0-faq-v2-1-update/",
+      "date_source": "2024-12-29",
+      "exigences": [
+        {
+          "id": "NSA-CNSA2-ACQUISITIONS-2027",
+          "resume_fr": "Selon des sources secondaires citant la FAQ CNSA 2.0 de la NSA (v2.1, déc. 2024) et la CNSSP 15, les nouvelles acquisitions de NSS doivent être conformes CNSA 2.0 à partir du 1er janvier 2027, sauf exception. atsec place l'obligation CNSA 2.0 en 2028 (et CNSA 1.0 en 2027) en s'appuyant sur la NIAP Policy Letter 33, qui vise l'évaluation des produits : les deux dates relèvent probablement de circuits distincts. Non vérifié dans le texte primaire (sites de la NSA inaccessibles).",
+          "summary_en": "According to secondary sources citing NSA's CNSA 2.0 FAQ (v2.1, Dec 2024) and CNSSP 15, new NSS acquisitions must be CNSA 2.0 compliant from 1 January 2027 unless an exception applies. atsec puts the CNSA 2.0 mandate in 2028 (and CNSA 1.0 in 2027), relying on NIAP Policy Letter 33, which governs product evaluation: the two dates probably belong to different tracks. Not verified in the primary text (NSA sites unreachable).",
+          "echeance": "2027-01-01",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "migration_requise",
+          "source_url": "https://postquantum.com/cnsa-2-0/2027-procurement-gate/",
+          "confiance": "faible"
+        },
+        {
+          "id": "NSA-CNSA2-RETRAIT-2030",
+          "resume_fr": "Selon les mêmes sources secondaires, les équipements et services qui ne peuvent pas prendre en charge CNSA 2.0 doivent être retirés au plus tard le 31 décembre 2030. Non vérifié dans le texte primaire.",
+          "summary_en": "According to the same secondary sources, equipment and services that cannot support CNSA 2.0 must be phased out by 31 December 2030. Not verified in the primary text.",
+          "echeance": "2030-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "migration_requise",
+          "source_url": "https://postquantum.com/security-pqc/nsa-cnsa-2-0-faq-v2-1-update/",
+          "confiance": "faible"
+        }
+      ]
+    },
+    {
+      "id": "EU-PQC-ROADMAP",
+      "nom": "A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography (NIS Cooperation Group, v1.1)",
+      "juridiction": "EU",
+      "emetteur": "NIS Cooperation Group (groupe de travail PQC), avec la Commission européenne",
+      "nature": "recommandation",
+      "public_vise_fr": "États membres de l'UE. Le texte ne crée aucune obligation directe pour les entreprises ; il découle d'une recommandation de la Commission et n'a pas, à notre lecture, d'effet juridique contraignant.",
+      "target_audience_en": "EU Member States. The text creates no direct obligation for companies; it follows a Commission recommendation and, on our reading, has no binding legal effect.",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography",
+      "date_source": "2025-06-23",
+      "exigences": [
+        {
+          "id": "EU-ROADMAP-2026-PLANS-NATIONAUX",
+          "resume_fr": "D'ici le 31 décembre 2026 : premières étapes mises en œuvre par tous les États membres, feuilles de route nationales initiales établies, planification et pilotes lancés pour les usages à risque élevé et moyen.",
+          "summary_en": "By 31 December 2026: First Steps implemented by all Member States, initial national roadmaps in place, planning and pilots started for high- and medium-risk use cases.",
+          "echeance": "2026-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "recommande",
+          "source_url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "confiance": "elevee"
+        },
+        {
+          "id": "EU-ROADMAP-2030-HAUT-RISQUE",
+          "resume_fr": "D'ici le 31 décembre 2030 : transition achevée pour les usages à haut risque (notamment les données devant rester confidentielles au moins 10 ans), mises à jour résistantes au quantique activées par défaut. Après 2030, aucun mécanisme à clé publique vulnérable ne devrait être utilisé seul pour ces usages.",
+          "summary_en": "By 31 December 2030: transition completed for high-risk use cases (notably data that must stay confidential for at least 10 years), quantum-safe upgrades enabled by default. After 2030, no quantum-vulnerable public-key mechanism should be used on its own for these use cases.",
+          "echeance": "2030-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "recommande",
+          "source_url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "confiance": "elevee"
+        },
+        {
+          "id": "EU-ROADMAP-2035",
+          "resume_fr": "D'ici le 31 décembre 2035 : transition achevée pour les usages à risque moyen et, autant que possible, pour les usages à faible risque ; les États visent « autant de systèmes que possible ».",
+          "summary_en": "By 31 December 2035: transition completed for medium-risk use cases and, as far as feasible, for low-risk ones; Member States aim at \"as many systems as feasible\".",
+          "echeance": "2035-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "recommande",
+          "source_url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "confiance": "elevee"
+        },
+        {
+          "id": "EU-ROADMAP-HYBRIDE",
+          "resume_fr": "Recommande des solutions hybrides normalisées et testées chaque fois que c'est possible et adapté.",
+          "summary_en": "Recommends standardised and tested hybrid solutions whenever feasible and suitable.",
+          "echeance": null,
+          "familles": [
+            "HYBRID_KEM"
+          ],
+          "effet": "recommande",
+          "source_url": "https://ec.europa.eu/newsroom/dae/redirection/document/117507",
+          "confiance": "elevee"
+        }
+      ]
+    },
+    {
+      "id": "EU-NIS2-COM-2026-13",
+      "nom": "Proposition de modification de la directive NIS2 — COM(2026) 13, procédure 2026/0012(COD)",
+      "juridiction": "EU",
+      "emetteur": "Commission européenne",
+      "nature": "projet",
+      "public_vise_fr": "États membres (stratégies nationales de cybersécurité). Aucune obligation PQC pour les entreprises, même une fois adoptée.",
+      "target_audience_en": "Member States (national cybersecurity strategies). No PQC obligation for companies, even once adopted.",
+      "source_url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/0012(COD)",
+      "date_source": "2026-01-14",
+      "exigences": [
+        {
+          "id": "EU-NIS2-PROPOSITION-PQC",
+          "resume_fr": "La proposition obligerait les États membres à adopter, dans leur stratégie nationale de cybersécurité, des politiques de migration vers la PQC. Ce n'est qu'une proposition, encore en commission (ITRE) au Parlement, avec une première lecture indicative le 8 mars 2027, puis une transposition. Le numéro d'article (7(2)(k)) et l'alignement sur 2030/2035 viennent de sources secondaires. Date de la proposition : 14 janv. 2026 selon l'Observatoire législatif, 20 janv. 2026 selon d'autres sources.",
+          "summary_en": "The proposal would require Member States to adopt PQC migration policies in their national cybersecurity strategies. It is only a proposal, still in committee (ITRE) in Parliament, with an indicative first-reading date of 8 March 2027, followed by transposition. The article number (7(2)(k)) and alignment with 2030/2035 come from secondary sources. Proposal date: 14 Jan 2026 per the Legislative Observatory, 20 Jan 2026 per other sources.",
+          "echeance": null,
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "autre",
+          "source_url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1884097",
+          "confiance": "moyenne"
+        }
+      ]
+    },
+    {
+      "id": "UK-NCSC-PQC",
+      "nom": "NCSC — Timelines for migration to post-quantum cryptography",
+      "juridiction": "UK",
+      "emetteur": "National Cyber Security Centre",
+      "nature": "recommandation",
+      "public_vise_fr": "D'abord les décideurs techniques et responsables des risques des grandes organisations, les opérateurs d'infrastructures nationales critiques et les organisations au SI sur mesure. Pour les PME sur informatique standard, la migration devrait se faire via les mises à jour des fournisseurs ; celles qui ont des logiciels spécifiques suivent le même calendrier.",
+      "target_audience_en": "Mainly technical decision-makers and risk owners in large organisations, critical national infrastructure operators and organisations with bespoke IT. For SMEs on commodity IT, migration should come through vendor updates; those with custom software follow the same timetable.",
+      "source_url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+      "date_source": "2025-03-20",
+      "exigences": [
+        {
+          "id": "UK-NCSC-2028-DECOUVERTE",
+          "resume_fr": "D'ici 2028 : définir les objectifs de migration, mener une découverte complète, établir un plan initial.",
+          "summary_en": "By 2028: define migration goals, carry out a full discovery exercise, build an initial plan.",
+          "echeance": "2028-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA",
+            "TLS_SUITE"
+          ],
+          "effet": "recommande",
+          "source_url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "confiance": "elevee"
+        },
+        {
+          "id": "UK-NCSC-2031-PRIORITAIRE",
+          "resume_fr": "D'ici 2031 : mener les migrations les plus prioritaires et affiner le plan en feuille de route complète.",
+          "summary_en": "By 2031: carry out the highest-priority migrations and refine the plan into a full roadmap.",
+          "echeance": "2031-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "recommande",
+          "source_url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "confiance": "elevee"
+        },
+        {
+          "id": "UK-NCSC-2035-COMPLETE",
+          "resume_fr": "D'ici 2035 : achever la migration de tous les systèmes, services et produits.",
+          "summary_en": "By 2035: complete migration of all systems, services and products.",
+          "echeance": "2035-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "recommande",
+          "source_url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines",
+          "confiance": "elevee"
+        }
+      ]
+    },
+    {
+      "id": "FR-ANSSI-PQC",
+      "nom": "ANSSI — positions sur la transition post-quantique",
+      "juridiction": "FR",
+      "emetteur": "ANSSI",
+      "nature": "recommandation",
+      "public_vise_fr": "Administrations, opérateurs et fournisseurs de produits évalués par l'ANSSI (périmètre exact non vérifié).",
+      "target_audience_en": "Government bodies, operators and suppliers of products evaluated by ANSSI (exact scope not verified).",
+      "source_url": "https://www.encryptionconsulting.com/pqc-migration-deadlines-by-country/",
+      "date_source": "2026-04-05",
+      "exigences": [
+        {
+          "id": "FR-ANSSI-HYBRIDATION",
+          "resume_fr": "Selon un site de synthèse, l'ANSSI impose l'hybridation (classique + post-quantique), sauf pour les signatures à base de hachage. Non vérifié dans les publications de l'ANSSI (site inaccessible) : à confirmer avant toute citation.",
+          "summary_en": "According to an aggregator site, ANSSI requires hybridisation (classical + post-quantum), except for hash-based signatures. Not verified in ANSSI publications (site unreachable): confirm before quoting.",
+          "echeance": null,
+          "familles": [
+            "HYBRID_KEM",
+            "ML-KEM",
+            "ML-DSA",
+            "SLH-DSA"
+          ],
+          "effet": "recommande",
+          "source_url": "https://www.encryptionconsulting.com/pqc-migration-deadlines-by-country/",
+          "confiance": "faible"
+        },
+        {
+          "id": "FR-ANSSI-CALENDRIER",
+          "resume_fr": "Selon le même site : déploiement à partir de 2026, usages à haut risque d'ici 2030, transition complète d'ici 2035, en cohérence avec la feuille de route européenne que l'ANSSI diffuse. Non vérifié dans un texte de l'ANSSI.",
+          "summary_en": "According to the same site: deployment from 2026, high-risk use cases by 2030, full transition by 2035, in line with the EU roadmap that ANSSI publishes. Not verified in an ANSSI text.",
+          "echeance": "2030-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "recommande",
+          "source_url": "https://www.encryptionconsulting.com/pqc-migration-deadlines-by-country/",
+          "confiance": "faible"
+        }
+      ]
+    },
+    {
+      "id": "DE-BSI-TR-02102-1",
+      "nom": "BSI TR-02102-1 — Cryptographic Mechanisms: Recommendations and Key Lengths (version 2026-01)",
+      "juridiction": "DE",
+      "emetteur": "BSI",
+      "nature": "recommandation",
+      "public_vise_fr": "Recommandations qui visent d'abord les développeurs de nouveaux systèmes cryptographiques à partir de 2026. D'autres textes du BSI peuvent être contraignants pour certaines applications.",
+      "target_audience_en": "Recommendations aimed mainly at developers of new cryptographic systems from 2026 onwards. Other BSI documents can be binding for certain applications.",
+      "source_url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf?__blob=publicationFile",
+      "date_source": "2026-01-23",
+      "exigences": [
+        {
+          "id": "DE-BSI-KEM-CLASSIQUE-2031",
+          "resume_fr": "L'usage seul d'un échange de clés classique n'est recommandé que jusqu'à fin 2031 ; au-delà, échange hybride avec un mécanisme post-quantique.",
+          "summary_en": "Classical key agreement on its own is recommended only until the end of 2031; after that, hybrid key agreement with a post-quantum mechanism.",
+          "echeance": "2031-12-31",
+          "familles": [
+            "RSA",
+            "ECDH",
+            "X25519_X448",
+            "DH"
+          ],
+          "effet": "deprecie",
+          "source_url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf?__blob=publicationFile",
+          "confiance": "elevee"
+        },
+        {
+          "id": "DE-BSI-HAUTE-PROTECTION-2030",
+          "resume_fr": "Pour les besoins de protection très élevés, la transition vers des mécanismes résistants au quantique devrait avoir lieu dès fin 2030.",
+          "summary_en": "For very high protection requirements, the transition to quantum-safe mechanisms should take place by the end of 2030.",
+          "echeance": "2030-12-31",
+          "familles": [
+            "RSA",
+            "ECDH",
+            "X25519_X448",
+            "DH"
+          ],
+          "effet": "recommande",
+          "source_url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf?__blob=publicationFile",
+          "confiance": "elevee"
+        },
+        {
+          "id": "DE-BSI-SIGNATURES-2035",
+          "resume_fr": "Les signatures classiques ne sont recommandées que jusqu'à fin 2035 ; les versions futures du guide ne les recommanderont plus qu'en mode hybride.",
+          "summary_en": "Classical signatures are recommended only until the end of 2035; future versions of the guideline will recommend them only in hybrid mode.",
+          "echeance": "2035-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "EDDSA",
+            "DSA"
+          ],
+          "effet": "deprecie",
+          "source_url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf?__blob=publicationFile",
+          "confiance": "elevee"
+        },
+        {
+          "id": "DE-BSI-HYBRIDE",
+          "resume_fr": "Les mécanismes post-quantiques recommandés (ML-KEM, FrodoKEM, Classic McEliece) doivent être utilisés en mode hybride, combinés à un mécanisme classique.",
+          "summary_en": "The recommended post-quantum mechanisms (ML-KEM, FrodoKEM, Classic McEliece) should be used in hybrid mode, combined with a classical mechanism.",
+          "echeance": null,
+          "familles": [
+            "HYBRID_KEM",
+            "ML-KEM"
+          ],
+          "effet": "recommande",
+          "source_url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf?__blob=publicationFile",
+          "confiance": "elevee"
+        },
+        {
+          "id": "DE-BSI-DSA-2029",
+          "resume_fr": "Fin de la recommandation de DSA à partir de 2029, d'après l'historique des versions (version 2024-01) ; le jour exact n'a pas été lu dans le corps du texte.",
+          "summary_en": "DSA no longer recommended from 2029, according to the version history (version 2024-01); the exact day was not read in the body of the text.",
+          "echeance": "2029-01-01",
+          "familles": [
+            "DSA"
+          ],
+          "effet": "deprecie",
+          "source_url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf?__blob=publicationFile",
+          "confiance": "moyenne"
+        }
+      ]
+    },
+    {
+      "id": "AU-ASD-ISM-PQC",
+      "nom": "ASD — Information Security Manual (ISM), transition post-quantique",
+      "juridiction": "AU",
+      "emetteur": "Australian Signals Directorate",
+      "nature": "contraignant",
+      "public_vise_fr": "Entités gouvernementales australiennes (selon les notes ; non vérifié).",
+      "target_audience_en": "Australian government entities (according to the notes; not verified).",
+      "source_url": "https://www.encryptionconsulting.com/pqc-migration-deadlines-by-country/",
+      "date_source": "2026-04-05",
+      "exigences": [
+        {
+          "id": "AU-ASD-FIN-ASYMETRIQUE-2030",
+          "resume_fr": "Selon un site de synthèse : plan affiné fin 2026, début de la migration des systèmes critiques fin 2028, abandon de la cryptographie asymétrique classique dans les systèmes gouvernementaux d'ici fin 2030 ; hybride permis mais non recommandé. Non vérifié dans l'ISM (site de l'ASD inaccessible).",
+          "summary_en": "According to an aggregator site: refined plan by end-2026, critical systems start migrating by end-2028, classical asymmetric cryptography eliminated from government systems by end-2030; hybrid allowed but not recommended. Not verified in the ISM (ASD site unreachable).",
+          "echeance": "2030-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "interdit",
+          "source_url": "https://www.encryptionconsulting.com/pqc-migration-deadlines-by-country/",
+          "confiance": "faible"
+        }
+      ]
+    },
+    {
+      "id": "CA-CCCS-ITSM-40-001",
+      "nom": "Centre canadien pour la cybersécurité — Roadmap for the migration to post-quantum cryptography for the Government of Canada (ITSM.40.001)",
+      "juridiction": "CA",
+      "emetteur": "Centre canadien pour la cybersécurité",
+      "nature": "recommandation",
+      "public_vise_fr": "Ministères et organismes fédéraux canadiens. Feuille de route dite « recommandée », que le Secrétariat du Conseil du Trésor doit rendre obligatoire par des instruments de politique.",
+      "target_audience_en": "Canadian federal departments and agencies. A \"recommended\" roadmap, which the Treasury Board Secretariat is to make mandatory through policy instruments.",
+      "source_url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+      "date_source": "2025-06-23",
+      "exigences": [
+        {
+          "id": "CA-CCCS-PLAN-2026",
+          "resume_fr": "Plan ministériel initial de migration PQC en avril 2026, puis rapport d'avancement annuel.",
+          "summary_en": "Initial departmental PQC migration plan in April 2026, then annual progress reporting.",
+          "echeance": "2026-04-30",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "autre",
+          "source_url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "confiance": "elevee"
+        },
+        {
+          "id": "CA-CCCS-PRIORITAIRES-2031",
+          "resume_fr": "Migration PQC des systèmes prioritaires achevée fin 2031.",
+          "summary_en": "PQC migration of high-priority systems completed by end-2031.",
+          "echeance": "2031-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "recommande",
+          "source_url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "confiance": "elevee"
+        },
+        {
+          "id": "CA-CCCS-RESTE-2035",
+          "resume_fr": "Migration PQC des systèmes restants achevée fin 2035.",
+          "summary_en": "PQC migration of remaining systems completed by end-2035.",
+          "echeance": "2035-12-31",
+          "familles": [
+            "RSA",
+            "ECDSA",
+            "ECDH",
+            "EDDSA",
+            "X25519_X448",
+            "DH",
+            "DSA"
+          ],
+          "effet": "recommande",
+          "source_url": "https://www.cyber.gc.ca/en/guidance/roadmap-migration-post-quantum-cryptography-government-canada-itsm40001",
+          "confiance": "elevee"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+identifiant	titre	statut_api	date_limite	pertinence	n_titre	n_desc	n_motscles	decision
+DIGITAL-ECCC-2027-DEPLOY-CYBER-11-DUALUSE	Dual-use technologies	31094502	2027-01-14	moyenne	0	4	3	retenu
+HORIZON-BRIDGING-2027-02-05	Advancing promising results from Pillar II collaborative research through the innovation journey	31094502	2027-01-28	faible	0	0	1	écarté
+HORIZON-CL3-2024-CS-01-02	Post-quantum cryptography transition	31094501	2024-11-20	forte	2	0	1	écarté (date limite passée, statut API périmé)
+HORIZON-CL3-2027-02-CS-ECCC-02	Secure Computing Continuum (IoT, Edge, Cloud, Data spaces)	31094501	2027-09-15	moyenne	0	2	2	retenu
+HORIZON-CL3-2027-02-CS-ECCC-03	Secure PQC implementations, Cryptanalysis and Post-quantum Digital Trust	31094501	2027-09-15	forte	4	20	0	retenu
+HORIZON-CL3-2027-02-CS-ECCC-04	New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks	31094501	2027-09-15	forte	2	31	0	retenu
+HORIZON-CL4-2024-DIGITAL-EMERGING-01-42	Stimulating transnational research and development of next generation quantum technologies, including basic theories and	31094501	2024-03-19	forte	2	0	6	écarté (date limite passée, statut API périmé)
+HORIZON-CL4-2024-DIGITAL-EMERGING-01-45	Quantum sensing and metrology for market uptake (IA)	31094501	2024-03-19	forte	2	0	5	écarté (date limite passée, statut API périmé)
+HORIZON-CL4-2024-HUMAN-01-61	Facilitate the engagement in global ICT standardisation development (CSA)	31094501	2024-03-19	faible	0	0	2	écarté (date limite passée, statut API périmé)
+HORIZON-CL4-2024-SPACE-01-64	Quantum Space Gravimetry Phase-B study & Technology Maturation	31094501	2024-02-20	forte	2	0	1	écarté (date limite passée, statut API périmé)
+HORIZON-CL4-2027-04-DATA-03	New approaches for decentralized, federated and sustainable AI data processing (RIA)	31094502	2027-03-18	moyenne	0	3	0	retenu
+HORIZON-CL4-2027-04-DATA-08	Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA)	31094502	2027-03-18	moyenne	0	3	0	retenu
+HORIZON-CL4-2027-SPACE-03-71	Quantum Space Gravimetry topic	31094501	2027-09-02	forte	2	21	0	retenu
+HORIZON-CL5-2027-06-D6-11	Enhancing Resilience and Accuracy in Positioning, Navigation, and Timing (PNT) Systems and e-conspicuity solutions	31094501	2027-10-07	faible	0	1	0	écarté
+HORIZON-EIC-2023-ACCELERATORCHALLENGES-05	EIC Accelerator Challenge: Emerging semiconductor or quantum technology components	31094502	2023-01-11,2023-03-22,2023-06-07,2023-10-04	forte	2	0	0	écarté (date limite passée, statut API périmé)
+HORIZON-EIC-2026-ACCELERATOR-01	EIC Accelerator 2026 - Short proposal	31094502	2026-11-04	-	0	0	0	saisie manuelle
+HORIZON-EIC-2026-STEP	EIC STEP Scale Up	31094502	2026-10-08	faible	0	2	0	écarté
+HORIZON-EIC-2027-ACCELERATOR-01	Short proposal	31094502	2027-12-16	-	0	0	0	saisie manuelle
+HORIZON-EIC-2027-DEFENCE-01	EIC STEP Defence	31094501	2027-06-01	-	0	0	0	retenu (générique)
+HORIZON-EIC-2027-PATHFINDEROPEN-two-stage	HORIZON-EIC-2027-PATHFINDEROPEN-two-stage	31094501	2027-02-25,2027-09-16	-	0	0	0	retenu (générique)
+HORIZON-EIC-2027-STEP	EIC STEP Scale Up	31094502	2027-11-24	-	0	0	0	saisie manuelle
+HORIZON-EIE-2027-02-CONNECT-01	European Startup and Scaleup Hubs pilot	31094502	2027-01-05	faible	0	1	0	écarté
+HORIZON-HLTH-2027-01-ENVHLTH-MISSCLIMA-03	Tools and technologies to support health adaptation to climate change	31094502	2027-02-17	faible	0	1	0	écarté
+HORIZON-HLTH-2027-02-DISEASE-01-two-stage	Innovative healthcare interventions for non-communicable diseases	31094502	2027-02-17,2027-09-16	faible	0	1	0	écarté
+HORIZON-JU-EUROHPC-2026-QML-07-01	Quantum Machine Learning	31094502	2027-01-28	forte	2	59	0	retenu
+HORIZON-WIDERA-2027-05-ERA-05	Pillar IV: Upgrading the EU’s independent knowledge on China's Science, Technology and Innovation system	31094501	2027-03-11	faible	0	1	0	écarté
+DIGITAL-2024-ADVANCED-DIGITAL-07-KEYCAPACITY	Specialised Education Programmes in Key Capacity Areas	31094502	2027-02-03	faible	0	1	0	écarté
+DIGITAL-2024-ADVANCED-DIGITAL-07-KEYCAPACITY	Specialised Education Programmes in Key Capacity Areas	31094502	2027-02-03	faible	0	2	0	écarté
+DIGITAL-ECCC-2024-DEPLOY-NCC-06-MS-COORDINATION	Deploying The Network of National Coordination Centres with Member States	31094502	2027-07-02	faible	0	1	0	écarté
+HORIZON-JU-IHI-2026-13-two-stage-01	IHI European HealthCare Incubator Network	31094503	2026-10-08,2027-04-21	faible	0	1	0	écarté
+HORIZON-JU-EUROHPC-2026-QEXP-14-01	Quantum Experimental Pilot Lines for Quantum Technologies	31094503	2026-11-17	forte	4	13	0	retenu
+HORIZON-JU-EUROHPC-2026-NQKD-12-01	Next-Generation QKD Systems	31094503	2026-11-17	forte	2	47	3	retenu
+HORIZON-JU-EUROHPC-2026-TIPT-09-01	Trapped-Ion Platform Technologies	31094503	2026-11-17	forte	2	18	0	retenu
+HORIZON-JU-EUROHPC-2026-SPT-10-01	Superconducting Platform Technologies	31094503	2026-11-17	forte	0	19	0	retenu
+HORIZON-JU-EUROHPC-2026-NAPT-11-01	Neutral-Atom Platform Technologies	31094503	2026-11-17	forte	2	39	1	retenu
+HORIZON-JU-EUROHPC-2026-QTI-13-01	Quantum-Testing Infrastructure for Quantum Technologies	31094503	2026-11-17	forte	4	9	0	retenu
+HORIZON-CL3-2026-01-SSRI-04	Development of ecosystem and next-generation capabilities for a secured European Critical Communication System in civil 	31094503	2026-11-05	moyenne	0	3	0	retenu
+HORIZON-CL3-2026-01-SSRI-03	Public procurement of innovation for security	31094503	2026-11-05	moyenne	0	2	1	retenu
+HORIZON-CL3-2026-01-FCT-02	Open topic on preventing and countering the misuse of emerging technologies for criminal purposes, including issues rela	31094503	2026-11-05	faible	0	1	0	écarté
+DIGITAL-2026-BESTUSE-10-EHDS	Building capacity to deploy the EEHRxF and digital health services and systems to support the rights of citizens and reu	31094503	2026-10-01	faible	0	2	0	écarté

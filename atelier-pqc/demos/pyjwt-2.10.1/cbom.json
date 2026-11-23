@@ -1,0 +1,2736 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:e5156714-7e5c-5610-865e-2b40e880603e",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-22T00:00:00Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "pqc-inventaire",
+          "version": "0.1.0"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "bom-ref": "cible-analysee",
+      "name": "pyjwt-2.10.1"
+    },
+    "properties": [
+      {
+        "name": "pqc-inventaire:avertissement",
+        "value": "Inventaire issu d'une analyse statique et de sondes TLS : faux positifs et omissions possibles ; à relire par un humain avant toute décision."
+      },
+      {
+        "name": "pqc-inventaire:source",
+        "value": "constats.json"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ec",
+      "name": "EC",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "jwt/utils.py",
+            "line": 7,
+            "additionalContext": "py-import-module; production; confiance moyenne"
+          },
+          {
+            "location": "tests/keys/__init__.py",
+            "line": 8,
+            "additionalContext": "py-import-module; test; confiance moyenne"
+          },
+          {
+            "location": "tests/keys/testkey_ec_secp192r1.priv",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "3"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ec-p-256",
+      "name": "EC-P-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "P-256",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "docs/usage.rst",
+            "line": 84,
+            "additionalContext": "pem-cle-privee; documentation; confiance elevee"
+          },
+          {
+            "location": "docs/usage.rst",
+            "line": 85,
+            "additionalContext": "pem-cle-publique; documentation; confiance elevee"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 573,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 631,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/api_jwk.py",
+            "line": 34,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/keys/testkey_ec.priv",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/keys/testkey_ec.pub",
+            "line": 1,
+            "additionalContext": "pem-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_advisory.py",
+            "line": 17,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 172,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 194,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 237,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 289,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 311,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 330,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 936,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 1046,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "16"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "documentation,production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ec-p-384",
+      "name": "EC-P-384",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "P-384",
+          "classicalSecurityLevel": 192,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "jwt/algorithms.py",
+            "line": 575,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 638,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/api_jwk.py",
+            "line": 36,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 173,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 198,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 237,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 331,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "7"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "faible"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ec-p-521",
+      "name": "EC-P-521",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "P-521",
+          "classicalSecurityLevel": 256,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "jwt/algorithms.py",
+            "line": 577,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 645,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/api_jwk.py",
+            "line": 38,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 174,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 202,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 237,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 332,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "7"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "faible"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ec-secp256k1",
+      "name": "EC-secp256k1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "secp256k1",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "jwt/algorithms.py",
+            "line": 579,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 652,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/api_jwk.py",
+            "line": 40,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 175,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 206,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 237,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 333,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "7"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "faible"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ecdsa",
+      "name": "ECDSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "sign",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "jwt/algorithms.py",
+            "line": 530,
+            "additionalContext": "py-cryptography-ec; production; confiance elevee"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 546,
+            "additionalContext": "py-cryptography-ec; production; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "2"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ecdsa-p-256",
+      "name": "ECDSA-P-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "P-256",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/keys/testkey_ec_ssh.pub",
+            "line": 1,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_advisory.py",
+            "line": 23,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "2"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ed25519",
+      "name": "Ed25519",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "Ed25519",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "verify"
+          ]
+        },
+        "oid": "1.3.101.112"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "docs/usage.rst",
+            "line": 70,
+            "additionalContext": "pem-cle-privee; documentation; confiance elevee"
+          },
+          {
+            "location": "docs/usage.rst",
+            "line": 71,
+            "additionalContext": "pem-cle-publique; documentation; confiance elevee"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 802,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 827,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 858,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 867,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 868,
+            "additionalContext": "py-cryptography-eddsa; production; confiance elevee"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 871,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 872,
+            "additionalContext": "py-cryptography-eddsa; production; confiance elevee"
+          },
+          {
+            "location": "jwt/api_jwk.py",
+            "line": 51,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/keys/testkey_ed25519",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/keys/testkey_ed25519.pub",
+            "line": 1,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_advisory.py",
+            "line": 9,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_advisory.py",
+            "line": 14,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 1052,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "15"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "documentation,production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ed448",
+      "name": "Ed448",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "Ed448",
+          "classicalSecurityLevel": 224,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        },
+        "oid": "1.3.101.113"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "jwt/algorithms.py",
+            "line": 802,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 827,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 858,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 869,
+            "additionalContext": "py-cryptography-eddsa; production; confiance elevee"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 873,
+            "additionalContext": "py-cryptography-eddsa; production; confiance elevee"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 942,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "6"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/eddsa",
+      "name": "EdDSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "jwt/algorithms.py",
+            "line": 101,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 132,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "jwt/api_jwk.py",
+            "line": 52,
+            "additionalContext": "py-chaine-algorithme; production; confiance faible"
+          },
+          {
+            "location": "tests/test_api_jwk.py",
+            "line": 169,
+            "additionalContext": "py-chaine-algorithme; test; confiance faible"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "4"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "faible"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/es256",
+      "name": "ES256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "curve": "P-256",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "sign",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 195,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 196,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 205,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 206,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 352,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 297,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "6"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "moyenne"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/hs256",
+      "name": "HS256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "cryptoFunctions": [
+            "sign",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 70,
+            "additionalContext": "py-jwt-algorithme; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 92,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 93,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 101,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 102,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 115,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 122,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 132,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 142,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 156,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 163,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 165,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 174,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 205,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 212,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 217,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 219,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 247,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 251,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 262,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 274,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 277,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 289,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 299,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 307,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 392,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 440,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 451,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 458,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 466,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 481,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 489,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 497,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 521,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 534,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 547,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 560,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 578,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 822,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 825,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 863,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 873,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 880,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 890,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 897,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 47,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 59,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 62,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 80,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 94,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 107,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 121,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 139,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 158,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 170,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 190,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 208,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 221,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 229,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 235,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 247,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 256,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 269,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 331,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 339,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 349,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 361,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 373,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 380,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 388,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 391,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 396,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 405,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 412,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 422,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 428,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 436,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 442,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 453,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 463,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 475,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 482,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 491,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 499,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 505,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 515,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 525,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 534,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 547,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 562,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 579,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 596,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 611,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 624,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 637,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 650,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 653,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 665,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 673,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 718,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 732,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 740,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 749,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 764,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 774,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 788,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 800,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 816,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 829,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 839,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 840,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 846,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 848,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 854,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 858,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 866,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 869,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 876,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 878,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 887,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 890,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 899,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 901,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 911,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 912,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 919,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 923,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 930,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 932,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 942,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 945,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_compressed_jwt.py",
+            "line": 27,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_compressed_jwt.py",
+            "line": 31,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_jwt.py",
+            "line": 16,
+            "additionalContext": "py-jwt-algorithme; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_jwt.py",
+            "line": 17,
+            "additionalContext": "py-jwt-algorithme; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "135"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "SHA2"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "hachage_ok"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/hs384",
+      "name": "HS384",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "cryptoFunctions": [
+            "sign",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 105,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "moyenne"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "SHA2"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "hachage_ok"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/hs512",
+      "name": "HS512",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "mac",
+          "cryptoFunctions": [
+            "sign",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 325,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "moyenne"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "SHA2"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "hachage_ok"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/rs256",
+      "name": "RS256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "padding": "pkcs1v15",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "sign",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_api_jwk.py",
+            "line": 80,
+            "additionalContext": "py-jwt-algorithme; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_api_jwk.py",
+            "line": 217,
+            "additionalContext": "py-jwt-algorithme; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_api_jwk.py",
+            "line": 223,
+            "additionalContext": "py-jwt-algorithme; test; confiance elevee"
+          },
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 475,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_jwks_client.py",
+            "line": 20,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_jwks_client.py",
+            "line": 37,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_jwks_client.py",
+            "line": 207,
+            "additionalContext": "py-jwt-algorithme; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "7"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/rs384",
+      "name": "RS384",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "padding": "pkcs1v15",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "sign",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_api_jws.py",
+            "line": 378,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_api_jwt.py",
+            "line": 321,
+            "additionalContext": "py-jwt-algorithme; test; confiance moyenne"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "2"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "moyenne"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/rsa",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "other"
+          ]
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "docs/usage.rst",
+            "line": 36,
+            "additionalContext": "pem-cle-privee; documentation; confiance elevee"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 477,
+            "additionalContext": "py-cryptography-rsa; production; confiance elevee"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 481,
+            "additionalContext": "py-cryptography-rsa; production; confiance elevee"
+          },
+          {
+            "location": "tests/test_algorithms.py",
+            "line": 27,
+            "additionalContext": "py-import-module; test; confiance moyenne"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "4"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "documentation,production,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/rsa-1024",
+      "name": "RSA-1024",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "parameterSetIdentifier": "1024",
+          "classicalSecurityLevel": 80,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "unknown"
+          ]
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/keys/testkey_pkcs1.pub.pem",
+            "line": 1,
+            "additionalContext": "pem-cle-publique; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/rsa-2048",
+      "name": "RSA-2048",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "parameterSetIdentifier": "2048",
+          "classicalSecurityLevel": 112,
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "verify"
+          ]
+        },
+        "oid": "1.2.840.113549.1.1.1"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "docs/usage.rst",
+            "line": 23,
+            "additionalContext": "pem-cle-privee; documentation; confiance elevee"
+          },
+          {
+            "location": "docs/usage.rst",
+            "line": 24,
+            "additionalContext": "pem-cle-publique; documentation; confiance elevee"
+          },
+          {
+            "location": "docs/usage.rst",
+            "line": 56,
+            "additionalContext": "pem-cle-privee; documentation; confiance elevee"
+          },
+          {
+            "location": "docs/usage.rst",
+            "line": 57,
+            "additionalContext": "pem-cle-publique; documentation; confiance elevee"
+          },
+          {
+            "location": "tests/keys/testkey2_rsa.pub.pem",
+            "line": 1,
+            "additionalContext": "pem-cle-publique; test; confiance elevee"
+          },
+          {
+            "location": "tests/keys/testkey_rsa.cer",
+            "line": 1,
+            "additionalContext": "pem-certificat; test; confiance elevee"
+          },
+          {
+            "location": "tests/keys/testkey_rsa.priv",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          },
+          {
+            "location": "tests/keys/testkey_rsa.pub",
+            "line": 1,
+            "additionalContext": "ssh-cle-publique; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "8"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "documentation,test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/rsa-pss",
+      "name": "RSA-PSS",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "padding": "other",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "sign",
+            "verify"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "jwt/algorithms.py",
+            "line": 689,
+            "additionalContext": "py-cryptography-rsa; production; confiance elevee"
+          },
+          {
+            "location": "jwt/algorithms.py",
+            "line": 701,
+            "additionalContext": "py-cryptography-rsa; production; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "2"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "production"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/sha256withrsa",
+      "name": "SHA256withRSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "padding": "pkcs1v15",
+          "nistQuantumSecurityLevel": 0,
+          "cryptoFunctions": [
+            "sign"
+          ]
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/keys/testkey_rsa.cer",
+            "line": 1,
+            "additionalContext": "pem-certificat; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/certificate/6a1289bb893f1cf9",
+      "name": "OU=Test Certificate,O=PyJWT,L=Austin,ST=Texas,C=US",
+      "cryptoProperties": {
+        "assetType": "certificate",
+        "certificateProperties": {
+          "certificateFormat": "X.509",
+          "subjectName": "OU=Test Certificate,O=PyJWT,L=Austin,ST=Texas,C=US",
+          "issuerName": "OU=Test Certificate,O=PyJWT,L=Austin,ST=Texas,C=US",
+          "notValidBefore": "2015-03-18T01:16:14Z",
+          "notValidAfter": "2018-03-17T01:16:14Z",
+          "certificateExtension": "cer",
+          "signatureAlgorithmRef": "crypto/algorithm/sha256withrsa",
+          "subjectPublicKeyRef": "crypto/related-crypto-material/cle-publique-6a1289bb893f1cf9"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/keys/testkey_rsa.cer",
+            "line": 1,
+            "additionalContext": "pem-certificat; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        },
+        {
+          "name": "pqc-inventaire:empreinte_sha256",
+          "value": "6a1289bb893f1cf93c5169707d4e9e14b4b69b0e24752ce4444fe78b3c426c81"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/protocol/tls",
+      "name": "TLS (version non précisée)",
+      "cryptoProperties": {
+        "assetType": "protocol",
+        "protocolProperties": {
+          "type": "tls"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_jwks_client.py",
+            "line": 342,
+            "additionalContext": "py-ssl-contexte; test; confiance moyenne"
+          },
+          {
+            "location": "tests/test_jwks_client.py",
+            "line": 351,
+            "additionalContext": "py-ssl-contexte; test; confiance moyenne"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "2"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "moyenne"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "TLS_SUITE"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "inventaire"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-docs-usage.rst-23",
+      "name": "clé privée stockée dans docs/usage.rst",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/rsa-2048",
+          "size": 2048
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "docs/usage.rst",
+            "line": 23,
+            "additionalContext": "pem-cle-privee; documentation; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "documentation"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-docs-usage.rst-36",
+      "name": "clé privée stockée dans docs/usage.rst",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/rsa"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "docs/usage.rst",
+            "line": 36,
+            "additionalContext": "pem-cle-privee; documentation; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "documentation"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-docs-usage.rst-56",
+      "name": "clé privée stockée dans docs/usage.rst",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/rsa-2048",
+          "size": 2048
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "docs/usage.rst",
+            "line": 56,
+            "additionalContext": "pem-cle-privee; documentation; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "documentation"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-docs-usage.rst-70",
+      "name": "clé privée stockée dans docs/usage.rst",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ed25519"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "docs/usage.rst",
+            "line": 70,
+            "additionalContext": "pem-cle-privee; documentation; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "documentation"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-docs-usage.rst-84",
+      "name": "clé privée stockée dans docs/usage.rst",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ec-p-256"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "docs/usage.rst",
+            "line": 84,
+            "additionalContext": "pem-cle-privee; documentation; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "documentation"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-keys-testkey-ec-secp192r1.priv-1",
+      "name": "clé privée stockée dans tests/keys/testkey_ec_secp192r1.priv",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ec"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/keys/testkey_ec_secp192r1.priv",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-keys-testkey-ec.priv-1",
+      "name": "clé privée stockée dans tests/keys/testkey_ec.priv",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ec-p-256"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/keys/testkey_ec.priv",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-keys-testkey-ed25519-1",
+      "name": "clé privée stockée dans tests/keys/testkey_ed25519",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ed25519"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/keys/testkey_ed25519",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-keys-testkey-rsa.priv-1",
+      "name": "clé privée stockée dans tests/keys/testkey_rsa.priv",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/rsa-2048",
+          "size": 2048
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/keys/testkey_rsa.priv",
+            "line": 1,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-advisory.py-17",
+      "name": "clé privée stockée dans tests/test_advisory.py",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ec-p-256"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_advisory.py",
+            "line": 17,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "ECDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-privee-tests-test-advisory.py-9",
+      "name": "clé privée stockée dans tests/test_advisory.py",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "private-key",
+          "algorithmRef": "crypto/algorithm/ed25519"
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/test_advisory.py",
+            "line": 9,
+            "additionalContext": "pem-cle-privee; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "EDDSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/related-crypto-material/cle-publique-6a1289bb893f1cf9",
+      "name": "clé publique RSA-2048 (OU=Test Certificate,O=PyJWT,L=Austin,ST=Texas,C=US)",
+      "cryptoProperties": {
+        "assetType": "related-crypto-material",
+        "relatedCryptoMaterialProperties": {
+          "type": "public-key",
+          "algorithmRef": "crypto/algorithm/rsa-2048",
+          "size": 2048
+        }
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "tests/keys/testkey_rsa.cer",
+            "line": 1,
+            "additionalContext": "pem-certificat; test; confiance elevee"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "pqc-inventaire:occurrences",
+          "value": "1"
+        },
+        {
+          "name": "pqc-inventaire:contextes",
+          "value": "test"
+        },
+        {
+          "name": "pqc-inventaire:confiance_max",
+          "value": "elevee"
+        },
+        {
+          "name": "pqc-inventaire:famille",
+          "value": "RSA"
+        },
+        {
+          "name": "pqc-inventaire:classe",
+          "value": "vulnerable_shor"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# Dossier de cession : retenu hors de Git tant que le dépôt GitHub est public.
+# Retirer cette ligne une fois le dépôt passé en privé.
+cession/

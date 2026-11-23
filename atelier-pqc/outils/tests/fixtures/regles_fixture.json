@@ -1,0 +1,61 @@
+{
+  "version": "2026-11-01",
+  "avertissement_fr": "Référentiel de test, contenu fictif réservé aux tests automatisés.",
+  "disclaimer_en": "Test reference set, fictitious content for automated tests only.",
+  "referentiels": [
+    {
+      "id": "TEST-PQ",
+      "nom": "Texte de test sur la transition post-quantique",
+      "juridiction": "TEST",
+      "emetteur": "Émetteur fictif",
+      "nature": "recommandation",
+      "public_vise_fr": "Organisations de test",
+      "target_audience_en": "Test organisations",
+      "source_url": "https://exemple.invalid/test-pq",
+      "date_source": "2026-10-01",
+      "exigences": [
+        {
+          "id": "TEST-PQ-DEPRECIATION-2030",
+          "resume_fr": "Exigence fictive : algorithmes à clé publique classiques dépréciés en 2030.",
+          "summary_en": "Fictitious requirement: classical public-key algorithms deprecated in 2030.",
+          "echeance": "2030-12-31",
+          "familles": ["RSA", "ECDSA", "ECDH", "EDDSA", "X25519_X448", "DH", "DSA"],
+          "effet": "deprecie",
+          "source_url": "https://exemple.invalid/test-pq#2030",
+          "confiance": "elevee"
+        },
+        {
+          "id": "TEST-PQ-INTERDICTION-2035",
+          "resume_fr": "Exigence fictive : interdiction en 2035.",
+          "summary_en": "Fictitious requirement: disallowed in 2035.",
+          "echeance": "2035-12-31",
+          "familles": ["RSA", "ECDSA", "ECDH", "EDDSA", "X25519_X448", "DH", "DSA"],
+          "effet": "interdit",
+          "source_url": "https://exemple.invalid/test-pq#2035",
+          "confiance": "faible"
+        }
+      ]
+    },
+    {
+      "id": "TEST-INV",
+      "nom": "Norme de test sur l'inventaire",
+      "juridiction": "TEST",
+      "emetteur": "Émetteur fictif",
+      "nature": "contraignant",
+      "source_url": "https://exemple.invalid/test-inv",
+      "date_source": "2026-09-01",
+      "exigences": [
+        {
+          "id": "TEST-INV-1",
+          "resume_fr": "Exigence fictive : inventaire annuel des suites et protocoles.",
+          "summary_en": "Fictitious requirement: yearly inventory of suites and protocols.",
+          "echeance": null,
+          "familles": ["TLS_SUITE", "TLS_LEGACY", "RSA", "ECDSA", "MD5", "FAMILLE_INCONNUE"],
+          "effet": "inventaire_obligatoire",
+          "source_url": "https://exemple.invalid/test-inv#1",
+          "confiance": "moyenne"
+        }
+      ]
+    }
+  ]
+}

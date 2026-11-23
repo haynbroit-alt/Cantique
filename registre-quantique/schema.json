@@ -1,0 +1,305 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:registre-quantique:affirmation:v0",
+  "title": "Affirmation du registre quantique (v0)",
+  "description": "Une ligne de affirmations.jsonl : une affirmation datée sur la route de l'informatique quantique tolérante aux fautes et du Q-Day, avec sa source, sa date et son statut. Le registre consigne sans trancher : le statut ne change que sur la foi d'une source tierce ou d'une déclaration ultérieure de l'acteur lui-même.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "acteur",
+    "type",
+    "date_affirmation",
+    "echeance_promise",
+    "metrique",
+    "valeur",
+    "unite",
+    "enonce",
+    "statut",
+    "source_url",
+    "source_titre",
+    "source_type",
+    "conflit_interet",
+    "date_consultation",
+    "date_saisie",
+    "liens",
+    "note"
+  ],
+  "properties": {
+    "id": {
+      "description": "Identifiant stable (slug). Ne change jamais, même si l'entrée est corrigée.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "maxLength": 96
+    },
+    "acteur": {
+      "description": "Organisation (ou auteur) qui fait l'affirmation.",
+      "type": "string",
+      "minLength": 1
+    },
+    "acteurs_associes": {
+      "description": "Autres organisations concernées (partenaires, entreprises retenues par un programme). La vue lisible affiche aussi l'entrée sous chacune d'elles.",
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "type": {
+      "description": "Nature de l'affirmation.",
+      "enum": [
+        "feuille_de_route",
+        "demonstration",
+        "estimation_ressources",
+        "programme_public",
+        "prix",
+        "revendication_avantage",
+        "refutation",
+        "financement",
+        "enquete_experts",
+        "marche_predictif",
+        "resultat_financier"
+      ]
+    },
+    "date_affirmation": {
+      "description": "Date à laquelle l'affirmation a été faite ou publiée (AAAA, AAAA-MM ou AAAA-MM-JJ).",
+      "$ref": "#/$defs/date_partielle"
+    },
+    "precision_date": {
+      "description": "« exacte » (défaut) : date_affirmation est la date de l'affirmation à la précision indiquée. « au_plus_tard » : la source n'est pas datée ; l'affirmation existait au plus tard à cette date.",
+      "enum": ["exacte", "au_plus_tard"]
+    },
+    "echeance_promise": {
+      "description": "Date cible promise ou horizon de la prévision, sinon null.",
+      "anyOf": [{ "$ref": "#/$defs/date_partielle" }, { "type": "null" }]
+    },
+    "metrique": {
+      "description": "Grandeur concernée, tirée du vocabulaire contrôlé.",
+      "$ref": "#/$defs/metrique"
+    },
+    "valeur": {
+      "description": "Valeur affirmée : nombre, ou chaîne pour une plage, un libellé ou une valeur qualitative.",
+      "type": ["number", "string"]
+    },
+    "comparateur": {
+      "description": "Relation entre la grandeur et la valeur (« < » pour « moins de », « ~ » pour « environ »). Défaut : « = ».",
+      "$ref": "#/$defs/comparateur"
+    },
+    "valeur_min": {
+      "description": "Borne basse numérique quand la valeur est une plage.",
+      "type": "number"
+    },
+    "valeur_max": {
+      "description": "Borne haute numérique quand la valeur est une plage.",
+      "type": "number"
+    },
+    "unite": {
+      "description": "Unité de la valeur, ou null.",
+      "type": ["string", "null"]
+    },
+    "mesures_complementaires": {
+      "description": "Autres chiffres de la même affirmation (par exemple le nombre de portes Toffoli associé à un nombre de qubits logiques).",
+      "type": "array",
+      "items": { "$ref": "#/$defs/mesure" }
+    },
+    "enonce": {
+      "description": "Citation courte ou paraphrase proche, dans la langue de la source.",
+      "type": "string",
+      "minLength": 1
+    },
+    "verbatim": {
+      "description": "true si les passages entre guillemets (“ ” ou « ») de l'énoncé sont des citations exactes de la source ; le reste est une paraphrase proche.",
+      "type": "boolean"
+    },
+    "statut": {
+      "description": "promis | demontre | verifie_tiers | contredit | en_retard | retire | inconnu (définitions dans README.md).",
+      "enum": [
+        "promis",
+        "demontre",
+        "verifie_tiers",
+        "contredit",
+        "en_retard",
+        "retire",
+        "inconnu"
+      ]
+    },
+    "statut_source_url": {
+      "description": "Source qui fonde le statut actuel. Obligatoire pour verifie_tiers, contredit, en_retard et retire.",
+      "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }]
+    },
+    "statut_date": {
+      "description": "Date de la source qui fonde le statut actuel.",
+      "anyOf": [{ "$ref": "#/$defs/date_partielle" }, { "type": "null" }]
+    },
+    "source_url": {
+      "description": "URL de la source principale.",
+      "$ref": "#/$defs/url"
+    },
+    "source_titre": {
+      "description": "Titre ou libellé de la source principale.",
+      "type": "string",
+      "minLength": 1
+    },
+    "source_type": {
+      "description": "Nature de la source principale. « vendeur » couvre toute communication de l'acteur lui-même ou de son partenaire commercial (entreprise, fondation, projet).",
+      "enum": [
+        "vendeur",
+        "revue_a_comite",
+        "preprint",
+        "gouvernement",
+        "depot_reglementaire",
+        "presse",
+        "analyste",
+        "enquete",
+        "autre"
+      ]
+    },
+    "sources_complementaires": {
+      "description": "Autres sources qui rapportent la même affirmation.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "conflit_interet": {
+      "description": "Conflit d'intérêts connu (par exemple un fabricant qui estime sa propre feuille de route), ou null.",
+      "type": ["string", "null"]
+    },
+    "date_consultation": {
+      "description": "Date à laquelle la source a été consultée (AAAA-MM-JJ).",
+      "$ref": "#/$defs/date_complete"
+    },
+    "date_saisie": {
+      "description": "Date d'entrée de la ligne dans le registre (AAAA-MM-JJ). Ne change pas lors d'une mise à jour de statut.",
+      "$ref": "#/$defs/date_complete"
+    },
+    "liens": {
+      "description": "Identifiants d'entrées liées (une réfutation pointe vers l'affirmation qu'elle conteste).",
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "uniqueItems": true
+    },
+    "note": {
+      "description": "Précisions, réserves, incertitudes (en français).",
+      "type": ["string", "null"]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "statut": { "enum": ["verifie_tiers", "contredit", "en_retard", "retire"] } },
+        "required": ["statut"]
+      },
+      "then": {
+        "required": ["statut_source_url"],
+        "properties": { "statut_source_url": { "$ref": "#/$defs/url" } }
+      }
+    },
+    {
+      "if": {
+        "properties": { "statut": { "const": "en_retard" } },
+        "required": ["statut"]
+      },
+      "then": {
+        "properties": { "echeance_promise": { "$ref": "#/$defs/date_partielle" } }
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "refutation" } },
+        "required": ["type"]
+      },
+      "then": {
+        "properties": { "liens": { "minItems": 1 } }
+      }
+    }
+  ],
+  "$defs": {
+    "date_partielle": {
+      "type": "string",
+      "pattern": "^[0-9]{4}(-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01]))?)?$"
+    },
+    "date_complete": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^https?://[^\\s]+$"
+    },
+    "comparateur": {
+      "enum": ["=", "<", "<=", ">", ">=", "~"]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "titre"],
+      "properties": {
+        "url": { "$ref": "#/$defs/url" },
+        "titre": { "type": "string", "minLength": 1 }
+      }
+    },
+    "mesure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["metrique", "valeur", "unite"],
+      "properties": {
+        "metrique": { "$ref": "#/$defs/metrique" },
+        "valeur": { "type": ["number", "string"] },
+        "comparateur": { "$ref": "#/$defs/comparateur" },
+        "unite": { "type": ["string", "null"] },
+        "libelle": { "type": "string", "minLength": 1 }
+      }
+    },
+    "metrique": {
+      "description": "Vocabulaire contrôlé. Ajouter une métrique ici avant de l'utiliser.",
+      "enum": [
+        "qubits_physiques",
+        "qubits_logiques",
+        "taux_erreur_logique",
+        "erreur_porte_2q",
+        "erreur_porte_logique_2q",
+        "fidelite_2q",
+        "portes_toffoli",
+        "portes_t_logiques",
+        "operations_logiques",
+        "duree_execution",
+        "probabilite_succes",
+        "latence_decodage",
+        "cycles_qec",
+        "facteur_reduction_surcout",
+        "taille_cle_cassee",
+        "aleatoire_certifie",
+        "bits_entropie_certifies",
+        "complexite_algorithme",
+        "avantage_quantique",
+        "jalon",
+        "mise_en_service",
+        "nombre_jalons",
+        "nombre_soumissions",
+        "nombre_entreprises",
+        "appreciation_qualitative",
+        "probabilite_crqc",
+        "horizon_crqc",
+        "horizon_tolerance_fautes",
+        "horizon_commercialisation",
+        "probabilite_marche",
+        "volume_marche",
+        "part_repondants",
+        "prix_minute",
+        "prix_tache",
+        "prix_tir",
+        "prix_heure",
+        "prix_porte_tir",
+        "prix_programme_min",
+        "engagement_minimum",
+        "minutes_gratuites",
+        "credits_gratuits",
+        "chiffre_affaires",
+        "ebitda_ajuste",
+        "montant_financement",
+        "valorisation",
+        "ratio_realise_projete",
+        "echeance_migration_pqc",
+        "statut_proposition",
+        "delai_apres_activation"
+      ]
+    }
+  }
+}

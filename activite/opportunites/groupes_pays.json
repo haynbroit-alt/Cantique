@@ -1,0 +1,53 @@
+{
+  "UE27": ["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GR", "HR", "HU", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PL", "PT", "RO", "SE", "SI", "SK"],
+  "EEE": ["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GR", "HR", "HU", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PL", "PT", "RO", "SE", "SI", "SK", "IS", "LI", "NO"],
+  "HE_ASSOCIES": ["AL", "AM", "BA", "CA", "EG", "FO", "GE", "IS", "IL", "JP", "XK", "MD", "ME", "NZ", "MK", "NO", "KR", "RS", "CH", "TN", "TR", "UA", "GB"],
+  "HE_ASSOCIES_PROGRAMME_COMPLET": ["AL", "AM", "BA", "EG", "FO", "GE", "IS", "IL", "XK", "MD", "ME", "MK", "NO", "RS", "CH", "TN", "TR", "UA", "GB"],
+  "HE_TRANSITOIRES": ["AU", "MA"],
+  "DEP_ASSOCIES": ["IS", "NO", "LI", "AL", "BA", "XK", "MD", "ME", "MK", "RS", "TR", "UA", "CH"],
+  "DEP_ASSOCIES_COMPLETS": ["IS", "NO", "LI"],
+  "_sources": {
+    "UE27": {
+      "source": "Traité sur l'Union européenne ; liste des 27 États membres (portail officiel de l'UE)",
+      "url": "https://european-union.europa.eu/principles-countries-history/eu-countries_en",
+      "date_verification": "2026-11-22",
+      "note": "Codes ISO 3166-1 alpha-2 ; la Grèce est codée GR (et non EL, code utilisé par la Commission)."
+    },
+    "EEE": {
+      "source": "Accord sur l'Espace économique européen : UE27 + Islande, Liechtenstein, Norvège",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_digital_en.pdf",
+      "date_verification": "2026-11-22",
+      "note": "Les trois pays AELE/EEE sont listés comme pleinement participants au programme Digital Europe dans la liste DEP V7.0 du 01.12.2025."
+    },
+    "HE_ASSOCIES": {
+      "source": "EU Grants: List of participating countries (HE), V4.2 – 07.10.2026",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf",
+      "date_verification": "2026-11-22",
+      "note": "23 pays dont l'accord d'association produit des effets juridiques. Associés au seul Pilier II (y compris partenariats institutionnalisés : EuroHPC JU, Chips JU) : CA (depuis le budget 2024), JP (budget 2026), NZ (WP 2023), KR (budget 2025). EG et CH : programme entier (budget 2025). GB : programme entier sauf le Fonds EIC (régime transitoire pour le Fonds EIC à partir du budget 2026). XK = Kosovo (code utilisateur, absent de l'ISO 3166-1). Les topics peuvent restreindre la participation (art. 22(5) du règlement HE) : toujours lire les conditions du topic."
+    },
+    "HE_ASSOCIES_PROGRAMME_COMPLET": {
+      "source": "Dérivé de la liste HE V4.2 – 07.10.2026 : HE_ASSOCIES moins les pays associés au seul Pilier II (CA, JP, NZ, KR)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf",
+      "date_verification": "2026-11-22",
+      "note": "À utiliser pour les appels du Pilier III (EIC). Pour la composante fonds propres de l'EIC Accelerator et EIC STEP, GB relève d'un régime transitoire (budget 2026 et suivants) : à vérifier dans l'Annexe 2 du programme de travail EIC 2027."
+    },
+    "HE_TRANSITOIRES": {
+      "source": "Liste HE V4.2 – 07.10.2026, section « transitional arrangements »",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf",
+      "date_verification": "2026-11-22",
+      "note": "AU : régime transitoire pour le Pilier II à partir du budget 2027 ; MA : programme entier. Applicable seulement si le programme de travail le prévoit. Le Liechtenstein n'entend pas s'associer à Horizon Europe."
+    },
+    "DEP_ASSOCIES": {
+      "source": "EU Grants: List of participating countries (DEP), V7.0 – 01.12.2025",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/digital/guidance/list-3rd-country-participation_digital_en.pdf",
+      "date_verification": "2026-11-22",
+      "note": "IS, NO, LI : programme entier. AL, BA, XK, MD, ME, MK, RS, TR, UA et CH (accord de novembre 2025, rétroactif au 01.01.2025) : seulement les objectifs spécifiques 1, 2, 4 et 5 ; les topics de l'objectif 3 (cybersécurité, dont ECCC) relèvent de l'article 12(5) du règlement DEP et sont souvent limités à l'UE/EEE. Le Royaume-Uni n'est pas associé à Digital Europe."
+    },
+    "DEP_ASSOCIES_COMPLETS": {
+      "source": "EU Grants: List of participating countries (DEP), V7.0 – 01.12.2025",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/digital/guidance/list-3rd-country-participation_digital_en.pdf",
+      "date_verification": "2026-11-22",
+      "note": "Pays associés à l'ensemble du programme Digital Europe (pays AELE de l'EEE)."
+    }
+  }
+}
