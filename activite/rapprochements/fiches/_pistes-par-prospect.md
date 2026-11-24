@@ -1,4 +1,4 @@
-# Pistes par prospect (usage interne, 2026-11-22)
+# Pistes par prospect (usage interne, 2026-11-23)
 
 Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la liste de contrôle de `offre/LIVRABLES/fiche-opportunite.md`.
 
@@ -18,26 +18,26 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | QRUISE GMBH | PME | DE | calcul | Fornitura di un sistema completo da vuoto criogenico per un esperimento a ioni intrappolati, nell’ambito del Programma di Ricerca dal titolo “Quantum Computing and Simulation Center” per il Dipartimento di Fisica e Astronomia dell’Università degli Studi di Padova. | ? | 67 | 1 |
 | QRUISE GMBH | PME | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
 | QRUISE GMBH | PME | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
-| PASQAL | PME | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 87 | 1 |
-| PASQAL | PME | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 80 | 1 |
-| PASQAL | PME | FR | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
-| PASQAL | PME | FR | calcul | Fornitura di un sistema completo da vuoto criogenico per un esperimento a ioni intrappolati, nell’ambito del Programma di Ricerca dal titolo “Quantum Computing and Simulation Center” per il Dipartimento di Fisica e Astronomia dell’Università degli Studi di Padova. | ? | 67 | 1 |
-| PASQAL | PME | FR | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
-| SEMIQON TECHNOLOGIES OY | PME | FI | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 87 | 1 |
-| SEMIQON TECHNOLOGIES OY | PME | FI | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 82 | 1 |
-| SEMIQON TECHNOLOGIES OY | PME | FI | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
-| SEMIQON TECHNOLOGIES OY | PME | FI | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
-| SEMIQON TECHNOLOGIES OY | PME | FI | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
-| IQM FINLAND OY | grande_entreprise | FI | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 87 | 1 |
-| IQM FINLAND OY | grande_entreprise | FI | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
-| IQM FINLAND OY | grande_entreprise | FI | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
-| IQM FINLAND OY | grande_entreprise | FI | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
-| IQM FINLAND OY | grande_entreprise | FI | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
 | LUXQUANTA TECHNOLOGIES SL | PME | ES | communication | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 85 | 1 |
 | LUXQUANTA TECHNOLOGIES SL | PME | ES | communication | Procurement of a High-Precision Optical Ground Station (OGS) Telescope Unit for Uplink and Satellite Tracking | 2026-12-04 | 60 | 1 |
 | LUXQUANTA TECHNOLOGIES SL | PME | ES | communication | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
 | LUXQUANTA TECHNOLOGIES SL | PME | ES | communication | Indizione della consultazione preliminare di mercato per la verifica di soluzioni tecnologiche, relative alla fornitura di componenti HW e SW finalizzate alla creazione, distribuzione e gestione di chiavi quantistiche in una rete multinodo regionale - Progetto EQUIP-FVG | ? | 60 | 1 |
 | LUXQUANTA TECHNOLOGIES SL | PME | ES | communication | contract de achizitie publica de furnizare produse - echipamente de comunicatie cuantica | 2026-12-10 | 55 | 1 |
+| PASQAL | PME | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 84 | 1 |
+| PASQAL | PME | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 80 | 1 |
+| PASQAL | PME | FR | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
+| PASQAL | PME | FR | calcul | Fornitura di un sistema completo da vuoto criogenico per un esperimento a ioni intrappolati, nell’ambito del Programma di Ricerca dal titolo “Quantum Computing and Simulation Center” per il Dipartimento di Fisica e Astronomia dell’Università degli Studi di Padova. | ? | 67 | 1 |
+| PASQAL | PME | FR | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
+| SEMIQON TECHNOLOGIES OY | PME | FI | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 84 | 1 |
+| SEMIQON TECHNOLOGIES OY | PME | FI | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 82 | 1 |
+| SEMIQON TECHNOLOGIES OY | PME | FI | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
+| SEMIQON TECHNOLOGIES OY | PME | FI | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
+| SEMIQON TECHNOLOGIES OY | PME | FI | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
+| IQM FINLAND OY | grande_entreprise | FI | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 84 | 1 |
+| IQM FINLAND OY | grande_entreprise | FI | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
+| IQM FINLAND OY | grande_entreprise | FI | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
+| IQM FINLAND OY | grande_entreprise | FI | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
+| IQM FINLAND OY | grande_entreprise | FI | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
 | RIGETTI UK LIMITED | PME | GB | calcul | Quantum Machine Learning | 2027-01-28 | 82 | 1 |
 | RIGETTI UK LIMITED | PME | GB | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 70 | 1 |
 | RIGETTI UK LIMITED | PME | GB | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 70 | 0 |
@@ -48,16 +48,11 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | QUANTROLOX FINLAND OY | PME | FI | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
 | QUANTROLOX FINLAND OY | PME | FI | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
 | QUANTROLOX FINLAND OY | PME | FI | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
-| QUANDELA | PME | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 82 | 1 |
 | QUANDELA | PME | FR | calcul | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 82 | 1 |
 | QUANDELA | PME | FR | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
 | QUANDELA | PME | FR | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
+| QUANDELA | PME | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
 | QUANDELA | PME | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
-| QILIMANJARO QUANTUM TECH SL | PME | ES | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 82 | 1 |
-| QILIMANJARO QUANTUM TECH SL | PME | ES | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
-| QILIMANJARO QUANTUM TECH SL | PME | ES | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
-| QILIMANJARO QUANTUM TECH SL | PME | ES | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
-| QILIMANJARO QUANTUM TECH SL | PME | ES | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
 | FALQON SYSTEMS B.V. | PME | NL | communication | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 82 | 1 |
 | FALQON SYSTEMS B.V. | PME | NL | communication | Procurement of a High-Precision Optical Ground Station (OGS) Telescope Unit for Uplink and Satellite Tracking | 2026-12-04 | 60 | 1 |
 | FALQON SYSTEMS B.V. | PME | NL | communication | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
@@ -73,61 +68,26 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | RIVERLANE LTD | PME | GB | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
 | RIVERLANE LTD | PME | GB | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
 | RIVERLANE LTD | PME | GB | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
-| ALPINE QUANTUM TECHNOLOGIES GMBH | PME | AT | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 80 | 1 |
-| ALPINE QUANTUM TECHNOLOGIES GMBH | PME | AT | calcul | Fornitura di un sistema completo da vuoto criogenico per un esperimento a ioni intrappolati, nell’ambito del Programma di Ricerca dal titolo “Quantum Computing and Simulation Center” per il Dipartimento di Fisica e Astronomia dell’Università degli Studi di Padova. | ? | 67 | 1 |
-| ALPINE QUANTUM TECHNOLOGIES GMBH | PME | AT | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
-| ALPINE QUANTUM TECHNOLOGIES GMBH | PME | AT | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
-| ALPINE QUANTUM TECHNOLOGIES GMBH | PME | AT | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
-| QUOBLY | PME | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 80 | 1 |
-| QUOBLY | PME | FR | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
-| QUOBLY | PME | FR | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
-| QUOBLY | PME | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
-| QUOBLY | PME | FR | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 60 | 2 |
-| QUANTWARE B.V. | PME | NL | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 80 | 1 |
-| QUANTWARE B.V. | PME | NL | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
-| QUANTWARE B.V. | PME | NL | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
-| QUANTWARE B.V. | PME | NL | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
-| QUANTWARE B.V. | PME | NL | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
-| QPHOX BV | PME | NL | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 80 | 1 |
-| QPHOX BV | PME | NL | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 70 | 1 |
-| QPHOX BV | PME | NL | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
-| QPHOX BV | PME | NL | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
-| QPHOX BV | PME | NL | calcul | Dual-use technologies | 2027-01-14 | 55 | 1 |
-| Groove Quantum B.V. | PME | NL | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 80 | 1 |
-| Groove Quantum B.V. | PME | NL | calcul | Quantum Machine Learning | 2027-01-28 | 75 | 1 |
-| Groove Quantum B.V. | PME | NL | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
-| Groove Quantum B.V. | PME | NL | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
-| Groove Quantum B.V. | PME | NL | calcul | Dual-use technologies | 2027-01-14 | 55 | 1 |
 | ORANGE QUANTUM SYSTEMS OPERATIONAL BV | PME | NL | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 80 | 1 |
 | ORANGE QUANTUM SYSTEMS OPERATIONAL BV | PME | NL | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
 | ORANGE QUANTUM SYSTEMS OPERATIONAL BV | PME | NL | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
 | ORANGE QUANTUM SYSTEMS OPERATIONAL BV | PME | NL | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
 | ORANGE QUANTUM SYSTEMS OPERATIONAL BV | PME | NL | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
-| ALICE & BOB | PME | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 80 | 1 |
-| ALICE & BOB | PME | FR | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
-| ALICE & BOB | PME | FR | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
-| ALICE & BOB | PME | FR | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
-| ALICE & BOB | PME | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
-| ELEQTRON GMBH | PME | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 80 | 1 |
-| ELEQTRON GMBH | PME | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
-| ELEQTRON GMBH | PME | DE | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
-| ELEQTRON GMBH | PME | DE | calcul | Dual-use technologies | 2027-01-14 | 55 | 1 |
-| ELEQTRON GMBH | PME | DE | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
-| C12 QUANTUM ELECTRONICS | PME | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 80 | 1 |
-| C12 QUANTUM ELECTRONICS | PME | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
-| C12 QUANTUM ELECTRONICS | PME | FR | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
-| C12 QUANTUM ELECTRONICS | PME | FR | calcul | Dual-use technologies | 2027-01-14 | 55 | 1 |
-| C12 QUANTUM ELECTRONICS | PME | FR | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
-| CUANTOMOCION SL | PME | ES | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 80 | 1 |
-| CUANTOMOCION SL | PME | ES | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
-| CUANTOMOCION SL | PME | ES | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
-| CUANTOMOCION SL | PME | ES | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
-| CUANTOMOCION SL | PME | ES | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 60 | 2 |
 | QBLOX BV | PME | NL | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
 | QBLOX BV | PME | NL | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
 | QBLOX BV | PME | NL | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
 | QBLOX BV | PME | NL | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
 | QBLOX BV | PME | NL | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
+| QUANTWARE B.V. | PME | NL | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
+| QUANTWARE B.V. | PME | NL | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
+| QUANTWARE B.V. | PME | NL | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
+| QUANTWARE B.V. | PME | NL | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
+| QUANTWARE B.V. | PME | NL | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
+| ALICE & BOB | PME | FR | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
+| ALICE & BOB | PME | FR | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
+| ALICE & BOB | PME | FR | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
+| ALICE & BOB | PME | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
+| ALICE & BOB | PME | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
 | NVISION QUANTUM TECHNOLOGIES GMBH | PME | DE | capteurs | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
 | NVISION QUANTUM TECHNOLOGIES GMBH | PME | DE | capteurs | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
 | NVISION QUANTUM TECHNOLOGIES GMBH | PME | DE | capteurs | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 60 | 2 |
@@ -138,6 +98,11 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | HAMAMATSU PHOTONICS A/S | grande_entreprise | DK | capteurs | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 60 | 2 |
 | HAMAMATSU PHOTONICS A/S | grande_entreprise | DK | capteurs | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
 | HAMAMATSU PHOTONICS A/S | grande_entreprise | DK | capteurs | NAVISP Element 2 – Permanent Standard Call for Proposals (navigation, positionnement, temps) | ? | 45 | 2 |
+| QILIMANJARO QUANTUM TECH SL | PME | ES | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
+| QILIMANJARO QUANTUM TECH SL | PME | ES | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
+| QILIMANJARO QUANTUM TECH SL | PME | ES | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
+| QILIMANJARO QUANTUM TECH SL | PME | ES | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
+| QILIMANJARO QUANTUM TECH SL | PME | ES | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
 | AIRBUS DEFENCE AND SPACE SAS | grande_entreprise | FR | capteurs | Quantum Space Gravimetry topic | 2027-09-02 | 80 | 1 |
 | AIRBUS DEFENCE AND SPACE SAS | grande_entreprise | FR | capteurs | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 70 | 0 |
 | AIRBUS DEFENCE AND SPACE SAS | grande_entreprise | FR | capteurs | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
@@ -199,6 +164,11 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | KETS QUANTUM SECURITY LTD | PME | GB | communication | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 77 | 1 |
 | KETS QUANTUM SECURITY LTD | PME | GB | communication | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 50 | 1 |
 | KETS QUANTUM SECURITY LTD | PME | GB | communication | EuroQCI Governmental System Concept Study (Phase A), Reference and Validation Environment and Engineering Support | ? | 45 | 2 |
+| Groove Quantum B.V. | PME | NL | calcul | Quantum Machine Learning | 2027-01-28 | 75 | 1 |
+| Groove Quantum B.V. | PME | NL | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
+| Groove Quantum B.V. | PME | NL | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
+| Groove Quantum B.V. | PME | NL | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
+| Groove Quantum B.V. | PME | NL | calcul | Dual-use technologies | 2027-01-14 | 55 | 1 |
 | AIRBUS OPERATIONS GMBH | grande_entreprise | DE | calcul | Quantum Machine Learning | 2027-01-28 | 75 | 1 |
 | AIRBUS OPERATIONS GMBH | grande_entreprise | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
 | AIRBUS OPERATIONS GMBH | grande_entreprise | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
@@ -225,9 +195,9 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | AIRBUS DEFENCE AND SPACE GMBH | grande_entreprise | DE | capteurs | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 50 | 2 |
 | AIRBUS DEFENCE AND SPACE GMBH | grande_entreprise | DE | capteurs | EIC Pathfinder Open 2027 (procédure en deux étapes) | 2027-02-25 | 40 | 1 |
 | LEONARDO - SOCIETA PER  AZIONI | grande_entreprise | IT | capteurs | Quantum Space Gravimetry topic | 2027-09-02 | 75 | 1 |
-| LEONARDO - SOCIETA PER  AZIONI | grande_entreprise | IT | capteurs | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 70 | 1 |
 | LEONARDO - SOCIETA PER  AZIONI | grande_entreprise | IT | capteurs | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 70 | 0 |
 | LEONARDO - SOCIETA PER  AZIONI | grande_entreprise | IT | capteurs | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
+| LEONARDO - SOCIETA PER  AZIONI | grande_entreprise | IT | capteurs | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 50 | 2 |
 | LEONARDO - SOCIETA PER  AZIONI | grande_entreprise | IT | capteurs | EIC Pathfinder Open 2027 (procédure en deux étapes) | 2027-02-25 | 40 | 1 |
 | GAC | PME | FR | capteurs | Quantum Space Gravimetry topic | 2027-09-02 | 75 | 1 |
 | GAC | PME | FR | capteurs | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 70 | 0 |
@@ -257,11 +227,6 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | QUANTUM MOTION TECHNOLOGIES LTD | PME | GB | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 70 | 0 |
 | QUANTUM MOTION TECHNOLOGIES LTD | PME | GB | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
 | QUANTUM MOTION TECHNOLOGIES LTD | PME | GB | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
-| INFINEON TECHNOLOGIES AG | grande_entreprise | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 72 | 1 |
-| INFINEON TECHNOLOGIES AG | grande_entreprise | DE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 70 | 1 |
-| INFINEON TECHNOLOGIES AG | grande_entreprise | DE | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
-| INFINEON TECHNOLOGIES AG | grande_entreprise | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
-| INFINEON TECHNOLOGIES AG | grande_entreprise | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
 | OXFORD IONICS LIMITED | PME | GB | calcul | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 72 | 1 |
 | OXFORD IONICS LIMITED | PME | GB | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 70 | 0 |
 | OXFORD IONICS LIMITED | PME | GB | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
@@ -370,66 +335,16 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | RED HAT CZECH S R O | grande_entreprise | CZ | pqc | Secure Computing Continuum (IoT, Edge, Cloud, Data spaces) | 2027-09-15 | 70 | 1 |
 | RED HAT CZECH S R O | grande_entreprise | CZ | pqc | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 70 | 1 |
 | RED HAT CZECH S R O | grande_entreprise | CZ | pqc | Dual-use technologies | 2027-01-14 | 65 | 0 |
-| INFINEON TECHNOLOGIES DRESDEN AG & Co. KG | grande_entreprise | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 70 | 1 |
-| INFINEON TECHNOLOGIES DRESDEN AG & Co. KG | grande_entreprise | DE | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
-| INFINEON TECHNOLOGIES DRESDEN AG & Co. KG | grande_entreprise | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
-| INFINEON TECHNOLOGIES DRESDEN AG & Co. KG | grande_entreprise | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
-| INFINEON TECHNOLOGIES DRESDEN AG & Co. KG | grande_entreprise | DE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 50 | 2 |
-| ALUVIA PHOTONICS B.V. | PME | NL | composants | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 70 | 1 |
-| ALUVIA PHOTONICS B.V. | PME | NL | composants | Suministro de un peine de frecuencias óptico financiado por MCIU/ AEI /10.13039/501100011033 / UE, FEDER y por la Diputación Foral de Bizkaia para el proyecto Bizkaia Industrial Quantum – Hub. | 2026-12-18 | 60 | 0 |
-| ALUVIA PHOTONICS B.V. | PME | NL | composants | Procurement of a High-Precision Optical Ground Station (OGS) Telescope Unit for Uplink and Satellite Tracking | 2026-12-04 | 50 | 1 |
-| ALUVIA PHOTONICS B.V. | PME | NL | composants | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
-| ALUVIA PHOTONICS B.V. | PME | NL | composants | Consultazione preliminare di mercato finalizzata all’individuazione di operatori economici da invitare ad una procedura negoziata senza bando ai sensi dell’art. 76, co. 2, lett. b), n. 2 del D.Lgs. n. 36 del 2023, per l’affidamento della fornitura di una piattaforma criogenica dry a ciclo chiuso, sp | ? | 35 | 2 |
-| PARITY QUANTUM COMPUTING GMBH | PME | AT | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 70 | 1 |
-| PARITY QUANTUM COMPUTING GMBH | PME | AT | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
-| PARITY QUANTUM COMPUTING GMBH | PME | AT | calcul | Fornitura di un sistema completo da vuoto criogenico per un esperimento a ioni intrappolati, nell’ambito del Programma di Ricerca dal titolo “Quantum Computing and Simulation Center” per il Dipartimento di Fisica e Astronomia dell’Università degli Studi di Padova. | ? | 55 | 1 |
-| PARITY QUANTUM COMPUTING GMBH | PME | AT | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
-| PARITY QUANTUM COMPUTING GMBH | PME | AT | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
-| SILTRONIC AG | grande_entreprise | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 70 | 1 |
-| SILTRONIC AG | grande_entreprise | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
-| SILTRONIC AG | grande_entreprise | DE | calcul | Dual-use technologies | 2027-01-14 | 45 | 1 |
-| SILTRONIC AG | grande_entreprise | DE | calcul | Quantum Machine Learning | 2027-01-28 | 45 | 2 |
-| SILTRONIC AG | grande_entreprise | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 40 | 2 |
-| QPURPOSE APS | PME | DK | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 70 | 1 |
-| QPURPOSE APS | PME | DK | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
-| QPURPOSE APS | PME | DK | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
-| QPURPOSE APS | PME | DK | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
-| QPURPOSE APS | PME | DK | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
-| IQRYPTO SRL | PME | BE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 70 | 1 |
-| IQRYPTO SRL | PME | BE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
-| IQRYPTO SRL | PME | BE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
-| IQRYPTO SRL | PME | BE | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
-| IQRYPTO SRL | PME | BE | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
-| SAES GETTERS S.P.A. | grande_entreprise | IT | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 70 | 1 |
-| SAES GETTERS S.P.A. | grande_entreprise | IT | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
-| SAES GETTERS S.P.A. | grande_entreprise | IT | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
-| SAES GETTERS S.P.A. | grande_entreprise | IT | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
-| SAES GETTERS S.P.A. | grande_entreprise | IT | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
-| ARQUE SYSTEMS GMBH | PME | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 70 | 1 |
-| ARQUE SYSTEMS GMBH | PME | DE | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
-| ARQUE SYSTEMS GMBH | PME | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
-| ARQUE SYSTEMS GMBH | PME | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
-| ARQUE SYSTEMS GMBH | PME | DE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 50 | 2 |
-| QPERFECT SAS | grande_entreprise | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 70 | 1 |
-| QPERFECT SAS | grande_entreprise | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
-| QPERFECT SAS | grande_entreprise | FR | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
-| QPERFECT SAS | grande_entreprise | FR | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
-| QPERFECT SAS | grande_entreprise | FR | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
-| TOP-GAN SP ZOO | PME | PL | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 70 | 1 |
-| TOP-GAN SP ZOO | PME | PL | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
-| TOP-GAN SP ZOO | PME | PL | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
-| TOP-GAN SP ZOO | PME | PL | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
-| TOP-GAN SP ZOO | PME | PL | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
-| SLF SVENSKA LASERFABRIKEN AB | PME | SE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 70 | 1 |
-| SLF SVENSKA LASERFABRIKEN AB | PME | SE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
-| SLF SVENSKA LASERFABRIKEN AB | PME | SE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
-| SLF SVENSKA LASERFABRIKEN AB | PME | SE | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
-| SLF SVENSKA LASERFABRIKEN AB | PME | SE | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
-| SAFRAN ELECTRONICS & DEFENSE | grande_entreprise | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 70 | 1 |
-| SAFRAN ELECTRONICS & DEFENSE | grande_entreprise | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
-| SAFRAN ELECTRONICS & DEFENSE | grande_entreprise | FR | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
-| SAFRAN ELECTRONICS & DEFENSE | grande_entreprise | FR | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
-| SAFRAN ELECTRONICS & DEFENSE | grande_entreprise | FR | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
+| QPHOX BV | PME | NL | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 70 | 1 |
+| QPHOX BV | PME | NL | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
+| QPHOX BV | PME | NL | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
+| QPHOX BV | PME | NL | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
+| QPHOX BV | PME | NL | calcul | Dual-use technologies | 2027-01-14 | 55 | 1 |
+| INFINEON TECHNOLOGIES AG | grande_entreprise | DE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 70 | 1 |
+| INFINEON TECHNOLOGIES AG | grande_entreprise | DE | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
+| INFINEON TECHNOLOGIES AG | grande_entreprise | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
+| INFINEON TECHNOLOGIES AG | grande_entreprise | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
+| INFINEON TECHNOLOGIES AG | grande_entreprise | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
 | EURICE EUROPEAN RESEARCH AND PROJECT OFFICE GMBH | PME | DE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 70 | 1 |
 | EURICE EUROPEAN RESEARCH AND PROJECT OFFICE GMBH | PME | DE | calcul | Fornitura di un sistema completo da vuoto criogenico per un esperimento a ioni intrappolati, nell’ambito del Programma di Ricerca dal titolo “Quantum Computing and Simulation Center” per il Dipartimento di Fisica e Astronomia dell’Università degli Studi di Padova. | ? | 57 | 1 |
 | EURICE EUROPEAN RESEARCH AND PROJECT OFFICE GMBH | PME | DE | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
@@ -583,6 +498,41 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | TELESPAZIO SPA | grande_entreprise | IT | pqc | Secure Computing Continuum (IoT, Edge, Cloud, Data spaces) | 2027-09-15 | 65 | 1 |
 | TELESPAZIO SPA | grande_entreprise | IT | pqc | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 65 | 1 |
 | TELESPAZIO SPA | grande_entreprise | IT | pqc | Dual-use technologies | 2027-01-14 | 60 | 0 |
+| QPURPOSE APS | PME | DK | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 67 | 1 |
+| QPURPOSE APS | PME | DK | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
+| QPURPOSE APS | PME | DK | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
+| QPURPOSE APS | PME | DK | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
+| QPURPOSE APS | PME | DK | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
+| IQRYPTO SRL | PME | BE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 67 | 1 |
+| IQRYPTO SRL | PME | BE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
+| IQRYPTO SRL | PME | BE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
+| IQRYPTO SRL | PME | BE | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
+| IQRYPTO SRL | PME | BE | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
+| SAES GETTERS S.P.A. | grande_entreprise | IT | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 67 | 1 |
+| SAES GETTERS S.P.A. | grande_entreprise | IT | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
+| SAES GETTERS S.P.A. | grande_entreprise | IT | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
+| SAES GETTERS S.P.A. | grande_entreprise | IT | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
+| SAES GETTERS S.P.A. | grande_entreprise | IT | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
+| QPERFECT SAS | grande_entreprise | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 67 | 1 |
+| QPERFECT SAS | grande_entreprise | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
+| QPERFECT SAS | grande_entreprise | FR | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
+| QPERFECT SAS | grande_entreprise | FR | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
+| QPERFECT SAS | grande_entreprise | FR | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
+| TOP-GAN SP ZOO | PME | PL | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 67 | 1 |
+| TOP-GAN SP ZOO | PME | PL | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
+| TOP-GAN SP ZOO | PME | PL | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
+| TOP-GAN SP ZOO | PME | PL | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
+| TOP-GAN SP ZOO | PME | PL | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
+| SLF SVENSKA LASERFABRIKEN AB | PME | SE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 67 | 1 |
+| SLF SVENSKA LASERFABRIKEN AB | PME | SE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
+| SLF SVENSKA LASERFABRIKEN AB | PME | SE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
+| SLF SVENSKA LASERFABRIKEN AB | PME | SE | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
+| SLF SVENSKA LASERFABRIKEN AB | PME | SE | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
+| SAFRAN ELECTRONICS & DEFENSE | grande_entreprise | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 67 | 1 |
+| SAFRAN ELECTRONICS & DEFENSE | grande_entreprise | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
+| SAFRAN ELECTRONICS & DEFENSE | grande_entreprise | FR | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
+| SAFRAN ELECTRONICS & DEFENSE | grande_entreprise | FR | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
+| SAFRAN ELECTRONICS & DEFENSE | grande_entreprise | FR | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
 | SEEQC UK | PME | GB | calcul | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 67 | 1 |
 | SEEQC UK | PME | GB | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 65 | 1 |
 | SEEQC UK | PME | GB | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 65 | 1 |
@@ -608,6 +558,11 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | VST S.r.l. | PME | IT | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 45 | 2 |
 | VST S.r.l. | PME | IT | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 45 | 2 |
 | VST S.r.l. | PME | IT | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
+| ALPINE QUANTUM TECHNOLOGIES GMBH | PME | AT | calcul | Fornitura di un sistema completo da vuoto criogenico per un esperimento a ioni intrappolati, nell’ambito del Programma di Ricerca dal titolo “Quantum Computing and Simulation Center” per il Dipartimento di Fisica e Astronomia dell’Università degli Studi di Padova. | ? | 67 | 1 |
+| ALPINE QUANTUM TECHNOLOGIES GMBH | PME | AT | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
+| ALPINE QUANTUM TECHNOLOGIES GMBH | PME | AT | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
+| ALPINE QUANTUM TECHNOLOGIES GMBH | PME | AT | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
+| ALPINE QUANTUM TECHNOLOGIES GMBH | PME | AT | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
 | BULL SAS | grande_entreprise | FR | calcul | Fornitura di un sistema completo da vuoto criogenico per un esperimento a ioni intrappolati, nell’ambito del Programma di Ricerca dal titolo “Quantum Computing and Simulation Center” per il Dipartimento di Fisica e Astronomia dell’Università degli Studi di Padova. | ? | 67 | 1 |
 | BULL SAS | grande_entreprise | FR | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
 | BULL SAS | grande_entreprise | FR | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
@@ -630,6 +585,11 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | QUANTOPTICON LTD. | PME | GB | composants | PURCH3086 Provision of Cryogen-Free Dilution Refrigerator System and Associated Consumables & Services | 2026-12-21 | 65 | 0 |
 | QUANTOPTICON LTD. | PME | GB | composants | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 45 | 2 |
 | QUANTOPTICON LTD. | PME | GB | composants | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
+| QUOBLY | PME | FR | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
+| QUOBLY | PME | FR | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
+| QUOBLY | PME | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
+| QUOBLY | PME | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
+| QUOBLY | PME | FR | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 60 | 2 |
 | KIUTRA GMBH | PME | DE | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
 | KIUTRA GMBH | PME | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
 | KIUTRA GMBH | PME | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
@@ -640,6 +600,11 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | MULTIVERSE COMPUTING SL | PME | ES | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
 | MULTIVERSE COMPUTING SL | PME | ES | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
 | MULTIVERSE COMPUTING SL | PME | ES | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 60 | 2 |
+| CUANTOMOCION SL | PME | ES | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
+| CUANTOMOCION SL | PME | ES | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
+| CUANTOMOCION SL | PME | ES | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
+| CUANTOMOCION SL | PME | ES | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
+| CUANTOMOCION SL | PME | ES | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 60 | 2 |
 | UBITECH LIMITED | PME | CY | calcul | Quantum Machine Learning | 2027-01-28 | 65 | 2 |
 | UBITECH LIMITED | PME | CY | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 60 | 2 |
 | UBITECH LIMITED | PME | CY | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
@@ -685,36 +650,11 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | SURECORE LIMITED | PME | GB | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 45 | 2 |
 | SURECORE LIMITED | PME | GB | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 45 | 2 |
 | SURECORE LIMITED | PME | GB | calcul | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 45 | 2 |
-| Peak Quantum GmbH | PME | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 65 | 1 |
-| Peak Quantum GmbH | PME | DE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
-| Peak Quantum GmbH | PME | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
-| Peak Quantum GmbH | PME | DE | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
-| Peak Quantum GmbH | PME | DE | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
-| neQxt GmbH | PME | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 65 | 1 |
-| neQxt GmbH | PME | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
-| neQxt GmbH | PME | DE | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
-| neQxt GmbH | PME | DE | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
-| neQxt GmbH | PME | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 35 | 2 |
-| QUDORA Technologies GmbH | grande_entreprise | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 65 | 1 |
-| QUDORA Technologies GmbH | grande_entreprise | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
-| QUDORA Technologies GmbH | grande_entreprise | DE | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
-| QUDORA Technologies GmbH | grande_entreprise | DE | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
-| QUDORA Technologies GmbH | grande_entreprise | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 35 | 2 |
-| NEW ORIGIN BV | PME | NL | composants | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 65 | 1 |
-| NEW ORIGIN BV | PME | NL | composants | Suministro de un peine de frecuencias óptico financiado por MCIU/ AEI /10.13039/501100011033 / UE, FEDER y por la Diputación Foral de Bizkaia para el proyecto Bizkaia Industrial Quantum – Hub. | 2026-12-18 | 55 | 0 |
-| NEW ORIGIN BV | PME | NL | composants | Procurement of a High-Precision Optical Ground Station (OGS) Telescope Unit for Uplink and Satellite Tracking | 2026-12-04 | 45 | 1 |
-| NEW ORIGIN BV | PME | NL | composants | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
-| NEW ORIGIN BV | PME | NL | composants | Consultazione preliminare di mercato finalizzata all’individuazione di operatori economici da invitare ad una procedura negoziata senza bando ai sensi dell’art. 76, co. 2, lett. b), n. 2 del D.Lgs. n. 36 del 2023, per l’affidamento della fornitura di una piattaforma criogenica dry a ciclo chiuso, sp | ? | 30 | 2 |
 | MASSIVE ANALYTIC LIMITED | PME | GB | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 65 | 1 |
 | MASSIVE ANALYTIC LIMITED | PME | GB | calcul | Quantum Machine Learning | 2027-01-28 | 50 | 2 |
 | MASSIVE ANALYTIC LIMITED | PME | GB | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 45 | 2 |
 | MASSIVE ANALYTIC LIMITED | PME | GB | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
 | MASSIVE ANALYTIC LIMITED | PME | GB | calcul | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 45 | 2 |
-| ARTIC INSTRUMENTS OY | PME | FI | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 65 | 1 |
-| ARTIC INSTRUMENTS OY | PME | FI | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
-| ARTIC INSTRUMENTS OY | PME | FI | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
-| ARTIC INSTRUMENTS OY | PME | FI | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
-| ARTIC INSTRUMENTS OY | PME | FI | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
 | Promethence S.r.l | PME | IT | logiciel | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 65 | 1 |
 | Promethence S.r.l | PME | IT | logiciel | Quantum Machine Learning | 2027-01-28 | 50 | 2 |
 | Promethence S.r.l | PME | IT | logiciel | Procurement of a High-Precision Optical Ground Station (OGS) Telescope Unit for Uplink and Satellite Tracking | 2026-12-04 | 45 | 1 |
@@ -947,6 +887,11 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | QUANTUM TECHNOLOGY LABORATORIES GMBH | PME | AT | communication | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
 | QUANTUM TECHNOLOGY LABORATORIES GMBH | PME | AT | communication | Indizione della consultazione preliminare di mercato per la verifica di soluzioni tecnologiche, relative alla fornitura di componenti HW e SW finalizzate alla creazione, distribuzione e gestione di chiavi quantistiche in una rete multinodo regionale - Progetto EQUIP-FVG | ? | 60 | 1 |
 | QUANTUM TECHNOLOGY LABORATORIES GMBH | PME | AT | communication | contract de achizitie publica de furnizare produse - echipamente de comunicatie cuantica | 2026-12-10 | 55 | 1 |
+| ALUVIA PHOTONICS B.V. | PME | NL | composants | Suministro de un peine de frecuencias óptico financiado por MCIU/ AEI /10.13039/501100011033 / UE, FEDER y por la Diputación Foral de Bizkaia para el proyecto Bizkaia Industrial Quantum – Hub. | 2026-12-18 | 60 | 0 |
+| ALUVIA PHOTONICS B.V. | PME | NL | composants | Procurement of a High-Precision Optical Ground Station (OGS) Telescope Unit for Uplink and Satellite Tracking | 2026-12-04 | 50 | 1 |
+| ALUVIA PHOTONICS B.V. | PME | NL | composants | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
+| ALUVIA PHOTONICS B.V. | PME | NL | composants | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
+| ALUVIA PHOTONICS B.V. | PME | NL | composants | Consultazione preliminare di mercato finalizzata all’individuazione di operatori economici da invitare ad una procedura negoziata senza bando ai sensi dell’art. 76, co. 2, lett. b), n. 2 del D.Lgs. n. 36 del 2023, per l’affidamento della fornitura di una piattaforma criogenica dry a ciclo chiuso, sp | ? | 35 | 2 |
 | AUREA TECHNOLOGY | PME | FR | composants | Suministro de un peine de frecuencias óptico financiado por MCIU/ AEI /10.13039/501100011033 / UE, FEDER y por la Diputación Foral de Bizkaia para el proyecto Bizkaia Industrial Quantum – Hub. | 2026-12-18 | 60 | 0 |
 | AUREA TECHNOLOGY | PME | FR | composants | Procurement of a High-Precision Optical Ground Station (OGS) Telescope Unit for Uplink and Satellite Tracking | 2026-12-04 | 50 | 1 |
 | AUREA TECHNOLOGY | PME | FR | composants | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
@@ -1024,6 +969,16 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | QUANTUM TRANSISTORS TECHNOLOGY LTD | PME | IL | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
 | QUANTUM TRANSISTORS TECHNOLOGY LTD | PME | IL | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
 | QUANTUM TRANSISTORS TECHNOLOGY LTD | PME | IL | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
+| ELEQTRON GMBH | PME | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
+| ELEQTRON GMBH | PME | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
+| ELEQTRON GMBH | PME | DE | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
+| ELEQTRON GMBH | PME | DE | calcul | Dual-use technologies | 2027-01-14 | 55 | 1 |
+| ELEQTRON GMBH | PME | DE | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
+| C12 QUANTUM ELECTRONICS | PME | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 60 | 2 |
+| C12 QUANTUM ELECTRONICS | PME | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 2 |
+| C12 QUANTUM ELECTRONICS | PME | FR | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 60 | 1 |
+| C12 QUANTUM ELECTRONICS | PME | FR | calcul | Dual-use technologies | 2027-01-14 | 55 | 1 |
+| C12 QUANTUM ELECTRONICS | PME | FR | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
 | ZURICH INSTRUMENTS AG | PME | CH | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 60 | 1 |
 | ZURICH INSTRUMENTS AG | PME | CH | calcul | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 60 | 1 |
 | ZURICH INSTRUMENTS AG | PME | CH | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 50 | 1 |
@@ -1035,10 +990,10 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | QUANTUM SPACE SYSTEMS GMBH | PME | DE | communication | Procurement of a High-Precision Optical Ground Station (OGS) Telescope Unit for Uplink and Satellite Tracking | 2026-12-04 | 50 | 1 |
 | QUANTUM SPACE SYSTEMS GMBH | PME | DE | communication | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 50 | 2 |
 | THALES | grande_entreprise | FR | transverse | Quantum Space Gravimetry topic | 2027-09-02 | 60 | 2 |
-| THALES | grande_entreprise | FR | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 55 | 2 |
+| THALES | grande_entreprise | FR | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 52 | 2 |
 | THALES | grande_entreprise | FR | transverse | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 52 | 2 |
-| THALES | grande_entreprise | FR | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 50 | 2 |
 | THALES | grande_entreprise | FR | transverse | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
+| THALES | grande_entreprise | FR | transverse | EuroQCI Governmental System Concept Study (Phase A), Reference and Validation Environment and Engineering Support | ? | 40 | 2 |
 | NORBLIS APS | PME | DK | capteurs | Quantum Space Gravimetry topic | 2027-09-02 | 60 | 1 |
 | NORBLIS APS | PME | DK | capteurs | Quantum Machine Learning | 2027-01-28 | 45 | 2 |
 | NORBLIS APS | PME | DK | capteurs | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 40 | 2 |
@@ -1205,9 +1160,9 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | QUANTUM TECHNOLOGIES ASSOCIATES LIMITED | PME | GB | capteurs | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 45 | 1 |
 | QUIX QUANTUM BV | PME | NL | transverse | Quantum Machine Learning | 2027-01-28 | 57 | 2 |
 | QUIX QUANTUM BV | PME | NL | transverse | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 2 |
-| QUIX QUANTUM BV | PME | NL | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 52 | 2 |
 | QUIX QUANTUM BV | PME | NL | transverse | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 52 | 2 |
-| QUIX QUANTUM BV | PME | NL | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 50 | 2 |
+| QUIX QUANTUM BV | PME | NL | transverse | Suministro de un peine de frecuencias óptico financiado por MCIU/ AEI /10.13039/501100011033 / UE, FEDER y por la Diputación Foral de Bizkaia para el proyecto Bizkaia Industrial Quantum – Hub. | 2026-12-18 | 42 | 1 |
+| QUIX QUANTUM BV | PME | NL | transverse | EuroQCI Governmental System Concept Study (Phase A), Reference and Validation Environment and Engineering Support | ? | 35 | 2 |
 | ELECTRICITE DE FRANCE | grande_entreprise | FR | calcul | Fornitura di un sistema completo da vuoto criogenico per un esperimento a ioni intrappolati, nell’ambito del Programma di Ricerca dal titolo “Quantum Computing and Simulation Center” per il Dipartimento di Fisica e Astronomia dell’Università degli Studi di Padova. | ? | 57 | 1 |
 | ELECTRICITE DE FRANCE | grande_entreprise | FR | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
 | ELECTRICITE DE FRANCE | grande_entreprise | FR | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
@@ -1263,6 +1218,11 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | LOW NOISE FACTORY AB | PME | SE | composants | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 45 | 2 |
 | LOW NOISE FACTORY AB | PME | SE | composants | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
 | LOW NOISE FACTORY AB | PME | SE | composants | EIC Accelerator Open 2027 – date limite des propositions complètes du 2027-01-20 | 2027-01-20 | 40 | 0 |
+| NEW ORIGIN BV | PME | NL | composants | Suministro de un peine de frecuencias óptico financiado por MCIU/ AEI /10.13039/501100011033 / UE, FEDER y por la Diputación Foral de Bizkaia para el proyecto Bizkaia Industrial Quantum – Hub. | 2026-12-18 | 55 | 0 |
+| NEW ORIGIN BV | PME | NL | composants | Procurement of a High-Precision Optical Ground Station (OGS) Telescope Unit for Uplink and Satellite Tracking | 2026-12-04 | 45 | 1 |
+| NEW ORIGIN BV | PME | NL | composants | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 45 | 2 |
+| NEW ORIGIN BV | PME | NL | composants | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
+| NEW ORIGIN BV | PME | NL | composants | Consultazione preliminare di mercato finalizzata all’individuazione di operatori economici da invitare ad una procedura negoziata senza bando ai sensi dell’art. 76, co. 2, lett. b), n. 2 del D.Lgs. n. 36 del 2023, per l’affidamento della fornitura di una piattaforma criogenica dry a ciclo chiuso, sp | ? | 30 | 2 |
 | PHIX BV | PME | NL | composants | Suministro de un peine de frecuencias óptico financiado por MCIU/ AEI /10.13039/501100011033 / UE, FEDER y por la Diputación Foral de Bizkaia para el proyecto Bizkaia Industrial Quantum – Hub. | 2026-12-18 | 55 | 0 |
 | PHIX BV | PME | NL | composants | Procurement of a High-Precision Optical Ground Station (OGS) Telescope Unit for Uplink and Satellite Tracking | 2026-12-04 | 45 | 1 |
 | PHIX BV | PME | NL | composants | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 45 | 2 |
@@ -1372,15 +1332,20 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | POLARITON TECHNOLOGIES AG | PME | CH | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 30 | 2 |
 | POLARITON TECHNOLOGIES AG | PME | CH | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 30 | 2 |
 | INFINEON TECHNOLOGIES AUSTRIA  AG | grande_entreprise | AT | transverse | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
-| INFINEON TECHNOLOGIES AUSTRIA  AG | grande_entreprise | AT | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 50 | 2 |
-| INFINEON TECHNOLOGIES AUSTRIA  AG | grande_entreprise | AT | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
 | INFINEON TECHNOLOGIES AUSTRIA  AG | grande_entreprise | AT | transverse | Quantum Space Gravimetry topic | 2027-09-02 | 50 | 2 |
 | INFINEON TECHNOLOGIES AUSTRIA  AG | grande_entreprise | AT | transverse | Secure PQC implementations, Cryptanalysis and Post-quantum Digital Trust | 2027-09-15 | 50 | 2 |
+| INFINEON TECHNOLOGIES AUSTRIA  AG | grande_entreprise | AT | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 30 | 3 |
+| INFINEON TECHNOLOGIES AUSTRIA  AG | grande_entreprise | AT | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 30 | 3 |
 | GMV NSL LIMITED | grande_entreprise | GB | capteurs | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
 | GMV NSL LIMITED | grande_entreprise | GB | capteurs | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 50 | 2 |
 | GMV NSL LIMITED | grande_entreprise | GB | capteurs | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 50 | 1 |
 | GMV NSL LIMITED | grande_entreprise | GB | capteurs | EIC STEP Scale Up 2027 – date de lot du 2027-01-28 | 2027-01-28 | 45 | 0 |
 | GMV NSL LIMITED | grande_entreprise | GB | capteurs | NAVISP Element 2 – Permanent Standard Call for Proposals (navigation, positionnement, temps) | ? | 45 | 2 |
+| INFINEON TECHNOLOGIES DRESDEN AG & Co. KG | grande_entreprise | DE | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
+| INFINEON TECHNOLOGIES DRESDEN AG & Co. KG | grande_entreprise | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
+| INFINEON TECHNOLOGIES DRESDEN AG & Co. KG | grande_entreprise | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
+| INFINEON TECHNOLOGIES DRESDEN AG & Co. KG | grande_entreprise | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
+| INFINEON TECHNOLOGIES DRESDEN AG & Co. KG | grande_entreprise | DE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 50 | 2 |
 | QUANTUM BRILLIANCE GMBH | PME | DE | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
 | QUANTUM BRILLIANCE GMBH | PME | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
 | QUANTUM BRILLIANCE GMBH | PME | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
@@ -1411,6 +1376,11 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | Q.M. TECHNOLOGIES LTD | PME | IL | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
 | Q.M. TECHNOLOGIES LTD | PME | IL | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
 | Q.M. TECHNOLOGIES LTD | PME | IL | calcul | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 50 | 2 |
+| PARITY QUANTUM COMPUTING GMBH | PME | AT | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
+| PARITY QUANTUM COMPUTING GMBH | PME | AT | calcul | Fornitura di un sistema completo da vuoto criogenico per un esperimento a ioni intrappolati, nell’ambito del Programma di Ricerca dal titolo “Quantum Computing and Simulation Center” per il Dipartimento di Fisica e Astronomia dell’Università degli Studi di Padova. | ? | 55 | 1 |
+| PARITY QUANTUM COMPUTING GMBH | PME | AT | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
+| PARITY QUANTUM COMPUTING GMBH | PME | AT | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
+| PARITY QUANTUM COMPUTING GMBH | PME | AT | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
 | FSAS TECHNOLOGIES SL | grande_entreprise | ES | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
 | FSAS TECHNOLOGIES SL | grande_entreprise | ES | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
 | FSAS TECHNOLOGIES SL | grande_entreprise | ES | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
@@ -1421,6 +1391,11 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | STMICROELECTRONICS FRANCE | grande_entreprise | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
 | STMICROELECTRONICS FRANCE | grande_entreprise | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
 | STMICROELECTRONICS FRANCE | grande_entreprise | FR | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 50 | 2 |
+| ARQUE SYSTEMS GMBH | PME | DE | calcul | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
+| ARQUE SYSTEMS GMBH | PME | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
+| ARQUE SYSTEMS GMBH | PME | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
+| ARQUE SYSTEMS GMBH | PME | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
+| ARQUE SYSTEMS GMBH | PME | DE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 50 | 2 |
 | QXBRANCH LLC | PME | GB | logiciel | Quantum Machine Learning | 2027-01-28 | 55 | 2 |
 | QXBRANCH LLC | PME | GB | logiciel | Secure PQC implementations, Cryptanalysis and Post-quantum Digital Trust | 2027-09-15 | 50 | 2 |
 | QXBRANCH LLC | PME | GB | logiciel | UK-Netherlands Co-Innovation for Quantum Technology 2026 | 2027-02-09 | 35 | 2 |
@@ -1446,10 +1421,15 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | KEEQUANT GMBH | PME | DE | communication | Procurement of a High-Precision Optical Ground Station (OGS) Telescope Unit for Uplink and Satellite Tracking | 2026-12-04 | 50 | 1 |
 | KEEQUANT GMBH | PME | DE | communication | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 45 | 2 |
 | SINGLE QUANTUM BV | PME | NL | transverse | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 2 |
-| SINGLE QUANTUM BV | PME | NL | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 50 | 2 |
-| SINGLE QUANTUM BV | PME | NL | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
 | SINGLE QUANTUM BV | PME | NL | transverse | Dual-use technologies | 2027-01-14 | 47 | 1 |
 | SINGLE QUANTUM BV | PME | NL | transverse | Procurement of a High-Precision Optical Ground Station (OGS) Telescope Unit for Uplink and Satellite Tracking | 2026-12-04 | 35 | 2 |
+| SINGLE QUANTUM BV | PME | NL | transverse | Quantum Machine Learning | 2027-01-28 | 35 | 3 |
+| SINGLE QUANTUM BV | PME | NL | transverse | Consultazione preliminare di mercato finalizzata all’individuazione di operatori economici da invitare ad una procedura negoziata senza bando ai sensi dell’art. 76, co. 2, lett. b), n. 2 del D.Lgs. n. 36 del 2023, per l’affidamento della fornitura di una piattaforma criogenica dry a ciclo chiuso, sp | ? | 35 | 2 |
+| Peak Quantum GmbH | PME | DE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
+| Peak Quantum GmbH | PME | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 45 | 2 |
+| Peak Quantum GmbH | PME | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
+| Peak Quantum GmbH | PME | DE | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
+| Peak Quantum GmbH | PME | DE | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
 | PNO Innovation | grande_entreprise | FR | capteurs | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
 | PNO Innovation | grande_entreprise | FR | capteurs | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
 | PNO Innovation | grande_entreprise | FR | capteurs | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 35 | 2 |
@@ -1460,6 +1440,11 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | MEGIN OY | grande_entreprise | FI | capteurs | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
 | MEGIN OY | grande_entreprise | FI | capteurs | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 35 | 2 |
 | MEGIN OY | grande_entreprise | FI | capteurs | NAVISP Element 2 – Permanent Standard Call for Proposals (navigation, positionnement, temps) | ? | 30 | 2 |
+| ARTIC INSTRUMENTS OY | PME | FI | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 55 | 1 |
+| ARTIC INSTRUMENTS OY | PME | FI | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 45 | 2 |
+| ARTIC INSTRUMENTS OY | PME | FI | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
+| ARTIC INSTRUMENTS OY | PME | FI | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
+| ARTIC INSTRUMENTS OY | PME | FI | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
 | MELLANOX TECHNOLOGIES LTD - MLNX | grande_entreprise | IL | transverse | Secure Computing Continuum (IoT, Edge, Cloud, Data spaces) | 2027-09-15 | 55 | 2 |
 | MELLANOX TECHNOLOGIES LTD - MLNX | grande_entreprise | IL | transverse | Secure PQC implementations, Cryptanalysis and Post-quantum Digital Trust | 2027-09-15 | 50 | 2 |
 | MELLANOX TECHNOLOGIES LTD - MLNX | grande_entreprise | IL | transverse | Quantum Machine Learning | 2027-01-28 | 47 | 2 |
@@ -1857,18 +1842,6 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | BOSON ENERGY | PME | LU | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 45 | 2 |
 | BOSON ENERGY | PME | LU | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
 | BOSON ENERGY | PME | LU | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 45 | 2 |
-| SPARROW QUANTUM ApS | PME | DK | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 50 | 2 |
-| SPARROW QUANTUM ApS | PME | DK | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
-| SILENT WAVES | PME | FR | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 50 | 2 |
-| SILENT WAVES | PME | FR | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
-| SILENT WAVES | PME | FR | transverse | Quantum Space Gravimetry topic | 2027-09-02 | 50 | 2 |
-| SILENT WAVES | PME | FR | transverse | Quantum Machine Learning | 2027-01-28 | 35 | 3 |
-| SILENT WAVES | PME | FR | transverse | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 30 | 3 |
-| PLANQC GMBH | PME | DE | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 50 | 2 |
-| PLANQC GMBH | PME | DE | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
-| PLANQC GMBH | PME | DE | transverse | Quantum Space Gravimetry topic | 2027-09-02 | 50 | 2 |
-| PLANQC GMBH | PME | DE | transverse | Quantum Machine Learning | 2027-01-28 | 35 | 3 |
-| PLANQC GMBH | PME | DE | transverse | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 30 | 3 |
 | SPLOROTECH SL | PME | ES | transverse | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 50 | 2 |
 | SPLOROTECH SL | PME | ES | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 45 | 2 |
 | SPLOROTECH SL | PME | ES | transverse | Secure Computing Continuum (IoT, Edge, Cloud, Data spaces) | 2027-09-15 | 45 | 2 |
@@ -1889,6 +1862,11 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | SEMIWISE LIMITED | PME | GB | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 30 | 2 |
 | SEMIWISE LIMITED | PME | GB | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 30 | 2 |
 | SEMIWISE LIMITED | PME | GB | calcul | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 30 | 2 |
+| SILTRONIC AG | grande_entreprise | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 50 | 2 |
+| SILTRONIC AG | grande_entreprise | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 2 |
+| SILTRONIC AG | grande_entreprise | DE | calcul | Dual-use technologies | 2027-01-14 | 45 | 1 |
+| SILTRONIC AG | grande_entreprise | DE | calcul | Quantum Machine Learning | 2027-01-28 | 45 | 2 |
+| SILTRONIC AG | grande_entreprise | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 40 | 2 |
 | APPLIED MATERIALS ITALIA SRL | grande_entreprise | IT | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 50 | 1 |
 | APPLIED MATERIALS ITALIA SRL | grande_entreprise | IT | calcul | Consultazione preliminare di mercato finalizzata all’individuazione di operatori economici da invitare ad una procedura negoziata senza bando ai sensi dell’art. 76, co. 2, lett. b), n. 2 del D.Lgs. n. 36 del 2023, per l’affidamento della fornitura di una piattaforma criogenica dry a ciclo chiuso, sp | ? | 45 | 1 |
 | APPLIED MATERIALS ITALIA SRL | grande_entreprise | IT | calcul | Dual-use technologies | 2027-01-14 | 35 | 1 |
@@ -1899,6 +1877,16 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | SYNOPSYS (NORTHERN EUROPE) LIMITED | grande_entreprise | GB | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 30 | 2 |
 | SYNOPSYS (NORTHERN EUROPE) LIMITED | grande_entreprise | GB | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 30 | 2 |
 | SYNOPSYS (NORTHERN EUROPE) LIMITED | grande_entreprise | GB | calcul | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 30 | 2 |
+| SILENT WAVES | PME | FR | transverse | Quantum Space Gravimetry topic | 2027-09-02 | 50 | 2 |
+| SILENT WAVES | PME | FR | transverse | Quantum Machine Learning | 2027-01-28 | 35 | 3 |
+| SILENT WAVES | PME | FR | transverse | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 30 | 3 |
+| SILENT WAVES | PME | FR | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 30 | 3 |
+| SILENT WAVES | PME | FR | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 30 | 3 |
+| PLANQC GMBH | PME | DE | transverse | Quantum Space Gravimetry topic | 2027-09-02 | 50 | 2 |
+| PLANQC GMBH | PME | DE | transverse | Quantum Machine Learning | 2027-01-28 | 35 | 3 |
+| PLANQC GMBH | PME | DE | transverse | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 30 | 3 |
+| PLANQC GMBH | PME | DE | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 30 | 3 |
+| PLANQC GMBH | PME | DE | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 30 | 3 |
 | BILFINGER NUCLEAR & ENERGY TRANSITION GMBH | grande_entreprise | DE | calcul | Quantum Space Gravimetry topic | 2027-09-02 | 50 | 1 |
 | BILFINGER NUCLEAR & ENERGY TRANSITION GMBH | grande_entreprise | DE | calcul | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 40 | 1 |
 | BILFINGER NUCLEAR & ENERGY TRANSITION GMBH | grande_entreprise | DE | calcul | Dual-use technologies | 2027-01-14 | 35 | 1 |
@@ -2251,11 +2239,21 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | BAY PHOTONICS LTD | PME | GB | transverse | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 45 | 2 |
 | BAY PHOTONICS LTD | PME | GB | transverse | Secure Computing Continuum (IoT, Edge, Cloud, Data spaces) | 2027-09-15 | 40 | 2 |
 | BAY PHOTONICS LTD | PME | GB | transverse | Secure PQC implementations, Cryptanalysis and Post-quantum Digital Trust | 2027-09-15 | 40 | 2 |
+| neQxt GmbH | PME | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 45 | 2 |
+| neQxt GmbH | PME | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
+| neQxt GmbH | PME | DE | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
+| neQxt GmbH | PME | DE | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
+| neQxt GmbH | PME | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 35 | 2 |
 | DIAMFAB | PME | FR | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 45 | 2 |
 | DIAMFAB | PME | FR | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
 | DIAMFAB | PME | FR | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
 | DIAMFAB | PME | FR | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
 | DIAMFAB | PME | FR | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 35 | 2 |
+| QUDORA Technologies GmbH | grande_entreprise | DE | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 45 | 2 |
+| QUDORA Technologies GmbH | grande_entreprise | DE | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
+| QUDORA Technologies GmbH | grande_entreprise | DE | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
+| QUDORA Technologies GmbH | grande_entreprise | DE | calcul | Quantum Machine Learning | 2027-01-28 | 40 | 2 |
+| QUDORA Technologies GmbH | grande_entreprise | DE | calcul | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 35 | 2 |
 | D. SWAROVSKI KG | grande_entreprise | AT | calcul | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 45 | 2 |
 | D. SWAROVSKI KG | grande_entreprise | AT | calcul | Quantum Chips: Enabling Technologies | 2027-03-31 | 45 | 2 |
 | D. SWAROVSKI KG | grande_entreprise | AT | calcul | Dual-use technologies | 2027-01-14 | 40 | 1 |
@@ -2271,12 +2269,8 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | ROBERT BOSCH CAR MULTIMEDIA GMBH | grande_entreprise | DE | transverse | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 40 | 2 |
 | ROBERT BOSCH CAR MULTIMEDIA GMBH | grande_entreprise | DE | transverse | Secure Computing Continuum (IoT, Edge, Cloud, Data spaces) | 2027-09-15 | 40 | 2 |
 | LIONIX INTERNATIONAL B.V. | PME | NL | transverse | Quantum Space Gravimetry topic | 2027-09-02 | 45 | 2 |
-| LIONIX INTERNATIONAL B.V. | PME | NL | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 42 | 2 |
-| LIONIX INTERNATIONAL B.V. | PME | NL | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 40 | 2 |
 | THALES ALENIA SPACE FRANCE SAS | grande_entreprise | FR | transverse | Quantum Space Gravimetry topic | 2027-09-02 | 45 | 2 |
 | THALES ALENIA SPACE FRANCE SAS | grande_entreprise | FR | transverse | EIC Pathfinder Open 2027 (procédure en deux étapes) | 2027-02-25 | 40 | 1 |
-| THALES ALENIA SPACE FRANCE SAS | grande_entreprise | FR | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 40 | 2 |
-| THALES ALENIA SPACE FRANCE SAS | grande_entreprise | FR | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 40 | 2 |
 | THALES ALENIA SPACE FRANCE SAS | grande_entreprise | FR | transverse | New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks | 2027-09-15 | 40 | 2 |
 | CRYPTO QUANTIQUE LIMITED | PME | GB | transverse | Secure Computing Continuum (IoT, Edge, Cloud, Data spaces) | 2027-09-15 | 45 | 2 |
 | CRYPTO QUANTIQUE LIMITED | PME | GB | transverse | EIC Accelerator Open 2027 – date limite des propositions complètes du 2027-01-20 | 2027-01-20 | 40 | 0 |
@@ -2488,8 +2482,6 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | TELEPLAN FORSBERG LIMITED | PME | GB | capteurs | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 35 | 2 |
 | TELEPLAN FORSBERG LIMITED | PME | GB | capteurs | EIC Pathfinder Challenge 2027 : Quantum Energetics | 2027-09-29 | 35 | 1 |
 | TELEPLAN FORSBERG LIMITED | PME | GB | capteurs | NAVISP Element 2 – Permanent Standard Call for Proposals (navigation, positionnement, temps) | ? | 30 | 2 |
-| LIGENTEC FRANCE | PME | FR | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 40 | 2 |
-| LIGENTEC FRANCE | PME | FR | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 40 | 2 |
 | TELSY S.P.A. | grande_entreprise | IT | pqc | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 40 | 2 |
 | TELSY S.P.A. | grande_entreprise | IT | pqc | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 40 | 2 |
 | TELSY S.P.A. | grande_entreprise | IT | pqc | Secure Computing Continuum (IoT, Edge, Cloud, Data spaces) | 2027-09-15 | 40 | 2 |
@@ -2803,6 +2795,8 @@ Chaque piste est une hypothèse du moteur. Avant d'envoyer une fiche, suivre la 
 | CRYPTA LABS LIMITED | PME | GB | communication | EuroQCI Governmental System Concept Study (Phase A), Reference and Validation Environment and Engineering Support | ? | 30 | 2 |
 | VDI TECHNOLOGIEZENTRUM GMBH | grande_entreprise | DE | transverse | EuroQCI Governmental System Concept Study (Phase A), Reference and Validation Environment and Engineering Support | ? | 35 | 2 |
 | CREOTECH INSTRUMENTS SPOLKA AKCYJNA | PME | PL | transverse | Suministro de un peine de frecuencias óptico financiado por MCIU/ AEI /10.13039/501100011033 / UE, FEDER y por la Diputación Foral de Bizkaia para el proyecto Bizkaia Industrial Quantum – Hub. | 2026-12-18 | 32 | 1 |
+| SPARROW QUANTUM ApS | PME | DK | transverse | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 30 | 3 |
+| SPARROW QUANTUM ApS | PME | DK | transverse | Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation | 2027-03-31 | 30 | 3 |
 | CAMBRIDGE CONSULTANTS LIMITED | PME | GB | pqc | New approaches for decentralized, federated and sustainable AI data processing (RIA) | 2027-03-18 | 30 | 2 |
 | CAMBRIDGE CONSULTANTS LIMITED | PME | GB | pqc | Demand-side 3C pilot demonstrators on converged Telco Edge Cloud Infrastructure (IA) | 2027-03-18 | 30 | 2 |
 | CAMBRIDGE CONSULTANTS LIMITED | PME | GB | pqc | Secure Computing Continuum (IoT, Edge, Cloud, Data spaces) | 2027-09-15 | 30 | 2 |

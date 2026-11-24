@@ -78,7 +78,7 @@ GENERIQUES = {
     "research", "innovation", "innovative", "advanced", "applications", "application", "europe",
     "european", "solutions", "solution", "industrial", "industry", "future", "next", "generation",
     "integration", "infrastructure", "digital", "data", "high", "performance", "scale", "scalable",
-    "ecosystem", "enabling", "hybrid", "design", "development", "demonstrator", "demonstrators",
+    "ecosystem", "enabling", "hybrid", "design", "development", "demonstrator", "demonstrators", "pilot",
 }
 
 
@@ -109,6 +109,7 @@ def evaluer(p: dict, o: dict, groupes: dict, aujourdhui: dt.date) -> dict | None
     reserves: list[str] = []
     eligibilite: list[str] = []
     score = 0
+    lien_specifique = False  # un projet financé précis partage un thème non générique avec l'appel
 
     # Éligibilité géographique.
     pays_ok = developper_pays(o.get("pays_eligibles"), groupes)
@@ -163,6 +164,7 @@ def evaluer(p: dict, o: dict, groupes: dict, aujourdhui: dt.date) -> dict | None
             if len(c) > len(communs_meilleur):
                 meilleur, communs_meilleur = f, c
         if meilleur:
+            lien_specifique = True
             raisons.append(
                 f"votre projet {meilleur.get('acronyme') or meilleur.get('projet')} ({meilleur.get('programme')}, "
                 f"{(meilleur.get('debut') or '')[:4]}) porte sur des thèmes proches de l'appel : "
@@ -234,6 +236,7 @@ def evaluer(p: dict, o: dict, groupes: dict, aujourdhui: dt.date) -> dict | None
         "score": max(0, min(score, 100)),
         "raisons": raisons,
         "eligibilite": eligibilite,
+        "lien_specifique": lien_specifique,
         "reserves": reserves,
         "liens": {
             "prospect": (p.get("sources") or [None])[0],
@@ -436,7 +439,12 @@ def main(argv=None) -> int:
         eligibles = [(pid, ps) for pid, ps in classement if cible(index_p[pid])]
         print(f"{len(eligibles)} prospects ciblés (types {', '.join(sorted(types_fiches))}, "
               f"part quantique ≥ {args.part_quantique_min}, hors profils de consultants).")
-        for pid, ses_pistes in eligibles[: args.nb_fiches]:
+        # Une fiche n'est écrite que si un projet financé précis renvoie au sujet de l'appel :
+        # une fiche au lien vague brûle un contact.
+        avec_lien = [(pid, [x for x in ps if x.get("lien_specifique")]) for pid, ps in eligibles]
+        avec_lien = [(pid, ps) for pid, ps in avec_lien if ps]
+        print(f"{len(avec_lien)} prospects ciblés ont au moins une piste avec un lien précis à un projet financé.")
+        for pid, ses_pistes in avec_lien[: args.nb_fiches]:
             meilleure = ses_pistes[0]
             chemin = ecrire_fiche(args.fiches, index_p[pid], meilleure, index_o[meilleure["opportunite_id"]],
                                   aujourdhui, args.signature)

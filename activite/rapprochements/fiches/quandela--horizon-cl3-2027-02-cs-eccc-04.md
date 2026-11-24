@@ -1,6 +1,6 @@
-# Fiche opportunité : QUANDELA × HORIZON-JU-CHIPS-2026-QUANTUM-1-RIA
+# Fiche opportunité : QUANDELA × HORIZON-CL3-2027-02-CS-ECCC-04
 
-*Fiche gratuite, établie le 2026-11-22 à partir de données publiques uniquement. Ce n'est ni un avis d'éligibilité, ni une recommandation de candidater.*
+*Fiche gratuite, établie le 2026-11-23 à partir de données publiques uniquement. Ce n'est ni un avis d'éligibilité, ni une recommandation de candidater.*
 
 ## Ce que disent les sources publiques sur vos financements
 
@@ -16,15 +16,15 @@ Segment retenu : **calcul**. Justification : mots-clés des projets : quantum co
 
 ## L'appel
 
-- **Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation** (HORIZON-JU-CHIPS-2026-QUANTUM-1-RIA), Chips JU, Horizon Europe – Chips JU (Chips for Europe Initiative).
-- **Clôture : 2027-03-31** (heure et fuseau à relire sur la page officielle). Vérifiée le 2026-11-22 sur la [page officielle](https://qt.eu/funding-opportunities).
-- Nature : subvention. Budget : 20 000 000 €. Montant indicatif par projet : 20 000 000 €.
-- Consortium : exigé, au moins 3 entités. Pays éligibles : EEE, CA, IL, KR, NZ, CH, GB.
+- **New primitives and protocols for functionalities of future hybrid classical-hybrid and quantum networks** (HORIZON-CL3-2027-02-CS-ECCC-04), Commission européenne / ECCC, Horizon Europe – Cluster 3.
+- **Clôture : 2027-09-15** (heure et fuseau à relire sur la page officielle). Vérifiée le 2026-11-22 sur la [page officielle](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2027-02-CS-ECCC-04).
+- Nature : subvention. Budget : 4 000 000 €. Montant indicatif par projet : 4 000 000 €.
+- Consortium : exigé, au moins 3 entités. Pays éligibles : UE27, HE_ASSOCIES.
 
 ## Pourquoi cet appel pourrait vous concerner
 
 1. Segment « calcul » visé par l'appel.
-2. Votre projet P4Q (Chips JU, 2026) porte sur des thèmes proches de l'appel : pilot.
+2. Votre projet QUDOT-TECH (H2020, 2020) porte sur des thèmes proches de l'appel : information.
 3. Au moins un projet financé encore en cours.
 4. Vous avez déjà porté seul un projet financé (sepoqc, EIC, 2 499 000 €).
 
@@ -36,7 +36,7 @@ D'après la fiche de l'appel, le pays (FR) et le type d'organisation (PME) sembl
 
 ## Calendrier
 
-Il reste **18 semaine(s)** avant la clôture : délai suffisant pour préparer un dossier sérieux.
+Il reste **42 semaine(s)** avant la clôture : délai suffisant pour préparer un dossier sérieux.
 
 ## Aide gratuite
 

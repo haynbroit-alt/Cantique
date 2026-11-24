@@ -1,6 +1,6 @@
-# Fiche opportunité : ALICE & BOB × HORIZON-JU-CHIPS-2026-QUANTUM-1-RIA
+# Fiche opportunité : ALICE & BOB × HORIZON-CL4-2027-SPACE-03-71
 
-*Fiche gratuite, établie le 2026-11-22 à partir de données publiques uniquement. Ce n'est ni un avis d'éligibilité, ni une recommandation de candidater.*
+*Fiche gratuite, établie le 2026-11-23 à partir de données publiques uniquement. Ce n'est ni un avis d'éligibilité, ni une recommandation de candidater.*
 
 ## Ce que disent les sources publiques sur vos financements
 
@@ -16,15 +16,15 @@ Segment retenu : **calcul**. Justification : mots-clés des projets : cryogenic 
 
 ## L'appel
 
-- **Quantum Chips Design: Driving Europe's Quantum Design Ecosystem and Enabling Quantum Design Tools Innovation** (HORIZON-JU-CHIPS-2026-QUANTUM-1-RIA), Chips JU, Horizon Europe – Chips JU (Chips for Europe Initiative).
-- **Clôture : 2027-03-31** (heure et fuseau à relire sur la page officielle). Vérifiée le 2026-11-22 sur la [page officielle](https://qt.eu/funding-opportunities).
-- Nature : subvention. Budget : 20 000 000 €. Montant indicatif par projet : 20 000 000 €.
-- Consortium : exigé, au moins 3 entités. Pays éligibles : EEE, CA, IL, KR, NZ, CH, GB.
+- **Quantum Space Gravimetry topic** (HORIZON-CL4-2027-SPACE-03-71), Commission européenne (DG DEFIS / HaDEA), Horizon Europe – Cluster 4 (Espace).
+- **Clôture : 2027-09-02** (heure et fuseau à relire sur la page officielle). Vérifiée le 2026-11-22 sur la [page officielle](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2027-SPACE-03-71).
+- Nature : subvention. Budget : 29 200 000 €. Montant indicatif par projet : 15 000 000 €.
+- Consortium : exigé, au moins 3 entités. Pays éligibles : UE27, NO, IS.
 
 ## Pourquoi cet appel pourrait vous concerner
 
 1. Segment « calcul » visé par l'appel.
-2. Votre projet SUPREME 1 (Chips JU, 2026) porte sur des thèmes proches de l'appel : pilot.
+2. Votre projet OpenSuperQPlus100 (Horizon Europe, 2023) porte sur des thèmes proches de l'appel : superconducting.
 3. Au moins un projet financé encore en cours.
 4. Vous avez déjà porté seul un projet financé (CatQubit, EIC, 2 500 000 €).
 
@@ -36,7 +36,7 @@ D'après la fiche de l'appel, le pays (FR) et le type d'organisation (PME) sembl
 
 ## Calendrier
 
-Il reste **18 semaine(s)** avant la clôture : délai suffisant pour préparer un dossier sérieux.
+Il reste **40 semaine(s)** avant la clôture : délai suffisant pour préparer un dossier sérieux.
 
 ## Aide gratuite
 

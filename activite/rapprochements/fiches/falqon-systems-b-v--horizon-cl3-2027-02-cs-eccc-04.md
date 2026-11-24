@@ -1,6 +1,6 @@
 # Fiche opportunité : FALQON SYSTEMS B.V. × HORIZON-CL3-2027-02-CS-ECCC-04
 
-*Fiche gratuite, établie le 2026-11-22 à partir de données publiques uniquement. Ce n'est ni un avis d'éligibilité, ni une recommandation de candidater.*
+*Fiche gratuite, établie le 2026-11-23 à partir de données publiques uniquement. Ce n'est ni un avis d'éligibilité, ni une recommandation de candidater.*
 
 ## Ce que disent les sources publiques sur vos financements
 
